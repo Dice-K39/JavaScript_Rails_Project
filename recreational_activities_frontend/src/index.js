@@ -1,6 +1,9 @@
+const api = new ApiService("http://localhost:3000");
+let search = false;
+
 document.addEventListener("DOMContentLoaded", () =>
 {
-    const app = new AppMain;
+    const addBtn = document.querySelector("")
 
-    app.bindEventListener();
+    new RecreationSearch;
 });
