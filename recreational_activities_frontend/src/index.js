@@ -1,5 +1,4 @@
-// const api = new ApiService("http://localhost:3000");
-let search = false;
+const api = new ApiService("http://localhost:3000");
 
 document.addEventListener("DOMContentLoaded", () =>
 {

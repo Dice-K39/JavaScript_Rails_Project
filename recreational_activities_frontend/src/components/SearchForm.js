@@ -25,7 +25,7 @@ class SearchForm
             num_records: num_records.value
         };
 
-        api.searchApi(data).then(search => new SearchCard(search));
+        api.searchActivities(data).then(search => new SearchCard(search));
     }
 
     render()
