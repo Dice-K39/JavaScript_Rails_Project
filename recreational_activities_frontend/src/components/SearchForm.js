@@ -31,7 +31,7 @@ class SearchForm
     render()
     {
         const form = document.createElement("form");
-debugger
+
         form.className = "search-form";
         form.innerHTML = this.renderInnerHTML();
         this.form = form;
