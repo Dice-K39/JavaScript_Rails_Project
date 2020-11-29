@@ -1,0 +1,271 @@
+Started GET "/search" for ::1 at 2020-11-27 22:01:13 -0500
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (No route matches [GET] "/search"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/search" for ::1 at 2020-11-27 22:03:15 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/search"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/search" for ::1 at 2020-11-27 22:04:30 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SearchController#search as */*
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 76)
+
+
+Started GET "/search" for ::1 at 2020-11-27 22:10:09 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SearchController#search as */*
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms | Allocations: 112)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/controllers/search_controller.rb:2:in `search'
+Started GET "/search" for ::1 at 2020-11-27 22:10:34 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SearchController#search as */*
+Completed 204 No Content in 60210ms (ActiveRecord: 0.0ms | Allocations: 142542)
+
+
+Started GET "/search" for ::1 at 2020-11-27 22:11:50 -0500
+Processing by SearchController#search as */*
+Completed 500 Internal Server Error in 4073ms (ActiveRecord: 0.0ms | Allocations: 5771)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `search'
+app/controllers/search_controller.rb:4:in `search'
+Started GET "/search" for ::1 at 2020-11-27 22:13:10 -0500
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SearchController#search as */*
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 24810)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/controllers/search_controller.rb:2:in `search'
+Started GET "/search" for ::1 at 2020-11-27 22:34:00 -0500
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SearchController#search as */*
+Completed 204 No Content in 26346ms (ActiveRecord: 0.0ms | Allocations: 20073)
+
+
+Started GET "/search" for ::1 at 2020-11-27 22:35:42 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SearchController#search as */*
+Completed 204 No Content in 85798ms (ActiveRecord: 0.0ms | Allocations: 80534)
+
+
+Started GET "/search" for ::1 at 2020-11-27 22:47:13 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SearchController#search as JSON
+  Parameters: {"search"=>{}}
+Completed 204 No Content in 52703ms (ActiveRecord: 0.0ms | Allocations: 2055)
+
+
+Started GET "/search" for ::1 at 2020-11-27 22:48:16 -0500
+Processing by SearchController#search as JSON
+  Parameters: {"search"=>{}}
+Completed 204 No Content in 21657ms (ActiveRecord: 0.0ms | Allocations: 2035)
+
+
+Started GET "/search" for ::1 at 2020-11-27 22:48:59 -0500
+Processing by SearchController#search as JSON
+  Parameters: {"search"=>{}}
+Completed 204 No Content in 12104ms (ActiveRecord: 0.0ms | Allocations: 2081)
+
+
+Started GET "/search" for ::1 at 2020-11-27 22:49:39 -0500
+Processing by SearchController#search as JSON
+  Parameters: {"search"=>{}}
+Completed 204 No Content in 10929ms (ActiveRecord: 0.0ms | Allocations: 2155)
+
+
+Started GET "/search" for ::1 at 2020-11-27 22:50:14 -0500
+Processing by SearchController#search as JSON
+  Parameters: {"search"=>{}}
+Completed 204 No Content in 4743ms (ActiveRecord: 0.0ms | Allocations: 2010)
+
+
+Started GET "/search" for ::1 at 2020-11-27 22:50:25 -0500
+Processing by SearchController#search as JSON
+  Parameters: {"search"=>{}}
+Completed 204 No Content in 12090ms (ActiveRecord: 0.0ms | Allocations: 2150)
+
+
+Started GET "/search" for ::1 at 2020-11-27 22:50:54 -0500
+Processing by SearchController#search as JSON
+  Parameters: {"search"=>{}}
+Completed 204 No Content in 98350ms (ActiveRecord: 0.0ms | Allocations: 2328)
+
+
+Started GET "/search" for ::1 at 2020-11-27 22:52:32 -0500
+Processing by SearchController#search as JSON
+  Parameters: {"search"=>{}}
+Completed 204 No Content in 49501ms (ActiveRecord: 0.0ms | Allocations: 80786)
+
+
+Started POST "/search" for ::1 at 2020-11-27 22:58:03 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/search"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/search" for ::1 at 2020-11-27 22:58:29 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SearchController#search as JSON
+  Parameters: {"search"=>{}}
+Completed 204 No Content in 60526ms (ActiveRecord: 0.0ms | Allocations: 80552)
+
+
+Started GET "/search" for ::1 at 2020-11-27 23:00:32 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SearchController#search as */*
+Completed 204 No Content in 24699ms (ActiveRecord: 0.0ms | Allocations: 2750)
+
+
+Started GET "/search" for ::1 at 2020-11-27 23:08:33 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SearchController#search as */*
+Completed 204 No Content in 16454ms (ActiveRecord: 0.0ms | Allocations: 2756)
+
+
+Started GET "/" for ::1 at 2020-11-28 09:03:04 -0500
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/daisukehashimoto/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/daisukehashimoto/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 9.9ms | Allocations: 482)
+Completed 200 OK in 19ms (Views: 15.7ms | ActiveRecord: 0.0ms | Allocations: 2637)
+
+
+Started GET "/favicon.ico" for ::1 at 2020-11-28 09:03:04 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/search" for ::1 at 2020-11-28 09:10:45 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SearchController#search as */*
+Completed 204 No Content in 15218ms (ActiveRecord: 0.0ms | Allocations: 36229)
+
+
+Started POST "/search" for ::1 at 2020-11-28 09:11:49 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"", "states"=>"", "num_records"=>"50"}
+Completed 204 No Content in 21773ms (ActiveRecord: 0.0ms | Allocations: 2971)
+
+
+Started POST "/search" for ::1 at 2020-11-28 09:19:06 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"", "states"=>"", "num_records"=>"50"}
+Completed 500 Internal Server Error in 3112ms (ActiveRecord: 0.0ms | Allocations: 83526)
+
+
+  
+NameError (undefined local variable or method `console' for #<SearchController:0x00007feec8daa5c0>):
+  
+app/controllers/search_controller.rb:6:in `search'
+Started POST "/search" for ::1 at 2020-11-28 09:19:51 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"", "states"=>"", "num_records"=>"50"}
+Completed 200 OK in 21455ms (Views: 22.7ms | ActiveRecord: 0.0ms | Allocations: 27666)
+
+

@@ -17,15 +17,7 @@ class SearchForm
     {
         event.preventDefault();
 
-        const {query, states, num_records} = event.target;
-        const data = 
-        {
-            query: query.value,
-            states: states.value,
-            num_records: num_records.value
-        };
-
-        api.searchActivities(data).then(search => new SearchCard(search));
+        api.searchActivities();
     }
 
     render()

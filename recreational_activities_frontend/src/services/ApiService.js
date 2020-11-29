@@ -5,11 +5,16 @@ class ApiService
         this.baseURL = baseURL;
     }
 
-    searchActivities = (data) =>
+    searchActivities = () =>
     {
-        console.log(data);
+        const formData = new FormData(document.querySelector(".search-form"))
         debugger
-        fetch(`${this.baseURL}/search`)
-            .then(res => res.json());
+        fetch(`${this.baseURL}/search`,
+        {
+            method: "POST",
+            body: formData
+        })
+            .then(res => res.json())
+            .then(data => console.log(data));
     };
 }
