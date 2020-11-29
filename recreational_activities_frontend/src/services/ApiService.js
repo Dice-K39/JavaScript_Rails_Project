@@ -15,6 +15,6 @@ class ApiService
             body: formData
         })
             .then(res => res.json())
-            .then(data => console.log(data));
+            .then(data => ActivityCard.getMatch(data));
     };
 }

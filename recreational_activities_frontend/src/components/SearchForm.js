@@ -102,7 +102,7 @@ class SearchForm
                     </select>
                 </div>
 
-                <br /><br />
+                <br />
 
                 <label>Number of Records (max 50):</label>
                 <div class="control">

@@ -346,3 +346,315 @@ Processing by SearchController#search as */*
 Completed 200 OK in 1088ms (Views: 12.7ms | ActiveRecord: 0.0ms | Allocations: 23100)
 
 
+Started POST "/search" for ::1 at 2020-11-28 22:37:26 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"", "states"=>"GA", "num_records"=>"1"}
+Completed 200 OK in 836ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 2642)
+
+
+Started POST "/search" for ::1 at 2020-11-28 22:37:45 -0500
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"camping", "states"=>"GA", "num_records"=>"1"}
+Completed 200 OK in 669ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 2660)
+
+
+Started POST "/search" for ::1 at 2020-11-28 22:38:21 -0500
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"trail", "states"=>"GA", "num_records"=>"1"}
+Completed 200 OK in 696ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 2637)
+
+
+Started POST "/search" for ::1 at 2020-11-29 12:50:15 -0500
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"", "states"=>"", "num_records"=>"50"}
+Completed 200 OK in 1027ms (Views: 17.9ms | ActiveRecord: 0.0ms | Allocations: 22247)
+
+
+Started POST "/search" for ::1 at 2020-11-29 12:56:10 -0500
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"", "states"=>"", "num_records"=>"50"}
+Completed 200 OK in 1168ms (Views: 30.0ms | ActiveRecord: 0.0ms | Allocations: 21498)
+
+
+Started POST "/search" for ::1 at 2020-11-29 12:57:43 -0500
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"", "states"=>"", "num_records"=>"50"}
+Completed 200 OK in 1533ms (Views: 9.1ms | ActiveRecord: 0.0ms | Allocations: 21494)
+
+
+Started POST "/search" for ::1 at 2020-11-29 12:58:10 -0500
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"", "states"=>"", "num_records"=>"50"}
+Completed 200 OK in 1105ms (Views: 8.4ms | ActiveRecord: 0.0ms | Allocations: 21515)
+
+
+Started POST "/search" for ::1 at 2020-11-29 13:02:53 -0500
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"", "states"=>"", "num_records"=>"50"}
+Completed 200 OK in 1112ms (Views: 9.1ms | ActiveRecord: 0.0ms | Allocations: 21524)
+
+
+Started POST "/search" for ::1 at 2020-11-29 13:05:18 -0500
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"", "states"=>"", "num_records"=>"50"}
+Completed 200 OK in 1067ms (Views: 9.7ms | ActiveRecord: 0.0ms | Allocations: 21559)
+
+
+Started POST "/search" for ::1 at 2020-11-29 13:05:40 -0500
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"", "states"=>"", "num_records"=>"50"}
+Completed 200 OK in 957ms (Views: 9.7ms | ActiveRecord: 0.0ms | Allocations: 21561)
+
+
+Started POST "/search" for ::1 at 2020-11-29 13:07:35 -0500
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"", "states"=>"", "num_records"=>"50"}
+Completed 200 OK in 1013ms (Views: 32.4ms | ActiveRecord: 0.0ms | Allocations: 21527)
+
+
+Started POST "/search" for ::1 at 2020-11-29 13:13:30 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"", "states"=>"", "num_records"=>"50"}
+Completed 200 OK in 1157ms (Views: 9.3ms | ActiveRecord: 0.0ms | Allocations: 21513)
+
+
+Started POST "/search" for ::1 at 2020-11-29 13:14:42 -0500
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"", "states"=>"", "num_records"=>"50"}
+Completed 200 OK in 980ms (Views: 9.4ms | ActiveRecord: 0.0ms | Allocations: 21539)
+
+
+Started POST "/search" for ::1 at 2020-11-29 13:14:52 -0500
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"", "states"=>"", "num_records"=>"50"}
+Completed 200 OK in 996ms (Views: 8.8ms | ActiveRecord: 0.0ms | Allocations: 21518)
+
+
+Started POST "/search" for ::1 at 2020-11-29 13:17:03 -0500
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"", "states"=>"", "num_records"=>"50"}
+Completed 200 OK in 1153ms (Views: 8.9ms | ActiveRecord: 0.0ms | Allocations: 21499)
+
+
+Started POST "/search" for ::1 at 2020-11-29 13:17:26 -0500
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"", "states"=>"", "num_records"=>"50"}
+Completed 200 OK in 898ms (Views: 8.8ms | ActiveRecord: 0.0ms | Allocations: 21487)
+
+
+Started POST "/search" for ::1 at 2020-11-29 13:18:16 -0500
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"", "states"=>"", "num_records"=>"50"}
+Completed 200 OK in 958ms (Views: 8.6ms | ActiveRecord: 0.0ms | Allocations: 21547)
+
+
+Started POST "/search" for ::1 at 2020-11-29 13:22:01 -0500
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"", "states"=>"", "num_records"=>"50"}
+Completed 200 OK in 997ms (Views: 10.3ms | ActiveRecord: 0.0ms | Allocations: 21557)
+
+
+Started POST "/search" for ::1 at 2020-11-29 13:22:56 -0500
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"", "states"=>"", "num_records"=>"50"}
+Completed 200 OK in 922ms (Views: 8.8ms | ActiveRecord: 0.0ms | Allocations: 21562)
+
+
+Started POST "/search" for ::1 at 2020-11-29 13:23:35 -0500
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"", "states"=>"", "num_records"=>"50"}
+Completed 200 OK in 1054ms (Views: 8.2ms | ActiveRecord: 0.0ms | Allocations: 21541)
+
+
+Started POST "/search" for ::1 at 2020-11-29 13:23:57 -0500
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"", "states"=>"", "num_records"=>"50"}
+Completed 200 OK in 923ms (Views: 8.7ms | ActiveRecord: 0.0ms | Allocations: 21509)
+
+
+Started POST "/search" for ::1 at 2020-11-29 13:26:11 -0500
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"", "states"=>"", "num_records"=>"50"}
+Completed 200 OK in 942ms (Views: 9.2ms | ActiveRecord: 0.0ms | Allocations: 21559)
+
+
+Started POST "/search" for ::1 at 2020-11-29 13:26:46 -0500
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"", "states"=>"", "num_records"=>"50"}
+Completed 200 OK in 894ms (Views: 9.2ms | ActiveRecord: 0.0ms | Allocations: 21498)
+
+
+Started POST "/search" for ::1 at 2020-11-29 13:29:42 -0500
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"", "states"=>"", "num_records"=>"50"}
+Completed 200 OK in 1092ms (Views: 34.5ms | ActiveRecord: 0.0ms | Allocations: 21546)
+
+
+Started POST "/search" for ::1 at 2020-11-29 13:30:21 -0500
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"", "states"=>"", "num_records"=>"50"}
+Completed 200 OK in 873ms (Views: 8.7ms | ActiveRecord: 0.0ms | Allocations: 21521)
+
+
+Started POST "/search" for ::1 at 2020-11-29 13:31:17 -0500
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"", "states"=>"", "num_records"=>"50"}
+Completed 200 OK in 947ms (Views: 9.5ms | ActiveRecord: 0.0ms | Allocations: 21540)
+
+
+Started POST "/search" for ::1 at 2020-11-29 13:32:26 -0500
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"", "states"=>"", "num_records"=>"50"}
+Completed 200 OK in 872ms (Views: 8.9ms | ActiveRecord: 0.0ms | Allocations: 21490)
+
+
+Started POST "/search" for ::1 at 2020-11-29 13:32:39 -0500
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"", "states"=>"", "num_records"=>"50"}
+Completed 200 OK in 953ms (Views: 8.3ms | ActiveRecord: 0.0ms | Allocations: 21519)
+
+
+Started POST "/search" for ::1 at 2020-11-29 13:33:07 -0500
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"", "states"=>"", "num_records"=>"50"}
+Completed 200 OK in 883ms (Views: 9.1ms | ActiveRecord: 0.0ms | Allocations: 21544)
+
+
+Started POST "/search" for ::1 at 2020-11-29 13:34:17 -0500
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"", "states"=>"", "num_records"=>"50"}
+Completed 200 OK in 1070ms (Views: 29.0ms | ActiveRecord: 0.0ms | Allocations: 21524)
+
+
+Started POST "/search" for ::1 at 2020-11-29 13:34:52 -0500
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"", "states"=>"", "num_records"=>"50"}
+Completed 200 OK in 921ms (Views: 9.6ms | ActiveRecord: 0.0ms | Allocations: 21559)
+
+
+Started POST "/search" for ::1 at 2020-11-29 13:34:58 -0500
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"", "states"=>"", "num_records"=>"50"}
+Completed 200 OK in 704ms (Views: 8.3ms | ActiveRecord: 0.0ms | Allocations: 21479)
+
+
+Started POST "/search" for ::1 at 2020-11-29 13:35:39 -0500
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"camping", "states"=>"", "num_records"=>"50"}
+Completed 200 OK in 1185ms (Views: 12.5ms | ActiveRecord: 0.0ms | Allocations: 24077)
+
+
+Started POST "/search" for ::1 at 2020-11-29 13:35:50 -0500
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"camping", "states"=>"", "num_records"=>"50"}
+Started POST "/search" for ::1 at 2020-11-29 13:35:50 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"camping", "states"=>"", "num_records"=>"50"}
+Started POST "/search" for ::1 at 2020-11-29 13:35:50 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"camping", "states"=>"", "num_records"=>"50"}
+Started POST "/search" for ::1 at 2020-11-29 13:35:50 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"camping", "states"=>"", "num_records"=>"50"}
+Completed 200 OK in 1034ms (Views: 12.5ms | ActiveRecord: 0.0ms | Allocations: 32890)
+
+
+Started POST "/search" for ::1 at 2020-11-29 13:35:51 -0500
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"camping", "states"=>"", "num_records"=>"50"}
+Completed 200 OK in 1267ms (Views: 33.0ms | ActiveRecord: 0.0ms | Allocations: 53335)
+
+
+Completed 200 OK in 1487ms (Views: 14.1ms | ActiveRecord: 0.0ms | Allocations: 78624)
+
+
+Completed 200 OK in 1149ms (Views: 13.1ms | ActiveRecord: 0.0ms | Allocations: 95133)
+
+
+Completed 200 OK in 971ms (Views: 12.8ms | ActiveRecord: 0.0ms | Allocations: 93126)
+
+
+Started POST "/search" for ::1 at 2020-11-29 13:40:10 -0500
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"", "states"=>"", "num_records"=>"50"}
+Completed 200 OK in 1134ms (Views: 9.6ms | ActiveRecord: 0.0ms | Allocations: 21505)
+
+
+Started POST "/search" for ::1 at 2020-11-29 13:43:07 -0500
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"", "states"=>"", "num_records"=>"50"}
+Completed 200 OK in 1071ms (Views: 9.1ms | ActiveRecord: 0.0ms | Allocations: 21522)
+
+
+Started POST "/search" for ::1 at 2020-11-29 13:43:34 -0500
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"overnight", "states"=>"", "num_records"=>"50"}
+Completed 200 OK in 1243ms (Views: 37.3ms | ActiveRecord: 0.0ms | Allocations: 26463)
+
+
+Started POST "/search" for ::1 at 2020-11-29 13:46:38 -0500
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"", "states"=>"", "num_records"=>"50"}
+Completed 200 OK in 968ms (Views: 8.7ms | ActiveRecord: 0.0ms | Allocations: 21521)
+
+
+Started POST "/search" for ::1 at 2020-11-29 13:49:18 -0500
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"", "states"=>"", "num_records"=>"50"}
+Completed 200 OK in 1090ms (Views: 8.6ms | ActiveRecord: 0.0ms | Allocations: 21585)
+
+
+Started POST "/search" for ::1 at 2020-11-29 13:50:56 -0500
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"", "states"=>"", "num_records"=>"50"}
+Completed 200 OK in 995ms (Views: 8.8ms | ActiveRecord: 0.0ms | Allocations: 21523)
+
+
+Started POST "/search" for ::1 at 2020-11-29 13:51:16 -0500
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"", "states"=>"", "num_records"=>"50"}
+Completed 200 OK in 948ms (Views: 8.6ms | ActiveRecord: 0.0ms | Allocations: 21520)
+
+
+Started POST "/search" for ::1 at 2020-11-29 13:51:32 -0500
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"", "states"=>"", "num_records"=>"50"}
+Completed 200 OK in 897ms (Views: 9.2ms | ActiveRecord: 0.0ms | Allocations: 21606)
+
+
+Started POST "/search" for ::1 at 2020-11-29 13:53:07 -0500
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"", "states"=>"", "num_records"=>"50"}
+Completed 200 OK in 1067ms (Views: 28.3ms | ActiveRecord: 0.0ms | Allocations: 21550)
+
+
+Started POST "/search" for ::1 at 2020-11-29 13:55:21 -0500
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"", "states"=>"", "num_records"=>"50"}
+Completed 200 OK in 1114ms (Views: 9.0ms | ActiveRecord: 0.0ms | Allocations: 21515)
+
+
+Started POST "/search" for ::1 at 2020-11-29 13:56:00 -0500
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"", "states"=>"", "num_records"=>"50"}
+Completed 200 OK in 870ms (Views: 8.9ms | ActiveRecord: 0.0ms | Allocations: 21470)
+
+
+Started POST "/search" for ::1 at 2020-11-29 13:56:17 -0500
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"", "states"=>"", "num_records"=>"50"}
+Completed 200 OK in 902ms (Views: 8.7ms | ActiveRecord: 0.0ms | Allocations: 21512)
+
+
+Started POST "/search" for ::1 at 2020-11-29 13:56:58 -0500
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"", "states"=>"", "num_records"=>"50"}
+Completed 200 OK in 885ms (Views: 8.9ms | ActiveRecord: 0.0ms | Allocations: 21533)
+
+
