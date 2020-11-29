@@ -33,7 +33,7 @@ class SearchForm
     renderInnerHTML = () =>
     {
         return `
-            <label class="label">Search for Facilites</label>
+            <label class="label">Search for Recreational Areas:</label>
             
             <br />
 

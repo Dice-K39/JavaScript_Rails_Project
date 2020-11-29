@@ -4,22 +4,23 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+        <link rel="stylesheet" href="index.css">
         <title>JavaScript Rails Project</title>
     </head>
 
     <body>
-        <nav class="navbar is-fixed-top is-info">
-
-        </nav>
+        <nav class="navbar is-fixed-top is-info"></nav>
 
         <div class="columns">
-            <div class="column has-background-light is-one-fifth">
+            <div class="column side-bar has-background-light is-one-fifth is-narrow">
                 <div class="search-section"></div>
 
-                <div class="favorited-container"></div>
+                <div class="favorited-section"></div>
             </div>
 
-            <div class="column display-container"></div>
+            <div class="column display-container is-offset-one-fifth">
+                <div class="display-search"></div>
+            </div>
         </div>
         <!--SCRIPTS-->
         <script src="src/components/ActivityCard.js"></script>

@@ -1,0 +1,10 @@
+.side-bar 
+{
+  height: 100%;
+  position: fixed;
+  padding-right: 0px;
+}
+.display-container
+{
+    padding-left: 0px;
+}

@@ -1,6 +1,6 @@
 class ActivityCard
 {
-    static container = document.querySelector(".display-container")
+    static container = document.querySelector(".display-search")
 
     constructor(activity)
     {
@@ -12,6 +12,7 @@ class ActivityCard
     static getMatch(data)
     {
         data.RECDATA.forEach(activity => new ActivityCard(activity));
+        debugger
     }
 
     render()
@@ -26,9 +27,18 @@ class ActivityCard
 
     renderInnerHTML()
     {
-        this.card.innerHTML =`
-            <h2>${this.activity.FacilityName}</h2>
-            <button class="favorite-btn button is-primary">Favorite</button>
-        `
+        if (this.activity.FacilityDescription !== "")
+        {
+            this.card.innerHTML =`
+                <div class="content">
+                    <h2>Recreational Facility: ${this.activity.FacilityName}</h2>
+                    <button class="favorite-btn button is-primary">Favorite</button>
+                    <br />
+                    <label class="label">Description: </label>
+                    ${this.activity.FacilityDescription}
+                    <hr>
+                </div>
+            `
+        }
     }
 }
