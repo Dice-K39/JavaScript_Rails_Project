@@ -1,0 +1,2 @@
+class RecreationalAreasController < ApplicationController
+end
