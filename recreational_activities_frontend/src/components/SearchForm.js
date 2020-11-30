@@ -37,16 +37,23 @@ class SearchForm
             
             <br />
 
-            <label>Keyword:</label>
+            <label>Keyword Search:</label>
             <div class="control">
-                <input class="input" name="query" type="text" placeholder="Input Search Criteria">
+                <input class="input" name="keyword_query" type="text" placeholder="Input Keyword">
             </div>
             
             <br />
 
+            <label>Activity Search:</label>
+            <div class="control">
+                <input class="input" name="activity_query" type="text" placeholder="Input Activity">
+            </div>
+
+            <br />
+
             <label>State:</label>
                 <div class="control">
-                    <select name="states">
+                    <select name="state">
                         <option value="">None</option> 
                         <option value="AL">Alabama</option>
                         <option value="AK">Alaska</option>
@@ -100,13 +107,6 @@ class SearchForm
                         <option value="WI">Wisconsin</option>
                         <option value="WY">Wyoming</option>
                     </select>
-                </div>
-
-                <br />
-
-                <label>Number of Records (max 50):</label>
-                <div class="control">
-                    <input class="input" name="num_records" type="text" value="50">
                 </div>
 
                 <br />

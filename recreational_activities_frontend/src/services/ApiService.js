@@ -8,7 +8,7 @@ class ApiService
     searchActivities = () =>
     {
         const formData = new FormData(document.querySelector(".search-form"))
-        
+        debugger
         fetch(`${this.baseURL}/search`,
         {
             method: "POST",

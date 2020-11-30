@@ -34,8 +34,6 @@ class ActivityCard
         this.card.innerHTML =`
             <div class="content">
                 <h2>${this.activity.FacilityName} <button class="favorite-btn button is-primary">Favorite</button></h2>
-                
-                <br />
                 ${this.activity.FacilityDescription}
                 <hr>
             </div>
