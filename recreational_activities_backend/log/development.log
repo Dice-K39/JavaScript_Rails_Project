@@ -1760,3 +1760,263 @@ Processing by SearchController#search as */*
 Completed 200 OK in 1056ms (Views: 8.8ms | ActiveRecord: 0.0ms | Allocations: 21592)
 
 
+Started POST "/search" for ::1 at 2020-11-29 19:03:35 -0500
+Processing by SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 1028ms (Views: 8.8ms | ActiveRecord: 0.0ms | Allocations: 21562)
+
+
+Started POST "/search" for ::1 at 2020-11-29 19:10:12 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 1094ms (Views: 31.0ms | ActiveRecord: 0.0ms | Allocations: 21569)
+
+
+Started POST "/search" for ::1 at 2020-11-29 19:10:15 -0500
+Processing by SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 938ms (Views: 9.1ms | ActiveRecord: 0.0ms | Allocations: 21545)
+
+
+Started POST "/search" for ::1 at 2020-11-29 19:10:23 -0500
+Processing by SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>"HI"}
+Completed 200 OK in 815ms (Views: 1.8ms | ActiveRecord: 0.0ms | Allocations: 4385)
+
+
+Started POST "/search" for ::1 at 2020-11-29 19:10:26 -0500
+Processing by SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>"HI"}
+Completed 200 OK in 678ms (Views: 1.9ms | ActiveRecord: 0.0ms | Allocations: 4388)
+
+
+Started POST "/search" for ::1 at 2020-11-29 19:11:14 -0500
+Processing by SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 974ms (Views: 8.6ms | ActiveRecord: 0.0ms | Allocations: 21562)
+
+
+Started POST "/search" for ::1 at 2020-11-29 19:11:53 -0500
+Processing by SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 975ms (Views: 7.8ms | ActiveRecord: 0.0ms | Allocations: 21605)
+
+
+Started POST "/search" for ::1 at 2020-11-29 19:11:56 -0500
+Processing by SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 864ms (Views: 9.3ms | ActiveRecord: 0.0ms | Allocations: 21531)
+
+
+Started POST "/search" for ::1 at 2020-11-29 19:11:59 -0500
+Processing by SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"asdf", "state"=>""}
+Completed 200 OK in 629ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 2236)
+
+
+Started POST "/search" for ::1 at 2020-11-29 19:12:06 -0500
+Processing by SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"adsf", "state"=>""}
+Completed 200 OK in 925ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2235)
+
+
+Started POST "/search" for ::1 at 2020-11-29 19:12:08 -0500
+Processing by SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"adsf", "state"=>""}
+Completed 200 OK in 650ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 2232)
+
+
+Started POST "/search" for ::1 at 2020-11-29 19:12:12 -0500
+Processing by SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 999ms (Views: 36.7ms | ActiveRecord: 0.0ms | Allocations: 21535)
+
+
+Started POST "/search" for ::1 at 2020-11-29 19:12:15 -0500
+Processing by SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 926ms (Views: 8.1ms | ActiveRecord: 0.0ms | Allocations: 21590)
+
+
+Started POST "/search" for ::1 at 2020-11-29 19:12:27 -0500
+Processing by SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"camping", "state"=>""}
+Completed 200 OK in 1066ms (Views: 11.2ms | ActiveRecord: 0.0ms | Allocations: 22729)
+
+
+Started POST "/search" for ::1 at 2020-11-29 19:13:56 -0500
+Processing by SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"camping", "state"=>""}
+Completed 200 OK in 1196ms (Views: 11.2ms | ActiveRecord: 0.0ms | Allocations: 22657)
+
+
+Started POST "/search" for ::1 at 2020-11-29 19:13:59 -0500
+Processing by SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"camping", "state"=>""}
+Completed 200 OK in 1048ms (Views: 11.2ms | ActiveRecord: 0.0ms | Allocations: 22815)
+
+
+Started POST "/search" for ::1 at 2020-11-29 19:19:02 -0500
+Processing by SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"camping", "state"=>"GA"}
+Completed 200 OK in 1328ms (Views: 29.6ms | ActiveRecord: 0.0ms | Allocations: 23899)
+
+
+Started POST "/search" for ::1 at 2020-11-29 19:19:06 -0500
+Processing by SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"camping", "state"=>"GA"}
+Completed 200 OK in 1185ms (Views: 13.2ms | ActiveRecord: 0.0ms | Allocations: 23876)
+
+
+Started POST "/search" for ::1 at 2020-11-29 19:19:14 -0500
+Processing by SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"camping", "state"=>"GA"}
+Completed 200 OK in 1269ms (Views: 13.8ms | ActiveRecord: 0.0ms | Allocations: 23883)
+
+
+Started POST "/search" for ::1 at 2020-11-29 19:21:21 -0500
+Processing by SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"camping", "state"=>""}
+Completed 200 OK in 1162ms (Views: 11.6ms | ActiveRecord: 0.0ms | Allocations: 22735)
+
+
+Started POST "/search" for ::1 at 2020-11-29 19:21:24 -0500
+Processing by SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"camping", "state"=>""}
+Completed 200 OK in 1097ms (Views: 11.3ms | ActiveRecord: 0.0ms | Allocations: 22815)
+
+
+Started POST "/search" for ::1 at 2020-11-29 19:22:55 -0500
+Processing by SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"camping", "state"=>"GA"}
+Completed 200 OK in 1224ms (Views: 13.5ms | ActiveRecord: 0.0ms | Allocations: 23842)
+
+
+Started POST "/search" for ::1 at 2020-11-29 19:56:15 -0500
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"camping", "state"=>""}
+Completed 200 OK in 1329ms (Views: 20.8ms | ActiveRecord: 0.0ms | Allocations: 23504)
+
+
+Started POST "/search" for ::1 at 2020-11-29 19:56:23 -0500
+Processing by SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 932ms (Views: 28.6ms | ActiveRecord: 0.0ms | Allocations: 21565)
+
+
+Started POST "/search" for ::1 at 2020-11-29 19:56:27 -0500
+Processing by SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 834ms (Views: 9.3ms | ActiveRecord: 0.0ms | Allocations: 21600)
+
+
+Started POST "/search" for ::1 at 2020-11-29 19:56:41 -0500
+Processing by SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>"AK"}
+Completed 200 OK in 1125ms (Views: 14.0ms | ActiveRecord: 0.0ms | Allocations: 23541)
+
+
+Started POST "/search" for ::1 at 2020-11-29 20:01:46 -0500
+Processing by SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 945ms (Views: 9.4ms | ActiveRecord: 0.0ms | Allocations: 21552)
+
+
+Started POST "/search" for ::1 at 2020-11-29 20:01:55 -0500
+Processing by SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"camping", "state"=>"GA"}
+Completed 200 OK in 732ms (Views: 14.1ms | ActiveRecord: 0.0ms | Allocations: 23780)
+
+
+Started POST "/search" for ::1 at 2020-11-29 20:04:21 -0500
+Processing by SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"camping", "state"=>"GA"}
+Completed 200 OK in 1085ms (Views: 14.1ms | ActiveRecord: 0.0ms | Allocations: 23847)
+
+
+Started POST "/search" for ::1 at 2020-11-29 20:04:54 -0500
+Processing by SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 876ms (Views: 28.8ms | ActiveRecord: 0.0ms | Allocations: 21574)
+
+
+Started POST "/search" for ::1 at 2020-11-29 20:05:55 -0500
+Processing by SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"camping", "state"=>"GA"}
+Completed 200 OK in 1026ms (Views: 13.0ms | ActiveRecord: 0.0ms | Allocations: 23828)
+
+
+Started POST "/search" for ::1 at 2020-11-29 20:06:36 -0500
+Processing by SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"camping", "state"=>"GA"}
+Completed 200 OK in 990ms (Views: 13.5ms | ActiveRecord: 0.0ms | Allocations: 23836)
+
+
+Started POST "/search" for ::1 at 2020-11-29 20:07:29 -0500
+Processing by SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 877ms (Views: 8.2ms | ActiveRecord: 0.0ms | Allocations: 21559)
+
+
+Started POST "/search" for ::1 at 2020-11-29 20:08:00 -0500
+Processing by SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 791ms (Views: 8.8ms | ActiveRecord: 0.0ms | Allocations: 21483)
+
+
+Started POST "/search" for ::1 at 2020-11-29 20:08:11 -0500
+Processing by SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"camping", "state"=>"GA"}
+Completed 200 OK in 989ms (Views: 13.5ms | ActiveRecord: 0.0ms | Allocations: 23809)
+
+
+Started POST "/search" for ::1 at 2020-11-29 20:09:31 -0500
+Processing by SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 989ms (Views: 29.4ms | ActiveRecord: 0.0ms | Allocations: 21531)
+
+
+Started POST "/search" for ::1 at 2020-11-29 20:09:38 -0500
+Processing by SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"camping", "state"=>"GA"}
+Completed 200 OK in 933ms (Views: 13.7ms | ActiveRecord: 0.0ms | Allocations: 23836)
+
+
+Started POST "/search" for ::1 at 2020-11-29 20:09:55 -0500
+Processing by SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"camping", "state"=>"GA"}
+Completed 200 OK in 1129ms (Views: 12.9ms | ActiveRecord: 0.0ms | Allocations: 23843)
+
+
+Started POST "/search" for ::1 at 2020-11-29 20:14:24 -0500
+Processing by SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"camping", "state"=>"GA"}
+Completed 200 OK in 1207ms (Views: 13.1ms | ActiveRecord: 0.0ms | Allocations: 23801)
+
+
+Started POST "/search" for ::1 at 2020-11-29 20:16:03 -0500
+Processing by SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"camping", "state"=>"GA"}
+Completed 200 OK in 1167ms (Views: 12.8ms | ActiveRecord: 0.0ms | Allocations: 23929)
+
+
+Started POST "/search" for ::1 at 2020-11-29 20:17:12 -0500
+Processing by SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"camping", "state"=>"GA"}
+Completed 200 OK in 1047ms (Views: 12.4ms | ActiveRecord: 0.0ms | Allocations: 23845)
+
+
+Started POST "/search" for ::1 at 2020-11-29 20:18:51 -0500
+Processing by SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 920ms (Views: 29.3ms | ActiveRecord: 0.0ms | Allocations: 21536)
+
+
+Started POST "/search" for ::1 at 2020-11-29 20:18:59 -0500
+Processing by SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"camping", "state"=>"GA"}
+Completed 200 OK in 988ms (Views: 13.3ms | ActiveRecord: 0.0ms | Allocations: 23974)
+
+

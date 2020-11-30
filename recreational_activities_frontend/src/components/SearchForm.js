@@ -39,14 +39,14 @@ class SearchForm
 
             <label>Keyword Search:</label>
             <div class="control">
-                <input class="input" name="keyword_query" type="text" placeholder="Input Keyword">
+                <input class="input" id="keyword_query" name="keyword_query" type="text" placeholder="Input Keyword">
             </div>
             
             <br />
 
             <label>Activity Search:</label>
             <div class="control">
-                <input class="input" name="activity_query" type="text" placeholder="Input Activity">
+                <input class="input" id="activity_query" name="activity_query" type="text" placeholder="Input Activity">
             </div>
 
             <br />
@@ -112,8 +112,8 @@ class SearchForm
                 <br />
 
                 <div class="buttons">
-                    <button class="button is-primary" name="submit">Submit</button>
-                    <button class="button is-danger" name="reset">Reset</button>
+                    <button class="button is-primary" id="submit" type="submit" name="submit">Submit</button>
+                    <button class="button is-danger" id="reset" type="reset" name="reset">Reset</button>
                 </div>
         `;
     };
