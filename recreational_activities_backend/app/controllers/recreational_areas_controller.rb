@@ -1,2 +1,0 @@
-class RecreationalAreasController < ApplicationController
-end

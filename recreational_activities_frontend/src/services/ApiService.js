@@ -8,12 +8,11 @@ class ApiService
     searchActivities = () =>
     {
         const formData = new FormData(document.querySelector(".search-form"))
-        
-        fetch(`${this.baseURL}/search`,
-        {
-            method: "POST",
-            body: formData
-        })
+        const url = new URL(this.baseURL + "/api/v1/search")
+
+        url.search = new URLSearchParams(formData)
+
+        fetch(url)
             .then(res => res.json())
             .then(data => ActivityCard.getMatch(data));
     };
