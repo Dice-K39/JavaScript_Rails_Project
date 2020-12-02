@@ -5,6 +5,8 @@ class ApiService
         this.baseURL = baseURL;
     }
 
+    signupUser
+
     searchActivities = () =>
     {
         const formData = new FormData(document.querySelector(".search-form"))

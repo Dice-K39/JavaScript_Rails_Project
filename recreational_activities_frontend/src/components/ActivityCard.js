@@ -6,7 +6,6 @@ class ActivityCard
     {
         this.activity = activity;
         this.render(activity);
-        // this.attachEventListener;
     }
 
     static getMatch(data)
