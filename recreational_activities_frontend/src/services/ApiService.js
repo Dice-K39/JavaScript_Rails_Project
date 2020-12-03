@@ -7,7 +7,7 @@ class ApiService
 
     signupUser = () =>
     {
-        
+        debugger
     }
 
     searchActivities = () =>

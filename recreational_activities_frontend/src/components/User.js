@@ -26,7 +26,6 @@ class User
         {
             this.constructor.container.innerHTML = "";
             this.renderSignupForm();
-            console.log("is this working?")
         }
     }
 
@@ -38,6 +37,22 @@ class User
         form.innerHTML = this.renderSignupFormInnerHTML();
         this.form = form;
         this.constructor.container.append(form);
+        this.attachSignupEventListener();
+    }
+
+    attachSignupEventListener()
+    {
+        this.form.addEventListener("click", this.handleSignupOnClick);
+    }
+    
+    handleSignupOnClick()
+    {
+        if (event.target.id === "submit")
+        {
+            event.preventDefault()
+
+            api.signupUser();
+        }
     }
 
     submitLogin = (event) =>
@@ -45,15 +60,6 @@ class User
         event.preventDefault();
 
         // api.loginUser();
-    }
-
-    submitSignup = (event) =>
-    {debugger
-        event.preventDefault()
-
-        renderSignupFormInnerHTML();
-
-        // api.signupUser();
     }
 
     renderButtons()
@@ -77,7 +83,7 @@ class User
             <div class="signup-form columns pr-5">
                 <label class="label column" display="inline">Username: </label>
                 <input class="input column" name="username" placeholder="Enter Username">
-                <button class="button is-primary column" type="submit">Register</button>
+                <button class="button is-primary column" id="submit">Register</button>
                 <button class="button is-danger column" id="back">Back</button>
             </div>
         `

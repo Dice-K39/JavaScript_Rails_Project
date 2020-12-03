@@ -2396,3 +2396,11 @@ Processing by Api::V1::SearchController#search as */*
 Completed 200 OK in 387ms (Views: 9.7ms | ActiveRecord: 0.0ms | Allocations: 21659)
 
 
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-02 19:30:10 -0500
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 777ms (Views: 24.8ms | ActiveRecord: 0.0ms | Allocations: 22308)
+
+
