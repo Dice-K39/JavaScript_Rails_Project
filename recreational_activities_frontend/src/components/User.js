@@ -10,21 +10,34 @@ class User
 
     attachEventListener()
     {
-        const login = document.querySelector(".signup-login-button ");
+        const btns = document.querySelector(".signup-login-button ");
         
-        login.addEventListener("click", this.handleOnClick);
+        btns.addEventListener("click", () => this.handleOnClick());
     }
 
     handleOnClick()
     {
-        if(event.target.id === 'login')
+        if (event.target.id === 'login')
         {
             console.log("this is where you'll call renderlogIn")
-        } 
-        if(event.target.id === 'signup')
-        {
-            console.log("this is where you'll call renderSignup")
         }
+
+        if (event.target.id === 'signup')
+        {
+            this.constructor.container.innerHTML = "";
+            this.renderSignupForm();
+            console.log("is this working?")
+        }
+    }
+
+    renderSignupForm()
+    {
+        const form = document.createElement("form");
+
+        form.className = "signup-form";
+        form.innerHTML = this.renderSignupFormInnerHTML();
+        this.form = form;
+        this.constructor.container.append(form);
     }
 
     submitLogin = (event) =>
@@ -36,7 +49,7 @@ class User
 
     submitSignup = (event) =>
     {debugger
-        event.preventDefault();
+        event.preventDefault()
 
         renderSignupFormInnerHTML();
 
@@ -59,12 +72,13 @@ class User
     };
 
     renderSignupFormInnerHTML = () => 
-    {debugger
+    {
         return `
-            <div class="signup-form" columns pr-5">
-                <label class="label column">Username: </label>
+            <div class="signup-form columns pr-5">
+                <label class="label column" display="inline">Username: </label>
                 <input class="input column" name="username" placeholder="Enter Username">
                 <button class="button is-primary column" type="submit">Register</button>
+                <button class="button is-danger column" id="back">Back</button>
             </div>
         `
     }

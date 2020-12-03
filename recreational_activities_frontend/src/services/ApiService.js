@@ -5,7 +5,10 @@ class ApiService
         this.baseURL = baseURL;
     }
 
-    signupUser
+    signupUser = () =>
+    {
+        
+    }
 
     searchActivities = () =>
     {
