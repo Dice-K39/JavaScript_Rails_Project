@@ -1,34 +1,51 @@
 class User
 {
     static container = document.querySelector(".navbar");
-
+    
     constructor()
     {
         this.renderButtons();
-        this.attachEventListener();
+        this.attachBtnEventListener();
+    }
+    
+    renderButtons()
+    {
+        this.constructor.container.innerHTML = this.renderInnerHTML();
     }
 
-    attachEventListener()
+    attachBtnEventListener()
     {
         const btns = document.querySelector(".signup-login-button ");
         
-        btns.addEventListener("click", () => this.handleOnClick());
+        btns.addEventListener("click", () => this.handleBtnsOnClick());
     }
-
-    handleOnClick()
+    
+    handleBtnsOnClick()
     {
         if (event.target.id === 'login')
         {
-            console.log("this is where you'll call renderlogIn")
+            this.constructor.container.innerHTML = "";
+            this.renderLoginForm();
         }
-
+        
         if (event.target.id === 'signup')
         {
             this.constructor.container.innerHTML = "";
             this.renderSignupForm();
         }
     }
+    
+    renderLoginForm()
+    {
+        const form = document.createElement("form");
 
+        form.className = "login-form";
+        form.innerHTML = this.renderLoginFormInnerHTML();
+        this.form = form;
+        this.constructor.container.append(form);
+        this.attachSignupLoginEventListener();
+    }
+        
     renderSignupForm()
     {
         const form = document.createElement("form");
@@ -37,35 +54,30 @@ class User
         form.innerHTML = this.renderSignupFormInnerHTML();
         this.form = form;
         this.constructor.container.append(form);
-        this.attachSignupEventListener();
+        this.attachSignupLoginEventListener();
     }
-
-    attachSignupEventListener()
+    attachSignupLoginEventListener()
     {
-        this.form.addEventListener("click", this.handleSignupOnClick);
+        this.form.addEventListener("click", this.handleSignupLoginOnClick);
     }
     
-    handleSignupOnClick()
+    handleSignupLoginOnClick()
     {
-        if (event.target.id === "submit")
+        if (event.target.id === "login")
+        {
+            event.preventDefault();
+            
+            api.loginUser();
+        }
+
+        if (event.target.id === "signup")
         {
             event.preventDefault()
-
+    
             api.signupUser();
         }
     }
 
-    submitLogin = (event) =>
-    {debugger
-        event.preventDefault();
-
-        // api.loginUser();
-    }
-
-    renderButtons()
-    {
-        this.constructor.container.innerHTML = this.renderInnerHTML();
-    }
 
     renderInnerHTML = () =>
     {
@@ -77,13 +89,25 @@ class User
         `;
     };
 
+    renderLoginFormInnerHTML = () => 
+    {
+        return `
+            <div class="signup-form columns pr-5">
+                <label class="label column" display="inline">Username: </label>
+                <input class="input column" name="username" placeholder="Enter Username">
+                <button class="button is-primary column" id="login">Login</button>
+                <button class="button is-danger column" id="back">Back</button>
+            </div>
+        `
+    }
+
     renderSignupFormInnerHTML = () => 
     {
         return `
             <div class="signup-form columns pr-5">
                 <label class="label column" display="inline">Username: </label>
                 <input class="input column" name="username" placeholder="Enter Username">
-                <button class="button is-primary column" id="submit">Register</button>
+                <button class="button is-primary column" id="signup">Signup</button>
                 <button class="button is-danger column" id="back">Back</button>
             </div>
         `

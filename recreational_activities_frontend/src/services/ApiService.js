@@ -10,6 +10,11 @@ class ApiService
         debugger
     }
 
+    loginUser = () =>
+    {
+        debugger
+    }
+
     searchActivities = () =>
     {
         const formData = new FormData(document.querySelector(".search-form"))
