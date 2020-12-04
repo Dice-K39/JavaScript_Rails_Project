@@ -2404,3 +2404,1249 @@ Processing by Api::V1::SearchController#search as */*
 Completed 200 OK in 777ms (Views: 24.8ms | ActiveRecord: 0.0ms | Allocations: 22308)
 
 
+Started POST "/users" for ::1 at 2020-12-03 00:07:13 -0500
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [POST] "/users"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/users" for ::1 at 2020-12-03 00:12:14 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (No route matches [POST] "/users"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/users" for ::1 at 2020-12-03 00:13:41 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (No route matches [POST] "/users"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/users" for ::1 at 2020-12-03 00:14:50 -0500
+Started POST "/users" for ::1 at 2020-12-03 00:14:50 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (No route matches [POST] "/users"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  
+ActionController::RoutingError (No route matches [POST] "/users"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/users" for ::1 at 2020-12-03 00:15:34 -0500
+Started POST "/users" for ::1 at 2020-12-03 00:15:34 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/users"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  
+ActionController::RoutingError (No route matches [POST] "/users"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/users" for ::1 at 2020-12-03 00:16:06 -0500
+Started POST "/users" for ::1 at 2020-12-03 00:16:06 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/users"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  
+ActionController::RoutingError (No route matches [POST] "/users"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/users" for ::1 at 2020-12-03 00:17:48 -0500
+Started POST "/users" for ::1 at 2020-12-03 00:17:48 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (No route matches [POST] "/users"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  
+ActionController::RoutingError (No route matches [POST] "/users"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/users/create" for ::1 at 2020-12-03 00:20:51 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/users/create"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/users/create" for ::1 at 2020-12-03 00:21:21 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/users/create"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/users" for ::1 at 2020-12-03 00:22:13 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/users"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-12-03 00:23:21 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/daisukehashimoto/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/daisukehashimoto/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 6.9ms | Allocations: 317)
+Completed 200 OK in 12ms (Views: 9.1ms | ActiveRecord: 0.0ms | Allocations: 1598)
+
+
+Started GET "/favicon.ico" for ::1 at 2020-12-03 00:23:21 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users" for ::1 at 2020-12-03 00:23:28 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/users" for ::1 at 2020-12-03 00:23:46 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/users"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/users" for ::1 at 2020-12-03 00:23:46 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/users"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/api/v1/api/v1/users" for ::1 at 2020-12-03 00:26:18 -0500
+Started POST "/api/v1/api/v1/users" for ::1 at 2020-12-03 00:26:18 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (No route matches [POST] "/api/v1/api/v1/users"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  
+ActionController::RoutingError (No route matches [POST] "/api/v1/api/v1/users"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/api/v1/users" for ::1 at 2020-12-03 00:26:49 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.4ms | Allocations: 166)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/api/v1/users_controller.rb:3:in `create'
+Started POST "/api/v1/users" for ::1 at 2020-12-03 00:26:56 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 118)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/api/v1/users_controller.rb:3:in `create'
+Started POST "/api/v1/users" for ::1 at 2020-12-03 06:39:37 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/Users/daisukehashimoto/Documents/Programming/Flatiron/Projects/JavaScript_Rails_Project/recreational_activities_backend/app/controllers/api/v1/users_controller.rb:3: syntax error, unexpected ')', expecting end
+...::V1::User.create(user_params))
+...                              ^):
+  
+app/controllers/api/v1/users_controller.rb:3: syntax error, unexpected ')', expecting end
+app/controllers/api/v1/users_controller.rb:3: syntax error, unexpected ')', expecting end
+Started POST "/api/v1/users" for ::1 at 2020-12-03 06:39:39 -0500
+  
+SyntaxError (/Users/daisukehashimoto/Documents/Programming/Flatiron/Projects/JavaScript_Rails_Project/recreational_activities_backend/app/controllers/api/v1/users_controller.rb:3: syntax error, unexpected ')', expecting end
+...::V1::User.create(user_params))
+...                              ^):
+  
+app/controllers/api/v1/users_controller.rb:3: syntax error, unexpected ')', expecting end
+app/controllers/api/v1/users_controller.rb:3: syntax error, unexpected ')', expecting end
+Started POST "/api/v1/users" for ::1 at 2020-12-03 06:40:27 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.4ms | Allocations: 139)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/api/v1/users_controller.rb:11:in `user_params'
+app/controllers/api/v1/users_controller.rb:3:in `create'
+Started POST "/api/v1/users" for ::1 at 2020-12-03 06:40:30 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 118)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/api/v1/users_controller.rb:11:in `user_params'
+app/controllers/api/v1/users_controller.rb:3:in `create'
+Started POST "/api/v1/users" for ::1 at 2020-12-03 06:42:03 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 119)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/api/v1/users_controller.rb:11:in `user_params'
+app/controllers/api/v1/users_controller.rb:3:in `create'
+Started POST "/api/v1/users" for ::1 at 2020-12-03 06:42:03 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 118)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/api/v1/users_controller.rb:11:in `user_params'
+app/controllers/api/v1/users_controller.rb:3:in `create'
+Started POST "/api/v1/users" for ::1 at 2020-12-03 06:43:00 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 118)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/api/v1/users_controller.rb:11:in `user_params'
+app/controllers/api/v1/users_controller.rb:3:in `create'
+Started POST "/api/v1/users" for ::1 at 2020-12-03 06:44:18 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 118)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/api/v1/users_controller.rb:11:in `user_params'
+app/controllers/api/v1/users_controller.rb:3:in `create'
+Started POST "/api/v1/users" for ::1 at 2020-12-03 06:44:20 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 118)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/api/v1/users_controller.rb:11:in `user_params'
+app/controllers/api/v1/users_controller.rb:3:in `create'
+Started POST "/api/v1/users" for ::1 at 2020-12-03 06:45:09 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.5ms | Allocations: 139)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/api/v1/users_controller.rb:11:in `user_params'
+app/controllers/api/v1/users_controller.rb:3:in `create'
+Started POST "/api/v1/users" for ::1 at 2020-12-03 06:45:10 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 118)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/api/v1/users_controller.rb:11:in `user_params'
+app/controllers/api/v1/users_controller.rb:3:in `create'
+Started POST "/api/v1/users" for ::1 at 2020-12-03 06:47:56 -0500
+Started POST "/api/v1/users" for ::1 at 2020-12-03 06:47:56 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#create as JSON
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{}}
+  Parameters: {"user"=>{}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.5ms | Allocations: 139)
+
+
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 118)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/api/v1/users_controller.rb:11:in `user_params'
+app/controllers/api/v1/users_controller.rb:3:in `create'
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/api/v1/users_controller.rb:11:in `user_params'
+app/controllers/api/v1/users_controller.rb:3:in `create'
+Started POST "/api/v1/users" for ::1 at 2020-12-03 06:53:22 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 118)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/api/v1/users_controller.rb:11:in `user_params'
+app/controllers/api/v1/users_controller.rb:3:in `create'
+Started POST "/api/v1/users" for ::1 at 2020-12-03 06:53:25 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 118)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/api/v1/users_controller.rb:11:in `user_params'
+app/controllers/api/v1/users_controller.rb:3:in `create'
+Started POST "/api/v1/users" for ::1 at 2020-12-03 07:01:26 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 118)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/api/v1/users_controller.rb:11:in `user_params'
+app/controllers/api/v1/users_controller.rb:3:in `create'
+Started POST "/api/v1/users" for ::1 at 2020-12-03 07:01:29 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 118)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/api/v1/users_controller.rb:11:in `user_params'
+app/controllers/api/v1/users_controller.rb:3:in `create'
+Started POST "/api/v1/users" for ::1 at 2020-12-03 07:01:55 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 118)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/api/v1/users_controller.rb:11:in `user_params'
+app/controllers/api/v1/users_controller.rb:3:in `create'
+Started POST "/api/v1/users" for ::1 at 2020-12-03 07:02:39 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 120)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/api/v1/users_controller.rb:11:in `user_params'
+app/controllers/api/v1/users_controller.rb:3:in `create'
+Started POST "/api/v1/users" for ::1 at 2020-12-03 07:02:55 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 120)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/api/v1/users_controller.rb:11:in `user_params'
+app/controllers/api/v1/users_controller.rb:3:in `create'
+Started POST "/api/v1/users" for ::1 at 2020-12-03 07:03:09 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 118)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/api/v1/users_controller.rb:11:in `user_params'
+app/controllers/api/v1/users_controller.rb:3:in `create'
+Started POST "/api/v1/users" for ::1 at 2020-12-03 12:00:29 -0500
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.4ms | Allocations: 173)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/api/v1/users_controller.rb:11:in `user_params'
+app/controllers/api/v1/users_controller.rb:3:in `create'
+Started POST "/api/v1/users" for ::1 at 2020-12-03 12:00:47 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 120)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/api/v1/users_controller.rb:11:in `user_params'
+app/controllers/api/v1/users_controller.rb:3:in `create'
+Started POST "/api/v1/users" for ::1 at 2020-12-03 12:15:41 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 120)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/api/v1/users_controller.rb:11:in `user_params'
+app/controllers/api/v1/users_controller.rb:3:in `create'
+Started POST "/api/v1/users" for ::1 at 2020-12-03 12:15:52 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 120)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/api/v1/users_controller.rb:11:in `user_params'
+app/controllers/api/v1/users_controller.rb:3:in `create'
+Started POST "/api/v1/users" for ::1 at 2020-12-03 12:17:05 -0500
+Started POST "/api/v1/users" for ::1 at 2020-12-03 12:17:05 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{}}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 118)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/api/v1/users_controller.rb:11:in `user_params'
+app/controllers/api/v1/users_controller.rb:3:in `create'
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 118)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/api/v1/users_controller.rb:11:in `user_params'
+app/controllers/api/v1/users_controller.rb:3:in `create'
+Started POST "/api/v1/users" for ::1 at 2020-12-03 12:18:12 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 120)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/api/v1/users_controller.rb:11:in `user_params'
+app/controllers/api/v1/users_controller.rb:3:in `create'
+Started POST "/api/v1/users" for ::1 at 2020-12-03 12:18:12 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 118)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/api/v1/users_controller.rb:11:in `user_params'
+app/controllers/api/v1/users_controller.rb:3:in `create'
+Started POST "/api/v1/users" for ::1 at 2020-12-03 12:19:10 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 118)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/api/v1/users_controller.rb:11:in `user_params'
+app/controllers/api/v1/users_controller.rb:3:in `create'
+Started POST "/api/v1/users" for ::1 at 2020-12-03 12:19:10 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 118)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/api/v1/users_controller.rb:11:in `user_params'
+app/controllers/api/v1/users_controller.rb:3:in `create'
+Started POST "/api/v1/users" for ::1 at 2020-12-03 12:21:58 -0500
+Started POST "/api/v1/users" for ::1 at 2020-12-03 12:21:58 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{}}
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 118)
+
+
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 118)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/api/v1/users_controller.rb:11:in `user_params'
+app/controllers/api/v1/users_controller.rb:3:in `create'
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/api/v1/users_controller.rb:11:in `user_params'
+app/controllers/api/v1/users_controller.rb:3:in `create'
+Started POST "/api/v1/users" for ::1 at 2020-12-03 12:22:33 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 118)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/api/v1/users_controller.rb:11:in `user_params'
+app/controllers/api/v1/users_controller.rb:3:in `create'
+Started POST "/api/v1/users" for ::1 at 2020-12-03 12:22:45 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 118)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/api/v1/users_controller.rb:11:in `user_params'
+app/controllers/api/v1/users_controller.rb:3:in `create'
+Started POST "/api/v1/users" for ::1 at 2020-12-03 12:23:01 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 118)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/api/v1/users_controller.rb:11:in `user_params'
+app/controllers/api/v1/users_controller.rb:3:in `create'
+Started POST "/api/v1/users" for ::1 at 2020-12-03 12:24:20 -0500
+Started POST "/api/v1/users" for ::1 at 2020-12-03 12:24:20 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{}}
+Processing by Api::V1::UsersController#create as JSON
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 118)
+
+
+  Parameters: {"user"=>{}}
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/api/v1/users_controller.rb:11:in `user_params'
+app/controllers/api/v1/users_controller.rb:3:in `create'
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 118)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/api/v1/users_controller.rb:11:in `user_params'
+app/controllers/api/v1/users_controller.rb:3:in `create'
+Started POST "/api/v1/users" for ::1 at 2020-12-03 12:25:58 -0500
+Started POST "/api/v1/users" for ::1 at 2020-12-03 12:25:58 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 118)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/api/v1/users_controller.rb:11:in `user_params'
+app/controllers/api/v1/users_controller.rb:3:in `create'
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 118)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/api/v1/users_controller.rb:11:in `user_params'
+app/controllers/api/v1/users_controller.rb:3:in `create'
+Started POST "/api/v1/users" for ::1 at 2020-12-03 12:28:48 -0500
+Started POST "/api/v1/users" for ::1 at 2020-12-03 12:28:48 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{}}
+Processing by Api::V1::UsersController#create as JSON
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 118)
+
+
+  Parameters: {"user"=>{}}
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/api/v1/users_controller.rb:11:in `user_params'
+app/controllers/api/v1/users_controller.rb:3:in `create'
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 118)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/api/v1/users_controller.rb:11:in `user_params'
+app/controllers/api/v1/users_controller.rb:3:in `create'
+Started POST "/api/v1/users" for ::1 at 2020-12-03 12:29:28 -0500
+Started POST "/api/v1/users" for ::1 at 2020-12-03 12:29:28 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 118)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/api/v1/users_controller.rb:11:in `user_params'
+app/controllers/api/v1/users_controller.rb:3:in `create'
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 118)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/api/v1/users_controller.rb:11:in `user_params'
+app/controllers/api/v1/users_controller.rb:3:in `create'
+Started POST "/api/v1/users" for ::1 at 2020-12-03 12:29:51 -0500
+Started POST "/api/v1/users" for ::1 at 2020-12-03 12:29:51 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+Processing by Api::V1::UsersController#create as JSON
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[36mApi::V1::User Create (7.3ms)[0m  [1m[32mINSERT INTO "api_v1_users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Dice"], ["created_at", "2020-12-03 17:29:51.852472"], ["updated_at", "2020-12-03 17:29:51.852472"]]
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[36mApi::V1::User Create (5153.7ms)[0m  [1m[32mINSERT INTO "api_v1_users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Dice"], ["created_at", "2020-12-03 17:29:51.860996"], ["updated_at", "2020-12-03 17:29:51.860996"]]
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+Completed 500 Internal Server Error in 5166ms (ActiveRecord: 5153.9ms | Allocations: 6691)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::BusyException: database is locked):
+  
+app/controllers/api/v1/users_controller.rb:3:in `create'
+Completed 500 Internal Server Error in 138798ms (ActiveRecord: 9.0ms | Allocations: 224947)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/api/v1/users_controller.rb:5:in `create'
+Started POST "/api/v1/users" for ::1 at 2020-12-03 17:53:07 -0500
+Started POST "/api/v1/users" for ::1 at 2020-12-03 17:53:07 -0500
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::UsersController#create as JSON
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[36mApi::V1::User Create (1.1ms)[0m  [1m[32mINSERT INTO "api_v1_users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Dice"], ["created_at", "2020-12-03 22:53:07.094689"], ["updated_at", "2020-12-03 22:53:07.094689"]]
+  [1m[36mApi::V1::User Create (5165.0ms)[0m  [1m[32mINSERT INTO "api_v1_users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Dice"], ["created_at", "2020-12-03 22:53:07.096098"], ["updated_at", "2020-12-03 22:53:07.096098"]]
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+Completed 500 Internal Server Error in 5173ms (ActiveRecord: 5165.1ms | Allocations: 6441)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::BusyException: database is locked):
+  
+app/controllers/api/v1/users_controller.rb:3:in `create'
+Completed 200 OK in 21914ms (Views: 0.4ms | ActiveRecord: 2.5ms | Allocations: 141837)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-03 17:55:33 -0500
+Started POST "/api/v1/users" for ::1 at 2020-12-03 17:55:33 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/Users/daisukehashimoto/Documents/Programming/Flatiron/Projects/JavaScript_Rails_Project/recreational_activities_backend/app/controllers/api/v1/users_controller.rb:5: syntax error, unexpected tLABEL, expecting do or '{' or '('
+        render json: user only: :username
+                          ^~~~~):
+  
+app/controllers/api/v1/users_controller.rb:5: syntax error, unexpected tLABEL, expecting do or '{' or '('
+app/controllers/api/v1/users_controller.rb:5: syntax error, unexpected tLABEL, expecting do or '{' or '('
+  
+SyntaxError (/Users/daisukehashimoto/Documents/Programming/Flatiron/Projects/JavaScript_Rails_Project/recreational_activities_backend/app/controllers/api/v1/users_controller.rb:5: syntax error, unexpected tLABEL, expecting do or '{' or '('
+        render json: user only: :username
+                          ^~~~~):
+  
+app/controllers/api/v1/users_controller.rb:5: syntax error, unexpected tLABEL, expecting do or '{' or '('
+app/controllers/api/v1/users_controller.rb:5: syntax error, unexpected tLABEL, expecting do or '{' or '('
+Started POST "/api/v1/users" for ::1 at 2020-12-03 17:58:03 -0500
+Started POST "/api/v1/users" for ::1 at 2020-12-03 17:58:03 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/Users/daisukehashimoto/Documents/Programming/Flatiron/Projects/JavaScript_Rails_Project/recreational_activities_backend/app/controllers/api/v1/users_controller.rb:5: syntax error, unexpected tLABEL, expecting do or '{' or '('
+...      render json: user except: [:created_at, :updated_at]
+...                        ^~~~~~~):
+  
+app/controllers/api/v1/users_controller.rb:5: syntax error, unexpected tLABEL, expecting do or '{' or '('
+app/controllers/api/v1/users_controller.rb:5: syntax error, unexpected tLABEL, expecting do or '{' or '('
+  
+SyntaxError (/Users/daisukehashimoto/Documents/Programming/Flatiron/Projects/JavaScript_Rails_Project/recreational_activities_backend/app/controllers/api/v1/users_controller.rb:5: syntax error, unexpected tLABEL, expecting do or '{' or '('
+...      render json: user except: [:created_at, :updated_at]
+...                        ^~~~~~~):
+  
+app/controllers/api/v1/users_controller.rb:5: syntax error, unexpected tLABEL, expecting do or '{' or '('
+app/controllers/api/v1/users_controller.rb:5: syntax error, unexpected tLABEL, expecting do or '{' or '('
+Started POST "/api/v1/users" for ::1 at 2020-12-03 17:58:44 -0500
+Started POST "/api/v1/users" for ::1 at 2020-12-03 17:58:44 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#create as JSON
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[36mApi::V1::User Create (0.5ms)[0m  [1m[32mINSERT INTO "api_v1_users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Dice"], ["created_at", "2020-12-03 22:58:45.067991"], ["updated_at", "2020-12-03 22:58:45.067991"]]
+  [1m[36mApi::V1::User Create (5168.0ms)[0m  [1m[32mINSERT INTO "api_v1_users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Dice"], ["created_at", "2020-12-03 22:58:45.068954"], ["updated_at", "2020-12-03 22:58:45.068954"]]
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+Completed 200 OK in 5181ms (Views: 0.3ms | ActiveRecord: 2.5ms | Allocations: 9042)
+
+
+Completed 500 Internal Server Error in 5177ms (ActiveRecord: 5168.0ms | Allocations: 6540)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::BusyException: database is locked):
+  
+app/controllers/api/v1/users_controller.rb:3:in `create'
+Started POST "/api/v1/users" for ::1 at 2020-12-03 18:00:55 -0500
+Started POST "/api/v1/users" for ::1 at 2020-12-03 18:00:55 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[36mApi::V1::User Create (0.4ms)[0m  [1m[32mINSERT INTO "api_v1_users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Dice"], ["created_at", "2020-12-03 23:00:55.463579"], ["updated_at", "2020-12-03 23:00:55.463579"]]
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+Completed 200 OK in 9ms (Views: 0.3ms | ActiveRecord: 1.9ms | Allocations: 4964)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[36mApi::V1::User Create (0.3ms)[0m  [1m[32mINSERT INTO "api_v1_users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Dice"], ["created_at", "2020-12-03 23:00:55.524766"], ["updated_at", "2020-12-03 23:00:55.524766"]]
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 1.9ms | Allocations: 4932)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-03 18:01:50 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[36mApi::V1::User Create (0.4ms)[0m  [1m[32mINSERT INTO "api_v1_users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Dice"], ["created_at", "2020-12-03 23:01:50.558067"], ["updated_at", "2020-12-03 23:01:50.558067"]]
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 1.3ms | Allocations: 2423)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-03 18:08:35 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[36mApi::V1::User Create (0.4ms)[0m  [1m[32mINSERT INTO "api_v1_users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Dice"], ["created_at", "2020-12-03 23:08:35.341313"], ["updated_at", "2020-12-03 23:08:35.341313"]]
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 1.1ms | Allocations: 2420)
+
+

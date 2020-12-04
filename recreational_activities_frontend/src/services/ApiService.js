@@ -4,23 +4,37 @@ class ApiService
     {
         this.baseURL = baseURL;
     }
-
-    signupUser = () =>
-    {
-        debugger
-    }
-
+    
     loginUser = () =>
     {
         debugger
     }
 
+    signupUser = (passedData) =>
+    {
+
+        const configObj =
+        {
+            method: "POST",
+            headers:
+            {
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+            },
+            body: JSON.stringify(passedData)
+        };
+
+        fetch(`${this.baseURL}/users`, configObj)
+            .then(res => res.json())
+            .then(data => console.log(data))
+    }
+
     searchActivities = () =>
     {
-        const formData = new FormData(document.querySelector(".search-form"))
-        const url = new URL(this.baseURL + "/api/v1/search")
+        const formData = new FormData(document.querySelector(".search-form"));
+        const url = new URL(this.baseURL + "/api/v1/search");
 
-        url.search = new URLSearchParams(formData)
+        url.search = new URLSearchParams(formData);
 
         fetch(url)
             .then(res => res.json())
