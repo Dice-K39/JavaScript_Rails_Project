@@ -7,7 +7,13 @@ class ApiService
     
     loginUser = (userName) =>
     {
-        const url = new URL(this.baseURL + "/users")
+        const url = new URL(this.baseURL + "/users");
+
+        url.search = new URLSearchParams(userName);
+
+        fetch(url)
+            .then(res => res.json())
+            .then(data => new User(data));
     }
 
     signupUser = (userName) =>

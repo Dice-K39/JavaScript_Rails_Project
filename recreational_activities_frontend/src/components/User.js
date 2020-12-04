@@ -52,8 +52,8 @@ class User
 
         if (event.target.id === "logout")
         {
-            const searchForm = document.querySelector(".search-form");
-
+            const searchForm = document.querySelector(".search-section");
+            
             searchForm.innerHTML = "";
 
             new User();
