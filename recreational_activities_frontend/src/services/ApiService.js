@@ -5,12 +5,12 @@ class ApiService
         this.baseURL = baseURL;
     }
     
-    loginUser = () =>
+    loginUser = (userName) =>
     {
-        debugger
+        const url = new URL(this.baseURL + "/users")
     }
 
-    signupUser = (passedData) =>
+    signupUser = (userName) =>
     {
 
         const configObj =
@@ -21,7 +21,7 @@ class ApiService
                 "Content-Type": "application/json",
                 "Accept": "application/json"
             },
-            body: JSON.stringify(passedData)
+            body: JSON.stringify(userName)
         };
 
         fetch(`${this.baseURL}/users`, configObj)
@@ -32,7 +32,7 @@ class ApiService
     searchActivities = () =>
     {
         const formData = new FormData(document.querySelector(".search-form"));
-        const url = new URL(this.baseURL + "/api/v1/search");
+        const url = new URL(this.baseURL + "/search");
 
         url.search = new URLSearchParams(formData);
 

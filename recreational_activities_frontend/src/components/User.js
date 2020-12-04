@@ -1,7 +1,6 @@
 class User
 {
     static container = document.querySelector(".navbar");
-
     
     constructor(user = null)
     {
@@ -10,6 +9,7 @@ class User
             this.user = user;
             this.displayName(user);
             this.attachBtnEventListener();
+            new SearchForm();
         }
         else
         {
@@ -33,7 +33,7 @@ class User
     attachBtnEventListener()
     {
         let btns;
-debugger
+
         if (this.user)
         {
             btns = document.querySelector(".logged-in")
@@ -49,7 +49,19 @@ debugger
     handleBtnsOnClick()
     {
         this.constructor.container.innerHTML = "";
-        this.renderForm();
+
+        if (event.target.id === "logout")
+        {
+            const searchForm = document.querySelector(".search-form");
+
+            searchForm.innerHTML = "";
+
+            new User();
+        }
+        else
+        {
+            this.renderForm();
+        }
     }
 
     renderForm()
@@ -70,23 +82,21 @@ debugger
     
     handleSignupLoginOnClick()
     {
+        const userName = event.currentTarget.username.value;
+        const data = 
+        {
+            username: userName
+        }
+
+        event.preventDefault();
+
         if (event.target.id === "login")
         {
-            event.preventDefault();
-            
-            api.loginUser();
+            api.loginUser(data);
         }
 
         if (event.target.id === "signup")
         {
-            event.preventDefault()
-    
-            const username = event.currentTarget.username.value;
-            const data =
-            {
-                username: username
-            }
-
             api.signupUser(data);
         }
 
