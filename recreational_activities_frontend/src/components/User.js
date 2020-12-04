@@ -53,8 +53,10 @@ class User
         if (event.target.id === "logout")
         {
             const searchForm = document.querySelector(".search-section");
+            const displayContainer = document.querySelector(".display-container");
             
             searchForm.innerHTML = "";
+            displayContainer.innerHTML = "";
 
             new User();
         }
