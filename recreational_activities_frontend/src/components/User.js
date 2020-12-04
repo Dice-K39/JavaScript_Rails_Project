@@ -1,13 +1,30 @@
 class User
 {
     static container = document.querySelector(".navbar");
+
     
-    constructor()
+    constructor(user = null)
     {
-        this.renderButtons();
-        this.attachBtnEventListener();
+        if (user)
+        {
+            this.user = user;
+            this.displayName(user);
+            this.attachBtnEventListener();
+        }
+        else
+        {
+            this.renderButtons();
+            this.attachBtnEventListener();
+        }
     }
     
+    displayName(user)
+    {
+
+        this.constructor.container.innerHTML = "";
+        this.constructor.container.innerHTML = this.constructor.renderLoggedIn(user);
+    }
+
     renderButtons()
     {
         this.constructor.container.innerHTML = this.renderInnerHTML();
@@ -15,7 +32,16 @@ class User
 
     attachBtnEventListener()
     {
-        const btns = document.querySelector(".signup-login-button ");
+        let btns;
+debugger
+        if (this.user)
+        {
+            btns = document.querySelector(".logged-in")
+        }
+        else
+        {
+            btns = document.querySelector(".signup-login-button");
+        }
         
         btns.addEventListener("click", () => this.handleBtnsOnClick());
     }
@@ -96,6 +122,16 @@ class User
                     `<button class="button is-primary column" id="signup">Signup</button>` : `<button class="button is-primary column" id="login">Login</button>`}
                 <button class="button is-danger column" id="back">Back</button>
             </div>
-        `
+        `;
+    }
+
+    static renderLoggedIn = (data) =>
+    {
+        return `
+            <div class="logged-in columns pr-5">
+                <label class="label column">Welcome: ${data.username}</label>
+                <button class="button is-danger column" id="logout">Logout</button>
+            </div>
+        `;
     }
 }

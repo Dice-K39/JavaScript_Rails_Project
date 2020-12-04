@@ -26,7 +26,7 @@ class ApiService
 
         fetch(`${this.baseURL}/users`, configObj)
             .then(res => res.json())
-            .then(data => console.log(data))
+            .then(data => new User(data))
     }
 
     searchActivities = () =>

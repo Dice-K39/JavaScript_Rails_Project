@@ -3702,3 +3702,585 @@ Processing by Api::V1::UsersController#create as JSON
 Completed 200 OK in 12ms (Views: 0.4ms | ActiveRecord: 2.6ms | Allocations: 4900)
 
 
+Started POST "/api/v1/users" for ::1 at 2020-12-04 13:29:06 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[36mApi::V1::User Create (0.4ms)[0m  [1m[32mINSERT INTO "api_v1_users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Dice"], ["created_at", "2020-12-04 18:29:06.267452"], ["updated_at", "2020-12-04 18:29:06.267452"]]
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+Completed 200 OK in 5ms (Views: 0.5ms | ActiveRecord: 1.5ms | Allocations: 2401)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-04 13:29:23 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"amatasora39", "user"=>{"username"=>"amatasora39"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[36mApi::V1::User Create (0.4ms)[0m  [1m[32mINSERT INTO "api_v1_users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "amatasora39"], ["created_at", "2020-12-04 18:29:23.029598"], ["updated_at", "2020-12-04 18:29:23.029598"]]
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 1.3ms | Allocations: 2406)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-04 13:29:43 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"unice", "user"=>{"username"=>"unice"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[36mApi::V1::User Create (0.4ms)[0m  [1m[32mINSERT INTO "api_v1_users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "unice"], ["created_at", "2020-12-04 18:29:43.848938"], ["updated_at", "2020-12-04 18:29:43.848938"]]
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 1.3ms | Allocations: 2406)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-04 13:30:10 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"quadice", "user"=>{"username"=>"quadice"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[36mApi::V1::User Create (0.4ms)[0m  [1m[32mINSERT INTO "api_v1_users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "quadice"], ["created_at", "2020-12-04 18:30:10.315591"], ["updated_at", "2020-12-04 18:30:10.315591"]]
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 1.2ms | Allocations: 2390)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-04 13:36:24 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[36mApi::V1::User Create (0.3ms)[0m  [1m[32mINSERT INTO "api_v1_users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Dice"], ["created_at", "2020-12-04 18:36:24.286806"], ["updated_at", "2020-12-04 18:36:24.286806"]]
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 1.2ms | Allocations: 2390)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-04 13:36:50 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[36mApi::V1::User Create (0.4ms)[0m  [1m[32mINSERT INTO "api_v1_users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Dice"], ["created_at", "2020-12-04 18:36:50.281601"], ["updated_at", "2020-12-04 18:36:50.281601"]]
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 1.3ms | Allocations: 2390)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-04 13:37:04 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"", "user"=>{"username"=>""}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[36mApi::V1::User Create (0.6ms)[0m  [1m[32mINSERT INTO "api_v1_users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", ""], ["created_at", "2020-12-04 18:37:04.089165"], ["updated_at", "2020-12-04 18:37:04.089165"]]
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 1.7ms | Allocations: 2390)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-04 13:57:00 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[36mApi::V1::User Create (0.5ms)[0m  [1m[32mINSERT INTO "api_v1_users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Dice"], ["created_at", "2020-12-04 18:57:00.583388"], ["updated_at", "2020-12-04 18:57:00.583388"]]
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 1.3ms | Allocations: 2390)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-04 13:59:10 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[36mApi::V1::User Create (0.3ms)[0m  [1m[32mINSERT INTO "api_v1_users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Dice"], ["created_at", "2020-12-04 18:59:10.338917"], ["updated_at", "2020-12-04 18:59:10.338917"]]
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 1.1ms | Allocations: 2390)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-04 13:59:36 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[36mApi::V1::User Create (0.4ms)[0m  [1m[32mINSERT INTO "api_v1_users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Dice"], ["created_at", "2020-12-04 18:59:36.689120"], ["updated_at", "2020-12-04 18:59:36.689120"]]
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 1.2ms | Allocations: 2390)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-04 13:59:54 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[36mApi::V1::User Create (0.4ms)[0m  [1m[32mINSERT INTO "api_v1_users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Dice"], ["created_at", "2020-12-04 18:59:54.023634"], ["updated_at", "2020-12-04 18:59:54.023634"]]
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 1.1ms | Allocations: 2390)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-04 14:01:53 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[36mApi::V1::User Create (0.5ms)[0m  [1m[32mINSERT INTO "api_v1_users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Dice"], ["created_at", "2020-12-04 19:01:53.181893"], ["updated_at", "2020-12-04 19:01:53.181893"]]
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 1.9ms | Allocations: 2390)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-04 14:02:28 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"trice", "user"=>{"username"=>"trice"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[36mApi::V1::User Create (0.3ms)[0m  [1m[32mINSERT INTO "api_v1_users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "trice"], ["created_at", "2020-12-04 19:02:28.574390"], ["updated_at", "2020-12-04 19:02:28.574390"]]
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 1.2ms | Allocations: 2390)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-04 14:03:00 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[36mApi::V1::User Create (0.7ms)[0m  [1m[32mINSERT INTO "api_v1_users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Dice"], ["created_at", "2020-12-04 19:03:00.069095"], ["updated_at", "2020-12-04 19:03:00.069095"]]
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 1.5ms | Allocations: 2391)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-04 14:03:21 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[36mApi::V1::User Create (0.4ms)[0m  [1m[32mINSERT INTO "api_v1_users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Dice"], ["created_at", "2020-12-04 19:03:21.108930"], ["updated_at", "2020-12-04 19:03:21.108930"]]
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 1.4ms | Allocations: 2391)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-04 14:04:15 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[36mApi::V1::User Create (0.4ms)[0m  [1m[32mINSERT INTO "api_v1_users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Dice"], ["created_at", "2020-12-04 19:04:15.806205"], ["updated_at", "2020-12-04 19:04:15.806205"]]
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 1.3ms | Allocations: 2390)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-04 14:04:28 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[36mApi::V1::User Create (0.4ms)[0m  [1m[32mINSERT INTO "api_v1_users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Dice"], ["created_at", "2020-12-04 19:04:28.142574"], ["updated_at", "2020-12-04 19:04:28.142574"]]
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 1.7ms | Allocations: 2390)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-04 14:06:42 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[36mApi::V1::User Create (0.4ms)[0m  [1m[32mINSERT INTO "api_v1_users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Dice"], ["created_at", "2020-12-04 19:06:42.049645"], ["updated_at", "2020-12-04 19:06:42.049645"]]
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 1.3ms | Allocations: 2390)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-04 14:07:05 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[36mApi::V1::User Create (1.2ms)[0m  [1m[32mINSERT INTO "api_v1_users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Dice"], ["created_at", "2020-12-04 19:07:05.939679"], ["updated_at", "2020-12-04 19:07:05.939679"]]
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+Completed 200 OK in 9ms (Views: 0.4ms | ActiveRecord: 2.6ms | Allocations: 2390)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-04 14:07:37 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[36mApi::V1::User Create (0.4ms)[0m  [1m[32mINSERT INTO "api_v1_users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Dice"], ["created_at", "2020-12-04 19:07:37.334014"], ["updated_at", "2020-12-04 19:07:37.334014"]]
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 1.3ms | Allocations: 2390)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-04 14:08:07 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[36mApi::V1::User Create (0.9ms)[0m  [1m[32mINSERT INTO "api_v1_users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Dice"], ["created_at", "2020-12-04 19:08:07.606069"], ["updated_at", "2020-12-04 19:08:07.606069"]]
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 2.0ms | Allocations: 2390)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-04 14:08:21 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[36mApi::V1::User Create (0.5ms)[0m  [1m[32mINSERT INTO "api_v1_users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Dice"], ["created_at", "2020-12-04 19:08:21.284779"], ["updated_at", "2020-12-04 19:08:21.284779"]]
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 1.6ms | Allocations: 2390)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-04 14:08:43 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[36mApi::V1::User Create (2.2ms)[0m  [1m[32mINSERT INTO "api_v1_users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Dice"], ["created_at", "2020-12-04 19:08:43.906246"], ["updated_at", "2020-12-04 19:08:43.906246"]]
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+Completed 200 OK in 9ms (Views: 0.2ms | ActiveRecord: 3.3ms | Allocations: 2390)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-04 14:09:43 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[36mApi::V1::User Create (0.3ms)[0m  [1m[32mINSERT INTO "api_v1_users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Dice"], ["created_at", "2020-12-04 19:09:43.114864"], ["updated_at", "2020-12-04 19:09:43.114864"]]
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 1.2ms | Allocations: 2390)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-04 14:10:18 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[36mApi::V1::User Create (0.4ms)[0m  [1m[32mINSERT INTO "api_v1_users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Dice"], ["created_at", "2020-12-04 19:10:18.365791"], ["updated_at", "2020-12-04 19:10:18.365791"]]
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 1.2ms | Allocations: 2390)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-04 14:12:45 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[36mApi::V1::User Create (0.4ms)[0m  [1m[32mINSERT INTO "api_v1_users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Dice"], ["created_at", "2020-12-04 19:12:45.420879"], ["updated_at", "2020-12-04 19:12:45.420879"]]
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 1.2ms | Allocations: 2390)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-04 14:15:12 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[36mApi::V1::User Create (1.1ms)[0m  [1m[32mINSERT INTO "api_v1_users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Dice"], ["created_at", "2020-12-04 19:15:12.056290"], ["updated_at", "2020-12-04 19:15:12.056290"]]
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 2.2ms | Allocations: 2390)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-04 14:19:24 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[36mApi::V1::User Create (0.4ms)[0m  [1m[32mINSERT INTO "api_v1_users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Dice"], ["created_at", "2020-12-04 19:19:24.824443"], ["updated_at", "2020-12-04 19:19:24.824443"]]
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 1.1ms | Allocations: 2390)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-04 14:29:36 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[36mApi::V1::User Create (0.4ms)[0m  [1m[32mINSERT INTO "api_v1_users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Dice"], ["created_at", "2020-12-04 19:29:36.816478"], ["updated_at", "2020-12-04 19:29:36.816478"]]
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 1.2ms | Allocations: 2390)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-04 14:31:17 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[36mApi::V1::User Create (0.4ms)[0m  [1m[32mINSERT INTO "api_v1_users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Dice"], ["created_at", "2020-12-04 19:31:17.789373"], ["updated_at", "2020-12-04 19:31:17.789373"]]
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 1.2ms | Allocations: 2390)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-04 14:44:22 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[36mApi::V1::User Create (0.4ms)[0m  [1m[32mINSERT INTO "api_v1_users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Dice"], ["created_at", "2020-12-04 19:44:22.619992"], ["updated_at", "2020-12-04 19:44:22.619992"]]
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 1.0ms | Allocations: 2391)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-04 14:44:49 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[36mApi::V1::User Create (0.4ms)[0m  [1m[32mINSERT INTO "api_v1_users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Dice"], ["created_at", "2020-12-04 19:44:49.624778"], ["updated_at", "2020-12-04 19:44:49.624778"]]
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 1.2ms | Allocations: 2390)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-04 14:45:28 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[36mApi::V1::User Create (0.4ms)[0m  [1m[32mINSERT INTO "api_v1_users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Dice"], ["created_at", "2020-12-04 19:45:28.453583"], ["updated_at", "2020-12-04 19:45:28.453583"]]
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 1.2ms | Allocations: 2390)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-04 14:45:54 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[36mApi::V1::User Create (0.3ms)[0m  [1m[32mINSERT INTO "api_v1_users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Dice"], ["created_at", "2020-12-04 19:45:54.270815"], ["updated_at", "2020-12-04 19:45:54.270815"]]
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 1.2ms | Allocations: 2390)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-04 14:48:16 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[36mApi::V1::User Create (0.8ms)[0m  [1m[32mINSERT INTO "api_v1_users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Dice"], ["created_at", "2020-12-04 19:48:16.682331"], ["updated_at", "2020-12-04 19:48:16.682331"]]
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 1.7ms | Allocations: 2390)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-04 14:49:13 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[36mApi::V1::User Create (0.5ms)[0m  [1m[32mINSERT INTO "api_v1_users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Dice"], ["created_at", "2020-12-04 19:49:13.123291"], ["updated_at", "2020-12-04 19:49:13.123291"]]
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 1.3ms | Allocations: 2390)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-04 14:49:55 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[36mApi::V1::User Create (0.4ms)[0m  [1m[32mINSERT INTO "api_v1_users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Dice"], ["created_at", "2020-12-04 19:49:55.946061"], ["updated_at", "2020-12-04 19:49:55.946061"]]
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+Completed 200 OK in 5ms (Views: 0.6ms | ActiveRecord: 1.4ms | Allocations: 2390)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-04 14:50:35 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[36mApi::V1::User Create (0.5ms)[0m  [1m[32mINSERT INTO "api_v1_users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Dice"], ["created_at", "2020-12-04 19:50:35.847236"], ["updated_at", "2020-12-04 19:50:35.847236"]]
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+Completed 200 OK in 6ms (Views: 0.7ms | ActiveRecord: 1.6ms | Allocations: 2390)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-04 14:51:21 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[36mApi::V1::User Create (0.4ms)[0m  [1m[32mINSERT INTO "api_v1_users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Dice"], ["created_at", "2020-12-04 19:51:21.908270"], ["updated_at", "2020-12-04 19:51:21.908270"]]
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 1.3ms | Allocations: 2390)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-04 14:52:26 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[36mApi::V1::User Create (0.4ms)[0m  [1m[32mINSERT INTO "api_v1_users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Dice"], ["created_at", "2020-12-04 19:52:26.089059"], ["updated_at", "2020-12-04 19:52:26.089059"]]
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 1.2ms | Allocations: 2390)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-04 14:53:05 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[36mApi::V1::User Create (0.7ms)[0m  [1m[32mINSERT INTO "api_v1_users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Dice"], ["created_at", "2020-12-04 19:53:05.694229"], ["updated_at", "2020-12-04 19:53:05.694229"]]
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 1.5ms | Allocations: 2390)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-04 14:54:20 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[36mApi::V1::User Create (0.5ms)[0m  [1m[32mINSERT INTO "api_v1_users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Dice"], ["created_at", "2020-12-04 19:54:20.101138"], ["updated_at", "2020-12-04 19:54:20.101138"]]
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 1.9ms | Allocations: 2390)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-04 15:16:52 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[36mApi::V1::User Create (0.4ms)[0m  [1m[32mINSERT INTO "api_v1_users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Dice"], ["created_at", "2020-12-04 20:16:52.921343"], ["updated_at", "2020-12-04 20:16:52.921343"]]
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 1.1ms | Allocations: 2390)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-04 15:18:08 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[36mApi::V1::User Create (0.3ms)[0m  [1m[32mINSERT INTO "api_v1_users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Dice"], ["created_at", "2020-12-04 20:18:08.252713"], ["updated_at", "2020-12-04 20:18:08.252713"]]
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 1.2ms | Allocations: 2390)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-04 15:21:35 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[36mApi::V1::User Create (0.3ms)[0m  [1m[32mINSERT INTO "api_v1_users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Dice"], ["created_at", "2020-12-04 20:21:35.204830"], ["updated_at", "2020-12-04 20:21:35.204830"]]
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 1.2ms | Allocations: 2390)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-04 15:21:48 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[36mApi::V1::User Create (0.4ms)[0m  [1m[32mINSERT INTO "api_v1_users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Dice"], ["created_at", "2020-12-04 20:21:48.503567"], ["updated_at", "2020-12-04 20:21:48.503567"]]
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 1.3ms | Allocations: 2390)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-04 15:22:59 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[36mApi::V1::User Create (0.4ms)[0m  [1m[32mINSERT INTO "api_v1_users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Dice"], ["created_at", "2020-12-04 20:22:59.026720"], ["updated_at", "2020-12-04 20:22:59.026720"]]
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 1.1ms | Allocations: 2390)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-04 15:28:26 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[36mApi::V1::User Create (0.9ms)[0m  [1m[32mINSERT INTO "api_v1_users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Dice"], ["created_at", "2020-12-04 20:28:26.771040"], ["updated_at", "2020-12-04 20:28:26.771040"]]
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:3:in `create'
+Completed 200 OK in 22ms (Views: 0.3ms | ActiveRecord: 1.9ms | Allocations: 2393)
+
+
