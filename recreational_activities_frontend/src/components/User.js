@@ -22,40 +22,21 @@ class User
     
     handleBtnsOnClick()
     {
-        if (event.target.id === 'login')
-        {
-            this.constructor.container.innerHTML = "";
-            this.renderLoginForm();
-        }
-        
-        if (event.target.id === 'signup')
-        {
-            this.constructor.container.innerHTML = "";
-            this.renderSignupForm();
-        }
+        this.constructor.container.innerHTML = "";
+        this.renderForm();
     }
-    
-    renderLoginForm()
+
+    renderForm()
     {
         const form = document.createElement("form");
 
-        form.className = "login-form";
-        form.innerHTML = this.renderLoginFormInnerHTML();
+        form.className = "signup-login-form";
+        form.innerHTML = this.renderSignupLoginFormInnerHTML();
         this.form = form;
         this.constructor.container.append(form);
         this.attachSignupLoginEventListener();
     }
-        
-    renderSignupForm()
-    {
-        const form = document.createElement("form");
 
-        form.className = "signup-form";
-        form.innerHTML = this.renderSignupFormInnerHTML();
-        this.form = form;
-        this.constructor.container.append(form);
-        this.attachSignupLoginEventListener();
-    }
     attachSignupLoginEventListener()
     {
         this.form.addEventListener("click", () => this.handleSignupLoginOnClick());
@@ -105,25 +86,14 @@ class User
         `;
     };
 
-    renderLoginFormInnerHTML = () => 
+    renderSignupLoginFormInnerHTML = () =>
     {
         return `
-            <div class="login-form columns pr-5">
+            <div class="signup-login columns pr-5">
                 <label class="label column">Username: </label>
                 <input class="input column" id="username" placeholder="Enter Username">
-                <button class="button is-primary column" id="login">Login</button>
-                <button class="button is-danger column" id="back">Back</button>
-            </div>
-        `
-    }
-
-    renderSignupFormInnerHTML = () => 
-    {
-        return `
-            <div class="signup columns pr-5">
-                <label class="label column">Username: </label>
-                <input class="input column" id="username" placeholder="Enter Username">
-                <button class="button is-primary column" id="signup">Signup</button>
+                ${event.target.id === "signup" ? 
+                    `<button class="button is-primary column" id="signup">Signup</button>` : `<button class="button is-primary column" id="login">Login</button>`}
                 <button class="button is-danger column" id="back">Back</button>
             </div>
         `
