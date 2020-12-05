@@ -24,7 +24,7 @@ class SearchForm
         
         if (event.target.id === "reset")
         {
-            document.querySelector(".display-search").innerHTML = "";
+            document.querySelector(".display-search").innerText = "";
         }
     }
 
