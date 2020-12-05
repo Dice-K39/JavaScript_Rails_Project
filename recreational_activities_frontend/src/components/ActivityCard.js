@@ -24,21 +24,21 @@ class ActivityCard
             card.className = "card";
             this.card = card;
             this.renderInnerHTML();
+            this.attachEventListener(card);
             this.constructor.container.append(card);
-            this.attachEventListener();
         }
     }
 
-    attachEventListener = () =>
+    attachEventListener = (card) =>
     {
-        const favBtn = document.querySelector(".display-search");
-
-        favBtn.addEventListener("click", (event) => this.handleBtnOnClick(event));
+        card.addEventListener("click", () => this.handleBtnOnClick());
     }
 
-    handleBtnOnClick(event)
+    handleBtnOnClick()
     {
-        event.stopImmediatePropagation()
+        // event.stopImmediatePropagation()
+
+        // console.log(this.activity)
         console.log("hi")
     }
 
