@@ -25,7 +25,21 @@ class ActivityCard
             this.card = card;
             this.renderInnerHTML();
             this.constructor.container.append(card);
+            this.attachEventListener();
         }
+    }
+
+    attachEventListener = () =>
+    {
+        const favBtn = document.querySelector(".display-search");
+
+        favBtn.addEventListener("click", (event) => this.handleBtnOnClick(event));
+    }
+
+    handleBtnOnClick(event)
+    {
+        event.stopImmediatePropagation()
+        console.log("hi")
     }
 
     renderInnerHTML()

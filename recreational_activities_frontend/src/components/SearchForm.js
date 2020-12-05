@@ -10,14 +10,22 @@ class SearchForm
 
     attachEventListener()
     {
-        this.form.addEventListener("submit", this.handleOnSubmit);
+        this.form.addEventListener("click", () => this.handleOnClick());
     }
 
-    handleOnSubmit = (event) =>
+    handleOnClick()
     {
-        event.preventDefault();
+        if (event.target.id === "submit")
+        {
+            event.preventDefault();
 
-        api.searchActivities();
+            api.searchActivities();
+        }
+        
+        if (event.target.id === "reset")
+        {
+            document.querySelector(".display-search").innerHTML = "";
+        }
     }
 
     render()
@@ -52,7 +60,7 @@ class SearchForm
             <br />
 
             <label>State:</label>
-                <div class="control">
+                <div class="control" id="state">
                     <select name="state">
                         <option value="">None</option> 
                         <option value="AL">Alabama</option>
@@ -112,8 +120,8 @@ class SearchForm
                 <br />
 
                 <div class="buttons">
-                    <button class="button is-primary" id="submit" type="submit" name="submit">Submit</button>
-                    <button class="button is-danger" id="reset" type="reset" name="reset">Reset</button>
+                    <button class="button is-primary" id="submit">Submit</button>
+                    <button class="button is-danger" id="reset" type="reset">Reset</button>
                 </div>
         `;
     };
