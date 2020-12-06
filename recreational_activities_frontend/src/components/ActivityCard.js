@@ -1,7 +1,6 @@
 class ActivityCard
 {
     static container = document.querySelector(".display-search")
-    static favorited = false;
 
     constructor(activity)
     {
@@ -51,7 +50,7 @@ class ActivityCard
             facility_phone: recreationalArea.FacilityPhone
         };
 
-        api.favoriteArea(userID, data);
+        api.saveFavoriteArea(userID, data);
     }
 
     renderInnerHTML()

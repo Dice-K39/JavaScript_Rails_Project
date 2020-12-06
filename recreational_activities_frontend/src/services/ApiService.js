@@ -46,7 +46,7 @@ class ApiService
             .then(data => ActivityCard.getMatch(data));
     };
 
-    favoriteArea = (userID, data) =>
+    saveFavoriteArea = (userID, data) =>
     {
         const url = new URL(this.baseURL + `/users/${userID}/recreational_areas`)
         const configObj =
@@ -62,6 +62,6 @@ class ApiService
 
         fetch(url, configObj)
             .then(res => res.json())
-            .then(data => console.log(data))
+            .then(data => data);
     }
 }

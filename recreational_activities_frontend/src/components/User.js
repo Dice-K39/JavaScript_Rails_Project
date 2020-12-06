@@ -117,8 +117,6 @@ class User
 
         if (event.target.id === "back")
         {
-            // event.preventDefault();
-
             const navbar = document.querySelector(".navbar");
 
             navbar.innerHTML = "";
@@ -149,5 +147,4 @@ class User
             </div>
         `;
     }
-
 }

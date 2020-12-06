@@ -9,7 +9,7 @@ class Api::V1::RecreationalAreasController < ApplicationController
 
     def create
         user = Api::V1::User.find_by_username(params[:username])
-        byebug
+        
         rec_area = user.recreational_areas.create(rec_area_params)
 
         render json: rec_area, except: [:created_at, :updated_at]
