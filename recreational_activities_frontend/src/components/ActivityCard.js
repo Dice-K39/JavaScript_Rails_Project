@@ -35,11 +35,19 @@ class ActivityCard
     }
 
     handleBtnOnClick()
-    {debugger
-        // event.stopImmediatePropagation()
+    {
+        const recreationalArea = this.activity;
+        const data =
+        {
+            facility_name: recreationalArea.FacilityName,
+            facility_description: recreationalArea.FacilityDescription,
+            facility_id: recreationalArea.FacilityID,
+            facility_directions: recreationalArea.FacilityDirections,
+            facility_email: recreationalArea.FacilityEmail,
+            facility_phone: recreationalArea.FacilityPhone
+        };
 
-        // console.log(this.activity)
-        console.log("hi")
+        api.favoriteArea(data);
     }
 
     renderInnerHTML()
