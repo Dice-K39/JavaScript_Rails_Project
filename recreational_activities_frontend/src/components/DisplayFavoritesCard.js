@@ -4,8 +4,17 @@ class DisplayFavoritesCard
 
     constructor(favoriteArea)
     {
+        // Used when pushing favorite button on the cards.
         this.favoriteArea = favoriteArea;
-        this.render();
+
+        if(this.favoriteArea.length === undefined)
+        {debugger
+            this.render();
+        }
+        else
+        {debugger
+            this.renderFavorites();
+        }
     }
 
     render()
@@ -14,15 +23,28 @@ class DisplayFavoritesCard
 
         card.className = "favorite-card";
         this.card = card;
-        this.renderInnerHTML();
+        this.renderInnerHTML(this.favoriteArea);
         this.constructor.container.append(card);
     }
 
-    renderInnerHTML = () =>
+    renderFavorites()
+    {
+        this.favoriteArea.forEach(area =>
+        {
+            const card = document.createElement("div");
+    
+            card.className = "favorite-card";
+            this.card = card;
+            this.renderInnerHTML(area);
+            this.constructor.container.append(card);
+        });    
+    }
+
+    renderInnerHTML = (area) =>
     {
         this.card.innerHTML = `
             <div class="favorite">
-                ${this.favoriteArea.facility_name}
+                ${area.facility_name}
                 <span class="close">x</span>
             </div>
         `;

@@ -8457,3 +8457,1390 @@ Processing by Api::V1::RecreationalAreasController#create as JSON
 Completed 200 OK in 12ms (Views: 0.3ms | ActiveRecord: 1.3ms | Allocations: 3596)
 
 
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 16:15:09 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 705)
+
+
+Started GET "/api/v1/users[object%20Object]/recreational_areas" for ::1 at 2020-12-06 16:15:09 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/users[object%20Object]/recreational_areas"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-06 16:15:22 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 485ms (Views: 9.5ms | ActiveRecord: 0.0ms | Allocations: 21573)
+
+
+Started POST "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-06 16:15:26 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"username"=>"Dice", "facility_name"=>"Tower Fall Campground", "facility_description"=>"Tower Fall Campground—elevation 6,600 feet (2012 m)—is located on the north side of the steep, winding, road to Dunraven Pass. The campground is near the Tower General Store and Tower Fall, where Tower Creek plunges over 130 feet down to its confluence with the Yellowstone River. On the road over Dunraven Pass, a six-mile trail provides access to the summit of Mount Washburn. Roosevelt Lodge, a short drive from the campground, offers dining and horseback riding.", "facility_id"=>"259308", "facility_directions"=>"This campground is located on the road between Tower Fall and Canyon--north of Dunraven Pass and 3.5 miles (5.6 km) south of Tower-Roosevelt Junction.", "facility_email"=>"yell_visitor_services@nps.gov", "facility_phone"=>"(307) 344-7381", "user_id"=>"1", "recreational_area"=>{"facility_name"=>"Tower Fall Campground", "facility_description"=>"Tower Fall Campground—elevation 6,600 feet (2012 m)—is located on the north side of the steep, winding, road to Dunraven Pass. The campground is near the Tower General Store and Tower Fall, where Tower Creek plunges over 130 feet down to its confluence with the Yellowstone River. On the road over Dunraven Pass, a six-mile trail provides access to the summit of Mount Washburn. Roosevelt Lodge, a short drive from the campground, offers dining and horseback riding.", "facility_id"=>"259308", "facility_directions"=>"This campground is located on the road between Tower Fall and Canyon--north of Dunraven Pass and 3.5 miles (5.6 km) south of Tower-Roosevelt Junction.", "facility_email"=>"yell_visitor_services@nps.gov", "facility_phone"=>"(307) 344-7381"}}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:11:in `create'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[36mApi::V1::RecreationalArea Create (0.4ms)[0m  [1m[32mINSERT INTO "api_v1_recreational_areas" ("facility_name", "facility_description", "created_at", "updated_at", "facility_id", "facility_directions", "facility_email", "facility_phone", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["facility_name", "Tower Fall Campground"], ["facility_description", "Tower Fall Campground—elevation 6,600 feet (2012 m)—is located on the north side of the steep, winding, road to Dunraven Pass. The campground is near the Tower General Store and Tower Fall, where Tower Creek plunges over 130 feet down to its confluence with the Yellowstone River. On the road over Dunraven Pass, a six-mile trail provides access to the summit of Mount Washburn. Roosevelt Lodge, a short drive from the campground, offers dining and horseback riding."], ["created_at", "2020-12-06 21:15:26.405442"], ["updated_at", "2020-12-06 21:15:26.405442"], ["facility_id", "259308"], ["facility_directions", "This campground is located on the road between Tower Fall and Canyon--north of Dunraven Pass and 3.5 miles (5.6 km) south of Tower-Roosevelt Junction."], ["facility_email", "yell_visitor_services@nps.gov"], ["facility_phone", "(307) 344-7381"], ["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+Completed 200 OK in 15ms (Views: 0.4ms | ActiveRecord: 1.5ms | Allocations: 3596)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 16:15:33 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users[object%20Object]/recreational_areas" for ::1 at 2020-12-06 16:15:33 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/users[object%20Object]/recreational_areas"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 16:17:04 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.4ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 690)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 16:20:32 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 16:20:55 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users1/recreational_areas?Dice=" for ::1 at 2020-12-06 16:20:58 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/users1/recreational_areas"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 16:21:46 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 690)
+
+
+Started GET "/api/v1/users/1/recreational_areas?Dice=" for ::1 at 2020-12-06 16:21:49 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"Dice"=>"", "user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:3:in `index'
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms | Allocations: 1187)
+
+
+  
+NoMethodError (undefined method `recreational_areas' for nil:NilClass):
+  
+app/controllers/api/v1/recreational_areas_controller.rb:5:in `index'
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 16:22:19 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 0.6ms | Allocations: 4650)
+
+
+Started GET "/api/v1/users/1/recreational_areas?Dice=" for ::1 at 2020-12-06 16:22:23 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"Dice"=>"", "user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:4:in `index'
+Completed 500 Internal Server Error in 183331ms (ActiveRecord: 0.2ms | Allocations: 9171)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 16:25:26 -0500
+  
+NoMethodError (undefined method `recreational_areas' for nil:NilClass):
+  
+app/controllers/api/v1/recreational_areas_controller.rb:6:in `index'
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 690)
+
+
+Started GET "/api/v1/users/1/recreational_areas?username=Dice" for ::1 at 2020-12-06 16:25:42 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"username"=>"Dice", "user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:4:in `index'
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-06 16:25:56 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:8:in `index'
+Completed 200 OK in 14077ms (Views: 9.7ms | ActiveRecord: 0.8ms | Allocations: 21818)
+
+
+Completed 200 OK in 549ms (Views: 8.1ms | ActiveRecord: 0.0ms | Allocations: 31426)
+
+
+Started POST "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-06 16:26:12 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"username"=>"Dice", "facility_name"=>"Tower Fall Campground", "facility_description"=>"Tower Fall Campground—elevation 6,600 feet (2012 m)—is located on the north side of the steep, winding, road to Dunraven Pass. The campground is near the Tower General Store and Tower Fall, where Tower Creek plunges over 130 feet down to its confluence with the Yellowstone River. On the road over Dunraven Pass, a six-mile trail provides access to the summit of Mount Washburn. Roosevelt Lodge, a short drive from the campground, offers dining and horseback riding.", "facility_id"=>"259308", "facility_directions"=>"This campground is located on the road between Tower Fall and Canyon--north of Dunraven Pass and 3.5 miles (5.6 km) south of Tower-Roosevelt Junction.", "facility_email"=>"yell_visitor_services@nps.gov", "facility_phone"=>"(307) 344-7381", "user_id"=>"1", "recreational_area"=>{"facility_name"=>"Tower Fall Campground", "facility_description"=>"Tower Fall Campground—elevation 6,600 feet (2012 m)—is located on the north side of the steep, winding, road to Dunraven Pass. The campground is near the Tower General Store and Tower Fall, where Tower Creek plunges over 130 feet down to its confluence with the Yellowstone River. On the road over Dunraven Pass, a six-mile trail provides access to the summit of Mount Washburn. Roosevelt Lodge, a short drive from the campground, offers dining and horseback riding.", "facility_id"=>"259308", "facility_directions"=>"This campground is located on the road between Tower Fall and Canyon--north of Dunraven Pass and 3.5 miles (5.6 km) south of Tower-Roosevelt Junction.", "facility_email"=>"yell_visitor_services@nps.gov", "facility_phone"=>"(307) 344-7381"}}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:12:in `create'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:14:in `create'
+  [1m[36mApi::V1::RecreationalArea Create (0.3ms)[0m  [1m[32mINSERT INTO "api_v1_recreational_areas" ("facility_name", "facility_description", "created_at", "updated_at", "facility_id", "facility_directions", "facility_email", "facility_phone", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["facility_name", "Tower Fall Campground"], ["facility_description", "Tower Fall Campground—elevation 6,600 feet (2012 m)—is located on the north side of the steep, winding, road to Dunraven Pass. The campground is near the Tower General Store and Tower Fall, where Tower Creek plunges over 130 feet down to its confluence with the Yellowstone River. On the road over Dunraven Pass, a six-mile trail provides access to the summit of Mount Washburn. Roosevelt Lodge, a short drive from the campground, offers dining and horseback riding."], ["created_at", "2020-12-06 21:26:12.405782"], ["updated_at", "2020-12-06 21:26:12.405782"], ["facility_id", "259308"], ["facility_directions", "This campground is located on the road between Tower Fall and Canyon--north of Dunraven Pass and 3.5 miles (5.6 km) south of Tower-Roosevelt Junction."], ["facility_email", "yell_visitor_services@nps.gov"], ["facility_phone", "(307) 344-7381"], ["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:14:in `create'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:14:in `create'
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 1.4ms | Allocations: 3672)
+
+
+Started POST "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-06 16:26:14 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"username"=>"Dice", "facility_name"=>"Yeoman Park Discovery Trailhead", "facility_description"=>"<p>This short interpretive trail is at an elevation of 9000 feet. It is designed to accommodate those forest visitors that may be disabled. The terrain is level with a packed small gravel surface. The trail is relatively straight and passes through a stand of mature blue spruce and sub-alpine fir trees and ends at a bench overlooking one of Yeoman Park’s small beaver ponds. Along the way there are several log benches to relax and take in the view. The Yeoman Park Discovery Trail has 7 unique interpretive signs focusing on the use of senses to explore nature. The signs were designed with many touchable features and they are accessible to those with disabilities. The natural subjects covered by the signs include Colorado mammals, wildflowers, rocks, trees, archaeology and water. There are many opportunities along the trail to view the behaviors of common tree and ground squirrels, as well as many species of birds such as mountain chickadees, Stellar’s jays and gray jays.</p><p>* There is a <a href=\"../../../../../../../../../../Internet/FSE_DOCUMENTS/stelprdb5186415.pdf\">printable Recreation Quicksheet for this trail</a> which is complete with directions, a map, details, and other information about this trail. Or to see quicksheets for other recreation areas across the Forest, click on the \"Recreation Quicksheets\" link in the right column and select the appropriate Ranger District.</p>", "facility_id"=>"10082507", "facility_directions"=>"From I-70 exit 147 for Eagle, turn south on Eby Creek Rd to the Route 6 roundabout.At roundabout, turn right (west) on Route 6/Grand Ave and travel 0.8 miles to next roundabout. At this roundabout, take the third right onto Sylvan Lake Road.Continue 1.6 miles to Brush Creek Road, and take a right on Brush Creek Road.Follow Brush Creek Rd for roughly 9 miles to the fork of East and West Brush Creek.Turn left onto East Brush Creek Rd., FDR 415 and drive for 6 miles to Yeoman Park.Enter the campground and drive to the end of Loop A where the trailhead is located.", "facility_email"=>"", "facility_phone"=>"", "user_id"=>"1", "recreational_area"=>{"facility_name"=>"Yeoman Park Discovery Trailhead", "facility_description"=>"<p>This short interpretive trail is at an elevation of 9000 feet. It is designed to accommodate those forest visitors that may be disabled. The terrain is level with a packed small gravel surface. The trail is relatively straight and passes through a stand of mature blue spruce and sub-alpine fir trees and ends at a bench overlooking one of Yeoman Park’s small beaver ponds. Along the way there are several log benches to relax and take in the view. The Yeoman Park Discovery Trail has 7 unique interpretive signs focusing on the use of senses to explore nature. The signs were designed with many touchable features and they are accessible to those with disabilities. The natural subjects covered by the signs include Colorado mammals, wildflowers, rocks, trees, archaeology and water. There are many opportunities along the trail to view the behaviors of common tree and ground squirrels, as well as many species of birds such as mountain chickadees, Stellar’s jays and gray jays.</p><p>* There is a <a href=\"../../../../../../../../../../Internet/FSE_DOCUMENTS/stelprdb5186415.pdf\">printable Recreation Quicksheet for this trail</a> which is complete with directions, a map, details, and other information about this trail. Or to see quicksheets for other recreation areas across the Forest, click on the \"Recreation Quicksheets\" link in the right column and select the appropriate Ranger District.</p>", "facility_id"=>"10082507", "facility_directions"=>"From I-70 exit 147 for Eagle, turn south on Eby Creek Rd to the Route 6 roundabout.At roundabout, turn right (west) on Route 6/Grand Ave and travel 0.8 miles to next roundabout. At this roundabout, take the third right onto Sylvan Lake Road.Continue 1.6 miles to Brush Creek Road, and take a right on Brush Creek Road.Follow Brush Creek Rd for roughly 9 miles to the fork of East and West Brush Creek.Turn left onto East Brush Creek Rd., FDR 415 and drive for 6 miles to Yeoman Park.Enter the campground and drive to the end of Loop A where the trailhead is located.", "facility_email"=>"", "facility_phone"=>""}}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:12:in `create'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:14:in `create'
+  [1m[36mApi::V1::RecreationalArea Create (0.5ms)[0m  [1m[32mINSERT INTO "api_v1_recreational_areas" ("facility_name", "facility_description", "created_at", "updated_at", "facility_id", "facility_directions", "facility_email", "facility_phone", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["facility_name", "Yeoman Park Discovery Trailhead"], ["facility_description", "<p>This short interpretive trail is at an elevation of 9000 feet. It is designed to accommodate those forest visitors that may be disabled. The terrain is level with a packed small gravel surface. The trail is relatively straight and passes through a stand of mature blue spruce and sub-alpine fir trees and ends at a bench overlooking one of Yeoman Park’s small beaver ponds. Along the way there are several log benches to relax and take in the view. The Yeoman Park Discovery Trail has 7 unique interpretive signs focusing on the use of senses to explore nature. The signs were designed with many touchable features and they are accessible to those with disabilities. The natural subjects covered by the signs include Colorado mammals, wildflowers, rocks, trees, archaeology and water. There are many opportunities along the trail to view the behaviors of common tree and ground squirrels, as well as many species of birds such as mountain chickadees, Stellar’s jays and gray jays.</p><p>* There is a <a href=\"../../../../../../../../../../Internet/FSE_DOCUMENTS/stelprdb5186415.pdf\">printable Recreation Quicksheet for this trail</a> which is complete with directions, a map, details, and other information about this trail. Or to see quicksheets for other recreation areas across the Forest, click on the \"Recreation Quicksheets\" link in the right column and select the appropriate Ranger District.</p>"], ["created_at", "2020-12-06 21:26:14.657504"], ["updated_at", "2020-12-06 21:26:14.657504"], ["facility_id", "10082507"], ["facility_directions", "From I-70 exit 147 for Eagle, turn south on Eby Creek Rd to the Route 6 roundabout.At roundabout, turn right (west) on Route 6/Grand Ave and travel 0.8 miles to next roundabout. At this roundabout, take the third right onto Sylvan Lake Road.Continue 1.6 miles to Brush Creek Road, and take a right on Brush Creek Road.Follow Brush Creek Rd for roughly 9 miles to the fork of East and West Brush Creek.Turn left onto East Brush Creek Rd., FDR 415 and drive for 6 miles to Yeoman Park.Enter the campground and drive to the end of Loop A where the trailhead is located."], ["facility_email", ""], ["facility_phone", ""], ["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:14:in `create'
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:14:in `create'
+Completed 200 OK in 7ms (Views: 0.5ms | ActiveRecord: 1.9ms | Allocations: 3612)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 16:26:18 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas?username=Dice" for ::1 at 2020-12-06 16:26:20 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"username"=>"Dice", "user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:4:in `index'
+  [1m[36mApi::V1::RecreationalArea Load (0.2ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:8:in `index'
+Completed 200 OK in 4552ms (Views: 1.7ms | ActiveRecord: 0.3ms | Allocations: 9889)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 16:38:55 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.5ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 9ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 4283)
+
+
+Started GET "/api/v1/users/1/recreational_areas?username=Dice" for ::1 at 2020-12-06 16:38:55 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"username"=>"Dice", "user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:3:in `index'
+  [1m[36mApi::V1::RecreationalArea Load (0.6ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 16ms (Views: 11.1ms | ActiveRecord: 0.8ms | Allocations: 8905)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-06 16:39:30 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 401ms (Views: 9.0ms | ActiveRecord: 0.0ms | Allocations: 21632)
+
+
+Started POST "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-06 16:39:31 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"username"=>"Dice", "facility_name"=>"Tower Fall Campground", "facility_description"=>"Tower Fall Campground—elevation 6,600 feet (2012 m)—is located on the north side of the steep, winding, road to Dunraven Pass. The campground is near the Tower General Store and Tower Fall, where Tower Creek plunges over 130 feet down to its confluence with the Yellowstone River. On the road over Dunraven Pass, a six-mile trail provides access to the summit of Mount Washburn. Roosevelt Lodge, a short drive from the campground, offers dining and horseback riding.", "facility_id"=>"259308", "facility_directions"=>"This campground is located on the road between Tower Fall and Canyon--north of Dunraven Pass and 3.5 miles (5.6 km) south of Tower-Roosevelt Junction.", "facility_email"=>"yell_visitor_services@nps.gov", "facility_phone"=>"(307) 344-7381", "user_id"=>"1", "recreational_area"=>{"facility_name"=>"Tower Fall Campground", "facility_description"=>"Tower Fall Campground—elevation 6,600 feet (2012 m)—is located on the north side of the steep, winding, road to Dunraven Pass. The campground is near the Tower General Store and Tower Fall, where Tower Creek plunges over 130 feet down to its confluence with the Yellowstone River. On the road over Dunraven Pass, a six-mile trail provides access to the summit of Mount Washburn. Roosevelt Lodge, a short drive from the campground, offers dining and horseback riding.", "facility_id"=>"259308", "facility_directions"=>"This campground is located on the road between Tower Fall and Canyon--north of Dunraven Pass and 3.5 miles (5.6 km) south of Tower-Roosevelt Junction.", "facility_email"=>"yell_visitor_services@nps.gov", "facility_phone"=>"(307) 344-7381"}}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:11:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[36mApi::V1::RecreationalArea Create (0.4ms)[0m  [1m[32mINSERT INTO "api_v1_recreational_areas" ("facility_name", "facility_description", "created_at", "updated_at", "facility_id", "facility_directions", "facility_email", "facility_phone", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["facility_name", "Tower Fall Campground"], ["facility_description", "Tower Fall Campground—elevation 6,600 feet (2012 m)—is located on the north side of the steep, winding, road to Dunraven Pass. The campground is near the Tower General Store and Tower Fall, where Tower Creek plunges over 130 feet down to its confluence with the Yellowstone River. On the road over Dunraven Pass, a six-mile trail provides access to the summit of Mount Washburn. Roosevelt Lodge, a short drive from the campground, offers dining and horseback riding."], ["created_at", "2020-12-06 21:39:31.844989"], ["updated_at", "2020-12-06 21:39:31.844989"], ["facility_id", "259308"], ["facility_directions", "This campground is located on the road between Tower Fall and Canyon--north of Dunraven Pass and 3.5 miles (5.6 km) south of Tower-Roosevelt Junction."], ["facility_email", "yell_visitor_services@nps.gov"], ["facility_phone", "(307) 344-7381"], ["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+Completed 200 OK in 9ms (Views: 0.3ms | ActiveRecord: 1.4ms | Allocations: 3650)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 16:42:48 -0500
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 11ms (Views: 1.5ms | ActiveRecord: 0.6ms | Allocations: 5405)
+
+
+Started GET "/api/v1/users/1/recreational_areas?username=Dice" for ::1 at 2020-12-06 16:42:48 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"username"=>"Dice", "user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:3:in `index'
+  [1m[36mApi::V1::RecreationalArea Load (0.2ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 37ms (Views: 28.7ms | ActiveRecord: 0.8ms | Allocations: 11250)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 16:44:55 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 707)
+
+
+Started GET "/api/v1/users/1/recreational_areas?username=Dice" for ::1 at 2020-12-06 16:44:55 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"username"=>"Dice", "user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:3:in `index'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.2ms | Allocations: 1642)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 16:46:06 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 707)
+
+
+Started GET "/api/v1/users/1/recreational_areas?username=Dice" for ::1 at 2020-12-06 16:46:06 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"username"=>"Dice", "user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:3:in `index'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 6ms (Views: 3.9ms | ActiveRecord: 0.2ms | Allocations: 1642)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 16:50:20 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 0.6ms | ActiveRecord: 0.2ms | Allocations: 707)
+
+
+Started GET "/api/v1/users/1/recreational_areas?username=Dice" for ::1 at 2020-12-06 16:50:20 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"username"=>"Dice", "user_id"=>"1"}
+  [1m[36mApi::V1::User Load (1.0ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:3:in `index'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 6ms (Views: 3.9ms | ActiveRecord: 1.1ms | Allocations: 1642)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 16:51:19 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas?username=Dice" for ::1 at 2020-12-06 16:51:19 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"username"=>"Dice", "user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:3:in `index'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 5ms (Views: 1.9ms | ActiveRecord: 0.3ms | Allocations: 1641)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-06 16:51:54 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 811ms (Views: 10.7ms | ActiveRecord: 0.0ms | Allocations: 22273)
+
+
+Started POST "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-06 16:51:56 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"username"=>"Dice", "facility_name"=>"Yeoman Park Discovery Trailhead", "facility_description"=>"<p>This short interpretive trail is at an elevation of 9000 feet. It is designed to accommodate those forest visitors that may be disabled. The terrain is level with a packed small gravel surface. The trail is relatively straight and passes through a stand of mature blue spruce and sub-alpine fir trees and ends at a bench overlooking one of Yeoman Park’s small beaver ponds. Along the way there are several log benches to relax and take in the view. The Yeoman Park Discovery Trail has 7 unique interpretive signs focusing on the use of senses to explore nature. The signs were designed with many touchable features and they are accessible to those with disabilities. The natural subjects covered by the signs include Colorado mammals, wildflowers, rocks, trees, archaeology and water. There are many opportunities along the trail to view the behaviors of common tree and ground squirrels, as well as many species of birds such as mountain chickadees, Stellar’s jays and gray jays.</p><p>* There is a <a href=\"../../../../../../../../../../Internet/FSE_DOCUMENTS/stelprdb5186415.pdf\">printable Recreation Quicksheet for this trail</a> which is complete with directions, a map, details, and other information about this trail. Or to see quicksheets for other recreation areas across the Forest, click on the \"Recreation Quicksheets\" link in the right column and select the appropriate Ranger District.</p>", "facility_id"=>"10082507", "facility_directions"=>"From I-70 exit 147 for Eagle, turn south on Eby Creek Rd to the Route 6 roundabout.At roundabout, turn right (west) on Route 6/Grand Ave and travel 0.8 miles to next roundabout. At this roundabout, take the third right onto Sylvan Lake Road.Continue 1.6 miles to Brush Creek Road, and take a right on Brush Creek Road.Follow Brush Creek Rd for roughly 9 miles to the fork of East and West Brush Creek.Turn left onto East Brush Creek Rd., FDR 415 and drive for 6 miles to Yeoman Park.Enter the campground and drive to the end of Loop A where the trailhead is located.", "facility_email"=>"", "facility_phone"=>"", "user_id"=>"1", "recreational_area"=>{"facility_name"=>"Yeoman Park Discovery Trailhead", "facility_description"=>"<p>This short interpretive trail is at an elevation of 9000 feet. It is designed to accommodate those forest visitors that may be disabled. The terrain is level with a packed small gravel surface. The trail is relatively straight and passes through a stand of mature blue spruce and sub-alpine fir trees and ends at a bench overlooking one of Yeoman Park’s small beaver ponds. Along the way there are several log benches to relax and take in the view. The Yeoman Park Discovery Trail has 7 unique interpretive signs focusing on the use of senses to explore nature. The signs were designed with many touchable features and they are accessible to those with disabilities. The natural subjects covered by the signs include Colorado mammals, wildflowers, rocks, trees, archaeology and water. There are many opportunities along the trail to view the behaviors of common tree and ground squirrels, as well as many species of birds such as mountain chickadees, Stellar’s jays and gray jays.</p><p>* There is a <a href=\"../../../../../../../../../../Internet/FSE_DOCUMENTS/stelprdb5186415.pdf\">printable Recreation Quicksheet for this trail</a> which is complete with directions, a map, details, and other information about this trail. Or to see quicksheets for other recreation areas across the Forest, click on the \"Recreation Quicksheets\" link in the right column and select the appropriate Ranger District.</p>", "facility_id"=>"10082507", "facility_directions"=>"From I-70 exit 147 for Eagle, turn south on Eby Creek Rd to the Route 6 roundabout.At roundabout, turn right (west) on Route 6/Grand Ave and travel 0.8 miles to next roundabout. At this roundabout, take the third right onto Sylvan Lake Road.Continue 1.6 miles to Brush Creek Road, and take a right on Brush Creek Road.Follow Brush Creek Rd for roughly 9 miles to the fork of East and West Brush Creek.Turn left onto East Brush Creek Rd., FDR 415 and drive for 6 miles to Yeoman Park.Enter the campground and drive to the end of Loop A where the trailhead is located.", "facility_email"=>"", "facility_phone"=>""}}
+  [1m[36mApi::V1::User Load (0.3ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:11:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[36mApi::V1::RecreationalArea Create (2.0ms)[0m  [1m[32mINSERT INTO "api_v1_recreational_areas" ("facility_name", "facility_description", "created_at", "updated_at", "facility_id", "facility_directions", "facility_email", "facility_phone", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["facility_name", "Yeoman Park Discovery Trailhead"], ["facility_description", "<p>This short interpretive trail is at an elevation of 9000 feet. It is designed to accommodate those forest visitors that may be disabled. The terrain is level with a packed small gravel surface. The trail is relatively straight and passes through a stand of mature blue spruce and sub-alpine fir trees and ends at a bench overlooking one of Yeoman Park’s small beaver ponds. Along the way there are several log benches to relax and take in the view. The Yeoman Park Discovery Trail has 7 unique interpretive signs focusing on the use of senses to explore nature. The signs were designed with many touchable features and they are accessible to those with disabilities. The natural subjects covered by the signs include Colorado mammals, wildflowers, rocks, trees, archaeology and water. There are many opportunities along the trail to view the behaviors of common tree and ground squirrels, as well as many species of birds such as mountain chickadees, Stellar’s jays and gray jays.</p><p>* There is a <a href=\"../../../../../../../../../../Internet/FSE_DOCUMENTS/stelprdb5186415.pdf\">printable Recreation Quicksheet for this trail</a> which is complete with directions, a map, details, and other information about this trail. Or to see quicksheets for other recreation areas across the Forest, click on the \"Recreation Quicksheets\" link in the right column and select the appropriate Ranger District.</p>"], ["created_at", "2020-12-06 21:51:56.283607"], ["updated_at", "2020-12-06 21:51:56.283607"], ["facility_id", "10082507"], ["facility_directions", "From I-70 exit 147 for Eagle, turn south on Eby Creek Rd to the Route 6 roundabout.At roundabout, turn right (west) on Route 6/Grand Ave and travel 0.8 miles to next roundabout. At this roundabout, take the third right onto Sylvan Lake Road.Continue 1.6 miles to Brush Creek Road, and take a right on Brush Creek Road.Follow Brush Creek Rd for roughly 9 miles to the fork of East and West Brush Creek.Turn left onto East Brush Creek Rd., FDR 415 and drive for 6 miles to Yeoman Park.Enter the campground and drive to the end of Loop A where the trailhead is located."], ["facility_email", ""], ["facility_phone", ""], ["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+Completed 200 OK in 11ms (Views: 0.3ms | ActiveRecord: 3.3ms | Allocations: 3858)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 16:54:04 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas?username=Dice" for ::1 at 2020-12-06 16:54:04 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"username"=>"Dice", "user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:3:in `index'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.2ms | Allocations: 1842)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 16:55:47 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas?username=Dice" for ::1 at 2020-12-06 16:55:47 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"username"=>"Dice", "user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:3:in `index'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.2ms | Allocations: 1842)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 16:56:55 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.4ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 692)
+
+
+Started GET "/api/v1/users/1/recreational_areas?username=Dice" for ::1 at 2020-12-06 16:56:55 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"username"=>"Dice", "user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:3:in `index'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.3ms | Allocations: 1842)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 16:58:45 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 707)
+
+
+Started GET "/api/v1/users/1/recreational_areas?username=Dice" for ::1 at 2020-12-06 16:58:45 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"username"=>"Dice", "user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:3:in `index'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 0.4ms | Allocations: 1843)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 17:05:08 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 705)
+
+
+Started GET "/api/v1/users/1/recreational_areas?username=Dice" for ::1 at 2020-12-06 17:05:08 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"username"=>"Dice", "user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.3ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:3:in `index'
+  [1m[36mApi::V1::RecreationalArea Load (0.2ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 7ms (Views: 4.3ms | ActiveRecord: 0.5ms | Allocations: 1867)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 17:05:28 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas?username=Dice" for ::1 at 2020-12-06 17:05:28 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"username"=>"Dice", "user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:3:in `index'
+  [1m[36mApi::V1::RecreationalArea Load (0.4ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.5ms | Allocations: 1842)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 17:07:18 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas?username=Dice" for ::1 at 2020-12-06 17:07:18 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"username"=>"Dice", "user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:3:in `index'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.2ms | Allocations: 1842)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 17:07:31 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas?username=Dice" for ::1 at 2020-12-06 17:07:31 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"username"=>"Dice", "user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:3:in `index'
+  [1m[36mApi::V1::RecreationalArea Load (0.2ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 0.4ms | Allocations: 1842)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 17:07:59 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas?username=Dice" for ::1 at 2020-12-06 17:07:59 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"username"=>"Dice", "user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:3:in `index'
+  [1m[36mApi::V1::RecreationalArea Load (0.2ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.3ms | Allocations: 1842)
+
+
+Started GET "/api/v1/users?username=" for ::1 at 2020-12-06 17:08:06 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>""}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 604)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 17:08:08 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas?username=Dice" for ::1 at 2020-12-06 17:08:08 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"username"=>"Dice", "user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:3:in `index'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 2.1ms | ActiveRecord: 0.2ms | Allocations: 1842)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=camping&state=GA" for ::1 at 2020-12-06 17:08:17 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"camping", "state"=>"GA"}
+Completed 200 OK in 1117ms (Views: 14.5ms | ActiveRecord: 0.0ms | Allocations: 23659)
+
+
+Started POST "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-06 17:08:25 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"username"=>"Dice", "facility_name"=>"Wildcat Creek Campground #2 Upper", "facility_description"=>"<p><strong>Wildcat Creek Campgrounds are opened to tent camping only. No RV, Large Campers, or Trailers allowed.</strong></p><p>Although the winding road leading to the campground is not RV friendly, the payoff of landing a night in this environment is pure delight. These developed campgrounds are buried deep in the North Georgia Mountains west of Lake Burton and along the headwaters of Wildcat Creek. The creek, seasonally stocked with rainbow trout, runs directly adjacent to the campsites and provides for an astounding setting, so be prepared to capture nature at its best, and bring your camera. On clear nights the stars appear to be just an arm’s reach away! <br/> </p>", "facility_id"=>"10070265", "facility_directions"=>"<p><strong> Physical Address:</strong> 4208 West Wildcat Rd., Clarkesville, GA</p>", "facility_email"=>"", "facility_phone"=>"", "user_id"=>"1", "recreational_area"=>{"facility_name"=>"Wildcat Creek Campground #2 Upper", "facility_description"=>"<p><strong>Wildcat Creek Campgrounds are opened to tent camping only. No RV, Large Campers, or Trailers allowed.</strong></p><p>Although the winding road leading to the campground is not RV friendly, the payoff of landing a night in this environment is pure delight. These developed campgrounds are buried deep in the North Georgia Mountains west of Lake Burton and along the headwaters of Wildcat Creek. The creek, seasonally stocked with rainbow trout, runs directly adjacent to the campsites and provides for an astounding setting, so be prepared to capture nature at its best, and bring your camera. On clear nights the stars appear to be just an arm’s reach away! <br/> </p>", "facility_id"=>"10070265", "facility_directions"=>"<p><strong> Physical Address:</strong> 4208 West Wildcat Rd., Clarkesville, GA</p>", "facility_email"=>"", "facility_phone"=>""}}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:11:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[36mApi::V1::RecreationalArea Create (0.4ms)[0m  [1m[32mINSERT INTO "api_v1_recreational_areas" ("facility_name", "facility_description", "created_at", "updated_at", "facility_id", "facility_directions", "facility_email", "facility_phone", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["facility_name", "Wildcat Creek Campground #2 Upper"], ["facility_description", "<p><strong>Wildcat Creek Campgrounds are opened to tent camping only. No RV, Large Campers, or Trailers allowed.</strong></p><p>Although the winding road leading to the campground is not RV friendly, the payoff of landing a night in this environment is pure delight. These developed campgrounds are buried deep in the North Georgia Mountains west of Lake Burton and along the headwaters of Wildcat Creek. The creek, seasonally stocked with rainbow trout, runs directly adjacent to the campsites and provides for an astounding setting, so be prepared to capture nature at its best, and bring your camera. On clear nights the stars appear to be just an arm’s reach away! <br/> </p>"], ["created_at", "2020-12-06 22:08:25.141567"], ["updated_at", "2020-12-06 22:08:25.141567"], ["facility_id", "10070265"], ["facility_directions", "<p><strong> Physical Address:</strong> 4208 West Wildcat Rd., Clarkesville, GA</p>"], ["facility_email", ""], ["facility_phone", ""], ["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+Completed 200 OK in 18ms (Views: 0.3ms | ActiveRecord: 1.5ms | Allocations: 3629)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 17:10:31 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas?username=Dice" for ::1 at 2020-12-06 17:10:31 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"username"=>"Dice", "user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:3:in `index'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.2ms | Allocations: 2057)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 17:10:50 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas?username=Dice" for ::1 at 2020-12-06 17:10:50 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"username"=>"Dice", "user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:3:in `index'
+  [1m[36mApi::V1::RecreationalArea Load (0.2ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.3ms | Allocations: 2057)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 17:12:18 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas?username=Dice" for ::1 at 2020-12-06 17:12:18 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"username"=>"Dice", "user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:3:in `index'
+  [1m[36mApi::V1::RecreationalArea Load (0.2ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.3ms | Allocations: 2057)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 17:14:32 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas?username=Dice" for ::1 at 2020-12-06 17:14:32 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"username"=>"Dice", "user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:3:in `index'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.2ms | Allocations: 2057)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=camping&state=GA" for ::1 at 2020-12-06 17:14:44 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"camping", "state"=>"GA"}
+Completed 200 OK in 928ms (Views: 32.1ms | ActiveRecord: 0.0ms | Allocations: 23672)
+
+
+Started POST "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-06 17:14:51 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"username"=>"Dice", "facility_name"=>"Leon E. Williams - Holiday Marina", "facility_description"=>"This recreation area is part of <a href=http://www.recreation.gov/recreationalAreaDetails.do?contractCode=NRSO&recAreaId=440&agencyCode=130>Allatoona Lake</a>", "facility_id"=>"231774", "facility_directions"=>"", "facility_email"=>"", "facility_phone"=>"", "user_id"=>"1", "recreational_area"=>{"facility_name"=>"Leon E. Williams - Holiday Marina", "facility_description"=>"This recreation area is part of <a href=http://www.recreation.gov/recreationalAreaDetails.do?contractCode=NRSO&recAreaId=440&agencyCode=130>Allatoona Lake</a>", "facility_id"=>"231774", "facility_directions"=>"", "facility_email"=>"", "facility_phone"=>""}}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:11:in `create'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[36mApi::V1::RecreationalArea Create (0.3ms)[0m  [1m[32mINSERT INTO "api_v1_recreational_areas" ("facility_name", "facility_description", "created_at", "updated_at", "facility_id", "facility_directions", "facility_email", "facility_phone", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["facility_name", "Leon E. Williams - Holiday Marina"], ["facility_description", "This recreation area is part of <a href=http://www.recreation.gov/recreationalAreaDetails.do?contractCode=NRSO&recAreaId=440&agencyCode=130>Allatoona Lake</a>"], ["created_at", "2020-12-06 22:14:51.712526"], ["updated_at", "2020-12-06 22:14:51.712526"], ["facility_id", "231774"], ["facility_directions", ""], ["facility_email", ""], ["facility_phone", ""], ["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+Completed 200 OK in 10ms (Views: 0.3ms | ActiveRecord: 1.3ms | Allocations: 3608)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 17:16:17 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas?username=Dice" for ::1 at 2020-12-06 17:16:17 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"username"=>"Dice", "user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:3:in `index'
+  [1m[36mApi::V1::RecreationalArea Load (0.2ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.3ms | Allocations: 2251)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 17:17:37 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 0.7ms | Allocations: 4595)
+
+
+Started GET "/api/v1/users/1/recreational_areas?username=Dice" for ::1 at 2020-12-06 17:17:37 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"username"=>"Dice", "user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:3:in `index'
+  [1m[36mApi::V1::RecreationalArea Load (0.2ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 15ms (Views: 12.4ms | ActiveRecord: 0.8ms | Allocations: 9534)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-06 17:17:58 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 636ms (Views: 9.4ms | ActiveRecord: 0.0ms | Allocations: 21586)
+
+
+Started POST "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-06 17:18:02 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"username"=>"Dice", "facility_name"=>"Hooper Lake #1860", "facility_description"=>"<p>The Hooper Lake trail begins at the end of Forest Sevice Road #610 (4wd high clearance vehicle needed) and becomes the North Derby Trail after passing Hooper Lake and crossing onto the Routt National Forest. It has a relatively gentle incline and passes near several small ponds and North Fork Derby Creek. It is recommended to have good map and compass skills for this area as there is so much undulating terrain and multiple trail intersections.</p>", "facility_id"=>"10082781", "facility_directions"=>"From Eagle travel west on I-70 for 13 miles to the Dotsero exit, and follow the signs for Sweetwater/ Burns, turning north onto the Colorado River Road.Follow the Colorado River Rd. for 23.5 miles until you get to Cabin Creek Rd. and turn left.Stay on this road for 7 miles to the intersection with Stump Park Rd., FDR 610 and turn right onto this high-clearance 4WD road.The trailhead is at the end of this road.", "facility_email"=>"", "facility_phone"=>"", "user_id"=>"1", "recreational_area"=>{"facility_name"=>"Hooper Lake #1860", "facility_description"=>"<p>The Hooper Lake trail begins at the end of Forest Sevice Road #610 (4wd high clearance vehicle needed) and becomes the North Derby Trail after passing Hooper Lake and crossing onto the Routt National Forest. It has a relatively gentle incline and passes near several small ponds and North Fork Derby Creek. It is recommended to have good map and compass skills for this area as there is so much undulating terrain and multiple trail intersections.</p>", "facility_id"=>"10082781", "facility_directions"=>"From Eagle travel west on I-70 for 13 miles to the Dotsero exit, and follow the signs for Sweetwater/ Burns, turning north onto the Colorado River Road.Follow the Colorado River Rd. for 23.5 miles until you get to Cabin Creek Rd. and turn left.Stay on this road for 7 miles to the intersection with Stump Park Rd., FDR 610 and turn right onto this high-clearance 4WD road.The trailhead is at the end of this road.", "facility_email"=>"", "facility_phone"=>""}}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:11:in `create'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[36mApi::V1::RecreationalArea Create (0.9ms)[0m  [1m[32mINSERT INTO "api_v1_recreational_areas" ("facility_name", "facility_description", "created_at", "updated_at", "facility_id", "facility_directions", "facility_email", "facility_phone", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["facility_name", "Hooper Lake #1860"], ["facility_description", "<p>The Hooper Lake trail begins at the end of Forest Sevice Road #610 (4wd high clearance vehicle needed) and becomes the North Derby Trail after passing Hooper Lake and crossing onto the Routt National Forest. It has a relatively gentle incline and passes near several small ponds and North Fork Derby Creek. It is recommended to have good map and compass skills for this area as there is so much undulating terrain and multiple trail intersections.</p>"], ["created_at", "2020-12-06 22:18:02.811392"], ["updated_at", "2020-12-06 22:18:02.811392"], ["facility_id", "10082781"], ["facility_directions", "From Eagle travel west on I-70 for 13 miles to the Dotsero exit, and follow the signs for Sweetwater/ Burns, turning north onto the Colorado River Road.Follow the Colorado River Rd. for 23.5 miles until you get to Cabin Creek Rd. and turn left.Stay on this road for 7 miles to the intersection with Stump Park Rd., FDR 610 and turn right onto this high-clearance 4WD road.The trailhead is at the end of this road."], ["facility_email", ""], ["facility_phone", ""], ["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+Completed 500 Internal Server Error in 46751ms (Views: 1.1ms | ActiveRecord: 2.1ms | Allocations: 46228)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/api/v1/recreational_areas_controller.rb:15:in `create'
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 17:19:48 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 690)
+
+
+Started GET "/api/v1/users/1/recreational_areas?username=Dice" for ::1 at 2020-12-06 17:19:48 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"username"=>"Dice", "user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:3:in `index'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.3ms | Allocations: 2442)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-06 17:19:58 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 944ms (Views: 9.4ms | ActiveRecord: 0.0ms | Allocations: 21640)
+
+
+Started POST "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-06 17:20:03 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"username"=>"Dice", "facility_name"=>"Bailey Lakes #1859", "facility_description"=>"<p>The Bailey Lakes trail begins on the Hooper Lake Trail # 1860 and ends at Bailey Lakes. Follow the Hooper Lake Trail for about 3 miles to reach the beginning of this trail which contiues another 1.5 miles to Bailey Lakes. A high clearance 4wd vehicle is required to reach the trailhead. It is recommended to have good map and compass skills for this area as there is so much undulating terrain and multiple trail intersections.</p>", "facility_id"=>"10082508", "facility_directions"=>"This trail starts about half way up the Hooper Lakes Trail #1860.", "facility_email"=>"", "facility_phone"=>"", "user_id"=>"1", "recreational_area"=>{"facility_name"=>"Bailey Lakes #1859", "facility_description"=>"<p>The Bailey Lakes trail begins on the Hooper Lake Trail # 1860 and ends at Bailey Lakes. Follow the Hooper Lake Trail for about 3 miles to reach the beginning of this trail which contiues another 1.5 miles to Bailey Lakes. A high clearance 4wd vehicle is required to reach the trailhead. It is recommended to have good map and compass skills for this area as there is so much undulating terrain and multiple trail intersections.</p>", "facility_id"=>"10082508", "facility_directions"=>"This trail starts about half way up the Hooper Lakes Trail #1860.", "facility_email"=>"", "facility_phone"=>""}}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:11:in `create'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[36mApi::V1::RecreationalArea Create (0.3ms)[0m  [1m[32mINSERT INTO "api_v1_recreational_areas" ("facility_name", "facility_description", "created_at", "updated_at", "facility_id", "facility_directions", "facility_email", "facility_phone", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["facility_name", "Bailey Lakes #1859"], ["facility_description", "<p>The Bailey Lakes trail begins on the Hooper Lake Trail # 1860 and ends at Bailey Lakes. Follow the Hooper Lake Trail for about 3 miles to reach the beginning of this trail which contiues another 1.5 miles to Bailey Lakes. A high clearance 4wd vehicle is required to reach the trailhead. It is recommended to have good map and compass skills for this area as there is so much undulating terrain and multiple trail intersections.</p>"], ["created_at", "2020-12-06 22:20:03.876362"], ["updated_at", "2020-12-06 22:20:03.876362"], ["facility_id", "10082508"], ["facility_directions", "This trail starts about half way up the Hooper Lakes Trail #1860."], ["facility_email", ""], ["facility_phone", ""], ["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+Completed 200 OK in 7496ms (Views: 0.5ms | ActiveRecord: 1.2ms | Allocations: 11899)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 17:22:31 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas?username=Dice" for ::1 at 2020-12-06 17:22:31 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"username"=>"Dice", "user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:3:in `index'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.2ms | Allocations: 2633)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=camping&state=GA" for ::1 at 2020-12-06 17:22:43 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"camping", "state"=>"GA"}
+Completed 200 OK in 744ms (Views: 14.3ms | ActiveRecord: 0.0ms | Allocations: 23762)
+
+
+Started POST "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-06 17:22:51 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"username"=>"Dice", "facility_name"=>"AMITY RECREATION AREA", "facility_description"=>"<h2>Overview</h2>\nAmity Recreation Area is one of the most popular parks on J. Strom Thurmond Lake. The large, 70,000-acre lake and its 1,000 miles of shoreline provide excellent boating, water skiing, swimming, fishing, hiking and picnicking.<h2>Recreation</h2>\nThurmond Lake provides some of the best fishing, hunting and water sports in the southeastern United States. \n<br /><br />\nAnglers will find largemouth bass, bream, crappie, catfish and striped bass. The large lake offers endless boating, waterskiing, jet skiing, canoeing and swimming opportunities. Amity Recreation Area provides a boat ramp and swimming area.<h2>Facilities</h2>\nThis facility is a wooded day-use area on the lake shore. There are three reservable group picnic shelters that can each accommodate up to 92 guests. A boat ramp, fishing pier, swimming area, ball field and playground provide additional recreation opportunities.<h2>Natural Features</h2>\nHot, humid summers and mild, pleasant winters characterize this wooded area. A mixed pine and hardwood forest covers the site, providing summer shade and fall color. \n<br /><br />\nWildlife is abundant around the lake. Visitors might spot bald eagles, migratory waterfowl, osprey, wild turkeys and white-tailed deer.\n<h2>Nearby Attractions</h2>\nAugusta, Georgia, about 20 miles away, offers museums, art galleries, zoos, restaurants and shopping areas. The Augusta National Golf Club hosts the Masters Golf Tournament annually the first week of April.", "facility_id"=>"232514", "facility_directions"=>"From Thomson, Georgia, take U.S. Highway 78 west for 6 miles. Turn right on State Route 43 and continue for about 7.5 miles. The park is on the right (look for signs). The park is located on the McDuffie/Lincoln County line.", "facility_email"=>"", "facility_phone"=>"800-533-3478", "user_id"=>"1", "recreational_area"=>{"facility_name"=>"AMITY RECREATION AREA", "facility_description"=>"<h2>Overview</h2>\nAmity Recreation Area is one of the most popular parks on J. Strom Thurmond Lake. The large, 70,000-acre lake and its 1,000 miles of shoreline provide excellent boating, water skiing, swimming, fishing, hiking and picnicking.<h2>Recreation</h2>\nThurmond Lake provides some of the best fishing, hunting and water sports in the southeastern United States. \n<br /><br />\nAnglers will find largemouth bass, bream, crappie, catfish and striped bass. The large lake offers endless boating, waterskiing, jet skiing, canoeing and swimming opportunities. Amity Recreation Area provides a boat ramp and swimming area.<h2>Facilities</h2>\nThis facility is a wooded day-use area on the lake shore. There are three reservable group picnic shelters that can each accommodate up to 92 guests. A boat ramp, fishing pier, swimming area, ball field and playground provide additional recreation opportunities.<h2>Natural Features</h2>\nHot, humid summers and mild, pleasant winters characterize this wooded area. A mixed pine and hardwood forest covers the site, providing summer shade and fall color. \n<br /><br />\nWildlife is abundant around the lake. Visitors might spot bald eagles, migratory waterfowl, osprey, wild turkeys and white-tailed deer.\n<h2>Nearby Attractions</h2>\nAugusta, Georgia, about 20 miles away, offers museums, art galleries, zoos, restaurants and shopping areas. The Augusta National Golf Club hosts the Masters Golf Tournament annually the first week of April.", "facility_id"=>"232514", "facility_directions"=>"From Thomson, Georgia, take U.S. Highway 78 west for 6 miles. Turn right on State Route 43 and continue for about 7.5 miles. The park is on the right (look for signs). The park is located on the McDuffie/Lincoln County line.", "facility_email"=>"", "facility_phone"=>"800-533-3478"}}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:11:in `create'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[36mApi::V1::RecreationalArea Create (0.4ms)[0m  [1m[32mINSERT INTO "api_v1_recreational_areas" ("facility_name", "facility_description", "created_at", "updated_at", "facility_id", "facility_directions", "facility_email", "facility_phone", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["facility_name", "AMITY RECREATION AREA"], ["facility_description", "<h2>Overview</h2>\nAmity Recreation Area is one of the most popular parks on J. Strom Thurmond Lake. The large, 70,000-acre lake and its 1,000 miles of shoreline provide excellent boating, water skiing, swimming, fishing, hiking and picnicking.<h2>Recreation</h2>\nThurmond Lake provides some of the best fishing, hunting and water sports in the southeastern United States. \n<br /><br />\nAnglers will find largemouth bass, bream, crappie, catfish and striped bass. The large lake offers endless boating, waterskiing, jet skiing, canoeing and swimming opportunities. Amity Recreation Area provides a boat ramp and swimming area.<h2>Facilities</h2>\nThis facility is a wooded day-use area on the lake shore. There are three reservable group picnic shelters that can each accommodate up to 92 guests. A boat ramp, fishing pier, swimming area, ball field and playground provide additional recreation opportunities.<h2>Natural Features</h2>\nHot, humid summers and mild, pleasant winters characterize this wooded area. A mixed pine and hardwood forest covers the site, providing summer shade and fall color. \n<br /><br />\nWildlife is abundant around the lake. Visitors might spot bald eagles, migratory waterfowl, osprey, wild turkeys and white-tailed deer.\n<h2>Nearby Attractions</h2>\nAugusta, Georgia, about 20 miles away, offers museums, art galleries, zoos, restaurants and shopping areas. The Augusta National Golf Club hosts the Masters Golf Tournament annually the first week of April."], ["created_at", "2020-12-06 22:22:51.592999"], ["updated_at", "2020-12-06 22:22:51.592999"], ["facility_id", "232514"], ["facility_directions", "From Thomson, Georgia, take U.S. Highway 78 west for 6 miles. Turn right on State Route 43 and continue for about 7.5 miles. The park is on the right (look for signs). The park is located on the McDuffie/Lincoln County line."], ["facility_email", ""], ["facility_phone", "800-533-3478"], ["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+Completed 200 OK in 4952ms (Views: 0.4ms | ActiveRecord: 1.4ms | Allocations: 11923)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 17:25:15 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.5ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.5ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas?username=Dice" for ::1 at 2020-12-06 17:25:15 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"username"=>"Dice", "user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:3:in `index'
+  [1m[36mApi::V1::RecreationalArea Load (0.2ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 5ms (Views: 2.8ms | ActiveRecord: 0.4ms | Allocations: 2848)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 17:25:42 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.3ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas?username=Dice" for ::1 at 2020-12-06 17:25:42 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"username"=>"Dice", "user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:3:in `index'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.2ms | Allocations: 2848)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-06 17:25:52 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 895ms (Views: 9.7ms | ActiveRecord: 0.0ms | Allocations: 21644)
+
+
+Started POST "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-06 17:25:57 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"username"=>"Dice", "facility_name"=>"TYEE CAMPGROUND (UMPQUA RIVER)", "facility_description"=>"<h2>Overview</h2>\nTyee Campground is situated between the Pacific Coast and the city of Roseburg, Oregon.  Perched on the banks of the Umpqua River, its location appeals to avid anglers and water sport enthusiasts. <br/> \nThe name, Umpqua, is a surviving term of the Native American Umpqua language, and translates to \"thundering waters,\" \"satisfied,\" or \"across the waters.\"\n<h2>Recreation</h2>\nFishing enthusiasts will enjoy the chance to catch chinook and coho salmon, steelhead, or bass depending on the season.   A round of horseshoe on the grounds or a walk down to the river will appeal to those looking for a more casual day.  \n<h2>Facilities</h2>\n<p>There are two areas with campsites.  <strong>Both areas are reservation only until further notice</strong>.   You will have access to amenities including multiple spigots for drinking water, restrooms, horseshoe pits, an emergency phone, and river access.  <br>The campground also features the reservable Tyee Pavilion, which includes six large picnic tables, a long serving counter, sink, electrical outlets and a large barbecue grill.   Search for Tyee Pavilion at  recreation.gov  for further information.  <strong>Pavilion is currently closed.</strong></p>\n<h2>Natural Features</h2>\nTyee is located along the Umpqua River in southwestern Oregon. It is only one of two rivers in Oregon with headwaters that begin high up in the Cascade Mountains and meanders on down to the Pacific Ocean. The campground lies in a broad river canyon surrounded by deeply forested mountainsides. \n<h2>Nearby Attractions</h2>\nThe Umpqua River Scenic Byway offers breathtaking views and outstanding scenery. Along the byway lies the town of Elkton, well-known for its wineries and butterfly pavilion. \n<br/><br/>\nWest of Elkton is the Dean Creek Elk Viewing Area, where spotting majestic Roosevelt Elk near the roadway is almost guaranteed. The Pacific Coast is roughly 50 miles from Tyee.\n\n", "facility_id"=>"251353", "facility_directions"=>"From I-5 in Sutherlin, head west 12 miles on Highway 138.  Turn left and cross over Bullock Bridge and immediately turn right only Country Road 57 (Bullock Road).  Travel .5 miles to the campground.  \n", "facility_email"=>"", "facility_phone"=>"541-440-4930", "user_id"=>"1", "recreational_area"=>{"facility_name"=>"TYEE CAMPGROUND (UMPQUA RIVER)", "facility_description"=>"<h2>Overview</h2>\nTyee Campground is situated between the Pacific Coast and the city of Roseburg, Oregon.  Perched on the banks of the Umpqua River, its location appeals to avid anglers and water sport enthusiasts. <br/> \nThe name, Umpqua, is a surviving term of the Native American Umpqua language, and translates to \"thundering waters,\" \"satisfied,\" or \"across the waters.\"\n<h2>Recreation</h2>\nFishing enthusiasts will enjoy the chance to catch chinook and coho salmon, steelhead, or bass depending on the season.   A round of horseshoe on the grounds or a walk down to the river will appeal to those looking for a more casual day.  \n<h2>Facilities</h2>\n<p>There are two areas with campsites.  <strong>Both areas are reservation only until further notice</strong>.   You will have access to amenities including multiple spigots for drinking water, restrooms, horseshoe pits, an emergency phone, and river access.  <br>The campground also features the reservable Tyee Pavilion, which includes six large picnic tables, a long serving counter, sink, electrical outlets and a large barbecue grill.   Search for Tyee Pavilion at  recreation.gov  for further information.  <strong>Pavilion is currently closed.</strong></p>\n<h2>Natural Features</h2>\nTyee is located along the Umpqua River in southwestern Oregon. It is only one of two rivers in Oregon with headwaters that begin high up in the Cascade Mountains and meanders on down to the Pacific Ocean. The campground lies in a broad river canyon surrounded by deeply forested mountainsides. \n<h2>Nearby Attractions</h2>\nThe Umpqua River Scenic Byway offers breathtaking views and outstanding scenery. Along the byway lies the town of Elkton, well-known for its wineries and butterfly pavilion. \n<br/><br/>\nWest of Elkton is the Dean Creek Elk Viewing Area, where spotting majestic Roosevelt Elk near the roadway is almost guaranteed. The Pacific Coast is roughly 50 miles from Tyee.\n\n", "facility_id"=>"251353", "facility_directions"=>"From I-5 in Sutherlin, head west 12 miles on Highway 138.  Turn left and cross over Bullock Bridge and immediately turn right only Country Road 57 (Bullock Road).  Travel .5 miles to the campground.  \n", "facility_email"=>"", "facility_phone"=>"541-440-4930"}}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:11:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[36mApi::V1::RecreationalArea Create (0.5ms)[0m  [1m[32mINSERT INTO "api_v1_recreational_areas" ("facility_name", "facility_description", "created_at", "updated_at", "facility_id", "facility_directions", "facility_email", "facility_phone", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["facility_name", "TYEE CAMPGROUND (UMPQUA RIVER)"], ["facility_description", "<h2>Overview</h2>\nTyee Campground is situated between the Pacific Coast and the city of Roseburg, Oregon.  Perched on the banks of the Umpqua River, its location appeals to avid anglers and water sport enthusiasts. <br/> \nThe name, Umpqua, is a surviving term of the Native American Umpqua language, and translates to \"thundering waters,\" \"satisfied,\" or \"across the waters.\"\n<h2>Recreation</h2>\nFishing enthusiasts will enjoy the chance to catch chinook and coho salmon, steelhead, or bass depending on the season.   A round of horseshoe on the grounds or a walk down to the river will appeal to those looking for a more casual day.  \n<h2>Facilities</h2>\n<p>There are two areas with campsites.  <strong>Both areas are reservation only until further notice</strong>.   You will have access to amenities including multiple spigots for drinking water, restrooms, horseshoe pits, an emergency phone, and river access.  <br>The campground also features the reservable Tyee Pavilion, which includes six large picnic tables, a long serving counter, sink, electrical outlets and a large barbecue grill.   Search for Tyee Pavilion at  recreation.gov  for further information.  <strong>Pavilion is currently closed.</strong></p>\n<h2>Natural Features</h2>\nTyee is located along the Umpqua River in southwestern Oregon. It is only one of two rivers in Oregon with headwaters that begin high up in the Cascade Mountains and meanders on down to the Pacific Ocean. The campground lies in a broad river canyon surrounded by deeply forested mountainsides. \n<h2>Nearby Attractions</h2>\nThe Umpqua River Scenic Byway offers breathtaking views and outstanding scenery. Along the byway lies the town of Elkton, well-known for its wineries and butterfly pavilion. \n<br/><br/>\nWest of Elkton is the Dean Creek Elk Viewing Area, where spotting majestic Roosevelt Elk near the roadway is almost guaranteed. The Pacific Coast is roughly 50 miles from Tyee.\n\n"], ["created_at", "2020-12-06 22:25:57.572143"], ["updated_at", "2020-12-06 22:25:57.572143"], ["facility_id", "251353"], ["facility_directions", "From I-5 in Sutherlin, head west 12 miles on Highway 138.  Turn left and cross over Bullock Bridge and immediately turn right only Country Road 57 (Bullock Road).  Travel .5 miles to the campground.  \n"], ["facility_email", ""], ["facility_phone", "541-440-4930"], ["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+Completed 200 OK in 7050ms (Views: 0.5ms | ActiveRecord: 2.1ms | Allocations: 11932)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 17:27:13 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas?username=Dice" for ::1 at 2020-12-06 17:27:13 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"username"=>"Dice", "user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.4ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:3:in `index'
+  [1m[36mApi::V1::RecreationalArea Load (0.2ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 6ms (Views: 3.6ms | ActiveRecord: 0.6ms | Allocations: 3077)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-06 17:27:22 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 623ms (Views: 9.2ms | ActiveRecord: 0.0ms | Allocations: 21632)
+
+
+Started POST "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-06 17:27:29 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"username"=>"Dice", "facility_name"=>"Upper Lehman Campground", "facility_description"=>"Located at 7,752 feet elevation Upper Lehman Campground has 24 campsites and is first come first serve. Water is available spring through fall.", "facility_id"=>"10088554", "facility_directions"=>"On Wheeler Peak Scenic Drive, 3.5 miles from the Lehman Caves Visitor Center.", "facility_email"=>"grba_interpretation@nps.gov", "facility_phone"=>"", "user_id"=>"1", "recreational_area"=>{"facility_name"=>"Upper Lehman Campground", "facility_description"=>"Located at 7,752 feet elevation Upper Lehman Campground has 24 campsites and is first come first serve. Water is available spring through fall.", "facility_id"=>"10088554", "facility_directions"=>"On Wheeler Peak Scenic Drive, 3.5 miles from the Lehman Caves Visitor Center.", "facility_email"=>"grba_interpretation@nps.gov", "facility_phone"=>""}}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:11:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[36mApi::V1::RecreationalArea Create (0.4ms)[0m  [1m[32mINSERT INTO "api_v1_recreational_areas" ("facility_name", "facility_description", "created_at", "updated_at", "facility_id", "facility_directions", "facility_email", "facility_phone", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["facility_name", "Upper Lehman Campground"], ["facility_description", "Located at 7,752 feet elevation Upper Lehman Campground has 24 campsites and is first come first serve. Water is available spring through fall."], ["created_at", "2020-12-06 22:27:29.089660"], ["updated_at", "2020-12-06 22:27:29.089660"], ["facility_id", "10088554"], ["facility_directions", "On Wheeler Peak Scenic Drive, 3.5 miles from the Lehman Caves Visitor Center."], ["facility_email", "grba_interpretation@nps.gov"], ["facility_phone", ""], ["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+Completed 200 OK in 4067ms (Views: 0.5ms | ActiveRecord: 1.6ms | Allocations: 11918)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 17:34:20 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 705)
+
+
+Started GET "/api/v1/users/1/recreational_areas?username=Dice" for ::1 at 2020-12-06 17:34:20 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"username"=>"Dice", "user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:3:in `index'
+  [1m[36mApi::V1::RecreationalArea Load (0.4ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 5ms (Views: 3.2ms | ActiveRecord: 0.5ms | Allocations: 3287)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-06 17:34:28 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 875ms (Views: 9.8ms | ActiveRecord: 0.0ms | Allocations: 21599)
+
+
+Started POST "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-06 17:34:34 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"username"=>"Dice", "facility_name"=>"Gillette Lake", "facility_description"=>"<p><a href=\"http://www.fs.usda.gov/photogallery/colville/?cid=2962\"><img alt=\"Gillette Lake\" src=\"http://www.fs.usda.gov/Internet/FSE_MEDIA/stelprdb5289105\" style=\"margin: 5px 10px 5px 5px; float: left\" width=\"518\"/></a>Gillette Lake is a 48 acre, 87' deep lake with recreation opportunities the whole family can enjoy.</p>", "facility_id"=>"10080888", "facility_directions"=>"<p><strong>From Three Rivers Ranger District:</strong> Head east on W 11th Ave towards Meyers St. Take a slight left on Meyers onto Meyers St for a half mile. Turn right onto US-395 S/E 3rd Ave for 8.1 miles. At the traffic circle, take the second exit onto US-395 E for a half mile. Turn left onto WA-20 E/E 3rd Ave for 24.7 miles. Turn right onto NF-200/Pendoreille Lake Rd, for 0.4 mile. Turn left and travel until you reach Gillette Lake, about 0.1 mile.</p><ul><li><a href=\"https://www.google.com/maps/dir/Three+Rivers+Ranger+Station,+West+11th+Avenue,+Kettle+Falls,+WA/Gillette+Lake,+Washington+99114/@48.558215,-117.9386564,11z/am=t/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x5362840901e8a951:0x343159e62916ba4!2m2!1d-118.0584017!2d48.6024832!1m5!1m1!1s0x53625f1534f6c4b9:0x2ad9a4d3a9bf2f9b!2m2!1d-117.5419963!2d48.6136495!3e0\">Google Map Directions from the Three Rivers Ranger District</a></li></ul>", "facility_email"=>"", "facility_phone"=>"", "user_id"=>"1", "recreational_area"=>{"facility_name"=>"Gillette Lake", "facility_description"=>"<p><a href=\"http://www.fs.usda.gov/photogallery/colville/?cid=2962\"><img alt=\"Gillette Lake\" src=\"http://www.fs.usda.gov/Internet/FSE_MEDIA/stelprdb5289105\" style=\"margin: 5px 10px 5px 5px; float: left\" width=\"518\"/></a>Gillette Lake is a 48 acre, 87' deep lake with recreation opportunities the whole family can enjoy.</p>", "facility_id"=>"10080888", "facility_directions"=>"<p><strong>From Three Rivers Ranger District:</strong> Head east on W 11th Ave towards Meyers St. Take a slight left on Meyers onto Meyers St for a half mile. Turn right onto US-395 S/E 3rd Ave for 8.1 miles. At the traffic circle, take the second exit onto US-395 E for a half mile. Turn left onto WA-20 E/E 3rd Ave for 24.7 miles. Turn right onto NF-200/Pendoreille Lake Rd, for 0.4 mile. Turn left and travel until you reach Gillette Lake, about 0.1 mile.</p><ul><li><a href=\"https://www.google.com/maps/dir/Three+Rivers+Ranger+Station,+West+11th+Avenue,+Kettle+Falls,+WA/Gillette+Lake,+Washington+99114/@48.558215,-117.9386564,11z/am=t/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x5362840901e8a951:0x343159e62916ba4!2m2!1d-118.0584017!2d48.6024832!1m5!1m1!1s0x53625f1534f6c4b9:0x2ad9a4d3a9bf2f9b!2m2!1d-117.5419963!2d48.6136495!3e0\">Google Map Directions from the Three Rivers Ranger District</a></li></ul>", "facility_email"=>"", "facility_phone"=>""}}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:11:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[36mApi::V1::RecreationalArea Create (0.4ms)[0m  [1m[32mINSERT INTO "api_v1_recreational_areas" ("facility_name", "facility_description", "created_at", "updated_at", "facility_id", "facility_directions", "facility_email", "facility_phone", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["facility_name", "Gillette Lake"], ["facility_description", "<p><a href=\"http://www.fs.usda.gov/photogallery/colville/?cid=2962\"><img alt=\"Gillette Lake\" src=\"http://www.fs.usda.gov/Internet/FSE_MEDIA/stelprdb5289105\" style=\"margin: 5px 10px 5px 5px; float: left\" width=\"518\"/></a>Gillette Lake is a 48 acre, 87' deep lake with recreation opportunities the whole family can enjoy.</p>"], ["created_at", "2020-12-06 22:34:34.310837"], ["updated_at", "2020-12-06 22:34:34.310837"], ["facility_id", "10080888"], ["facility_directions", "<p><strong>From Three Rivers Ranger District:</strong> Head east on W 11th Ave towards Meyers St. Take a slight left on Meyers onto Meyers St for a half mile. Turn right onto US-395 S/E 3rd Ave for 8.1 miles. At the traffic circle, take the second exit onto US-395 E for a half mile. Turn left onto WA-20 E/E 3rd Ave for 24.7 miles. Turn right onto NF-200/Pendoreille Lake Rd, for 0.4 mile. Turn left and travel until you reach Gillette Lake, about 0.1 mile.</p><ul><li><a href=\"https://www.google.com/maps/dir/Three+Rivers+Ranger+Station,+West+11th+Avenue,+Kettle+Falls,+WA/Gillette+Lake,+Washington+99114/@48.558215,-117.9386564,11z/am=t/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x5362840901e8a951:0x343159e62916ba4!2m2!1d-118.0584017!2d48.6024832!1m5!1m1!1s0x53625f1534f6c4b9:0x2ad9a4d3a9bf2f9b!2m2!1d-117.5419963!2d48.6136495!3e0\">Google Map Directions from the Three Rivers Ranger District</a></li></ul>"], ["facility_email", ""], ["facility_phone", ""], ["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+Completed 200 OK in 5017ms (Views: 0.5ms | ActiveRecord: 1.5ms | Allocations: 11941)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 17:35:35 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas?username=Dice" for ::1 at 2020-12-06 17:35:35 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"username"=>"Dice", "user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:3:in `index'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.2ms | Allocations: 1456)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-06 17:35:56 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 732ms (Views: 10.1ms | ActiveRecord: 0.0ms | Allocations: 21549)
+
+
+Started POST "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-06 17:35:58 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"username"=>"Dice", "facility_name"=>"Tower Fall Campground", "facility_description"=>"Tower Fall Campground—elevation 6,600 feet (2012 m)—is located on the north side of the steep, winding, road to Dunraven Pass. The campground is near the Tower General Store and Tower Fall, where Tower Creek plunges over 130 feet down to its confluence with the Yellowstone River. On the road over Dunraven Pass, a six-mile trail provides access to the summit of Mount Washburn. Roosevelt Lodge, a short drive from the campground, offers dining and horseback riding.", "facility_id"=>"259308", "facility_directions"=>"This campground is located on the road between Tower Fall and Canyon--north of Dunraven Pass and 3.5 miles (5.6 km) south of Tower-Roosevelt Junction.", "facility_email"=>"yell_visitor_services@nps.gov", "facility_phone"=>"(307) 344-7381", "user_id"=>"1", "recreational_area"=>{"facility_name"=>"Tower Fall Campground", "facility_description"=>"Tower Fall Campground—elevation 6,600 feet (2012 m)—is located on the north side of the steep, winding, road to Dunraven Pass. The campground is near the Tower General Store and Tower Fall, where Tower Creek plunges over 130 feet down to its confluence with the Yellowstone River. On the road over Dunraven Pass, a six-mile trail provides access to the summit of Mount Washburn. Roosevelt Lodge, a short drive from the campground, offers dining and horseback riding.", "facility_id"=>"259308", "facility_directions"=>"This campground is located on the road between Tower Fall and Canyon--north of Dunraven Pass and 3.5 miles (5.6 km) south of Tower-Roosevelt Junction.", "facility_email"=>"yell_visitor_services@nps.gov", "facility_phone"=>"(307) 344-7381"}}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:11:in `create'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[36mApi::V1::RecreationalArea Create (0.4ms)[0m  [1m[32mINSERT INTO "api_v1_recreational_areas" ("facility_name", "facility_description", "created_at", "updated_at", "facility_id", "facility_directions", "facility_email", "facility_phone", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["facility_name", "Tower Fall Campground"], ["facility_description", "Tower Fall Campground—elevation 6,600 feet (2012 m)—is located on the north side of the steep, winding, road to Dunraven Pass. The campground is near the Tower General Store and Tower Fall, where Tower Creek plunges over 130 feet down to its confluence with the Yellowstone River. On the road over Dunraven Pass, a six-mile trail provides access to the summit of Mount Washburn. Roosevelt Lodge, a short drive from the campground, offers dining and horseback riding."], ["created_at", "2020-12-06 22:35:58.878636"], ["updated_at", "2020-12-06 22:35:58.878636"], ["facility_id", "259308"], ["facility_directions", "This campground is located on the road between Tower Fall and Canyon--north of Dunraven Pass and 3.5 miles (5.6 km) south of Tower-Roosevelt Junction."], ["facility_email", "yell_visitor_services@nps.gov"], ["facility_phone", "(307) 344-7381"], ["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+Completed 200 OK in 3393ms (Views: 0.5ms | ActiveRecord: 1.4ms | Allocations: 11888)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 17:46:51 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 705)
+
+
+Started GET "/api/v1/users/1/recreational_areas?username=Dice" for ::1 at 2020-12-06 17:46:51 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"username"=>"Dice", "user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:3:in `index'
+  [1m[36mApi::V1::RecreationalArea Load (0.2ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 6ms (Views: 2.7ms | ActiveRecord: 0.5ms | Allocations: 1666)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-06 17:46:54 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 733ms (Views: 24.3ms | ActiveRecord: 0.0ms | Allocations: 21591)
+
+
+Started POST "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-06 17:46:57 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"username"=>"Dice", "facility_name"=>"Tower Fall Campground", "facility_description"=>"Tower Fall Campground—elevation 6,600 feet (2012 m)—is located on the north side of the steep, winding, road to Dunraven Pass. The campground is near the Tower General Store and Tower Fall, where Tower Creek plunges over 130 feet down to its confluence with the Yellowstone River. On the road over Dunraven Pass, a six-mile trail provides access to the summit of Mount Washburn. Roosevelt Lodge, a short drive from the campground, offers dining and horseback riding.", "facility_id"=>"259308", "facility_directions"=>"This campground is located on the road between Tower Fall and Canyon--north of Dunraven Pass and 3.5 miles (5.6 km) south of Tower-Roosevelt Junction.", "facility_email"=>"yell_visitor_services@nps.gov", "facility_phone"=>"(307) 344-7381", "user_id"=>"1", "recreational_area"=>{"facility_name"=>"Tower Fall Campground", "facility_description"=>"Tower Fall Campground—elevation 6,600 feet (2012 m)—is located on the north side of the steep, winding, road to Dunraven Pass. The campground is near the Tower General Store and Tower Fall, where Tower Creek plunges over 130 feet down to its confluence with the Yellowstone River. On the road over Dunraven Pass, a six-mile trail provides access to the summit of Mount Washburn. Roosevelt Lodge, a short drive from the campground, offers dining and horseback riding.", "facility_id"=>"259308", "facility_directions"=>"This campground is located on the road between Tower Fall and Canyon--north of Dunraven Pass and 3.5 miles (5.6 km) south of Tower-Roosevelt Junction.", "facility_email"=>"yell_visitor_services@nps.gov", "facility_phone"=>"(307) 344-7381"}}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:11:in `create'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[36mApi::V1::RecreationalArea Create (0.4ms)[0m  [1m[32mINSERT INTO "api_v1_recreational_areas" ("facility_name", "facility_description", "created_at", "updated_at", "facility_id", "facility_directions", "facility_email", "facility_phone", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["facility_name", "Tower Fall Campground"], ["facility_description", "Tower Fall Campground—elevation 6,600 feet (2012 m)—is located on the north side of the steep, winding, road to Dunraven Pass. The campground is near the Tower General Store and Tower Fall, where Tower Creek plunges over 130 feet down to its confluence with the Yellowstone River. On the road over Dunraven Pass, a six-mile trail provides access to the summit of Mount Washburn. Roosevelt Lodge, a short drive from the campground, offers dining and horseback riding."], ["created_at", "2020-12-06 22:46:57.058676"], ["updated_at", "2020-12-06 22:46:57.058676"], ["facility_id", "259308"], ["facility_directions", "This campground is located on the road between Tower Fall and Canyon--north of Dunraven Pass and 3.5 miles (5.6 km) south of Tower-Roosevelt Junction."], ["facility_email", "yell_visitor_services@nps.gov"], ["facility_phone", "(307) 344-7381"], ["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+Completed 200 OK in 5241ms (Views: 0.5ms | ActiveRecord: 1.4ms | Allocations: 11889)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 17:47:59 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas?username=Dice" for ::1 at 2020-12-06 17:47:59 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"username"=>"Dice", "user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:3:in `index'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.2ms | Allocations: 1826)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-06 17:48:01 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 779ms (Views: 10.1ms | ActiveRecord: 0.0ms | Allocations: 21587)
+
+
+Started POST "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-06 17:48:05 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"username"=>"Dice", "facility_name"=>"Tower Fall Campground", "facility_description"=>"Tower Fall Campground—elevation 6,600 feet (2012 m)—is located on the north side of the steep, winding, road to Dunraven Pass. The campground is near the Tower General Store and Tower Fall, where Tower Creek plunges over 130 feet down to its confluence with the Yellowstone River. On the road over Dunraven Pass, a six-mile trail provides access to the summit of Mount Washburn. Roosevelt Lodge, a short drive from the campground, offers dining and horseback riding.", "facility_id"=>"259308", "facility_directions"=>"This campground is located on the road between Tower Fall and Canyon--north of Dunraven Pass and 3.5 miles (5.6 km) south of Tower-Roosevelt Junction.", "facility_email"=>"yell_visitor_services@nps.gov", "facility_phone"=>"(307) 344-7381", "user_id"=>"1", "recreational_area"=>{"facility_name"=>"Tower Fall Campground", "facility_description"=>"Tower Fall Campground—elevation 6,600 feet (2012 m)—is located on the north side of the steep, winding, road to Dunraven Pass. The campground is near the Tower General Store and Tower Fall, where Tower Creek plunges over 130 feet down to its confluence with the Yellowstone River. On the road over Dunraven Pass, a six-mile trail provides access to the summit of Mount Washburn. Roosevelt Lodge, a short drive from the campground, offers dining and horseback riding.", "facility_id"=>"259308", "facility_directions"=>"This campground is located on the road between Tower Fall and Canyon--north of Dunraven Pass and 3.5 miles (5.6 km) south of Tower-Roosevelt Junction.", "facility_email"=>"yell_visitor_services@nps.gov", "facility_phone"=>"(307) 344-7381"}}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:11:in `create'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[36mApi::V1::RecreationalArea Create (0.8ms)[0m  [1m[32mINSERT INTO "api_v1_recreational_areas" ("facility_name", "facility_description", "created_at", "updated_at", "facility_id", "facility_directions", "facility_email", "facility_phone", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["facility_name", "Tower Fall Campground"], ["facility_description", "Tower Fall Campground—elevation 6,600 feet (2012 m)—is located on the north side of the steep, winding, road to Dunraven Pass. The campground is near the Tower General Store and Tower Fall, where Tower Creek plunges over 130 feet down to its confluence with the Yellowstone River. On the road over Dunraven Pass, a six-mile trail provides access to the summit of Mount Washburn. Roosevelt Lodge, a short drive from the campground, offers dining and horseback riding."], ["created_at", "2020-12-06 22:48:05.294850"], ["updated_at", "2020-12-06 22:48:05.294850"], ["facility_id", "259308"], ["facility_directions", "This campground is located on the road between Tower Fall and Canyon--north of Dunraven Pass and 3.5 miles (5.6 km) south of Tower-Roosevelt Junction."], ["facility_email", "yell_visitor_services@nps.gov"], ["facility_phone", "(307) 344-7381"], ["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+Completed 200 OK in 2894ms (Views: 0.4ms | ActiveRecord: 1.9ms | Allocations: 11902)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 17:49:02 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas?username=Dice" for ::1 at 2020-12-06 17:49:02 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"username"=>"Dice", "user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:3:in `index'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.2ms | Allocations: 2011)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-06 17:49:04 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 873ms (Views: 10.0ms | ActiveRecord: 0.0ms | Allocations: 21558)
+
+
+Started POST "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-06 17:49:06 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"username"=>"Dice", "facility_name"=>"Tower Fall Campground", "facility_description"=>"Tower Fall Campground—elevation 6,600 feet (2012 m)—is located on the north side of the steep, winding, road to Dunraven Pass. The campground is near the Tower General Store and Tower Fall, where Tower Creek plunges over 130 feet down to its confluence with the Yellowstone River. On the road over Dunraven Pass, a six-mile trail provides access to the summit of Mount Washburn. Roosevelt Lodge, a short drive from the campground, offers dining and horseback riding.", "facility_id"=>"259308", "facility_directions"=>"This campground is located on the road between Tower Fall and Canyon--north of Dunraven Pass and 3.5 miles (5.6 km) south of Tower-Roosevelt Junction.", "facility_email"=>"yell_visitor_services@nps.gov", "facility_phone"=>"(307) 344-7381", "user_id"=>"1", "recreational_area"=>{"facility_name"=>"Tower Fall Campground", "facility_description"=>"Tower Fall Campground—elevation 6,600 feet (2012 m)—is located on the north side of the steep, winding, road to Dunraven Pass. The campground is near the Tower General Store and Tower Fall, where Tower Creek plunges over 130 feet down to its confluence with the Yellowstone River. On the road over Dunraven Pass, a six-mile trail provides access to the summit of Mount Washburn. Roosevelt Lodge, a short drive from the campground, offers dining and horseback riding.", "facility_id"=>"259308", "facility_directions"=>"This campground is located on the road between Tower Fall and Canyon--north of Dunraven Pass and 3.5 miles (5.6 km) south of Tower-Roosevelt Junction.", "facility_email"=>"yell_visitor_services@nps.gov", "facility_phone"=>"(307) 344-7381"}}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:11:in `create'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[36mApi::V1::RecreationalArea Create (0.4ms)[0m  [1m[32mINSERT INTO "api_v1_recreational_areas" ("facility_name", "facility_description", "created_at", "updated_at", "facility_id", "facility_directions", "facility_email", "facility_phone", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["facility_name", "Tower Fall Campground"], ["facility_description", "Tower Fall Campground—elevation 6,600 feet (2012 m)—is located on the north side of the steep, winding, road to Dunraven Pass. The campground is near the Tower General Store and Tower Fall, where Tower Creek plunges over 130 feet down to its confluence with the Yellowstone River. On the road over Dunraven Pass, a six-mile trail provides access to the summit of Mount Washburn. Roosevelt Lodge, a short drive from the campground, offers dining and horseback riding."], ["created_at", "2020-12-06 22:49:06.637103"], ["updated_at", "2020-12-06 22:49:06.637103"], ["facility_id", "259308"], ["facility_directions", "This campground is located on the road between Tower Fall and Canyon--north of Dunraven Pass and 3.5 miles (5.6 km) south of Tower-Roosevelt Junction."], ["facility_email", "yell_visitor_services@nps.gov"], ["facility_phone", "(307) 344-7381"], ["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+Completed 200 OK in 2322ms (Views: 0.5ms | ActiveRecord: 1.5ms | Allocations: 11922)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 17:49:29 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas?username=Dice" for ::1 at 2020-12-06 17:49:29 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"username"=>"Dice", "user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:3:in `index'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.2ms | Allocations: 2200)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 17:50:27 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas?username=Dice" for ::1 at 2020-12-06 17:50:27 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"username"=>"Dice", "user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.3ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:3:in `index'
+  [1m[36mApi::V1::RecreationalArea Load (0.3ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 6ms (Views: 2.9ms | ActiveRecord: 0.6ms | Allocations: 2197)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-06 17:50:28 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 492ms (Views: 10.4ms | ActiveRecord: 0.0ms | Allocations: 21664)
+
+
+Started POST "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-06 17:50:30 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"username"=>"Dice", "facility_name"=>"Tower Fall Campground", "facility_description"=>"Tower Fall Campground—elevation 6,600 feet (2012 m)—is located on the north side of the steep, winding, road to Dunraven Pass. The campground is near the Tower General Store and Tower Fall, where Tower Creek plunges over 130 feet down to its confluence with the Yellowstone River. On the road over Dunraven Pass, a six-mile trail provides access to the summit of Mount Washburn. Roosevelt Lodge, a short drive from the campground, offers dining and horseback riding.", "facility_id"=>"259308", "facility_directions"=>"This campground is located on the road between Tower Fall and Canyon--north of Dunraven Pass and 3.5 miles (5.6 km) south of Tower-Roosevelt Junction.", "facility_email"=>"yell_visitor_services@nps.gov", "facility_phone"=>"(307) 344-7381", "user_id"=>"1", "recreational_area"=>{"facility_name"=>"Tower Fall Campground", "facility_description"=>"Tower Fall Campground—elevation 6,600 feet (2012 m)—is located on the north side of the steep, winding, road to Dunraven Pass. The campground is near the Tower General Store and Tower Fall, where Tower Creek plunges over 130 feet down to its confluence with the Yellowstone River. On the road over Dunraven Pass, a six-mile trail provides access to the summit of Mount Washburn. Roosevelt Lodge, a short drive from the campground, offers dining and horseback riding.", "facility_id"=>"259308", "facility_directions"=>"This campground is located on the road between Tower Fall and Canyon--north of Dunraven Pass and 3.5 miles (5.6 km) south of Tower-Roosevelt Junction.", "facility_email"=>"yell_visitor_services@nps.gov", "facility_phone"=>"(307) 344-7381"}}
+  [1m[36mApi::V1::User Load (0.5ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:11:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[36mApi::V1::RecreationalArea Create (0.5ms)[0m  [1m[32mINSERT INTO "api_v1_recreational_areas" ("facility_name", "facility_description", "created_at", "updated_at", "facility_id", "facility_directions", "facility_email", "facility_phone", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["facility_name", "Tower Fall Campground"], ["facility_description", "Tower Fall Campground—elevation 6,600 feet (2012 m)—is located on the north side of the steep, winding, road to Dunraven Pass. The campground is near the Tower General Store and Tower Fall, where Tower Creek plunges over 130 feet down to its confluence with the Yellowstone River. On the road over Dunraven Pass, a six-mile trail provides access to the summit of Mount Washburn. Roosevelt Lodge, a short drive from the campground, offers dining and horseback riding."], ["created_at", "2020-12-06 22:50:30.867150"], ["updated_at", "2020-12-06 22:50:30.867150"], ["facility_id", "259308"], ["facility_directions", "This campground is located on the road between Tower Fall and Canyon--north of Dunraven Pass and 3.5 miles (5.6 km) south of Tower-Roosevelt Junction."], ["facility_email", "yell_visitor_services@nps.gov"], ["facility_phone", "(307) 344-7381"], ["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+Completed 200 OK in 2807ms (Views: 0.4ms | ActiveRecord: 1.9ms | Allocations: 11914)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 17:51:54 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.3ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas?username=Dice" for ::1 at 2020-12-06 17:51:54 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"username"=>"Dice", "user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:3:in `index'
+  [1m[36mApi::V1::RecreationalArea Load (0.2ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 5ms (Views: 2.9ms | ActiveRecord: 0.3ms | Allocations: 2382)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 17:52:21 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas?username=Dice" for ::1 at 2020-12-06 17:52:21 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"username"=>"Dice", "user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:3:in `index'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 2.1ms | ActiveRecord: 0.3ms | Allocations: 2382)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-06 17:52:37 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 955ms (Views: 9.8ms | ActiveRecord: 0.0ms | Allocations: 21579)
+
+
+Started POST "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-06 17:52:39 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"username"=>"Dice", "facility_name"=>"Yeoman Park Discovery Trailhead", "facility_description"=>"<p>This short interpretive trail is at an elevation of 9000 feet. It is designed to accommodate those forest visitors that may be disabled. The terrain is level with a packed small gravel surface. The trail is relatively straight and passes through a stand of mature blue spruce and sub-alpine fir trees and ends at a bench overlooking one of Yeoman Park’s small beaver ponds. Along the way there are several log benches to relax and take in the view. The Yeoman Park Discovery Trail has 7 unique interpretive signs focusing on the use of senses to explore nature. The signs were designed with many touchable features and they are accessible to those with disabilities. The natural subjects covered by the signs include Colorado mammals, wildflowers, rocks, trees, archaeology and water. There are many opportunities along the trail to view the behaviors of common tree and ground squirrels, as well as many species of birds such as mountain chickadees, Stellar’s jays and gray jays.</p><p>* There is a <a href=\"../../../../../../../../../../Internet/FSE_DOCUMENTS/stelprdb5186415.pdf\">printable Recreation Quicksheet for this trail</a> which is complete with directions, a map, details, and other information about this trail. Or to see quicksheets for other recreation areas across the Forest, click on the \"Recreation Quicksheets\" link in the right column and select the appropriate Ranger District.</p>", "facility_id"=>"10082507", "facility_directions"=>"From I-70 exit 147 for Eagle, turn south on Eby Creek Rd to the Route 6 roundabout.At roundabout, turn right (west) on Route 6/Grand Ave and travel 0.8 miles to next roundabout. At this roundabout, take the third right onto Sylvan Lake Road.Continue 1.6 miles to Brush Creek Road, and take a right on Brush Creek Road.Follow Brush Creek Rd for roughly 9 miles to the fork of East and West Brush Creek.Turn left onto East Brush Creek Rd., FDR 415 and drive for 6 miles to Yeoman Park.Enter the campground and drive to the end of Loop A where the trailhead is located.", "facility_email"=>"", "facility_phone"=>"", "user_id"=>"1", "recreational_area"=>{"facility_name"=>"Yeoman Park Discovery Trailhead", "facility_description"=>"<p>This short interpretive trail is at an elevation of 9000 feet. It is designed to accommodate those forest visitors that may be disabled. The terrain is level with a packed small gravel surface. The trail is relatively straight and passes through a stand of mature blue spruce and sub-alpine fir trees and ends at a bench overlooking one of Yeoman Park’s small beaver ponds. Along the way there are several log benches to relax and take in the view. The Yeoman Park Discovery Trail has 7 unique interpretive signs focusing on the use of senses to explore nature. The signs were designed with many touchable features and they are accessible to those with disabilities. The natural subjects covered by the signs include Colorado mammals, wildflowers, rocks, trees, archaeology and water. There are many opportunities along the trail to view the behaviors of common tree and ground squirrels, as well as many species of birds such as mountain chickadees, Stellar’s jays and gray jays.</p><p>* There is a <a href=\"../../../../../../../../../../Internet/FSE_DOCUMENTS/stelprdb5186415.pdf\">printable Recreation Quicksheet for this trail</a> which is complete with directions, a map, details, and other information about this trail. Or to see quicksheets for other recreation areas across the Forest, click on the \"Recreation Quicksheets\" link in the right column and select the appropriate Ranger District.</p>", "facility_id"=>"10082507", "facility_directions"=>"From I-70 exit 147 for Eagle, turn south on Eby Creek Rd to the Route 6 roundabout.At roundabout, turn right (west) on Route 6/Grand Ave and travel 0.8 miles to next roundabout. At this roundabout, take the third right onto Sylvan Lake Road.Continue 1.6 miles to Brush Creek Road, and take a right on Brush Creek Road.Follow Brush Creek Rd for roughly 9 miles to the fork of East and West Brush Creek.Turn left onto East Brush Creek Rd., FDR 415 and drive for 6 miles to Yeoman Park.Enter the campground and drive to the end of Loop A where the trailhead is located.", "facility_email"=>"", "facility_phone"=>""}}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:11:in `create'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[36mApi::V1::RecreationalArea Create (0.4ms)[0m  [1m[32mINSERT INTO "api_v1_recreational_areas" ("facility_name", "facility_description", "created_at", "updated_at", "facility_id", "facility_directions", "facility_email", "facility_phone", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["facility_name", "Yeoman Park Discovery Trailhead"], ["facility_description", "<p>This short interpretive trail is at an elevation of 9000 feet. It is designed to accommodate those forest visitors that may be disabled. The terrain is level with a packed small gravel surface. The trail is relatively straight and passes through a stand of mature blue spruce and sub-alpine fir trees and ends at a bench overlooking one of Yeoman Park’s small beaver ponds. Along the way there are several log benches to relax and take in the view. The Yeoman Park Discovery Trail has 7 unique interpretive signs focusing on the use of senses to explore nature. The signs were designed with many touchable features and they are accessible to those with disabilities. The natural subjects covered by the signs include Colorado mammals, wildflowers, rocks, trees, archaeology and water. There are many opportunities along the trail to view the behaviors of common tree and ground squirrels, as well as many species of birds such as mountain chickadees, Stellar’s jays and gray jays.</p><p>* There is a <a href=\"../../../../../../../../../../Internet/FSE_DOCUMENTS/stelprdb5186415.pdf\">printable Recreation Quicksheet for this trail</a> which is complete with directions, a map, details, and other information about this trail. Or to see quicksheets for other recreation areas across the Forest, click on the \"Recreation Quicksheets\" link in the right column and select the appropriate Ranger District.</p>"], ["created_at", "2020-12-06 22:52:39.533207"], ["updated_at", "2020-12-06 22:52:39.533207"], ["facility_id", "10082507"], ["facility_directions", "From I-70 exit 147 for Eagle, turn south on Eby Creek Rd to the Route 6 roundabout.At roundabout, turn right (west) on Route 6/Grand Ave and travel 0.8 miles to next roundabout. At this roundabout, take the third right onto Sylvan Lake Road.Continue 1.6 miles to Brush Creek Road, and take a right on Brush Creek Road.Follow Brush Creek Rd for roughly 9 miles to the fork of East and West Brush Creek.Turn left onto East Brush Creek Rd., FDR 415 and drive for 6 miles to Yeoman Park.Enter the campground and drive to the end of Loop A where the trailhead is located."], ["facility_email", ""], ["facility_phone", ""], ["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+Completed 200 OK in 2848ms (Views: 0.5ms | ActiveRecord: 1.5ms | Allocations: 11904)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 17:54:06 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas?username=Dice" for ::1 at 2020-12-06 17:54:06 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"username"=>"Dice", "user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:3:in `index'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.2ms | Allocations: 2583)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-06 17:54:12 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 994ms (Views: 23.5ms | ActiveRecord: 0.0ms | Allocations: 21565)
+
+
+Started POST "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-06 17:54:15 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"username"=>"Dice", "facility_name"=>"Hooper Lake #1860", "facility_description"=>"<p>The Hooper Lake trail begins at the end of Forest Sevice Road #610 (4wd high clearance vehicle needed) and becomes the North Derby Trail after passing Hooper Lake and crossing onto the Routt National Forest. It has a relatively gentle incline and passes near several small ponds and North Fork Derby Creek. It is recommended to have good map and compass skills for this area as there is so much undulating terrain and multiple trail intersections.</p>", "facility_id"=>"10082781", "facility_directions"=>"From Eagle travel west on I-70 for 13 miles to the Dotsero exit, and follow the signs for Sweetwater/ Burns, turning north onto the Colorado River Road.Follow the Colorado River Rd. for 23.5 miles until you get to Cabin Creek Rd. and turn left.Stay on this road for 7 miles to the intersection with Stump Park Rd., FDR 610 and turn right onto this high-clearance 4WD road.The trailhead is at the end of this road.", "facility_email"=>"", "facility_phone"=>"", "user_id"=>"1", "recreational_area"=>{"facility_name"=>"Hooper Lake #1860", "facility_description"=>"<p>The Hooper Lake trail begins at the end of Forest Sevice Road #610 (4wd high clearance vehicle needed) and becomes the North Derby Trail after passing Hooper Lake and crossing onto the Routt National Forest. It has a relatively gentle incline and passes near several small ponds and North Fork Derby Creek. It is recommended to have good map and compass skills for this area as there is so much undulating terrain and multiple trail intersections.</p>", "facility_id"=>"10082781", "facility_directions"=>"From Eagle travel west on I-70 for 13 miles to the Dotsero exit, and follow the signs for Sweetwater/ Burns, turning north onto the Colorado River Road.Follow the Colorado River Rd. for 23.5 miles until you get to Cabin Creek Rd. and turn left.Stay on this road for 7 miles to the intersection with Stump Park Rd., FDR 610 and turn right onto this high-clearance 4WD road.The trailhead is at the end of this road.", "facility_email"=>"", "facility_phone"=>""}}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:11:in `create'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[36mApi::V1::RecreationalArea Create (0.4ms)[0m  [1m[32mINSERT INTO "api_v1_recreational_areas" ("facility_name", "facility_description", "created_at", "updated_at", "facility_id", "facility_directions", "facility_email", "facility_phone", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["facility_name", "Hooper Lake #1860"], ["facility_description", "<p>The Hooper Lake trail begins at the end of Forest Sevice Road #610 (4wd high clearance vehicle needed) and becomes the North Derby Trail after passing Hooper Lake and crossing onto the Routt National Forest. It has a relatively gentle incline and passes near several small ponds and North Fork Derby Creek. It is recommended to have good map and compass skills for this area as there is so much undulating terrain and multiple trail intersections.</p>"], ["created_at", "2020-12-06 22:54:15.481976"], ["updated_at", "2020-12-06 22:54:15.481976"], ["facility_id", "10082781"], ["facility_directions", "From Eagle travel west on I-70 for 13 miles to the Dotsero exit, and follow the signs for Sweetwater/ Burns, turning north onto the Colorado River Road.Follow the Colorado River Rd. for 23.5 miles until you get to Cabin Creek Rd. and turn left.Stay on this road for 7 miles to the intersection with Stump Park Rd., FDR 610 and turn right onto this high-clearance 4WD road.The trailhead is at the end of this road."], ["facility_email", ""], ["facility_phone", ""], ["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+Completed 200 OK in 2545ms (Views: 0.4ms | ActiveRecord: 1.4ms | Allocations: 11894)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 17:57:28 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas?username=Dice" for ::1 at 2020-12-06 17:57:28 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"username"=>"Dice", "user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:3:in `index'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.2ms | Allocations: 2774)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-06 17:57:50 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 572ms (Views: 9.2ms | ActiveRecord: 0.0ms | Allocations: 21584)
+
+
+Started POST "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-06 17:57:53 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"username"=>"Dice", "facility_name"=>"Bailey Lakes #1859", "facility_description"=>"<p>The Bailey Lakes trail begins on the Hooper Lake Trail # 1860 and ends at Bailey Lakes. Follow the Hooper Lake Trail for about 3 miles to reach the beginning of this trail which contiues another 1.5 miles to Bailey Lakes. A high clearance 4wd vehicle is required to reach the trailhead. It is recommended to have good map and compass skills for this area as there is so much undulating terrain and multiple trail intersections.</p>", "facility_id"=>"10082508", "facility_directions"=>"This trail starts about half way up the Hooper Lakes Trail #1860.", "facility_email"=>"", "facility_phone"=>"", "user_id"=>"1", "recreational_area"=>{"facility_name"=>"Bailey Lakes #1859", "facility_description"=>"<p>The Bailey Lakes trail begins on the Hooper Lake Trail # 1860 and ends at Bailey Lakes. Follow the Hooper Lake Trail for about 3 miles to reach the beginning of this trail which contiues another 1.5 miles to Bailey Lakes. A high clearance 4wd vehicle is required to reach the trailhead. It is recommended to have good map and compass skills for this area as there is so much undulating terrain and multiple trail intersections.</p>", "facility_id"=>"10082508", "facility_directions"=>"This trail starts about half way up the Hooper Lakes Trail #1860.", "facility_email"=>"", "facility_phone"=>""}}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:11:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[36mApi::V1::RecreationalArea Create (0.4ms)[0m  [1m[32mINSERT INTO "api_v1_recreational_areas" ("facility_name", "facility_description", "created_at", "updated_at", "facility_id", "facility_directions", "facility_email", "facility_phone", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["facility_name", "Bailey Lakes #1859"], ["facility_description", "<p>The Bailey Lakes trail begins on the Hooper Lake Trail # 1860 and ends at Bailey Lakes. Follow the Hooper Lake Trail for about 3 miles to reach the beginning of this trail which contiues another 1.5 miles to Bailey Lakes. A high clearance 4wd vehicle is required to reach the trailhead. It is recommended to have good map and compass skills for this area as there is so much undulating terrain and multiple trail intersections.</p>"], ["created_at", "2020-12-06 22:57:53.392255"], ["updated_at", "2020-12-06 22:57:53.392255"], ["facility_id", "10082508"], ["facility_directions", "This trail starts about half way up the Hooper Lakes Trail #1860."], ["facility_email", ""], ["facility_phone", ""], ["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+Completed 200 OK in 2581ms (Views: 0.4ms | ActiveRecord: 1.4ms | Allocations: 11908)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 17:59:01 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas?username=Dice" for ::1 at 2020-12-06 17:59:01 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"username"=>"Dice", "user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:3:in `index'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.2ms | Allocations: 1456)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-06 17:59:15 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 914ms (Views: 10.0ms | ActiveRecord: 0.0ms | Allocations: 21575)
+
+
+Started POST "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-06 17:59:18 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"username"=>"Dice", "facility_name"=>"Tower Fall Campground", "facility_description"=>"Tower Fall Campground—elevation 6,600 feet (2012 m)—is located on the north side of the steep, winding, road to Dunraven Pass. The campground is near the Tower General Store and Tower Fall, where Tower Creek plunges over 130 feet down to its confluence with the Yellowstone River. On the road over Dunraven Pass, a six-mile trail provides access to the summit of Mount Washburn. Roosevelt Lodge, a short drive from the campground, offers dining and horseback riding.", "facility_id"=>"259308", "facility_directions"=>"This campground is located on the road between Tower Fall and Canyon--north of Dunraven Pass and 3.5 miles (5.6 km) south of Tower-Roosevelt Junction.", "facility_email"=>"yell_visitor_services@nps.gov", "facility_phone"=>"(307) 344-7381", "user_id"=>"1", "recreational_area"=>{"facility_name"=>"Tower Fall Campground", "facility_description"=>"Tower Fall Campground—elevation 6,600 feet (2012 m)—is located on the north side of the steep, winding, road to Dunraven Pass. The campground is near the Tower General Store and Tower Fall, where Tower Creek plunges over 130 feet down to its confluence with the Yellowstone River. On the road over Dunraven Pass, a six-mile trail provides access to the summit of Mount Washburn. Roosevelt Lodge, a short drive from the campground, offers dining and horseback riding.", "facility_id"=>"259308", "facility_directions"=>"This campground is located on the road between Tower Fall and Canyon--north of Dunraven Pass and 3.5 miles (5.6 km) south of Tower-Roosevelt Junction.", "facility_email"=>"yell_visitor_services@nps.gov", "facility_phone"=>"(307) 344-7381"}}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:11:in `create'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[36mApi::V1::RecreationalArea Create (0.4ms)[0m  [1m[32mINSERT INTO "api_v1_recreational_areas" ("facility_name", "facility_description", "created_at", "updated_at", "facility_id", "facility_directions", "facility_email", "facility_phone", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["facility_name", "Tower Fall Campground"], ["facility_description", "Tower Fall Campground—elevation 6,600 feet (2012 m)—is located on the north side of the steep, winding, road to Dunraven Pass. The campground is near the Tower General Store and Tower Fall, where Tower Creek plunges over 130 feet down to its confluence with the Yellowstone River. On the road over Dunraven Pass, a six-mile trail provides access to the summit of Mount Washburn. Roosevelt Lodge, a short drive from the campground, offers dining and horseback riding."], ["created_at", "2020-12-06 22:59:18.886676"], ["updated_at", "2020-12-06 22:59:18.886676"], ["facility_id", "259308"], ["facility_directions", "This campground is located on the road between Tower Fall and Canyon--north of Dunraven Pass and 3.5 miles (5.6 km) south of Tower-Roosevelt Junction."], ["facility_email", "yell_visitor_services@nps.gov"], ["facility_phone", "(307) 344-7381"], ["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+Completed 200 OK in 3729ms (Views: 0.5ms | ActiveRecord: 2.0ms | Allocations: 11921)
+
+
+Started POST "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-06 17:59:33 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"username"=>"Dice", "facility_name"=>"Yeoman Park Discovery Trailhead", "facility_description"=>"<p>This short interpretive trail is at an elevation of 9000 feet. It is designed to accommodate those forest visitors that may be disabled. The terrain is level with a packed small gravel surface. The trail is relatively straight and passes through a stand of mature blue spruce and sub-alpine fir trees and ends at a bench overlooking one of Yeoman Park’s small beaver ponds. Along the way there are several log benches to relax and take in the view. The Yeoman Park Discovery Trail has 7 unique interpretive signs focusing on the use of senses to explore nature. The signs were designed with many touchable features and they are accessible to those with disabilities. The natural subjects covered by the signs include Colorado mammals, wildflowers, rocks, trees, archaeology and water. There are many opportunities along the trail to view the behaviors of common tree and ground squirrels, as well as many species of birds such as mountain chickadees, Stellar’s jays and gray jays.</p><p>* There is a <a href=\"../../../../../../../../../../Internet/FSE_DOCUMENTS/stelprdb5186415.pdf\">printable Recreation Quicksheet for this trail</a> which is complete with directions, a map, details, and other information about this trail. Or to see quicksheets for other recreation areas across the Forest, click on the \"Recreation Quicksheets\" link in the right column and select the appropriate Ranger District.</p>", "facility_id"=>"10082507", "facility_directions"=>"From I-70 exit 147 for Eagle, turn south on Eby Creek Rd to the Route 6 roundabout.At roundabout, turn right (west) on Route 6/Grand Ave and travel 0.8 miles to next roundabout. At this roundabout, take the third right onto Sylvan Lake Road.Continue 1.6 miles to Brush Creek Road, and take a right on Brush Creek Road.Follow Brush Creek Rd for roughly 9 miles to the fork of East and West Brush Creek.Turn left onto East Brush Creek Rd., FDR 415 and drive for 6 miles to Yeoman Park.Enter the campground and drive to the end of Loop A where the trailhead is located.", "facility_email"=>"", "facility_phone"=>"", "user_id"=>"1", "recreational_area"=>{"facility_name"=>"Yeoman Park Discovery Trailhead", "facility_description"=>"<p>This short interpretive trail is at an elevation of 9000 feet. It is designed to accommodate those forest visitors that may be disabled. The terrain is level with a packed small gravel surface. The trail is relatively straight and passes through a stand of mature blue spruce and sub-alpine fir trees and ends at a bench overlooking one of Yeoman Park’s small beaver ponds. Along the way there are several log benches to relax and take in the view. The Yeoman Park Discovery Trail has 7 unique interpretive signs focusing on the use of senses to explore nature. The signs were designed with many touchable features and they are accessible to those with disabilities. The natural subjects covered by the signs include Colorado mammals, wildflowers, rocks, trees, archaeology and water. There are many opportunities along the trail to view the behaviors of common tree and ground squirrels, as well as many species of birds such as mountain chickadees, Stellar’s jays and gray jays.</p><p>* There is a <a href=\"../../../../../../../../../../Internet/FSE_DOCUMENTS/stelprdb5186415.pdf\">printable Recreation Quicksheet for this trail</a> which is complete with directions, a map, details, and other information about this trail. Or to see quicksheets for other recreation areas across the Forest, click on the \"Recreation Quicksheets\" link in the right column and select the appropriate Ranger District.</p>", "facility_id"=>"10082507", "facility_directions"=>"From I-70 exit 147 for Eagle, turn south on Eby Creek Rd to the Route 6 roundabout.At roundabout, turn right (west) on Route 6/Grand Ave and travel 0.8 miles to next roundabout. At this roundabout, take the third right onto Sylvan Lake Road.Continue 1.6 miles to Brush Creek Road, and take a right on Brush Creek Road.Follow Brush Creek Rd for roughly 9 miles to the fork of East and West Brush Creek.Turn left onto East Brush Creek Rd., FDR 415 and drive for 6 miles to Yeoman Park.Enter the campground and drive to the end of Loop A where the trailhead is located.", "facility_email"=>"", "facility_phone"=>""}}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:11:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[36mApi::V1::RecreationalArea Create (0.4ms)[0m  [1m[32mINSERT INTO "api_v1_recreational_areas" ("facility_name", "facility_description", "created_at", "updated_at", "facility_id", "facility_directions", "facility_email", "facility_phone", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["facility_name", "Yeoman Park Discovery Trailhead"], ["facility_description", "<p>This short interpretive trail is at an elevation of 9000 feet. It is designed to accommodate those forest visitors that may be disabled. The terrain is level with a packed small gravel surface. The trail is relatively straight and passes through a stand of mature blue spruce and sub-alpine fir trees and ends at a bench overlooking one of Yeoman Park’s small beaver ponds. Along the way there are several log benches to relax and take in the view. The Yeoman Park Discovery Trail has 7 unique interpretive signs focusing on the use of senses to explore nature. The signs were designed with many touchable features and they are accessible to those with disabilities. The natural subjects covered by the signs include Colorado mammals, wildflowers, rocks, trees, archaeology and water. There are many opportunities along the trail to view the behaviors of common tree and ground squirrels, as well as many species of birds such as mountain chickadees, Stellar’s jays and gray jays.</p><p>* There is a <a href=\"../../../../../../../../../../Internet/FSE_DOCUMENTS/stelprdb5186415.pdf\">printable Recreation Quicksheet for this trail</a> which is complete with directions, a map, details, and other information about this trail. Or to see quicksheets for other recreation areas across the Forest, click on the \"Recreation Quicksheets\" link in the right column and select the appropriate Ranger District.</p>"], ["created_at", "2020-12-06 22:59:33.926539"], ["updated_at", "2020-12-06 22:59:33.926539"], ["facility_id", "10082507"], ["facility_directions", "From I-70 exit 147 for Eagle, turn south on Eby Creek Rd to the Route 6 roundabout.At roundabout, turn right (west) on Route 6/Grand Ave and travel 0.8 miles to next roundabout. At this roundabout, take the third right onto Sylvan Lake Road.Continue 1.6 miles to Brush Creek Road, and take a right on Brush Creek Road.Follow Brush Creek Rd for roughly 9 miles to the fork of East and West Brush Creek.Turn left onto East Brush Creek Rd., FDR 415 and drive for 6 miles to Yeoman Park.Enter the campground and drive to the end of Loop A where the trailhead is located."], ["facility_email", ""], ["facility_phone", ""], ["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+Completed 200 OK in 2562ms (Views: 0.5ms | ActiveRecord: 1.6ms | Allocations: 11918)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 17:59:50 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas?username=Dice" for ::1 at 2020-12-06 17:59:50 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"username"=>"Dice", "user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:3:in `index'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.2ms | Allocations: 1842)
+
+

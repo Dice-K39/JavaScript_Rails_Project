@@ -64,4 +64,19 @@ class ApiService
             .then(res => res.json())
             .then(data => new DisplayFavoritesCard(data));
     }
+
+    getFavorites = (user) =>
+    {
+        const url = new URL(this.baseURL + `/users/${user.id}/recreational_areas`);
+        const userData =
+        {
+            username: user.username
+        }
+
+        url.search = new URLSearchParams(userData);
+
+        fetch(url)
+            .then(res => res.json())
+            .then(data => new DisplayFavoritesCard(data));
+    }
 }

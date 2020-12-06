@@ -22,6 +22,7 @@ class User
             this.user = user;
             this.displayName(user);
             this.attachBtnEventListener();
+            this.loadFavorites();
             new SearchForm();
         }
         else
@@ -29,6 +30,11 @@ class User
             this.renderButtons();
             this.attachBtnEventListener();
         }
+    }
+
+    loadFavorites()
+    {
+        api.getFavorites(this.user);
     }
     
     displayName(user)
