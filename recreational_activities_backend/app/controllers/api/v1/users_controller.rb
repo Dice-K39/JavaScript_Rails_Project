@@ -5,6 +5,7 @@ class Api::V1::UsersController < ApplicationController
         else
             user = version_number.all
         end
+
         render json: user, except: [:created_at, :updated_at]
     end
     

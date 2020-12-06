@@ -18,7 +18,6 @@ class ApiService
 
     signupUser = (userName) =>
     {
-
         const configObj =
         {
             method: "POST",
@@ -46,4 +45,23 @@ class ApiService
             .then(res => res.json())
             .then(data => ActivityCard.getMatch(data));
     };
+
+    favoriteArea = (userID, data) =>
+    {
+        const url = new URL(this.baseURL + `/users/${userID}/recreational_areas`)
+        const configObj =
+        {
+            method: "POST",
+            headers:
+            {
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+            },
+            body: JSON.stringify(data)
+        };
+
+        fetch(url, configObj)
+            .then(res => res.json())
+            .then(data => console.log(data))
+    }
 }

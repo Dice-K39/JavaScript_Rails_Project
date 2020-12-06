@@ -6032,3 +6032,1184 @@ Processing by Api::V1::SearchController#search as */*
 Completed 200 OK in 539ms (Views: 34.9ms | ActiveRecord: 0.0ms | Allocations: 21680)
 
 
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-05 21:56:29 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 705)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-05 21:57:01 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-05 21:58:36 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-05 22:00:45 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-05 22:01:35 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-05 22:01:38 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 513ms (Views: 9.7ms | ActiveRecord: 0.0ms | Allocations: 21685)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-05 22:02:42 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-05 22:02:43 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 462ms (Views: 8.5ms | ActiveRecord: 0.0ms | Allocations: 21659)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-05 22:21:56 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 705)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-05 22:21:58 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 439ms (Views: 8.7ms | ActiveRecord: 0.0ms | Allocations: 21706)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-05 22:23:08 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.5ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 691)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-05 22:23:10 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 339ms (Views: 9.4ms | ActiveRecord: 0.0ms | Allocations: 21684)
+
+
+Started GET "/api/v1/users/?Dice=" for ::1 at 2020-12-05 22:23:12 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"Dice"=>""}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms | Allocations: 1004)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-05 22:23:56 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 11213ms (Views: 0.2ms | ActiveRecord: 0.8ms | Allocations: 42308)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-05 22:24:12 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 389ms (Views: 9.1ms | ActiveRecord: 0.0ms | Allocations: 21768)
+
+
+Started GET "/api/v1/users/?Dice=" for ::1 at 2020-12-05 22:24:14 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"Dice"=>""}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:9:in `index'
+Completed 200 OK in 134810ms (Views: 1.6ms | ActiveRecord: 0.2ms | Allocations: 5816)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-05 22:26:37 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 9608ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 5456)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-05 22:26:51 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 499ms (Views: 9.5ms | ActiveRecord: 0.0ms | Allocations: 21695)
+
+
+Started GET "/api/v1/users/?username=Dice&facility_name=Tower+Fall+Campground&facility_description=Tower+Fall+Campground%E2%80%94elevation+6%2C600+feet+%282012+m%29%E2%80%94is+located+on+the+north+side+of+the+steep%2C+winding%2C+road+to+Dunraven+Pass.+The+campground+is+near+the+Tower+General+Store+and+Tower+Fall%2C+where+Tower+Creek+plunges+over+130+feet+down+to+its+confluence+with+the+Yellowstone+River.+On+the+road+over+Dunraven+Pass%2C+a+six-mile+trail+provides+access+to+the+summit+of+Mount+Washburn.+Roosevelt+Lodge%2C+a+short+drive+from+the+campground%2C+offers+dining+and+horseback+riding.&facility_id=259308&facility_directions=This+campground+is+located+on+the+road+between+Tower+Fall+and+Canyon--north+of+Dunraven+Pass+and+3.5+miles+%285.6+km%29+south+of+Tower-Roosevelt+Junction.&facility_email=yell_visitor_services%40nps.gov&facility_phone=%28307%29+344-7381" for ::1 at 2020-12-05 22:26:52 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice", "facility_name"=>"Tower Fall Campground", "facility_description"=>"Tower Fall Campground—elevation 6,600 feet (2012 m)—is located on the north side of the steep, winding, road to Dunraven Pass. The campground is near the Tower General Store and Tower Fall, where Tower Creek plunges over 130 feet down to its confluence with the Yellowstone River. On the road over Dunraven Pass, a six-mile trail provides access to the summit of Mount Washburn. Roosevelt Lodge, a short drive from the campground, offers dining and horseback riding.", "facility_id"=>"259308", "facility_directions"=>"This campground is located on the road between Tower Fall and Canyon--north of Dunraven Pass and 3.5 miles (5.6 km) south of Tower-Roosevelt Junction.", "facility_email"=>"yell_visitor_services@nps.gov", "facility_phone"=>"(307) 344-7381"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 27103ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 5711)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-05 22:28:21 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 83585ms (Views: 0.3ms | ActiveRecord: 0.9ms | Allocations: 14967)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-05 22:29:55 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 435ms (Views: 9.3ms | ActiveRecord: 0.0ms | Allocations: 21766)
+
+
+Started GET "/api/v1/users/?username=Dice&facility_name=Tower+Fall+Campground&facility_description=Tower+Fall+Campground%E2%80%94elevation+6%2C600+feet+%282012+m%29%E2%80%94is+located+on+the+north+side+of+the+steep%2C+winding%2C+road+to+Dunraven+Pass.+The+campground+is+near+the+Tower+General+Store+and+Tower+Fall%2C+where+Tower+Creek+plunges+over+130+feet+down+to+its+confluence+with+the+Yellowstone+River.+On+the+road+over+Dunraven+Pass%2C+a+six-mile+trail+provides+access+to+the+summit+of+Mount+Washburn.+Roosevelt+Lodge%2C+a+short+drive+from+the+campground%2C+offers+dining+and+horseback+riding.&facility_id=259308&facility_directions=This+campground+is+located+on+the+road+between+Tower+Fall+and+Canyon--north+of+Dunraven+Pass+and+3.5+miles+%285.6+km%29+south+of+Tower-Roosevelt+Junction.&facility_email=yell_visitor_services%40nps.gov&facility_phone=%28307%29+344-7381" for ::1 at 2020-12-05 22:29:58 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice", "facility_name"=>"Tower Fall Campground", "facility_description"=>"Tower Fall Campground—elevation 6,600 feet (2012 m)—is located on the north side of the steep, winding, road to Dunraven Pass. The campground is near the Tower General Store and Tower Fall, where Tower Creek plunges over 130 feet down to its confluence with the Yellowstone River. On the road over Dunraven Pass, a six-mile trail provides access to the summit of Mount Washburn. Roosevelt Lodge, a short drive from the campground, offers dining and horseback riding.", "facility_id"=>"259308", "facility_directions"=>"This campground is located on the road between Tower Fall and Canyon--north of Dunraven Pass and 3.5 miles (5.6 km) south of Tower-Roosevelt Junction.", "facility_email"=>"yell_visitor_services@nps.gov", "facility_phone"=>"(307) 344-7381"}
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-05 22:30:52 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 3029ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 23130)
+
+
+Completed 200 OK in 56140ms (Views: 0.2ms | ActiveRecord: 0.8ms | Allocations: 30941)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-05 22:30:59 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 347ms (Views: 21.6ms | ActiveRecord: 0.0ms | Allocations: 21666)
+
+
+Started GET "/api/v1/users/?username=Dice&facility_name=Tower+Fall+Campground&facility_description=Tower+Fall+Campground%E2%80%94elevation+6%2C600+feet+%282012+m%29%E2%80%94is+located+on+the+north+side+of+the+steep%2C+winding%2C+road+to+Dunraven+Pass.+The+campground+is+near+the+Tower+General+Store+and+Tower+Fall%2C+where+Tower+Creek+plunges+over+130+feet+down+to+its+confluence+with+the+Yellowstone+River.+On+the+road+over+Dunraven+Pass%2C+a+six-mile+trail+provides+access+to+the+summit+of+Mount+Washburn.+Roosevelt+Lodge%2C+a+short+drive+from+the+campground%2C+offers+dining+and+horseback+riding.&facility_id=259308&facility_directions=This+campground+is+located+on+the+road+between+Tower+Fall+and+Canyon--north+of+Dunraven+Pass+and+3.5+miles+%285.6+km%29+south+of+Tower-Roosevelt+Junction.&facility_email=yell_visitor_services%40nps.gov&facility_phone=%28307%29+344-7381" for ::1 at 2020-12-05 22:31:02 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice", "facility_name"=>"Tower Fall Campground", "facility_description"=>"Tower Fall Campground—elevation 6,600 feet (2012 m)—is located on the north side of the steep, winding, road to Dunraven Pass. The campground is near the Tower General Store and Tower Fall, where Tower Creek plunges over 130 feet down to its confluence with the Yellowstone River. On the road over Dunraven Pass, a six-mile trail provides access to the summit of Mount Washburn. Roosevelt Lodge, a short drive from the campground, offers dining and horseback riding.", "facility_id"=>"259308", "facility_directions"=>"This campground is located on the road between Tower Fall and Canyon--north of Dunraven Pass and 3.5 miles (5.6 km) south of Tower-Roosevelt Junction.", "facility_email"=>"yell_visitor_services@nps.gov", "facility_phone"=>"(307) 344-7381"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 96133ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 15401)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-05 22:32:38 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 1126ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 11015)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-05 22:32:42 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 410ms (Views: 9.5ms | ActiveRecord: 0.0ms | Allocations: 21684)
+
+
+Started GET "/api/v1/users/?username=Dice" for ::1 at 2020-12-05 22:32:45 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 43395ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 12691)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-05 22:33:28 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 1013ms (Views: 0.4ms | ActiveRecord: 0.1ms | Allocations: 11010)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-05 22:33:35 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 340ms (Views: 9.1ms | ActiveRecord: 0.0ms | Allocations: 21705)
+
+
+Started GET "/api/v1/users/?username=Dice" for ::1 at 2020-12-05 22:33:36 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 1131391ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 11185)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 00:47:26 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.5ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 4208ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 11160)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-06 00:47:34 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 449ms (Views: 9.3ms | ActiveRecord: 0.0ms | Allocations: 21778)
+
+
+Started GET "/api/v1/users/?username=Dice" for ::1 at 2020-12-06 00:47:36 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 65065ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 13212)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 00:59:28 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.5ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 11ms (Views: 0.6ms | ActiveRecord: 0.5ms | Allocations: 4284)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-06 00:59:30 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 364ms (Views: 10.4ms | ActiveRecord: 0.0ms | Allocations: 21603)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 01:04:51 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.4ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 705)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-06 01:04:53 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 382ms (Views: 8.8ms | ActiveRecord: 0.0ms | Allocations: 21561)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 01:04:55 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 01:06:07 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-06 01:06:08 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 380ms (Views: 9.2ms | ActiveRecord: 0.0ms | Allocations: 21524)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 01:07:37 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 01:10:00 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-06 01:10:02 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 468ms (Views: 8.7ms | ActiveRecord: 0.0ms | Allocations: 21551)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 01:10:03 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 691)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 01:11:01 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-06 01:11:02 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 349ms (Views: 9.7ms | ActiveRecord: 0.0ms | Allocations: 21625)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 01:11:49 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 01:12:37 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 691)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-06 01:12:38 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 430ms (Views: 8.7ms | ActiveRecord: 0.0ms | Allocations: 21561)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 01:12:58 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 01:18:52 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.7ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.7ms | Allocations: 705)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-06 01:18:53 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 435ms (Views: 9.2ms | ActiveRecord: 0.0ms | Allocations: 21552)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 01:18:55 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 01:21:53 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 33949ms (Views: 0.3ms | ActiveRecord: 0.7ms | Allocations: 10387)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-06 01:22:31 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 326ms (Views: 25.7ms | ActiveRecord: 0.0ms | Allocations: 21604)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 01:22:33 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 30902ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 6587)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 01:24:07 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 4561ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 6508)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-06 01:24:15 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 394ms (Views: 9.6ms | ActiveRecord: 0.0ms | Allocations: 21536)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 01:24:18 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 4580ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 6518)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 01:25:25 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 2919ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 6508)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-06 01:25:31 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 265ms (Views: 8.6ms | ActiveRecord: 0.0ms | Allocations: 21580)
+
+
+Started GET "/api/v1/users?Dice=" for ::1 at 2020-12-06 01:25:35 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"Dice"=>""}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/controllers/api/v1/users_controller.rb:9:in `index'
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:9:in `index'
+Completed 200 OK in 104494ms (Views: 1.7ms | ActiveRecord: 0.4ms | Allocations: 7994)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 01:29:02 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1890ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 6701)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-06 01:29:07 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 317ms (Views: 23.1ms | ActiveRecord: 0.0ms | Allocations: 21573)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 01:29:10 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 6611ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 6691)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 01:32:11 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 0.7ms | Allocations: 4592)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-06 01:32:13 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 462ms (Views: 9.5ms | ActiveRecord: 0.0ms | Allocations: 21544)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 01:32:15 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 691)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 01:47:47 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.4ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 21ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 4281)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-06 01:47:50 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 388ms (Views: 8.7ms | ActiveRecord: 0.0ms | Allocations: 21615)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 01:47:52 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 01:48:33 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-06 01:48:35 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 271ms (Views: 8.5ms | ActiveRecord: 0.0ms | Allocations: 21548)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 01:48:37 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 691)
+
+
+Started POST "/api/v1/users/undefined/recreational_areas" for ::1 at 2020-12-06 01:49:00 -0500
+  
+SyntaxError (/Users/daisukehashimoto/Documents/Programming/Flatiron/Projects/JavaScript_Rails_Project/recreational_activities_backend/app/controllers/api/v1/recreational_areas_controller.rb:2: syntax error, unexpected ':', expecting end
+    before_action: :find_user, only: [:index, :...
+                 ^):
+  
+app/controllers/api/v1/recreational_areas_controller.rb:2: syntax error, unexpected ':', expecting end
+app/controllers/api/v1/recreational_areas_controller.rb:2: syntax error, unexpected ':', expecting end
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 01:50:00 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 0.7ms | Allocations: 4560)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-06 01:50:01 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 316ms (Views: 10.0ms | ActiveRecord: 0.0ms | Allocations: 21579)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 01:50:02 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 691)
+
+
+Started POST "/api/v1/users/undefined/recreational_areas" for ::1 at 2020-12-06 01:50:07 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"facility_name"=>"Tower Fall Campground", "facility_description"=>"Tower Fall Campground—elevation 6,600 feet (2012 m)—is located on the north side of the steep, winding, road to Dunraven Pass. The campground is near the Tower General Store and Tower Fall, where Tower Creek plunges over 130 feet down to its confluence with the Yellowstone River. On the road over Dunraven Pass, a six-mile trail provides access to the summit of Mount Washburn. Roosevelt Lodge, a short drive from the campground, offers dining and horseback riding.", "facility_id"=>"259308", "facility_directions"=>"This campground is located on the road between Tower Fall and Canyon--north of Dunraven Pass and 3.5 miles (5.6 km) south of Tower-Roosevelt Junction.", "facility_email"=>"yell_visitor_services@nps.gov", "facility_phone"=>"(307) 344-7381", "user_id"=>"undefined", "recreational_area"=>{"facility_name"=>"Tower Fall Campground", "facility_description"=>"Tower Fall Campground—elevation 6,600 feet (2012 m)—is located on the north side of the steep, winding, road to Dunraven Pass. The campground is near the Tower General Store and Tower Fall, where Tower Creek plunges over 130 feet down to its confluence with the Yellowstone River. On the road over Dunraven Pass, a six-mile trail provides access to the summit of Mount Washburn. Roosevelt Lodge, a short drive from the campground, offers dining and horseback riding.", "facility_id"=>"259308", "facility_directions"=>"This campground is located on the road between Tower Fall and Canyon--north of Dunraven Pass and 3.5 miles (5.6 km) south of Tower-Roosevelt Junction.", "facility_email"=>"yell_visitor_services@nps.gov", "facility_phone"=>"(307) 344-7381"}}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.4ms | Allocations: 1666)
+
+
+  
+NameError (uninitialized constant Api::V1::RecreationalAreasController::User
+Did you mean?  Api::V1::User):
+  
+app/controllers/api/v1/recreational_areas_controller.rb:27:in `find_user'
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 01:55:30 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 4281)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-06 01:55:31 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 351ms (Views: 9.0ms | ActiveRecord: 0.0ms | Allocations: 21657)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 01:55:33 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 691)
+
+
+Started POST "/api/v1/users/undefined/recreational_areas" for ::1 at 2020-12-06 01:55:52 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"facility_name"=>"Tower Fall Campground", "facility_description"=>"Tower Fall Campground—elevation 6,600 feet (2012 m)—is located on the north side of the steep, winding, road to Dunraven Pass. The campground is near the Tower General Store and Tower Fall, where Tower Creek plunges over 130 feet down to its confluence with the Yellowstone River. On the road over Dunraven Pass, a six-mile trail provides access to the summit of Mount Washburn. Roosevelt Lodge, a short drive from the campground, offers dining and horseback riding.", "facility_id"=>"259308", "facility_directions"=>"This campground is located on the road between Tower Fall and Canyon--north of Dunraven Pass and 3.5 miles (5.6 km) south of Tower-Roosevelt Junction.", "facility_email"=>"yell_visitor_services@nps.gov", "facility_phone"=>"(307) 344-7381", "user_id"=>"undefined", "recreational_area"=>{"facility_name"=>"Tower Fall Campground", "facility_description"=>"Tower Fall Campground—elevation 6,600 feet (2012 m)—is located on the north side of the steep, winding, road to Dunraven Pass. The campground is near the Tower General Store and Tower Fall, where Tower Creek plunges over 130 feet down to its confluence with the Yellowstone River. On the road over Dunraven Pass, a six-mile trail provides access to the summit of Mount Washburn. Roosevelt Lodge, a short drive from the campground, offers dining and horseback riding.", "facility_id"=>"259308", "facility_directions"=>"This campground is located on the road between Tower Fall and Canyon--north of Dunraven Pass and 3.5 miles (5.6 km) south of Tower-Roosevelt Junction.", "facility_email"=>"yell_visitor_services@nps.gov", "facility_phone"=>"(307) 344-7381"}}
+  [1m[36mApi::V1::User Load (0.3ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:27:in `find_user'
+Completed 500 Internal Server Error in 165ms (ActiveRecord: 0.3ms | Allocations: 78105)
+
+
+  
+NameError (undefined local variable or method `user' for #<Api::V1::RecreationalAreasController:0x00007fa973ca1560>
+Did you mean?  super):
+  
+app/controllers/api/v1/recreational_areas_controller.rb:11:in `create'
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 01:59:20 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 0.7ms | Allocations: 4609)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-06 01:59:22 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 386ms (Views: 9.1ms | ActiveRecord: 0.0ms | Allocations: 21623)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 01:59:24 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 691)
+
+
+Started POST "/api/v1/users/undefined/recreational_areas" for ::1 at 2020-12-06 01:59:37 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"facility_name"=>"Tower Fall Campground", "facility_description"=>"Tower Fall Campground—elevation 6,600 feet (2012 m)—is located on the north side of the steep, winding, road to Dunraven Pass. The campground is near the Tower General Store and Tower Fall, where Tower Creek plunges over 130 feet down to its confluence with the Yellowstone River. On the road over Dunraven Pass, a six-mile trail provides access to the summit of Mount Washburn. Roosevelt Lodge, a short drive from the campground, offers dining and horseback riding.", "facility_id"=>"259308", "facility_directions"=>"This campground is located on the road between Tower Fall and Canyon--north of Dunraven Pass and 3.5 miles (5.6 km) south of Tower-Roosevelt Junction.", "facility_email"=>"yell_visitor_services@nps.gov", "facility_phone"=>"(307) 344-7381", "user_id"=>"undefined", "recreational_area"=>{"facility_name"=>"Tower Fall Campground", "facility_description"=>"Tower Fall Campground—elevation 6,600 feet (2012 m)—is located on the north side of the steep, winding, road to Dunraven Pass. The campground is near the Tower General Store and Tower Fall, where Tower Creek plunges over 130 feet down to its confluence with the Yellowstone River. On the road over Dunraven Pass, a six-mile trail provides access to the summit of Mount Washburn. Roosevelt Lodge, a short drive from the campground, offers dining and horseback riding.", "facility_id"=>"259308", "facility_directions"=>"This campground is located on the road between Tower Fall and Canyon--north of Dunraven Pass and 3.5 miles (5.6 km) south of Tower-Roosevelt Junction.", "facility_email"=>"yell_visitor_services@nps.gov", "facility_phone"=>"(307) 344-7381"}}
+Completed 500 Internal Server Error in 97ms (ActiveRecord: 0.4ms | Allocations: 39165)
+
+
+  
+NoMethodError (undefined method `find_user' for #<Api::V1::RecreationalAreasController:0x00007fa9774369a8>):
+  
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:428:in `block in make_lambda'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:181:in `block (2 levels) in halting_and_conditional'
+actionpack (6.0.3.4) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:182:in `block in halting_and_conditional'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:513:in `each'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:134:in `run_callbacks'
+actionpack (6.0.3.4) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.3.4) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.3.4) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.3.4) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.3.4) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.3.4) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.3.4) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.3.4) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.3.4) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.3.4) lib/abstract_controller/base.rb:136:in `process'
+actionpack (6.0.3.4) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.4) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.3.4) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 02:00:10 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 0.7ms | Allocations: 4592)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-06 02:00:13 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 252ms (Views: 8.4ms | ActiveRecord: 0.0ms | Allocations: 21645)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 02:00:15 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 691)
+
+
+Started POST "/api/v1/users/undefined/recreational_areas" for ::1 at 2020-12-06 02:00:20 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"facility_name"=>"Tower Fall Campground", "facility_description"=>"Tower Fall Campground—elevation 6,600 feet (2012 m)—is located on the north side of the steep, winding, road to Dunraven Pass. The campground is near the Tower General Store and Tower Fall, where Tower Creek plunges over 130 feet down to its confluence with the Yellowstone River. On the road over Dunraven Pass, a six-mile trail provides access to the summit of Mount Washburn. Roosevelt Lodge, a short drive from the campground, offers dining and horseback riding.", "facility_id"=>"259308", "facility_directions"=>"This campground is located on the road between Tower Fall and Canyon--north of Dunraven Pass and 3.5 miles (5.6 km) south of Tower-Roosevelt Junction.", "facility_email"=>"yell_visitor_services@nps.gov", "facility_phone"=>"(307) 344-7381", "user_id"=>"undefined", "recreational_area"=>{"facility_name"=>"Tower Fall Campground", "facility_description"=>"Tower Fall Campground—elevation 6,600 feet (2012 m)—is located on the north side of the steep, winding, road to Dunraven Pass. The campground is near the Tower General Store and Tower Fall, where Tower Creek plunges over 130 feet down to its confluence with the Yellowstone River. On the road over Dunraven Pass, a six-mile trail provides access to the summit of Mount Washburn. Roosevelt Lodge, a short drive from the campground, offers dining and horseback riding.", "facility_id"=>"259308", "facility_directions"=>"This campground is located on the road between Tower Fall and Canyon--north of Dunraven Pass and 3.5 miles (5.6 km) south of Tower-Roosevelt Junction.", "facility_email"=>"yell_visitor_services@nps.gov", "facility_phone"=>"(307) 344-7381"}}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:10:in `create'
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.8ms | Allocations: 1195)
+
+
+  
+NoMethodError (undefined method `recreational_areas' for nil:NilClass):
+  
+app/controllers/api/v1/recreational_areas_controller.rb:11:in `create'
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 02:01:21 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 0.7ms | Allocations: 4592)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-06 02:01:22 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 377ms (Views: 9.1ms | ActiveRecord: 0.0ms | Allocations: 21595)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 02:01:24 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 691)
+
+
+Started POST "/api/v1/users/undefined/recreational_areas" for ::1 at 2020-12-06 02:01:30 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"facility_name"=>"Tower Fall Campground", "facility_description"=>"Tower Fall Campground—elevation 6,600 feet (2012 m)—is located on the north side of the steep, winding, road to Dunraven Pass. The campground is near the Tower General Store and Tower Fall, where Tower Creek plunges over 130 feet down to its confluence with the Yellowstone River. On the road over Dunraven Pass, a six-mile trail provides access to the summit of Mount Washburn. Roosevelt Lodge, a short drive from the campground, offers dining and horseback riding.", "facility_id"=>"259308", "facility_directions"=>"This campground is located on the road between Tower Fall and Canyon--north of Dunraven Pass and 3.5 miles (5.6 km) south of Tower-Roosevelt Junction.", "facility_email"=>"yell_visitor_services@nps.gov", "facility_phone"=>"(307) 344-7381", "user_id"=>"undefined", "recreational_area"=>{"facility_name"=>"Tower Fall Campground", "facility_description"=>"Tower Fall Campground—elevation 6,600 feet (2012 m)—is located on the north side of the steep, winding, road to Dunraven Pass. The campground is near the Tower General Store and Tower Fall, where Tower Creek plunges over 130 feet down to its confluence with the Yellowstone River. On the road over Dunraven Pass, a six-mile trail provides access to the summit of Mount Washburn. Roosevelt Lodge, a short drive from the campground, offers dining and horseback riding.", "facility_id"=>"259308", "facility_directions"=>"This campground is located on the road between Tower Fall and Canyon--north of Dunraven Pass and 3.5 miles (5.6 km) south of Tower-Roosevelt Junction.", "facility_email"=>"yell_visitor_services@nps.gov", "facility_phone"=>"(307) 344-7381"}}
+  [1m[36mApi::V1::User Load (0.3ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:11:in `create'
+Completed 500 Internal Server Error in 493884ms (ActiveRecord: 0.8ms | Allocations: 7853)
+
+
+  
+NoMethodError (undefined method `recreational_areas' for nil:NilClass):
+  
+app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 02:09:44 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 690)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 02:09:44 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 02:09:44 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 02:09:44 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 691)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 02:09:44 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 02:09:44 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 691)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 02:09:44 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 692)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 02:09:44 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 02:09:44 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 02:09:44 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 02:09:44 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 02:16:04 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 705)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-06 02:16:44 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 476ms (Views: 8.9ms | ActiveRecord: 0.0ms | Allocations: 21616)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 02:19:30 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-06 02:19:32 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 445ms (Views: 6.5ms | ActiveRecord: 0.0ms | Allocations: 21523)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 02:20:09 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-06 02:20:11 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 272ms (Views: 9.5ms | ActiveRecord: 0.0ms | Allocations: 21574)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 02:22:12 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-06 02:22:27 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 447ms (Views: 9.9ms | ActiveRecord: 0.0ms | Allocations: 21549)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 02:24:38 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-06 02:24:40 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 412ms (Views: 27.2ms | ActiveRecord: 0.0ms | Allocations: 21560)
+
+
+Started POST "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-06 02:24:49 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"facility_name"=>"Tower Fall Campground", "facility_description"=>"Tower Fall Campground—elevation 6,600 feet (2012 m)—is located on the north side of the steep, winding, road to Dunraven Pass. The campground is near the Tower General Store and Tower Fall, where Tower Creek plunges over 130 feet down to its confluence with the Yellowstone River. On the road over Dunraven Pass, a six-mile trail provides access to the summit of Mount Washburn. Roosevelt Lodge, a short drive from the campground, offers dining and horseback riding.", "facility_id"=>"259308", "facility_directions"=>"This campground is located on the road between Tower Fall and Canyon--north of Dunraven Pass and 3.5 miles (5.6 km) south of Tower-Roosevelt Junction.", "facility_email"=>"yell_visitor_services@nps.gov", "facility_phone"=>"(307) 344-7381", "user_id"=>"1", "recreational_area"=>{"facility_name"=>"Tower Fall Campground", "facility_description"=>"Tower Fall Campground—elevation 6,600 feet (2012 m)—is located on the north side of the steep, winding, road to Dunraven Pass. The campground is near the Tower General Store and Tower Fall, where Tower Creek plunges over 130 feet down to its confluence with the Yellowstone River. On the road over Dunraven Pass, a six-mile trail provides access to the summit of Mount Washburn. Roosevelt Lodge, a short drive from the campground, offers dining and horseback riding.", "facility_id"=>"259308", "facility_directions"=>"This campground is located on the road between Tower Fall and Canyon--north of Dunraven Pass and 3.5 miles (5.6 km) south of Tower-Roosevelt Junction.", "facility_email"=>"yell_visitor_services@nps.gov", "facility_phone"=>"(307) 344-7381"}}
+  [1m[36mApi::V1::User Load (0.3ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:11:in `create'
+Completed 500 Internal Server Error in 19115ms (ActiveRecord: 0.3ms | Allocations: 7755)
+
+
+  
+NoMethodError (undefined method `recreational_areas' for nil:NilClass):
+  
+app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddUserIdToApiV1RecreationalAreas (20201206173156)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "api_v1_recreational_areas" ADD "user_id" integer[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201206173156"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" ORDER BY "api_v1_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" ORDER BY "api_v1_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mApi::V1::RecreationalArea Create (0.7ms)[0m  [1m[32mINSERT INTO "api_v1_recreational_areas" ("facility_name", "facility_description", "created_at", "updated_at", "facility_id", "facility_directions", "facility_email", "facility_phone", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["facility_name", "A"], ["facility_description", "B"], ["created_at", "2020-12-06 17:50:36.026750"], ["updated_at", "2020-12-06 17:50:36.026750"], ["facility_id", "C"], ["facility_directions", "D"], ["facility_email", "E"], ["facility_phone", "F"], ["user_id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 12:55:23 -0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 9ms (Views: 0.4ms | ActiveRecord: 0.6ms | Allocations: 5405)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-06 12:55:25 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 565ms (Views: 26.5ms | ActiveRecord: 0.0ms | Allocations: 22255)
+
+
+Started POST "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-06 12:55:28 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"facility_name"=>"Tower Fall Campground", "facility_description"=>"Tower Fall Campground—elevation 6,600 feet (2012 m)—is located on the north side of the steep, winding, road to Dunraven Pass. The campground is near the Tower General Store and Tower Fall, where Tower Creek plunges over 130 feet down to its confluence with the Yellowstone River. On the road over Dunraven Pass, a six-mile trail provides access to the summit of Mount Washburn. Roosevelt Lodge, a short drive from the campground, offers dining and horseback riding.", "facility_id"=>"259308", "facility_directions"=>"This campground is located on the road between Tower Fall and Canyon--north of Dunraven Pass and 3.5 miles (5.6 km) south of Tower-Roosevelt Junction.", "facility_email"=>"yell_visitor_services@nps.gov", "facility_phone"=>"(307) 344-7381", "user_id"=>"1", "recreational_area"=>{"facility_name"=>"Tower Fall Campground", "facility_description"=>"Tower Fall Campground—elevation 6,600 feet (2012 m)—is located on the north side of the steep, winding, road to Dunraven Pass. The campground is near the Tower General Store and Tower Fall, where Tower Creek plunges over 130 feet down to its confluence with the Yellowstone River. On the road over Dunraven Pass, a six-mile trail provides access to the summit of Mount Washburn. Roosevelt Lodge, a short drive from the campground, offers dining and horseback riding.", "facility_id"=>"259308", "facility_directions"=>"This campground is located on the road between Tower Fall and Canyon--north of Dunraven Pass and 3.5 miles (5.6 km) south of Tower-Roosevelt Junction.", "facility_email"=>"yell_visitor_services@nps.gov", "facility_phone"=>"(307) 344-7381"}}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:11:in `create'
+Completed 500 Internal Server Error in 36437ms (ActiveRecord: 0.4ms | Allocations: 41779)
+
+
+  
+NoMethodError (undefined method `recreational_areas' for nil:NilClass):
+  
+app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 12:56:16 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.6ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 0.6ms | Allocations: 706)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-06 12:56:18 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 336ms (Views: 10.7ms | ActiveRecord: 0.0ms | Allocations: 21587)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 12:57:31 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-06 12:57:32 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 528ms (Views: 10.1ms | ActiveRecord: 0.0ms | Allocations: 21545)
+
+
+Started POST "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-06 12:58:09 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"username"=>"Dice", "facility_name"=>"Tower Fall Campground", "facility_description"=>"Tower Fall Campground—elevation 6,600 feet (2012 m)—is located on the north side of the steep, winding, road to Dunraven Pass. The campground is near the Tower General Store and Tower Fall, where Tower Creek plunges over 130 feet down to its confluence with the Yellowstone River. On the road over Dunraven Pass, a six-mile trail provides access to the summit of Mount Washburn. Roosevelt Lodge, a short drive from the campground, offers dining and horseback riding.", "facility_id"=>"259308", "facility_directions"=>"This campground is located on the road between Tower Fall and Canyon--north of Dunraven Pass and 3.5 miles (5.6 km) south of Tower-Roosevelt Junction.", "facility_email"=>"yell_visitor_services@nps.gov", "facility_phone"=>"(307) 344-7381", "user_id"=>"1", "recreational_area"=>{"facility_name"=>"Tower Fall Campground", "facility_description"=>"Tower Fall Campground—elevation 6,600 feet (2012 m)—is located on the north side of the steep, winding, road to Dunraven Pass. The campground is near the Tower General Store and Tower Fall, where Tower Creek plunges over 130 feet down to its confluence with the Yellowstone River. On the road over Dunraven Pass, a six-mile trail provides access to the summit of Mount Washburn. Roosevelt Lodge, a short drive from the campground, offers dining and horseback riding.", "facility_id"=>"259308", "facility_directions"=>"This campground is located on the road between Tower Fall and Canyon--north of Dunraven Pass and 3.5 miles (5.6 km) south of Tower-Roosevelt Junction.", "facility_email"=>"yell_visitor_services@nps.gov", "facility_phone"=>"(307) 344-7381"}}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:11:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[36mApi::V1::RecreationalArea Create (0.5ms)[0m  [1m[32mINSERT INTO "api_v1_recreational_areas" ("facility_name", "facility_description", "created_at", "updated_at", "facility_id", "facility_directions", "facility_email", "facility_phone", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["facility_name", "Tower Fall Campground"], ["facility_description", "Tower Fall Campground—elevation 6,600 feet (2012 m)—is located on the north side of the steep, winding, road to Dunraven Pass. The campground is near the Tower General Store and Tower Fall, where Tower Creek plunges over 130 feet down to its confluence with the Yellowstone River. On the road over Dunraven Pass, a six-mile trail provides access to the summit of Mount Washburn. Roosevelt Lodge, a short drive from the campground, offers dining and horseback riding."], ["created_at", "2020-12-06 17:58:18.949004"], ["updated_at", "2020-12-06 17:58:18.949004"], ["facility_id", "259308"], ["facility_directions", "This campground is located on the road between Tower Fall and Canyon--north of Dunraven Pass and 3.5 miles (5.6 km) south of Tower-Roosevelt Junction."], ["facility_email", "yell_visitor_services@nps.gov"], ["facility_phone", "(307) 344-7381"], ["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+Completed 200 OK in 9214ms (Views: 0.3ms | ActiveRecord: 1.7ms | Allocations: 20725)
+
+
+Started POST "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-06 12:59:28 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"username"=>"Dice", "facility_name"=>"Yeoman Park Discovery Trailhead", "facility_description"=>"<p>This short interpretive trail is at an elevation of 9000 feet. It is designed to accommodate those forest visitors that may be disabled. The terrain is level with a packed small gravel surface. The trail is relatively straight and passes through a stand of mature blue spruce and sub-alpine fir trees and ends at a bench overlooking one of Yeoman Park’s small beaver ponds. Along the way there are several log benches to relax and take in the view. The Yeoman Park Discovery Trail has 7 unique interpretive signs focusing on the use of senses to explore nature. The signs were designed with many touchable features and they are accessible to those with disabilities. The natural subjects covered by the signs include Colorado mammals, wildflowers, rocks, trees, archaeology and water. There are many opportunities along the trail to view the behaviors of common tree and ground squirrels, as well as many species of birds such as mountain chickadees, Stellar’s jays and gray jays.</p><p>* There is a <a href=\"../../../../../../../../../../Internet/FSE_DOCUMENTS/stelprdb5186415.pdf\">printable Recreation Quicksheet for this trail</a> which is complete with directions, a map, details, and other information about this trail. Or to see quicksheets for other recreation areas across the Forest, click on the \"Recreation Quicksheets\" link in the right column and select the appropriate Ranger District.</p>", "facility_id"=>"10082507", "facility_directions"=>"From I-70 exit 147 for Eagle, turn south on Eby Creek Rd to the Route 6 roundabout.At roundabout, turn right (west) on Route 6/Grand Ave and travel 0.8 miles to next roundabout. At this roundabout, take the third right onto Sylvan Lake Road.Continue 1.6 miles to Brush Creek Road, and take a right on Brush Creek Road.Follow Brush Creek Rd for roughly 9 miles to the fork of East and West Brush Creek.Turn left onto East Brush Creek Rd., FDR 415 and drive for 6 miles to Yeoman Park.Enter the campground and drive to the end of Loop A where the trailhead is located.", "facility_email"=>"", "facility_phone"=>"", "user_id"=>"1", "recreational_area"=>{"facility_name"=>"Yeoman Park Discovery Trailhead", "facility_description"=>"<p>This short interpretive trail is at an elevation of 9000 feet. It is designed to accommodate those forest visitors that may be disabled. The terrain is level with a packed small gravel surface. The trail is relatively straight and passes through a stand of mature blue spruce and sub-alpine fir trees and ends at a bench overlooking one of Yeoman Park’s small beaver ponds. Along the way there are several log benches to relax and take in the view. The Yeoman Park Discovery Trail has 7 unique interpretive signs focusing on the use of senses to explore nature. The signs were designed with many touchable features and they are accessible to those with disabilities. The natural subjects covered by the signs include Colorado mammals, wildflowers, rocks, trees, archaeology and water. There are many opportunities along the trail to view the behaviors of common tree and ground squirrels, as well as many species of birds such as mountain chickadees, Stellar’s jays and gray jays.</p><p>* There is a <a href=\"../../../../../../../../../../Internet/FSE_DOCUMENTS/stelprdb5186415.pdf\">printable Recreation Quicksheet for this trail</a> which is complete with directions, a map, details, and other information about this trail. Or to see quicksheets for other recreation areas across the Forest, click on the \"Recreation Quicksheets\" link in the right column and select the appropriate Ranger District.</p>", "facility_id"=>"10082507", "facility_directions"=>"From I-70 exit 147 for Eagle, turn south on Eby Creek Rd to the Route 6 roundabout.At roundabout, turn right (west) on Route 6/Grand Ave and travel 0.8 miles to next roundabout. At this roundabout, take the third right onto Sylvan Lake Road.Continue 1.6 miles to Brush Creek Road, and take a right on Brush Creek Road.Follow Brush Creek Rd for roughly 9 miles to the fork of East and West Brush Creek.Turn left onto East Brush Creek Rd., FDR 415 and drive for 6 miles to Yeoman Park.Enter the campground and drive to the end of Loop A where the trailhead is located.", "facility_email"=>"", "facility_phone"=>""}}
+  [1m[36mApi::V1::User Load (0.6ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:11:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[36mApi::V1::RecreationalArea Create (0.5ms)[0m  [1m[32mINSERT INTO "api_v1_recreational_areas" ("facility_name", "facility_description", "created_at", "updated_at", "facility_id", "facility_directions", "facility_email", "facility_phone", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["facility_name", "Yeoman Park Discovery Trailhead"], ["facility_description", "<p>This short interpretive trail is at an elevation of 9000 feet. It is designed to accommodate those forest visitors that may be disabled. The terrain is level with a packed small gravel surface. The trail is relatively straight and passes through a stand of mature blue spruce and sub-alpine fir trees and ends at a bench overlooking one of Yeoman Park’s small beaver ponds. Along the way there are several log benches to relax and take in the view. The Yeoman Park Discovery Trail has 7 unique interpretive signs focusing on the use of senses to explore nature. The signs were designed with many touchable features and they are accessible to those with disabilities. The natural subjects covered by the signs include Colorado mammals, wildflowers, rocks, trees, archaeology and water. There are many opportunities along the trail to view the behaviors of common tree and ground squirrels, as well as many species of birds such as mountain chickadees, Stellar’s jays and gray jays.</p><p>* There is a <a href=\"../../../../../../../../../../Internet/FSE_DOCUMENTS/stelprdb5186415.pdf\">printable Recreation Quicksheet for this trail</a> which is complete with directions, a map, details, and other information about this trail. Or to see quicksheets for other recreation areas across the Forest, click on the \"Recreation Quicksheets\" link in the right column and select the appropriate Ranger District.</p>"], ["created_at", "2020-12-06 17:59:36.218979"], ["updated_at", "2020-12-06 17:59:36.218979"], ["facility_id", "10082507"], ["facility_directions", "From I-70 exit 147 for Eagle, turn south on Eby Creek Rd to the Route 6 roundabout.At roundabout, turn right (west) on Route 6/Grand Ave and travel 0.8 miles to next roundabout. At this roundabout, take the third right onto Sylvan Lake Road.Continue 1.6 miles to Brush Creek Road, and take a right on Brush Creek Road.Follow Brush Creek Rd for roughly 9 miles to the fork of East and West Brush Creek.Turn left onto East Brush Creek Rd., FDR 415 and drive for 6 miles to Yeoman Park.Enter the campground and drive to the end of Loop A where the trailhead is located."], ["facility_email", ""], ["facility_phone", ""], ["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+Completed 200 OK in 7217ms (Views: 0.4ms | ActiveRecord: 1.9ms | Allocations: 10979)
+
+
+Started GET "/api/v1/users?username=trice" for ::1 at 2020-12-06 13:01:20 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"trice"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "trice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 704)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-06 13:01:21 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 494ms (Views: 9.0ms | ActiveRecord: 0.0ms | Allocations: 21637)
+
+
+Started POST "/api/v1/users/2/recreational_areas" for ::1 at 2020-12-06 13:01:35 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"username"=>"trice", "facility_name"=>"Hooper Lake #1860", "facility_description"=>"<p>The Hooper Lake trail begins at the end of Forest Sevice Road #610 (4wd high clearance vehicle needed) and becomes the North Derby Trail after passing Hooper Lake and crossing onto the Routt National Forest. It has a relatively gentle incline and passes near several small ponds and North Fork Derby Creek. It is recommended to have good map and compass skills for this area as there is so much undulating terrain and multiple trail intersections.</p>", "facility_id"=>"10082781", "facility_directions"=>"From Eagle travel west on I-70 for 13 miles to the Dotsero exit, and follow the signs for Sweetwater/ Burns, turning north onto the Colorado River Road.Follow the Colorado River Rd. for 23.5 miles until you get to Cabin Creek Rd. and turn left.Stay on this road for 7 miles to the intersection with Stump Park Rd., FDR 610 and turn right onto this high-clearance 4WD road.The trailhead is at the end of this road.", "facility_email"=>"", "facility_phone"=>"", "user_id"=>"2", "recreational_area"=>{"facility_name"=>"Hooper Lake #1860", "facility_description"=>"<p>The Hooper Lake trail begins at the end of Forest Sevice Road #610 (4wd high clearance vehicle needed) and becomes the North Derby Trail after passing Hooper Lake and crossing onto the Routt National Forest. It has a relatively gentle incline and passes near several small ponds and North Fork Derby Creek. It is recommended to have good map and compass skills for this area as there is so much undulating terrain and multiple trail intersections.</p>", "facility_id"=>"10082781", "facility_directions"=>"From Eagle travel west on I-70 for 13 miles to the Dotsero exit, and follow the signs for Sweetwater/ Burns, turning north onto the Colorado River Road.Follow the Colorado River Rd. for 23.5 miles until you get to Cabin Creek Rd. and turn left.Stay on this road for 7 miles to the intersection with Stump Park Rd., FDR 610 and turn right onto this high-clearance 4WD road.The trailhead is at the end of this road.", "facility_email"=>"", "facility_phone"=>""}}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "trice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:11:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[36mApi::V1::RecreationalArea Create (0.4ms)[0m  [1m[32mINSERT INTO "api_v1_recreational_areas" ("facility_name", "facility_description", "created_at", "updated_at", "facility_id", "facility_directions", "facility_email", "facility_phone", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["facility_name", "Hooper Lake #1860"], ["facility_description", "<p>The Hooper Lake trail begins at the end of Forest Sevice Road #610 (4wd high clearance vehicle needed) and becomes the North Derby Trail after passing Hooper Lake and crossing onto the Routt National Forest. It has a relatively gentle incline and passes near several small ponds and North Fork Derby Creek. It is recommended to have good map and compass skills for this area as there is so much undulating terrain and multiple trail intersections.</p>"], ["created_at", "2020-12-06 18:01:43.051508"], ["updated_at", "2020-12-06 18:01:43.051508"], ["facility_id", "10082781"], ["facility_directions", "From Eagle travel west on I-70 for 13 miles to the Dotsero exit, and follow the signs for Sweetwater/ Burns, turning north onto the Colorado River Road.Follow the Colorado River Rd. for 23.5 miles until you get to Cabin Creek Rd. and turn left.Stay on this road for 7 miles to the intersection with Stump Park Rd., FDR 610 and turn right onto this high-clearance 4WD road.The trailhead is at the end of this road."], ["facility_email", ""], ["facility_phone", ""], ["user_id", 2]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+Completed 200 OK in 7412ms (Views: 0.3ms | ActiveRecord: 1.3ms | Allocations: 11077)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 13:28:16 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 705)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-06 13:28:17 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 568ms (Views: 9.3ms | ActiveRecord: 0.0ms | Allocations: 21588)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 13:29:27 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-06 13:29:28 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 511ms (Views: 9.3ms | ActiveRecord: 0.0ms | Allocations: 21562)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 13:31:11 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-06 13:31:12 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 401ms (Views: 10.1ms | ActiveRecord: 0.0ms | Allocations: 21674)
+
+
+Started POST "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-06 13:31:13 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"username"=>"Dice", "facility_name"=>"Tower Fall Campground", "facility_description"=>"Tower Fall Campground—elevation 6,600 feet (2012 m)—is located on the north side of the steep, winding, road to Dunraven Pass. The campground is near the Tower General Store and Tower Fall, where Tower Creek plunges over 130 feet down to its confluence with the Yellowstone River. On the road over Dunraven Pass, a six-mile trail provides access to the summit of Mount Washburn. Roosevelt Lodge, a short drive from the campground, offers dining and horseback riding.", "facility_id"=>"259308", "facility_directions"=>"This campground is located on the road between Tower Fall and Canyon--north of Dunraven Pass and 3.5 miles (5.6 km) south of Tower-Roosevelt Junction.", "facility_email"=>"yell_visitor_services@nps.gov", "facility_phone"=>"(307) 344-7381", "user_id"=>"1", "recreational_area"=>{"facility_name"=>"Tower Fall Campground", "facility_description"=>"Tower Fall Campground—elevation 6,600 feet (2012 m)—is located on the north side of the steep, winding, road to Dunraven Pass. The campground is near the Tower General Store and Tower Fall, where Tower Creek plunges over 130 feet down to its confluence with the Yellowstone River. On the road over Dunraven Pass, a six-mile trail provides access to the summit of Mount Washburn. Roosevelt Lodge, a short drive from the campground, offers dining and horseback riding.", "facility_id"=>"259308", "facility_directions"=>"This campground is located on the road between Tower Fall and Canyon--north of Dunraven Pass and 3.5 miles (5.6 km) south of Tower-Roosevelt Junction.", "facility_email"=>"yell_visitor_services@nps.gov", "facility_phone"=>"(307) 344-7381"}}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:11:in `create'
+Completed 500 Internal Server Error in 12361ms (ActiveRecord: 0.1ms | Allocations: 15022)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 13:32:23 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (1.0ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 17ms (Views: 7.2ms | ActiveRecord: 1.0ms | Allocations: 162845)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-06 13:32:24 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 725ms (Views: 266.1ms | ActiveRecord: 0.0ms | Allocations: 3162501)
+
+

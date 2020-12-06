@@ -2,6 +2,19 @@ class User
 {
     static container = document.querySelector(".navbar");
     
+    static renderLoggedIn = (data) =>
+    {
+        // Not safe to send around user_id from database. Future iteration of app will use secure method.
+        return `
+            <div class="logged-in columns pr-5">
+                <label class="name-label column">Welcome: </label>
+                <div class="name column">${data.username}</div>
+                <input class="user-id" type="hidden" value="${data.id}">
+                <button class="button is-danger column" id="logout">Logout</button>
+            </div>
+        `;
+    }
+
     constructor(user = null)
     {
         if (user)
@@ -137,13 +150,4 @@ class User
         `;
     }
 
-    static renderLoggedIn = (data) =>
-    {
-        return `
-            <div class="logged-in columns pr-5">
-                <label class="label column">Welcome: ${data.username}</label>
-                <button class="button is-danger column" id="logout">Logout</button>
-            </div>
-        `;
-    }
 }

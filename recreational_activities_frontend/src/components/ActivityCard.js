@@ -1,6 +1,7 @@
 class ActivityCard
 {
     static container = document.querySelector(".display-search")
+    static favorited = false;
 
     constructor(activity)
     {
@@ -37,8 +38,11 @@ class ActivityCard
     handleBtnOnClick()
     {
         const recreationalArea = this.activity;
+        const userName = document.querySelector(".name");
+        const userID = document.querySelector(".user-id").value; // Not safe to send around user_id from database. Future iteration of app will use secure method.
         const data =
         {
+            username: userName.innerText,
             facility_name: recreationalArea.FacilityName,
             facility_description: recreationalArea.FacilityDescription,
             facility_id: recreationalArea.FacilityID,
@@ -47,7 +51,7 @@ class ActivityCard
             facility_phone: recreationalArea.FacilityPhone
         };
 
-        api.favoriteArea(data);
+        api.favoriteArea(userID, data);
     }
 
     renderInnerHTML()

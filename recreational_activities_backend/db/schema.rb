@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_06_015740) do
+ActiveRecord::Schema.define(version: 2020_12_06_173156) do
 
   create_table "api_v1_recreational_areas", force: :cascade do |t|
     t.string "facility_name"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 2020_12_06_015740) do
     t.string "facility_directions"
     t.string "facility_email"
     t.string "facility_phone"
+    t.integer "user_id"
   end
 
   create_table "api_v1_users", force: :cascade do |t|
