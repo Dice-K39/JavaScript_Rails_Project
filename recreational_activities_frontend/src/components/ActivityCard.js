@@ -35,7 +35,7 @@ class ActivityCard
     }
 
     handleBtnOnClick()
-    {
+    {debugger
         // event.stopImmediatePropagation()
 
         // console.log(this.activity)

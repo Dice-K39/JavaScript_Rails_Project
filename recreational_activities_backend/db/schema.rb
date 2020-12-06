@@ -10,14 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_01_043314) do
+ActiveRecord::Schema.define(version: 2020_12_06_015740) do
 
   create_table "api_v1_recreational_areas", force: :cascade do |t|
-    t.string "area_name"
-    t.string "description"
+    t.string "facility_name"
+    t.string "facility_description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "facility_id"
+    t.string "facility_directions"
+    t.string "facility_email"
+    t.string "facility_phone"
   end
 
   create_table "api_v1_users", force: :cascade do |t|

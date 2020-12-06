@@ -5848,3 +5848,71 @@ Processing by Api::V1::SearchController#search as */*
 Completed 200 OK in 521ms (Views: 28.9ms | ActiveRecord: 0.0ms | Allocations: 21685)
 
 
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-05 20:31:25 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 705)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-05 20:31:27 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 559ms (Views: 6.3ms | ActiveRecord: 0.0ms | Allocations: 21704)
+
+
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to ChangeColumnNamesApiV1RecreationalAreas (20201206014831)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aapi_v1_recreational_areas" ("id" integer NOT NULL PRIMARY KEY, "facility_name" varchar DEFAULT NULL, "description" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "facility_id" varchar DEFAULT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "aapi_v1_recreational_areas" ("id","facility_name","description","created_at","updated_at","facility_id")
+                     SELECT "id","area_name","description","created_at","updated_at","facility_id" FROM "api_v1_recreational_areas"[0m
+  [1m[35m (0.7ms)[0m  [1m[35mDROP TABLE "api_v1_recreational_areas"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "api_v1_recreational_areas" ("id" integer NOT NULL PRIMARY KEY, "facility_name" varchar DEFAULT NULL, "description" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "facility_id" varchar DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "api_v1_recreational_areas" ("id","facility_name","description","created_at","updated_at","facility_id")
+                     SELECT "id","facility_name","description","created_at","updated_at","facility_id" FROM "aapi_v1_recreational_areas"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aapi_v1_recreational_areas"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aapi_v1_recreational_areas" ("id" integer NOT NULL PRIMARY KEY, "facility_name" varchar DEFAULT NULL, "facility_description" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "facility_id" varchar DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aapi_v1_recreational_areas" ("id","facility_name","facility_description","created_at","updated_at","facility_id")
+                     SELECT "id","facility_name","description","created_at","updated_at","facility_id" FROM "api_v1_recreational_areas"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "api_v1_recreational_areas"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "api_v1_recreational_areas" ("id" integer NOT NULL PRIMARY KEY, "facility_name" varchar DEFAULT NULL, "facility_description" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "facility_id" varchar DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "api_v1_recreational_areas" ("id","facility_name","facility_description","created_at","updated_at","facility_id")
+                     SELECT "id","facility_name","facility_description","created_at","updated_at","facility_id" FROM "aapi_v1_recreational_areas"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aapi_v1_recreational_areas"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mprimary::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201206014831"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddManyColumnsToApiV1RecreationalAreas (20201206015740)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "api_v1_recreational_areas" ADD "facility_directions" varchar[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "api_v1_recreational_areas" ADD "facility_email" varchar[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "api_v1_recreational_areas" ADD "facility_phone" varchar[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "api_v1_recreational_areas" ADD "facility_id" varchar[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddManyColumnsToApiV1RecreationalAreas (20201206015740)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "api_v1_recreational_areas" ADD "facility_directions" varchar[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "api_v1_recreational_areas" ADD "facility_email" varchar[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "api_v1_recreational_areas" ADD "facility_phone" varchar[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201206015740"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
