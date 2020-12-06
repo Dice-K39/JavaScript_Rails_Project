@@ -9844,3 +9844,24 @@ Processing by Api::V1::RecreationalAreasController#index as */*
 Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.2ms | Allocations: 1842)
 
 
+Started GET "/api/v1/search?keyword_query=&activity_query=camping&state=GA" for ::1 at 2020-12-06 18:01:31 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"camping", "state"=>"GA"}
+Completed 200 OK in 1006ms (Views: 14.2ms | ActiveRecord: 0.0ms | Allocations: 27899)
+
+
+Started POST "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-06 18:01:34 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"username"=>"Dice", "facility_name"=>"Wildcat Creek Campground #2 Upper", "facility_description"=>"<p><strong>Wildcat Creek Campgrounds are opened to tent camping only. No RV, Large Campers, or Trailers allowed.</strong></p><p>Although the winding road leading to the campground is not RV friendly, the payoff of landing a night in this environment is pure delight. These developed campgrounds are buried deep in the North Georgia Mountains west of Lake Burton and along the headwaters of Wildcat Creek. The creek, seasonally stocked with rainbow trout, runs directly adjacent to the campsites and provides for an astounding setting, so be prepared to capture nature at its best, and bring your camera. On clear nights the stars appear to be just an arm’s reach away! <br/> </p>", "facility_id"=>"10070265", "facility_directions"=>"<p><strong> Physical Address:</strong> 4208 West Wildcat Rd., Clarkesville, GA</p>", "facility_email"=>"", "facility_phone"=>"", "user_id"=>"1", "recreational_area"=>{"facility_name"=>"Wildcat Creek Campground #2 Upper", "facility_description"=>"<p><strong>Wildcat Creek Campgrounds are opened to tent camping only. No RV, Large Campers, or Trailers allowed.</strong></p><p>Although the winding road leading to the campground is not RV friendly, the payoff of landing a night in this environment is pure delight. These developed campgrounds are buried deep in the North Georgia Mountains west of Lake Burton and along the headwaters of Wildcat Creek. The creek, seasonally stocked with rainbow trout, runs directly adjacent to the campsites and provides for an astounding setting, so be prepared to capture nature at its best, and bring your camera. On clear nights the stars appear to be just an arm’s reach away! <br/> </p>", "facility_id"=>"10070265", "facility_directions"=>"<p><strong> Physical Address:</strong> 4208 West Wildcat Rd., Clarkesville, GA</p>", "facility_email"=>"", "facility_phone"=>""}}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:11:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[36mApi::V1::RecreationalArea Create (0.4ms)[0m  [1m[32mINSERT INTO "api_v1_recreational_areas" ("facility_name", "facility_description", "created_at", "updated_at", "facility_id", "facility_directions", "facility_email", "facility_phone", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["facility_name", "Wildcat Creek Campground #2 Upper"], ["facility_description", "<p><strong>Wildcat Creek Campgrounds are opened to tent camping only. No RV, Large Campers, or Trailers allowed.</strong></p><p>Although the winding road leading to the campground is not RV friendly, the payoff of landing a night in this environment is pure delight. These developed campgrounds are buried deep in the North Georgia Mountains west of Lake Burton and along the headwaters of Wildcat Creek. The creek, seasonally stocked with rainbow trout, runs directly adjacent to the campsites and provides for an astounding setting, so be prepared to capture nature at its best, and bring your camera. On clear nights the stars appear to be just an arm’s reach away! <br/> </p>"], ["created_at", "2020-12-06 23:01:34.954267"], ["updated_at", "2020-12-06 23:01:34.954267"], ["facility_id", "10070265"], ["facility_directions", "<p><strong> Physical Address:</strong> 4208 West Wildcat Rd., Clarkesville, GA</p>"], ["facility_email", ""], ["facility_phone", ""], ["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+Completed 200 OK in 24ms (Views: 0.6ms | ActiveRecord: 3.0ms | Allocations: 13436)
+
+

@@ -8,11 +8,11 @@ class DisplayFavoritesCard
         this.favoriteArea = favoriteArea;
 
         if(this.favoriteArea.length === undefined)
-        {debugger
+        {
             this.render();
         }
         else
-        {debugger
+        {
             this.renderFavorites();
         }
     }
