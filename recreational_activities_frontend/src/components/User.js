@@ -67,9 +67,11 @@ class User
         {
             const searchForm = document.querySelector(".search-section");
             const displaySearch = document.querySelector(".display-search");
+            const favoritedSection = document.querySelector(".favorited-section");
             
             searchForm.innerHTML = "";
             displaySearch.innerHTML = "";
+            favoritedSection.innerHTML = "";
 
             new User();
         }

@@ -62,6 +62,6 @@ class ApiService
 
         fetch(url, configObj)
             .then(res => res.json())
-            .then(data => data);
+            .then(data => new DisplayFavoritesCard(data));
     }
 }
