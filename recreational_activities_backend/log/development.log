@@ -7495,3 +7495,68 @@ Processing by Api::V1::RecreationalAreasController#create as JSON
 Completed 200 OK in 8ms (Views: 0.6ms | ActiveRecord: 1.7ms | Allocations: 3606)
 
 
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 15:01:15 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 705)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 15:03:06 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 15:03:46 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-06 15:03:46 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:3:in `index'
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.2ms | Allocations: 1165)
+
+
+  
+NoMethodError (undefined method `recreational_areas' for nil:NilClass):
+  
+app/controllers/api/v1/recreational_areas_controller.rb:5:in `index'
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 15:04:35 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 690)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 15:05:14 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.4ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-06 15:06:31 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:3:in `index'
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms | Allocations: 1148)
+
+
+  
+NoMethodError (undefined method `recreational_areas' for nil:NilClass):
+  
+app/controllers/api/v1/recreational_areas_controller.rb:5:in `index'

@@ -48,7 +48,7 @@ class ApiService
 
     saveFavoriteArea = (userID, data) =>
     {
-        const url = new URL(this.baseURL + `/users/${userID}/recreational_areas`)
+        const url = new URL(this.baseURL + `/users/${userID}/recreational_areas`);
         const configObj =
         {
             method: "POST",
