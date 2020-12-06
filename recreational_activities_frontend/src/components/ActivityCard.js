@@ -31,7 +31,7 @@ class ActivityCard
 
     attachEventListener = (card) =>
     {
-        card.addEventListener("click", () => this.handleBtnOnClick());
+        card.querySelector(".favorite-btn").addEventListener("click", () => this.handleBtnOnClick());
     }
 
     handleBtnOnClick()

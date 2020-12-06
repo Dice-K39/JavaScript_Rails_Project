@@ -104,7 +104,7 @@ class User
 
         if (event.target.id === "back")
         {
-            event.preventDefault();
+            // event.preventDefault();
 
             const navbar = document.querySelector(".navbar");
 
