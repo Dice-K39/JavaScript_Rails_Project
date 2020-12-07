@@ -10,24 +10,24 @@ The app is made with JavaScript frontend and Ruby on Rails backend.
 
 To get started you will need to:
 
-*Fork the repository
-*Install the Ruby Gems by changing the main directory to the backend by:
+* Fork the repository
+* Install the Ruby Gems by changing the main directory to the backend by:
 
-    cd (Your Path)/recreational_activities_backend
+        cd (Your Path)/recreational_activities_backend
 
   and
 
-    bundle install
+        bundle install
 
-*Setup the database by:
+* Setup the database by:
 
-    rails db:migrate
+        rails db:migrate
 
-*Run the rails server by:
+* Run the rails server by:
 
-    rails s
+        rails s
 
-*Then navigate to the frontend of the project and open the index.html file.
+* Then navigate to the frontend of the project and open the index.html file.
 
 ## Contributing
 
