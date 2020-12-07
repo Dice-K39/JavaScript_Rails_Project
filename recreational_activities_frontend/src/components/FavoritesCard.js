@@ -47,8 +47,11 @@ class FavoritesCard
                 <div class="favorite-site-name column is-three-quarters">
                     ${area.facility_name}
                 </div>
-                <button class="remove-btn button is-danger column">x</button>
+                
             </div>
-        `;
+        `
+        // Will add to code later
+        // <button class="remove-btn button is-danger column">x</button>
+        ;
     }
 }
