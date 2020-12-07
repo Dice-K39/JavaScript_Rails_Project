@@ -1,4 +1,4 @@
-class DisplayFavoritesCard
+class FavoritesCard
 {
     static container = document.querySelector(".favorited-section");
 
