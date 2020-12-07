@@ -29,6 +29,8 @@ To get started you will need to:
 
 * Then navigate to the frontend of the project and open the index.html file.
 
+** You will need an api key to use the search function of the app. The search function takes information from an external api and lists the result on the browser.
+
 ## Contributing
 
 Bug reports and pull requests are welcomed on [GitHub](https://github.com/Dice-K39/JavaScript_Rails_Project)
