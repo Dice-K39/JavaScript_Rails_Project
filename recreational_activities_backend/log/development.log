@@ -10239,3 +10239,63 @@ Processing by Api::V1::RecreationalAreasController#index as */*
 Completed 200 OK in 8ms (Views: 6.2ms | ActiveRecord: 0.3ms | Allocations: 1867)
 
 
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-07 05:55:33 -0500
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 12ms (Views: 0.4ms | ActiveRecord: 0.9ms | Allocations: 5405)
+
+
+Started GET "/api/v1/users/1/recreational_areas?username=Dice" for ::1 at 2020-12-07 05:55:33 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"username"=>"Dice", "user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:3:in `index'
+  [1m[36mApi::V1::RecreationalArea Load (0.2ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 20ms (Views: 9.4ms | ActiveRecord: 0.8ms | Allocations: 4431)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-07 06:02:53 -0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 9ms (Views: 0.3ms | ActiveRecord: 0.6ms | Allocations: 5405)
+
+
+Started GET "/api/v1/users/1/recreational_areas?username=Dice" for ::1 at 2020-12-07 06:02:53 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"username"=>"Dice", "user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:3:in `index'
+  [1m[36mApi::V1::RecreationalArea Load (0.3ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 13ms (Views: 6.0ms | ActiveRecord: 0.7ms | Allocations: 4431)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=camping&state=GA" for ::1 at 2020-12-07 06:03:38 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"camping", "state"=>"GA"}
+Completed 200 OK in 582ms (Views: 35.8ms | ActiveRecord: 0.0ms | Allocations: 24412)
+
+
+Started POST "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-07 06:04:25 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"username"=>"Dice", "facility_name"=>"BIG HART CAMPGROUND", "facility_description"=>"<h2>Overview</h2>\nBig Hart Campground is located at the confluence of Big Creek and Hart Creek on the western end of beautiful J. Strom Thurmond Lake, the largest Corps of Engineers lake project east of the Mississippi River. <br/><br/>\nThe 70,000 acre lake and its 1,000+ miles of shoreline provide excellent boating, water skiing, swimming, fishing, hiking and picnicking.<h2>Recreation</h2>\nThurmond Lake provides some of the best fishing, hunting, and water sports in the southeastern United States. Anglers fish for largemouth bass, bream, crappie, catfish and striped bass. The large lake offers endless boating, water skiing, jet skiing, canoeing and swimming opportunities.<h2>Facilities</h2>\nBig Hart Campground is situated in a wooded area on the waterfront. One group campsite and 31 family campsites are available, all with 50-amp electrical hookups. Amenities include flush and vault toilets, showers, drinking water, a dump station, playground, beach, boat ramp and dock. <h2>Natural Features</h2>\nHot, humid summers and mild, pleasant winters characterize this heavily wooded area on the shore of Thurmond Lake. A mixed pine and hardwood forest covers the site, providing summer shade and fall color. Elevation is 235' above sea level. <br/>\n<br/>\nWildlife is abundant around the lake. Visitors regularly see southern bald eagles, migratory waterfowl, wild turkeys and whitetail deer.\n<h2>Nearby Attractions</h2>\nNumerous parks and recreation areas lie around Thurmond Lake, providing additional boating, swimming, hunting, and hiking opportunities. Nearby cities house museums, art galleries, zoos, restaurants, and shopping areas. <br/><br/>\nThe Augusta National Golf Club hosts the Masters Golf Tournament annually the first week of April.", "facility_id"=>"232525", "facility_directions"=>"From I-20, take Exit 172 (Thomson/HWY 78) and continue north 8 miles on HWY 78 to Russell Landing Road. Turn right and travel east 4 miles to campground.", "facility_email"=>"", "facility_phone"=>"(706) 595-8613 ", "user_id"=>"1", "recreational_area"=>{"facility_name"=>"BIG HART CAMPGROUND", "facility_description"=>"<h2>Overview</h2>\nBig Hart Campground is located at the confluence of Big Creek and Hart Creek on the western end of beautiful J. Strom Thurmond Lake, the largest Corps of Engineers lake project east of the Mississippi River. <br/><br/>\nThe 70,000 acre lake and its 1,000+ miles of shoreline provide excellent boating, water skiing, swimming, fishing, hiking and picnicking.<h2>Recreation</h2>\nThurmond Lake provides some of the best fishing, hunting, and water sports in the southeastern United States. Anglers fish for largemouth bass, bream, crappie, catfish and striped bass. The large lake offers endless boating, water skiing, jet skiing, canoeing and swimming opportunities.<h2>Facilities</h2>\nBig Hart Campground is situated in a wooded area on the waterfront. One group campsite and 31 family campsites are available, all with 50-amp electrical hookups. Amenities include flush and vault toilets, showers, drinking water, a dump station, playground, beach, boat ramp and dock. <h2>Natural Features</h2>\nHot, humid summers and mild, pleasant winters characterize this heavily wooded area on the shore of Thurmond Lake. A mixed pine and hardwood forest covers the site, providing summer shade and fall color. Elevation is 235' above sea level. <br/>\n<br/>\nWildlife is abundant around the lake. Visitors regularly see southern bald eagles, migratory waterfowl, wild turkeys and whitetail deer.\n<h2>Nearby Attractions</h2>\nNumerous parks and recreation areas lie around Thurmond Lake, providing additional boating, swimming, hunting, and hiking opportunities. Nearby cities house museums, art galleries, zoos, restaurants, and shopping areas. <br/><br/>\nThe Augusta National Golf Club hosts the Masters Golf Tournament annually the first week of April.", "facility_id"=>"232525", "facility_directions"=>"From I-20, take Exit 172 (Thomson/HWY 78) and continue north 8 miles on HWY 78 to Russell Landing Road. Turn right and travel east 4 miles to campground.", "facility_email"=>"", "facility_phone"=>"(706) 595-8613 "}}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:11:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[36mApi::V1::RecreationalArea Create (0.6ms)[0m  [1m[32mINSERT INTO "api_v1_recreational_areas" ("facility_name", "facility_description", "created_at", "updated_at", "facility_id", "facility_directions", "facility_email", "facility_phone", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["facility_name", "BIG HART CAMPGROUND"], ["facility_description", "<h2>Overview</h2>\nBig Hart Campground is located at the confluence of Big Creek and Hart Creek on the western end of beautiful J. Strom Thurmond Lake, the largest Corps of Engineers lake project east of the Mississippi River. <br/><br/>\nThe 70,000 acre lake and its 1,000+ miles of shoreline provide excellent boating, water skiing, swimming, fishing, hiking and picnicking.<h2>Recreation</h2>\nThurmond Lake provides some of the best fishing, hunting, and water sports in the southeastern United States. Anglers fish for largemouth bass, bream, crappie, catfish and striped bass. The large lake offers endless boating, water skiing, jet skiing, canoeing and swimming opportunities.<h2>Facilities</h2>\nBig Hart Campground is situated in a wooded area on the waterfront. One group campsite and 31 family campsites are available, all with 50-amp electrical hookups. Amenities include flush and vault toilets, showers, drinking water, a dump station, playground, beach, boat ramp and dock. <h2>Natural Features</h2>\nHot, humid summers and mild, pleasant winters characterize this heavily wooded area on the shore of Thurmond Lake. A mixed pine and hardwood forest covers the site, providing summer shade and fall color. Elevation is 235' above sea level. <br/>\n<br/>\nWildlife is abundant around the lake. Visitors regularly see southern bald eagles, migratory waterfowl, wild turkeys and whitetail deer.\n<h2>Nearby Attractions</h2>\nNumerous parks and recreation areas lie around Thurmond Lake, providing additional boating, swimming, hunting, and hiking opportunities. Nearby cities house museums, art galleries, zoos, restaurants, and shopping areas. <br/><br/>\nThe Augusta National Golf Club hosts the Masters Golf Tournament annually the first week of April."], ["created_at", "2020-12-07 11:04:25.778983"], ["updated_at", "2020-12-07 11:04:25.778983"], ["facility_id", "232525"], ["facility_directions", "From I-20, take Exit 172 (Thomson/HWY 78) and continue north 8 miles on HWY 78 to Russell Landing Road. Turn right and travel east 4 miles to campground."], ["facility_email", ""], ["facility_phone", "(706) 595-8613 "], ["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+Completed 200 OK in 40ms (Views: 0.5ms | ActiveRecord: 2.3ms | Allocations: 12042)
+
+

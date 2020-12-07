@@ -62,7 +62,7 @@ class ApiService
 
         fetch(url, configObj)
             .then(res => res.json())
-            .then(data => new DisplayFavoritesCard(data));
+            .then(data => new FavoritesCard(data));
     }
 
     getFavorites = (user) =>
@@ -77,6 +77,6 @@ class ApiService
 
         fetch(url)
             .then(res => res.json())
-            .then(data => new DisplayFavoritesCard(data));
+            .then(data => new FavoritesCard(data));
     }
 }
