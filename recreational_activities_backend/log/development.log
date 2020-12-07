@@ -9865,3 +9865,377 @@ Processing by Api::V1::RecreationalAreasController#create as JSON
 Completed 200 OK in 24ms (Views: 0.6ms | ActiveRecord: 3.0ms | Allocations: 13436)
 
 
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 20:38:47 -0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.4ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 11ms (Views: 0.8ms | ActiveRecord: 1.0ms | Allocations: 5405)
+
+
+Started GET "/api/v1/users/1/recreational_areas?username=Dice" for ::1 at 2020-12-06 20:38:47 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"username"=>"Dice", "user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:3:in `index'
+  [1m[36mApi::V1::RecreationalArea Load (0.4ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 33ms (Views: 23.6ms | ActiveRecord: 1.1ms | Allocations: 11666)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-06 20:38:54 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 531ms (Views: 31.4ms | ActiveRecord: 0.0ms | Allocations: 22316)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 20:39:57 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 707)
+
+
+Started GET "/api/v1/users/1/recreational_areas?username=Dice" for ::1 at 2020-12-06 20:39:57 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"username"=>"Dice", "user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:3:in `index'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.2ms | Allocations: 2058)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 20:40:34 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.3ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 707)
+
+
+Started GET "/api/v1/users/1/recreational_areas?username=Dice" for ::1 at 2020-12-06 20:40:34 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"username"=>"Dice", "user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:3:in `index'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 0.3ms | Allocations: 2058)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-06 20:41:40 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 523ms (Views: 10.6ms | ActiveRecord: 0.0ms | Allocations: 21619)
+
+
+Started POST "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-06 20:41:49 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"username"=>"Dice", "facility_name"=>"Hooper Lake #1860", "facility_description"=>"<p>The Hooper Lake trail begins at the end of Forest Sevice Road #610 (4wd high clearance vehicle needed) and becomes the North Derby Trail after passing Hooper Lake and crossing onto the Routt National Forest. It has a relatively gentle incline and passes near several small ponds and North Fork Derby Creek. It is recommended to have good map and compass skills for this area as there is so much undulating terrain and multiple trail intersections.</p>", "facility_id"=>"10082781", "facility_directions"=>"From Eagle travel west on I-70 for 13 miles to the Dotsero exit, and follow the signs for Sweetwater/ Burns, turning north onto the Colorado River Road.Follow the Colorado River Rd. for 23.5 miles until you get to Cabin Creek Rd. and turn left.Stay on this road for 7 miles to the intersection with Stump Park Rd., FDR 610 and turn right onto this high-clearance 4WD road.The trailhead is at the end of this road.", "facility_email"=>"", "facility_phone"=>"", "user_id"=>"1", "recreational_area"=>{"facility_name"=>"Hooper Lake #1860", "facility_description"=>"<p>The Hooper Lake trail begins at the end of Forest Sevice Road #610 (4wd high clearance vehicle needed) and becomes the North Derby Trail after passing Hooper Lake and crossing onto the Routt National Forest. It has a relatively gentle incline and passes near several small ponds and North Fork Derby Creek. It is recommended to have good map and compass skills for this area as there is so much undulating terrain and multiple trail intersections.</p>", "facility_id"=>"10082781", "facility_directions"=>"From Eagle travel west on I-70 for 13 miles to the Dotsero exit, and follow the signs for Sweetwater/ Burns, turning north onto the Colorado River Road.Follow the Colorado River Rd. for 23.5 miles until you get to Cabin Creek Rd. and turn left.Stay on this road for 7 miles to the intersection with Stump Park Rd., FDR 610 and turn right onto this high-clearance 4WD road.The trailhead is at the end of this road.", "facility_email"=>"", "facility_phone"=>""}}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:11:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[36mApi::V1::RecreationalArea Create (1.0ms)[0m  [1m[32mINSERT INTO "api_v1_recreational_areas" ("facility_name", "facility_description", "created_at", "updated_at", "facility_id", "facility_directions", "facility_email", "facility_phone", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["facility_name", "Hooper Lake #1860"], ["facility_description", "<p>The Hooper Lake trail begins at the end of Forest Sevice Road #610 (4wd high clearance vehicle needed) and becomes the North Derby Trail after passing Hooper Lake and crossing onto the Routt National Forest. It has a relatively gentle incline and passes near several small ponds and North Fork Derby Creek. It is recommended to have good map and compass skills for this area as there is so much undulating terrain and multiple trail intersections.</p>"], ["created_at", "2020-12-07 01:41:49.803786"], ["updated_at", "2020-12-07 01:41:49.803786"], ["facility_id", "10082781"], ["facility_directions", "From Eagle travel west on I-70 for 13 miles to the Dotsero exit, and follow the signs for Sweetwater/ Burns, turning north onto the Colorado River Road.Follow the Colorado River Rd. for 23.5 miles until you get to Cabin Creek Rd. and turn left.Stay on this road for 7 miles to the intersection with Stump Park Rd., FDR 610 and turn right onto this high-clearance 4WD road.The trailhead is at the end of this road."], ["facility_email", ""], ["facility_phone", ""], ["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 1.7ms | Allocations: 3846)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 20:43:26 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 705)
+
+
+Started GET "/api/v1/users/1/recreational_areas?username=Dice" for ::1 at 2020-12-06 20:43:26 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"username"=>"Dice", "user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:3:in `index'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.2ms | Allocations: 2250)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 20:44:33 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas?username=Dice" for ::1 at 2020-12-06 20:44:33 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"username"=>"Dice", "user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:3:in `index'
+  [1m[36mApi::V1::RecreationalArea Load (0.2ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.3ms | Allocations: 2249)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-06 20:44:40 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 424ms (Views: 9.0ms | ActiveRecord: 0.0ms | Allocations: 21598)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 20:46:00 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas?username=Dice" for ::1 at 2020-12-06 20:46:00 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"username"=>"Dice", "user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:3:in `index'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.2ms | Allocations: 2249)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 20:47:12 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.5ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas?username=Dice" for ::1 at 2020-12-06 20:47:12 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"username"=>"Dice", "user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:3:in `index'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.2ms | Allocations: 2249)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=camping&state=GA" for ::1 at 2020-12-06 20:55:30 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"camping", "state"=>"GA"}
+Completed 200 OK in 507ms (Views: 13.2ms | ActiveRecord: 0.0ms | Allocations: 23829)
+
+
+Started POST "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-06 20:58:21 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"username"=>"Dice", "facility_name"=>"BIG OAKS", "facility_description"=>"<h2>Overview</h2>\nBig Oaks Recreation Area is a 12 acre gently sloping site with good grass cover  and scattered pine and hardwood trees throughout.. . . The area experiences high levels of intense public use during peak recreation season and serves to host numerous large special events annually, e.g. Hartwell Dam Run, Pre-Fourth Fireworks, etc.  The site presently offers day use and boat launching facilities to include a large picnic shelter (with water and electric service), 26 picnic sites, a two lane boat ramp, 1 courtesy dock, 1 comfort station, 1 playground, and associated paved roads and parking areas throughout. The area is also the access point to the paved walking trail located atop the Georgia earthen embankment of Hartwell Dam.  <h2>Recreation</h2>\nBoating and water sports top the list of popular activities. A two-lane boat ramp with a courtesy dock is provided for easy lake access.\n <h2>Facilities</h2>\n The site presently offers day use and boat launching facilities to include a large picnic shelter (with water and electric service), 26 picnic sites, a two lane boat ramp, 1 courtesy dock, 1 comfort station, 1 playground, and associated paved roads and parking areas throughout.  <h2>Natural Features</h2>\nHartwell Lake is a man-made lake bordering Georgia and South Carolina on the Savannah, Tugaloo and Seneca Rivers. The dam and lake area boasts 8 campgrounds and 11 day-use facilities that are operated by the US Army Corps of Engineers. \n  \nThe Hartwell Project was originally authorized for hydropower, flood control, and navigation. Later, recreation, water quality, water supply, and fish and wildlife management were added. \n  \nSurrounding vegetation allows for plenty of shade, and the 962 miles of shoreline provide numerous swimming beaches, picnic areas and boat ramps. \n<h2>Nearby Attractions</h2>\nA 2.75 mile (rountrip) paved, walking, and bicycling path is located at the entrance to Big Oaks.<h2>Charges &amp; Cancellations</h2>\nA $10 service fee will apply if you change or cancel your reservation more than 14 days in advance of the arrival. If you cancel a resrvation within 14 days of your scheduled arrival date, you will forfeit the reservation fee.", "facility_id"=>"232527", "facility_directions"=>"From Hartwell, GA, take Highway 29 North towards Anderson, SC for about 5 miles. Big Oaks is located on the left next to the Hartwell Visitor Center and Manager's Office.  \n5823 DAM ROAD\nHARTWELL, GA 30643\n", "facility_email"=>"", "facility_phone"=>"888-893-0678 HARTWELL PROJECT OFFICE", "user_id"=>"1", "recreational_area"=>{"facility_name"=>"BIG OAKS", "facility_description"=>"<h2>Overview</h2>\nBig Oaks Recreation Area is a 12 acre gently sloping site with good grass cover  and scattered pine and hardwood trees throughout.. . . The area experiences high levels of intense public use during peak recreation season and serves to host numerous large special events annually, e.g. Hartwell Dam Run, Pre-Fourth Fireworks, etc.  The site presently offers day use and boat launching facilities to include a large picnic shelter (with water and electric service), 26 picnic sites, a two lane boat ramp, 1 courtesy dock, 1 comfort station, 1 playground, and associated paved roads and parking areas throughout. The area is also the access point to the paved walking trail located atop the Georgia earthen embankment of Hartwell Dam.  <h2>Recreation</h2>\nBoating and water sports top the list of popular activities. A two-lane boat ramp with a courtesy dock is provided for easy lake access.\n <h2>Facilities</h2>\n The site presently offers day use and boat launching facilities to include a large picnic shelter (with water and electric service), 26 picnic sites, a two lane boat ramp, 1 courtesy dock, 1 comfort station, 1 playground, and associated paved roads and parking areas throughout.  <h2>Natural Features</h2>\nHartwell Lake is a man-made lake bordering Georgia and South Carolina on the Savannah, Tugaloo and Seneca Rivers. The dam and lake area boasts 8 campgrounds and 11 day-use facilities that are operated by the US Army Corps of Engineers. \n  \nThe Hartwell Project was originally authorized for hydropower, flood control, and navigation. Later, recreation, water quality, water supply, and fish and wildlife management were added. \n  \nSurrounding vegetation allows for plenty of shade, and the 962 miles of shoreline provide numerous swimming beaches, picnic areas and boat ramps. \n<h2>Nearby Attractions</h2>\nA 2.75 mile (rountrip) paved, walking, and bicycling path is located at the entrance to Big Oaks.<h2>Charges &amp; Cancellations</h2>\nA $10 service fee will apply if you change or cancel your reservation more than 14 days in advance of the arrival. If you cancel a resrvation within 14 days of your scheduled arrival date, you will forfeit the reservation fee.", "facility_id"=>"232527", "facility_directions"=>"From Hartwell, GA, take Highway 29 North towards Anderson, SC for about 5 miles. Big Oaks is located on the left next to the Hartwell Visitor Center and Manager's Office.  \n5823 DAM ROAD\nHARTWELL, GA 30643\n", "facility_email"=>"", "facility_phone"=>"888-893-0678 HARTWELL PROJECT OFFICE"}}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:11:in `create'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[36mApi::V1::RecreationalArea Create (0.3ms)[0m  [1m[32mINSERT INTO "api_v1_recreational_areas" ("facility_name", "facility_description", "created_at", "updated_at", "facility_id", "facility_directions", "facility_email", "facility_phone", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["facility_name", "BIG OAKS"], ["facility_description", "<h2>Overview</h2>\nBig Oaks Recreation Area is a 12 acre gently sloping site with good grass cover  and scattered pine and hardwood trees throughout.. . . The area experiences high levels of intense public use during peak recreation season and serves to host numerous large special events annually, e.g. Hartwell Dam Run, Pre-Fourth Fireworks, etc.  The site presently offers day use and boat launching facilities to include a large picnic shelter (with water and electric service), 26 picnic sites, a two lane boat ramp, 1 courtesy dock, 1 comfort station, 1 playground, and associated paved roads and parking areas throughout. The area is also the access point to the paved walking trail located atop the Georgia earthen embankment of Hartwell Dam.  <h2>Recreation</h2>\nBoating and water sports top the list of popular activities. A two-lane boat ramp with a courtesy dock is provided for easy lake access.\n <h2>Facilities</h2>\n The site presently offers day use and boat launching facilities to include a large picnic shelter (with water and electric service), 26 picnic sites, a two lane boat ramp, 1 courtesy dock, 1 comfort station, 1 playground, and associated paved roads and parking areas throughout.  <h2>Natural Features</h2>\nHartwell Lake is a man-made lake bordering Georgia and South Carolina on the Savannah, Tugaloo and Seneca Rivers. The dam and lake area boasts 8 campgrounds and 11 day-use facilities that are operated by the US Army Corps of Engineers. \n  \nThe Hartwell Project was originally authorized for hydropower, flood control, and navigation. Later, recreation, water quality, water supply, and fish and wildlife management were added. \n  \nSurrounding vegetation allows for plenty of shade, and the 962 miles of shoreline provide numerous swimming beaches, picnic areas and boat ramps. \n<h2>Nearby Attractions</h2>\nA 2.75 mile (rountrip) paved, walking, and bicycling path is located at the entrance to Big Oaks.<h2>Charges &amp; Cancellations</h2>\nA $10 service fee will apply if you change or cancel your reservation more than 14 days in advance of the arrival. If you cancel a resrvation within 14 days of your scheduled arrival date, you will forfeit the reservation fee."], ["created_at", "2020-12-07 01:58:21.970391"], ["updated_at", "2020-12-07 01:58:21.970391"], ["facility_id", "232527"], ["facility_directions", "From Hartwell, GA, take Highway 29 North towards Anderson, SC for about 5 miles. Big Oaks is located on the left next to the Hartwell Visitor Center and Manager's Office.  \n5823 DAM ROAD\nHARTWELL, GA 30643\n"], ["facility_email", ""], ["facility_phone", "888-893-0678 HARTWELL PROJECT OFFICE"], ["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+Completed 200 OK in 20ms (Views: 0.4ms | ActiveRecord: 1.4ms | Allocations: 3643)
+
+
+Started POST "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-06 20:58:29 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"username"=>"Dice", "facility_name"=>"BIG OAKS", "facility_description"=>"<h2>Overview</h2>\nBig Oaks Recreation Area is a 12 acre gently sloping site with good grass cover  and scattered pine and hardwood trees throughout.. . . The area experiences high levels of intense public use during peak recreation season and serves to host numerous large special events annually, e.g. Hartwell Dam Run, Pre-Fourth Fireworks, etc.  The site presently offers day use and boat launching facilities to include a large picnic shelter (with water and electric service), 26 picnic sites, a two lane boat ramp, 1 courtesy dock, 1 comfort station, 1 playground, and associated paved roads and parking areas throughout. The area is also the access point to the paved walking trail located atop the Georgia earthen embankment of Hartwell Dam.  <h2>Recreation</h2>\nBoating and water sports top the list of popular activities. A two-lane boat ramp with a courtesy dock is provided for easy lake access.\n <h2>Facilities</h2>\n The site presently offers day use and boat launching facilities to include a large picnic shelter (with water and electric service), 26 picnic sites, a two lane boat ramp, 1 courtesy dock, 1 comfort station, 1 playground, and associated paved roads and parking areas throughout.  <h2>Natural Features</h2>\nHartwell Lake is a man-made lake bordering Georgia and South Carolina on the Savannah, Tugaloo and Seneca Rivers. The dam and lake area boasts 8 campgrounds and 11 day-use facilities that are operated by the US Army Corps of Engineers. \n  \nThe Hartwell Project was originally authorized for hydropower, flood control, and navigation. Later, recreation, water quality, water supply, and fish and wildlife management were added. \n  \nSurrounding vegetation allows for plenty of shade, and the 962 miles of shoreline provide numerous swimming beaches, picnic areas and boat ramps. \n<h2>Nearby Attractions</h2>\nA 2.75 mile (rountrip) paved, walking, and bicycling path is located at the entrance to Big Oaks.<h2>Charges &amp; Cancellations</h2>\nA $10 service fee will apply if you change or cancel your reservation more than 14 days in advance of the arrival. If you cancel a resrvation within 14 days of your scheduled arrival date, you will forfeit the reservation fee.", "facility_id"=>"232527", "facility_directions"=>"From Hartwell, GA, take Highway 29 North towards Anderson, SC for about 5 miles. Big Oaks is located on the left next to the Hartwell Visitor Center and Manager's Office.  \n5823 DAM ROAD\nHARTWELL, GA 30643\n", "facility_email"=>"", "facility_phone"=>"888-893-0678 HARTWELL PROJECT OFFICE", "user_id"=>"1", "recreational_area"=>{"facility_name"=>"BIG OAKS", "facility_description"=>"<h2>Overview</h2>\nBig Oaks Recreation Area is a 12 acre gently sloping site with good grass cover  and scattered pine and hardwood trees throughout.. . . The area experiences high levels of intense public use during peak recreation season and serves to host numerous large special events annually, e.g. Hartwell Dam Run, Pre-Fourth Fireworks, etc.  The site presently offers day use and boat launching facilities to include a large picnic shelter (with water and electric service), 26 picnic sites, a two lane boat ramp, 1 courtesy dock, 1 comfort station, 1 playground, and associated paved roads and parking areas throughout. The area is also the access point to the paved walking trail located atop the Georgia earthen embankment of Hartwell Dam.  <h2>Recreation</h2>\nBoating and water sports top the list of popular activities. A two-lane boat ramp with a courtesy dock is provided for easy lake access.\n <h2>Facilities</h2>\n The site presently offers day use and boat launching facilities to include a large picnic shelter (with water and electric service), 26 picnic sites, a two lane boat ramp, 1 courtesy dock, 1 comfort station, 1 playground, and associated paved roads and parking areas throughout.  <h2>Natural Features</h2>\nHartwell Lake is a man-made lake bordering Georgia and South Carolina on the Savannah, Tugaloo and Seneca Rivers. The dam and lake area boasts 8 campgrounds and 11 day-use facilities that are operated by the US Army Corps of Engineers. \n  \nThe Hartwell Project was originally authorized for hydropower, flood control, and navigation. Later, recreation, water quality, water supply, and fish and wildlife management were added. \n  \nSurrounding vegetation allows for plenty of shade, and the 962 miles of shoreline provide numerous swimming beaches, picnic areas and boat ramps. \n<h2>Nearby Attractions</h2>\nA 2.75 mile (rountrip) paved, walking, and bicycling path is located at the entrance to Big Oaks.<h2>Charges &amp; Cancellations</h2>\nA $10 service fee will apply if you change or cancel your reservation more than 14 days in advance of the arrival. If you cancel a resrvation within 14 days of your scheduled arrival date, you will forfeit the reservation fee.", "facility_id"=>"232527", "facility_directions"=>"From Hartwell, GA, take Highway 29 North towards Anderson, SC for about 5 miles. Big Oaks is located on the left next to the Hartwell Visitor Center and Manager's Office.  \n5823 DAM ROAD\nHARTWELL, GA 30643\n", "facility_email"=>"", "facility_phone"=>"888-893-0678 HARTWELL PROJECT OFFICE"}}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:11:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[36mApi::V1::RecreationalArea Create (0.4ms)[0m  [1m[32mINSERT INTO "api_v1_recreational_areas" ("facility_name", "facility_description", "created_at", "updated_at", "facility_id", "facility_directions", "facility_email", "facility_phone", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["facility_name", "BIG OAKS"], ["facility_description", "<h2>Overview</h2>\nBig Oaks Recreation Area is a 12 acre gently sloping site with good grass cover  and scattered pine and hardwood trees throughout.. . . The area experiences high levels of intense public use during peak recreation season and serves to host numerous large special events annually, e.g. Hartwell Dam Run, Pre-Fourth Fireworks, etc.  The site presently offers day use and boat launching facilities to include a large picnic shelter (with water and electric service), 26 picnic sites, a two lane boat ramp, 1 courtesy dock, 1 comfort station, 1 playground, and associated paved roads and parking areas throughout. The area is also the access point to the paved walking trail located atop the Georgia earthen embankment of Hartwell Dam.  <h2>Recreation</h2>\nBoating and water sports top the list of popular activities. A two-lane boat ramp with a courtesy dock is provided for easy lake access.\n <h2>Facilities</h2>\n The site presently offers day use and boat launching facilities to include a large picnic shelter (with water and electric service), 26 picnic sites, a two lane boat ramp, 1 courtesy dock, 1 comfort station, 1 playground, and associated paved roads and parking areas throughout.  <h2>Natural Features</h2>\nHartwell Lake is a man-made lake bordering Georgia and South Carolina on the Savannah, Tugaloo and Seneca Rivers. The dam and lake area boasts 8 campgrounds and 11 day-use facilities that are operated by the US Army Corps of Engineers. \n  \nThe Hartwell Project was originally authorized for hydropower, flood control, and navigation. Later, recreation, water quality, water supply, and fish and wildlife management were added. \n  \nSurrounding vegetation allows for plenty of shade, and the 962 miles of shoreline provide numerous swimming beaches, picnic areas and boat ramps. \n<h2>Nearby Attractions</h2>\nA 2.75 mile (rountrip) paved, walking, and bicycling path is located at the entrance to Big Oaks.<h2>Charges &amp; Cancellations</h2>\nA $10 service fee will apply if you change or cancel your reservation more than 14 days in advance of the arrival. If you cancel a resrvation within 14 days of your scheduled arrival date, you will forfeit the reservation fee."], ["created_at", "2020-12-07 01:58:29.230345"], ["updated_at", "2020-12-07 01:58:29.230345"], ["facility_id", "232527"], ["facility_directions", "From Hartwell, GA, take Highway 29 North towards Anderson, SC for about 5 miles. Big Oaks is located on the left next to the Hartwell Visitor Center and Manager's Office.  \n5823 DAM ROAD\nHARTWELL, GA 30643\n"], ["facility_email", ""], ["facility_phone", "888-893-0678 HARTWELL PROJECT OFFICE"], ["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+Completed 200 OK in 7ms (Views: 0.4ms | ActiveRecord: 1.5ms | Allocations: 3642)
+
+
+Started POST "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-06 20:58:31 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"username"=>"Dice", "facility_name"=>"BOLDING MILL", "facility_description"=>"<h2>Overview</h2>\nBolding Mill Campground is an excellent choice for camping on Lake Sidney Lanier, offering plenty of comfortable amenities in addition to a well-kept facility.  <br/><br/>\nVisitors will enjoy fishing and boating on the lake as well as the lush picnic area and large swimming beach, perfect for families.<br/><br/><h2>Recreation</h2>\nThe large swimming beach is concrete, which provides a gentle slope and ADA access for visitors. An on-site boat ramp and fishing pier provide access to many water activities.\nLand-based recreation features picnic shelters and playground area near the front of the park.\n<h2>Facilities</h2>\nThe campground offers 88 sites with electric and water hookups (no sewer). There's also nine tent-only primitive sites.  Campground conveniences include a laundry facility, fishing pier, and restroom/showerhouses.\nFacilities outside of the campground but within Bolding Mill park include the playground, swim beach and boat ramp. There's also two dump stations, inside and outside the campground which rotate use per year.<h2>Natural Features</h2>\nLake Lanier spans 38,000 surface water acres and 17,000 land acres across five counties in northern Georgia. The reservoir is known for its aqua-blue coloring and spectacular scenery in the forested foothills of the Blue Ridge Mountains.   \nBolding Mill campground is on the northwest side of the lake, which has plenty of grass and shade for comfortable camping.\n<h2>Nearby Attractions</h2>\nHead to the Don Carter State Park for birding and hiking opportunities. Another idea is the Sawnee Mountain Preserve, with breathtaking scenic overlooks, hiking opportunities and rock climbing.\nNearby Gainesville, Dawsonville and Dalonega provide many different experiences and opportunities.<h2>Charges &amp; Cancellations</h2>\nCancellations must be made via the online/phone reservation system.", "facility_id"=>"232531", "facility_directions"=>"From Atlanta, GA, take SR 400 north to Exit 17, turn right on GA Hwy\n306, turn right on GA Hwy 53, turn left on Old Sardis Rd, and turn left\non Chestatee Rd.  Follow into campground.", "facility_email"=>"Brent.J.Cossette@sam.usace.army.mil", "facility_phone"=>"770-534-6960", "user_id"=>"1", "recreational_area"=>{"facility_name"=>"BOLDING MILL", "facility_description"=>"<h2>Overview</h2>\nBolding Mill Campground is an excellent choice for camping on Lake Sidney Lanier, offering plenty of comfortable amenities in addition to a well-kept facility.  <br/><br/>\nVisitors will enjoy fishing and boating on the lake as well as the lush picnic area and large swimming beach, perfect for families.<br/><br/><h2>Recreation</h2>\nThe large swimming beach is concrete, which provides a gentle slope and ADA access for visitors. An on-site boat ramp and fishing pier provide access to many water activities.\nLand-based recreation features picnic shelters and playground area near the front of the park.\n<h2>Facilities</h2>\nThe campground offers 88 sites with electric and water hookups (no sewer). There's also nine tent-only primitive sites.  Campground conveniences include a laundry facility, fishing pier, and restroom/showerhouses.\nFacilities outside of the campground but within Bolding Mill park include the playground, swim beach and boat ramp. There's also two dump stations, inside and outside the campground which rotate use per year.<h2>Natural Features</h2>\nLake Lanier spans 38,000 surface water acres and 17,000 land acres across five counties in northern Georgia. The reservoir is known for its aqua-blue coloring and spectacular scenery in the forested foothills of the Blue Ridge Mountains.   \nBolding Mill campground is on the northwest side of the lake, which has plenty of grass and shade for comfortable camping.\n<h2>Nearby Attractions</h2>\nHead to the Don Carter State Park for birding and hiking opportunities. Another idea is the Sawnee Mountain Preserve, with breathtaking scenic overlooks, hiking opportunities and rock climbing.\nNearby Gainesville, Dawsonville and Dalonega provide many different experiences and opportunities.<h2>Charges &amp; Cancellations</h2>\nCancellations must be made via the online/phone reservation system.", "facility_id"=>"232531", "facility_directions"=>"From Atlanta, GA, take SR 400 north to Exit 17, turn right on GA Hwy\n306, turn right on GA Hwy 53, turn left on Old Sardis Rd, and turn left\non Chestatee Rd.  Follow into campground.", "facility_email"=>"Brent.J.Cossette@sam.usace.army.mil", "facility_phone"=>"770-534-6960"}}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:11:in `create'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[36mApi::V1::RecreationalArea Create (0.6ms)[0m  [1m[32mINSERT INTO "api_v1_recreational_areas" ("facility_name", "facility_description", "created_at", "updated_at", "facility_id", "facility_directions", "facility_email", "facility_phone", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["facility_name", "BOLDING MILL"], ["facility_description", "<h2>Overview</h2>\nBolding Mill Campground is an excellent choice for camping on Lake Sidney Lanier, offering plenty of comfortable amenities in addition to a well-kept facility.  <br/><br/>\nVisitors will enjoy fishing and boating on the lake as well as the lush picnic area and large swimming beach, perfect for families.<br/><br/><h2>Recreation</h2>\nThe large swimming beach is concrete, which provides a gentle slope and ADA access for visitors. An on-site boat ramp and fishing pier provide access to many water activities.\nLand-based recreation features picnic shelters and playground area near the front of the park.\n<h2>Facilities</h2>\nThe campground offers 88 sites with electric and water hookups (no sewer). There's also nine tent-only primitive sites.  Campground conveniences include a laundry facility, fishing pier, and restroom/showerhouses.\nFacilities outside of the campground but within Bolding Mill park include the playground, swim beach and boat ramp. There's also two dump stations, inside and outside the campground which rotate use per year.<h2>Natural Features</h2>\nLake Lanier spans 38,000 surface water acres and 17,000 land acres across five counties in northern Georgia. The reservoir is known for its aqua-blue coloring and spectacular scenery in the forested foothills of the Blue Ridge Mountains.   \nBolding Mill campground is on the northwest side of the lake, which has plenty of grass and shade for comfortable camping.\n<h2>Nearby Attractions</h2>\nHead to the Don Carter State Park for birding and hiking opportunities. Another idea is the Sawnee Mountain Preserve, with breathtaking scenic overlooks, hiking opportunities and rock climbing.\nNearby Gainesville, Dawsonville and Dalonega provide many different experiences and opportunities.<h2>Charges &amp; Cancellations</h2>\nCancellations must be made via the online/phone reservation system."], ["created_at", "2020-12-07 01:58:31.498673"], ["updated_at", "2020-12-07 01:58:31.498673"], ["facility_id", "232531"], ["facility_directions", "From Atlanta, GA, take SR 400 north to Exit 17, turn right on GA Hwy\n306, turn right on GA Hwy 53, turn left on Old Sardis Rd, and turn left\non Chestatee Rd.  Follow into campground."], ["facility_email", "Brent.J.Cossette@sam.usace.army.mil"], ["facility_phone", "770-534-6960"], ["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+Completed 200 OK in 19ms (Views: 0.6ms | ActiveRecord: 1.7ms | Allocations: 3633)
+
+
+Started POST "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-06 20:58:33 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"username"=>"Dice", "facility_name"=>"BROYLES", "facility_description"=>"<h2>Overview</h2>\nBroyles Recreation Area consists of 24 acres with a gentle to moderate slope and vegetation consisting primarily of pine. The site presently offers day use and boat launching facilities consisting of 1 volunteer host campsite, 14 picnic sites, 1 standard picnic shelter with water and electric service, 1 three lane boat ramp, 1 courtesy dock, 1 comfort station, 1 playground, 1 designated swim area/beach, 1 fishing pier, and associated paved roads and parking areas throughout. Parking expansion to add approximately 30 additional boat trailer spaces and 8 single car spaces completed in 2018.  Area is a favorite location for large fishing tournaments throughout the Spring and Summer annually. <h2>Recreation</h2>\nBoating and water sports top the list of popular activities. A boat ramp is provided for easy lake access.\n<h2>Facilities</h2>\n The site presently offers day use and boat launching facilities consisting of 1 volunteer host campsite, 14 picnic sites, 1 standard picnic shelter with water and electric service, 1 three lane boat ramp, 1 courtesy dock, 1 comfort station, 1 playground, 1 designated swim area/beach, 1 fishing pier, and associated paved roads and parking areas throughout. Parking expansion to add approximately 30 additional boat trailer spaces and 8 single car spaces completed in 2018.<h2>Natural Features</h2>\nHartwell Lake is a man-made lake bordering Georgia and South Carolina on the Savannah, Tugaloo and Seneca Rivers. The dam and lake area boasts 8 campgrounds and 11 day-use facilities that are operated by the US Army Corps of Engineers. \n  \nThe Hartwell Project was originally authorized for hydro-power, flood control, and navigation. Later, recreation, water quality, water supply and fish and wildlife management were added. \n  \nSurrounding vegetation allows for plenty of shade, and the 962 miles of shoreline provide numerous swimming beaches, picnic areas and boat ramps. \n<h2>Nearby Attractions</h2>\n<h2>Charges &amp; Cancellations</h2>\nA $10 service fee will apply if you change or cancel a reservation more than 14 days in advance of arrival date.  If you cancel a reservation within 14 days of your scheduled arrival date, you will forfeit the reservation fee.", "facility_id"=>"232533", "facility_directions"=>"From Interstate 85, take exit 11 to Highway 24 headed towards Anderson, SC. Turn right onto Hattens Ford Road and follow signs to the facility. \n900 SMYZER ROAD, TOWNVILLE, SC 29689", "facility_email"=>"", "facility_phone"=>"888-893-0678 HARTWELL PROJECT OFFICE", "user_id"=>"1", "recreational_area"=>{"facility_name"=>"BROYLES", "facility_description"=>"<h2>Overview</h2>\nBroyles Recreation Area consists of 24 acres with a gentle to moderate slope and vegetation consisting primarily of pine. The site presently offers day use and boat launching facilities consisting of 1 volunteer host campsite, 14 picnic sites, 1 standard picnic shelter with water and electric service, 1 three lane boat ramp, 1 courtesy dock, 1 comfort station, 1 playground, 1 designated swim area/beach, 1 fishing pier, and associated paved roads and parking areas throughout. Parking expansion to add approximately 30 additional boat trailer spaces and 8 single car spaces completed in 2018.  Area is a favorite location for large fishing tournaments throughout the Spring and Summer annually. <h2>Recreation</h2>\nBoating and water sports top the list of popular activities. A boat ramp is provided for easy lake access.\n<h2>Facilities</h2>\n The site presently offers day use and boat launching facilities consisting of 1 volunteer host campsite, 14 picnic sites, 1 standard picnic shelter with water and electric service, 1 three lane boat ramp, 1 courtesy dock, 1 comfort station, 1 playground, 1 designated swim area/beach, 1 fishing pier, and associated paved roads and parking areas throughout. Parking expansion to add approximately 30 additional boat trailer spaces and 8 single car spaces completed in 2018.<h2>Natural Features</h2>\nHartwell Lake is a man-made lake bordering Georgia and South Carolina on the Savannah, Tugaloo and Seneca Rivers. The dam and lake area boasts 8 campgrounds and 11 day-use facilities that are operated by the US Army Corps of Engineers. \n  \nThe Hartwell Project was originally authorized for hydro-power, flood control, and navigation. Later, recreation, water quality, water supply and fish and wildlife management were added. \n  \nSurrounding vegetation allows for plenty of shade, and the 962 miles of shoreline provide numerous swimming beaches, picnic areas and boat ramps. \n<h2>Nearby Attractions</h2>\n<h2>Charges &amp; Cancellations</h2>\nA $10 service fee will apply if you change or cancel a reservation more than 14 days in advance of arrival date.  If you cancel a reservation within 14 days of your scheduled arrival date, you will forfeit the reservation fee.", "facility_id"=>"232533", "facility_directions"=>"From Interstate 85, take exit 11 to Highway 24 headed towards Anderson, SC. Turn right onto Hattens Ford Road and follow signs to the facility. \n900 SMYZER ROAD, TOWNVILLE, SC 29689", "facility_email"=>"", "facility_phone"=>"888-893-0678 HARTWELL PROJECT OFFICE"}}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:11:in `create'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[36mApi::V1::RecreationalArea Create (0.4ms)[0m  [1m[32mINSERT INTO "api_v1_recreational_areas" ("facility_name", "facility_description", "created_at", "updated_at", "facility_id", "facility_directions", "facility_email", "facility_phone", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["facility_name", "BROYLES"], ["facility_description", "<h2>Overview</h2>\nBroyles Recreation Area consists of 24 acres with a gentle to moderate slope and vegetation consisting primarily of pine. The site presently offers day use and boat launching facilities consisting of 1 volunteer host campsite, 14 picnic sites, 1 standard picnic shelter with water and electric service, 1 three lane boat ramp, 1 courtesy dock, 1 comfort station, 1 playground, 1 designated swim area/beach, 1 fishing pier, and associated paved roads and parking areas throughout. Parking expansion to add approximately 30 additional boat trailer spaces and 8 single car spaces completed in 2018.  Area is a favorite location for large fishing tournaments throughout the Spring and Summer annually. <h2>Recreation</h2>\nBoating and water sports top the list of popular activities. A boat ramp is provided for easy lake access.\n<h2>Facilities</h2>\n The site presently offers day use and boat launching facilities consisting of 1 volunteer host campsite, 14 picnic sites, 1 standard picnic shelter with water and electric service, 1 three lane boat ramp, 1 courtesy dock, 1 comfort station, 1 playground, 1 designated swim area/beach, 1 fishing pier, and associated paved roads and parking areas throughout. Parking expansion to add approximately 30 additional boat trailer spaces and 8 single car spaces completed in 2018.<h2>Natural Features</h2>\nHartwell Lake is a man-made lake bordering Georgia and South Carolina on the Savannah, Tugaloo and Seneca Rivers. The dam and lake area boasts 8 campgrounds and 11 day-use facilities that are operated by the US Army Corps of Engineers. \n  \nThe Hartwell Project was originally authorized for hydro-power, flood control, and navigation. Later, recreation, water quality, water supply and fish and wildlife management were added. \n  \nSurrounding vegetation allows for plenty of shade, and the 962 miles of shoreline provide numerous swimming beaches, picnic areas and boat ramps. \n<h2>Nearby Attractions</h2>\n<h2>Charges &amp; Cancellations</h2>\nA $10 service fee will apply if you change or cancel a reservation more than 14 days in advance of arrival date.  If you cancel a reservation within 14 days of your scheduled arrival date, you will forfeit the reservation fee."], ["created_at", "2020-12-07 01:58:33.546023"], ["updated_at", "2020-12-07 01:58:33.546023"], ["facility_id", "232533"], ["facility_directions", "From Interstate 85, take exit 11 to Highway 24 headed towards Anderson, SC. Turn right onto Hattens Ford Road and follow signs to the facility. \n900 SMYZER ROAD, TOWNVILLE, SC 29689"], ["facility_email", ""], ["facility_phone", "888-893-0678 HARTWELL PROJECT OFFICE"], ["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 1.3ms | Allocations: 3628)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 21:06:12 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 706)
+
+
+Started GET "/api/v1/users/1/recreational_areas?username=Dice" for ::1 at 2020-12-06 21:06:12 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"username"=>"Dice", "user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:3:in `index'
+  [1m[36mApi::V1::RecreationalArea Load (0.2ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.3ms | Allocations: 2346)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 21:06:30 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas?username=Dice" for ::1 at 2020-12-06 21:06:30 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"username"=>"Dice", "user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:3:in `index'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.2ms | Allocations: 2321)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 21:09:03 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas?username=Dice" for ::1 at 2020-12-06 21:09:03 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"username"=>"Dice", "user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:3:in `index'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.3ms | Allocations: 1456)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-06 21:09:45 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 430ms (Views: 8.5ms | ActiveRecord: 0.0ms | Allocations: 21676)
+
+
+Started POST "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-06 21:09:47 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"username"=>"Dice", "facility_name"=>"Tower Fall Campground", "facility_description"=>"Tower Fall Campground—elevation 6,600 feet (2012 m)—is located on the north side of the steep, winding, road to Dunraven Pass. The campground is near the Tower General Store and Tower Fall, where Tower Creek plunges over 130 feet down to its confluence with the Yellowstone River. On the road over Dunraven Pass, a six-mile trail provides access to the summit of Mount Washburn. Roosevelt Lodge, a short drive from the campground, offers dining and horseback riding.", "facility_id"=>"259308", "facility_directions"=>"This campground is located on the road between Tower Fall and Canyon--north of Dunraven Pass and 3.5 miles (5.6 km) south of Tower-Roosevelt Junction.", "facility_email"=>"yell_visitor_services@nps.gov", "facility_phone"=>"(307) 344-7381", "user_id"=>"1", "recreational_area"=>{"facility_name"=>"Tower Fall Campground", "facility_description"=>"Tower Fall Campground—elevation 6,600 feet (2012 m)—is located on the north side of the steep, winding, road to Dunraven Pass. The campground is near the Tower General Store and Tower Fall, where Tower Creek plunges over 130 feet down to its confluence with the Yellowstone River. On the road over Dunraven Pass, a six-mile trail provides access to the summit of Mount Washburn. Roosevelt Lodge, a short drive from the campground, offers dining and horseback riding.", "facility_id"=>"259308", "facility_directions"=>"This campground is located on the road between Tower Fall and Canyon--north of Dunraven Pass and 3.5 miles (5.6 km) south of Tower-Roosevelt Junction.", "facility_email"=>"yell_visitor_services@nps.gov", "facility_phone"=>"(307) 344-7381"}}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:11:in `create'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[36mApi::V1::RecreationalArea Create (0.4ms)[0m  [1m[32mINSERT INTO "api_v1_recreational_areas" ("facility_name", "facility_description", "created_at", "updated_at", "facility_id", "facility_directions", "facility_email", "facility_phone", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["facility_name", "Tower Fall Campground"], ["facility_description", "Tower Fall Campground—elevation 6,600 feet (2012 m)—is located on the north side of the steep, winding, road to Dunraven Pass. The campground is near the Tower General Store and Tower Fall, where Tower Creek plunges over 130 feet down to its confluence with the Yellowstone River. On the road over Dunraven Pass, a six-mile trail provides access to the summit of Mount Washburn. Roosevelt Lodge, a short drive from the campground, offers dining and horseback riding."], ["created_at", "2020-12-07 02:09:47.619853"], ["updated_at", "2020-12-07 02:09:47.619853"], ["facility_id", "259308"], ["facility_directions", "This campground is located on the road between Tower Fall and Canyon--north of Dunraven Pass and 3.5 miles (5.6 km) south of Tower-Roosevelt Junction."], ["facility_email", "yell_visitor_services@nps.gov"], ["facility_phone", "(307) 344-7381"], ["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 1.4ms | Allocations: 3600)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 21:15:15 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 705)
+
+
+Started GET "/api/v1/users/1/recreational_areas?username=Dice" for ::1 at 2020-12-06 21:15:15 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"username"=>"Dice", "user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:3:in `index'
+  [1m[36mApi::V1::RecreationalArea Load (0.3ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 9ms (Views: 7.2ms | ActiveRecord: 0.4ms | Allocations: 1666)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 21:17:17 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas?username=Dice" for ::1 at 2020-12-06 21:17:17 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"username"=>"Dice", "user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:3:in `index'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.2ms | Allocations: 1641)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-06 21:17:32 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 403ms (Views: 8.2ms | ActiveRecord: 0.0ms | Allocations: 21659)
+
+
+Started POST "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-06 21:17:35 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"username"=>"Dice", "facility_name"=>"Yeoman Park Discovery Trailhead", "facility_description"=>"<p>This short interpretive trail is at an elevation of 9000 feet. It is designed to accommodate those forest visitors that may be disabled. The terrain is level with a packed small gravel surface. The trail is relatively straight and passes through a stand of mature blue spruce and sub-alpine fir trees and ends at a bench overlooking one of Yeoman Park’s small beaver ponds. Along the way there are several log benches to relax and take in the view. The Yeoman Park Discovery Trail has 7 unique interpretive signs focusing on the use of senses to explore nature. The signs were designed with many touchable features and they are accessible to those with disabilities. The natural subjects covered by the signs include Colorado mammals, wildflowers, rocks, trees, archaeology and water. There are many opportunities along the trail to view the behaviors of common tree and ground squirrels, as well as many species of birds such as mountain chickadees, Stellar’s jays and gray jays.</p><p>* There is a <a href=\"../../../../../../../../../../Internet/FSE_DOCUMENTS/stelprdb5186415.pdf\">printable Recreation Quicksheet for this trail</a> which is complete with directions, a map, details, and other information about this trail. Or to see quicksheets for other recreation areas across the Forest, click on the \"Recreation Quicksheets\" link in the right column and select the appropriate Ranger District.</p>", "facility_id"=>"10082507", "facility_directions"=>"From I-70 exit 147 for Eagle, turn south on Eby Creek Rd to the Route 6 roundabout.At roundabout, turn right (west) on Route 6/Grand Ave and travel 0.8 miles to next roundabout. At this roundabout, take the third right onto Sylvan Lake Road.Continue 1.6 miles to Brush Creek Road, and take a right on Brush Creek Road.Follow Brush Creek Rd for roughly 9 miles to the fork of East and West Brush Creek.Turn left onto East Brush Creek Rd., FDR 415 and drive for 6 miles to Yeoman Park.Enter the campground and drive to the end of Loop A where the trailhead is located.", "facility_email"=>"", "facility_phone"=>"", "user_id"=>"1", "recreational_area"=>{"facility_name"=>"Yeoman Park Discovery Trailhead", "facility_description"=>"<p>This short interpretive trail is at an elevation of 9000 feet. It is designed to accommodate those forest visitors that may be disabled. The terrain is level with a packed small gravel surface. The trail is relatively straight and passes through a stand of mature blue spruce and sub-alpine fir trees and ends at a bench overlooking one of Yeoman Park’s small beaver ponds. Along the way there are several log benches to relax and take in the view. The Yeoman Park Discovery Trail has 7 unique interpretive signs focusing on the use of senses to explore nature. The signs were designed with many touchable features and they are accessible to those with disabilities. The natural subjects covered by the signs include Colorado mammals, wildflowers, rocks, trees, archaeology and water. There are many opportunities along the trail to view the behaviors of common tree and ground squirrels, as well as many species of birds such as mountain chickadees, Stellar’s jays and gray jays.</p><p>* There is a <a href=\"../../../../../../../../../../Internet/FSE_DOCUMENTS/stelprdb5186415.pdf\">printable Recreation Quicksheet for this trail</a> which is complete with directions, a map, details, and other information about this trail. Or to see quicksheets for other recreation areas across the Forest, click on the \"Recreation Quicksheets\" link in the right column and select the appropriate Ranger District.</p>", "facility_id"=>"10082507", "facility_directions"=>"From I-70 exit 147 for Eagle, turn south on Eby Creek Rd to the Route 6 roundabout.At roundabout, turn right (west) on Route 6/Grand Ave and travel 0.8 miles to next roundabout. At this roundabout, take the third right onto Sylvan Lake Road.Continue 1.6 miles to Brush Creek Road, and take a right on Brush Creek Road.Follow Brush Creek Rd for roughly 9 miles to the fork of East and West Brush Creek.Turn left onto East Brush Creek Rd., FDR 415 and drive for 6 miles to Yeoman Park.Enter the campground and drive to the end of Loop A where the trailhead is located.", "facility_email"=>"", "facility_phone"=>""}}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:11:in `create'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[36mApi::V1::RecreationalArea Create (0.4ms)[0m  [1m[32mINSERT INTO "api_v1_recreational_areas" ("facility_name", "facility_description", "created_at", "updated_at", "facility_id", "facility_directions", "facility_email", "facility_phone", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["facility_name", "Yeoman Park Discovery Trailhead"], ["facility_description", "<p>This short interpretive trail is at an elevation of 9000 feet. It is designed to accommodate those forest visitors that may be disabled. The terrain is level with a packed small gravel surface. The trail is relatively straight and passes through a stand of mature blue spruce and sub-alpine fir trees and ends at a bench overlooking one of Yeoman Park’s small beaver ponds. Along the way there are several log benches to relax and take in the view. The Yeoman Park Discovery Trail has 7 unique interpretive signs focusing on the use of senses to explore nature. The signs were designed with many touchable features and they are accessible to those with disabilities. The natural subjects covered by the signs include Colorado mammals, wildflowers, rocks, trees, archaeology and water. There are many opportunities along the trail to view the behaviors of common tree and ground squirrels, as well as many species of birds such as mountain chickadees, Stellar’s jays and gray jays.</p><p>* There is a <a href=\"../../../../../../../../../../Internet/FSE_DOCUMENTS/stelprdb5186415.pdf\">printable Recreation Quicksheet for this trail</a> which is complete with directions, a map, details, and other information about this trail. Or to see quicksheets for other recreation areas across the Forest, click on the \"Recreation Quicksheets\" link in the right column and select the appropriate Ranger District.</p>"], ["created_at", "2020-12-07 02:17:35.324739"], ["updated_at", "2020-12-07 02:17:35.324739"], ["facility_id", "10082507"], ["facility_directions", "From I-70 exit 147 for Eagle, turn south on Eby Creek Rd to the Route 6 roundabout.At roundabout, turn right (west) on Route 6/Grand Ave and travel 0.8 miles to next roundabout. At this roundabout, take the third right onto Sylvan Lake Road.Continue 1.6 miles to Brush Creek Road, and take a right on Brush Creek Road.Follow Brush Creek Rd for roughly 9 miles to the fork of East and West Brush Creek.Turn left onto East Brush Creek Rd., FDR 415 and drive for 6 miles to Yeoman Park.Enter the campground and drive to the end of Loop A where the trailhead is located."], ["facility_email", ""], ["facility_phone", ""], ["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 1.4ms | Allocations: 3613)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-06 21:23:29 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 705)
+
+
+Started GET "/api/v1/users/1/recreational_areas?username=Dice" for ::1 at 2020-12-06 21:23:29 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"username"=>"Dice", "user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:3:in `index'
+  [1m[36mApi::V1::RecreationalArea Load (0.2ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 8ms (Views: 6.2ms | ActiveRecord: 0.3ms | Allocations: 1867)
+
+

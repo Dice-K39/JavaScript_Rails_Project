@@ -43,9 +43,11 @@ class DisplayFavoritesCard
     renderInnerHTML = (area) =>
     {
         this.card.innerHTML = `
-            <div class="favorite">
-                ${area.facility_name}
-                <span class="close">x</span>
+            <div class="favorite columns">
+                <div class="favorite-site-name column is-three-quarters">
+                    ${area.facility_name}
+                </div>
+                <button class="remove-btn button is-danger column">x</button>
             </div>
         `;
     }
