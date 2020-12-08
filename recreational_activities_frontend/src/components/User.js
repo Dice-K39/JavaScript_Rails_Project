@@ -21,14 +21,14 @@ class User
         {
             this.user = user;
             this.displayName(user);
-            this.attachBtnEventListener();
+            this.selectBtnEventListener();
             this.loadFavorites();
             new SearchForm();
         }
         else
         {
             this.renderButtons();
-            this.attachBtnEventListener();
+            this.selectBtnEventListener();
         }
     }
 
@@ -39,7 +39,6 @@ class User
     
     displayName(user)
     {
-
         this.constructor.container.innerHTML = "";
         this.constructor.container.innerHTML = this.constructor.renderLoggedIn(user);
     }
@@ -49,20 +48,23 @@ class User
         this.constructor.container.innerHTML = this.renderInnerHTML();
     }
 
-    attachBtnEventListener()
+    selectBtnEventListener()
     {
-        let btns;
-
         if (this.user)
         {
-            btns = document.querySelector(".logged-in")
+            const btn = document.querySelector(".logged-in")
+
+            this.attachEventListener(btn);
         }
         else
         {
-            btns = document.querySelector(".signup-login-button");
+            document.querySelectorAll(".signup-login-button").forEach(btn => this.attachEventListener(btn))
         }
-        
-        btns.addEventListener("click", () => this.handleBtnsOnClick());
+    }
+
+    attachEventListener(btn)
+    {
+        btn.addEventListener("click", () => this.handleBtnsOnClick());
     }
     
     handleBtnsOnClick()

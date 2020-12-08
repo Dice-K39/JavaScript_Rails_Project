@@ -52,9 +52,8 @@ class FavoritesCard
                 </div> 
             </div>
         `
-        // Will add to code later
-               
-        // and link to each facility with more information
+        // Will add to code later               
+        // link to each facility with more information
         ;
     }
 }
