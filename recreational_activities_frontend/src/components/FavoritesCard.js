@@ -7,13 +7,13 @@ class FavoritesCard
         this.favoriteArea = favoriteArea;
 
         if(this.favoriteArea.length === undefined)
-        {debugger
+        {
             this.render(this.favoriteArea);
         }
         else
         {
             this.favoriteArea.forEach(area => 
-            {debugger
+            {
                 this.render(area);
             });
         }
@@ -25,19 +25,19 @@ class FavoritesCard
 
         card.className = "favorite-card";
         this.card = card;
-        this.favoriteArea.length === undefined ? this.renderInnerHTML(this.favoriteArea) : this.renderInnerHTML(area);
+        this.renderInnerHTML(area);
         this.attachEventListener(card);
         this.constructor.container.append(card);
     }
 
     attachEventListener = (card) =>
     {
-        card.querySelector(".remove-btn").addEventListener("click", () => this.handleRemoveOnClick());
+        card.querySelector(".remove-btn").addEventListener("click", () => this.handleRemoveOnClick(card));
     }
 
-    handleRemoveOnClick = () =>
+    handleRemoveOnClick = (card) =>
     {
-        console.log(this.card)
+        console.log(card)
     }
 
     renderInnerHTML = (area) =>
