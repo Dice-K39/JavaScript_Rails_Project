@@ -4,7 +4,6 @@ class FavoritesCard
 
     constructor(favoriteArea)
     {
-        // Used when pushing favorite button on the cards.
         this.favoriteArea = favoriteArea;
 
         if(this.favoriteArea.length === undefined)
@@ -52,6 +51,7 @@ class FavoritesCard
         `
         // Will add to code later
         // <button class="remove-btn button is-danger column">x</button>
+        // and link to each facility with more information
         ;
     }
 }

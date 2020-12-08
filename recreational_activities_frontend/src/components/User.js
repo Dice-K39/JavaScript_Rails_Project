@@ -137,7 +137,7 @@ class User
     {
         return `
             <div class="signup-login-button columns pr-5">
-                <button class="button column is-primary" id="login">Login</button>"
+                <button class="button column is-primary" id="login">Login</button>
                 <button class="button column is-warning" id="signup">Sign Up</button>
             </div>
         `;
