@@ -6,11 +6,11 @@ class User
     {
         // Not safe to send around user_id from database. Future iteration of app will use secure method.
         return `
-            <div class="logged-in columns pr-5">
-                <label class="name-label column">Welcome: </label>
-                <div class="name column">${data.username}</div>
+            <div class="logged-in is-flex">
+                <label class="name-label">Welcome: </label>
+                <div class="name">${data.username}</div>
                 <input class="user-id" type="hidden" value="${data.id}">
-                <button class="button is-danger column" id="logout">Logout</button>
+                <button class="button is-danger" id="logout">Logout</button>
             </div>
         `;
     }
@@ -136,9 +136,9 @@ class User
     renderInnerHTML = () =>
     {
         return `
-            <div class="signup-login-button columns pr-5">
-                <button class="button column is-primary" id="login">Login</button>
-                <button class="button column is-warning" id="signup">Sign Up</button>
+            <div class="signup-login-button is-flex">
+                <button class="button is-primary" id="login">Login</button>
+                <button class="button is-warning" id="signup">Sign Up</button>
             </div>
         `;
     };
@@ -146,12 +146,12 @@ class User
     renderSignupLoginFormInnerHTML = () =>
     {
         return `
-            <div class="signup-login columns pr-5">
-                <label class="label column">Username: </label>
-                <input class="input column" id="username" placeholder="Enter Username">
+            <div class="signup-login is-flex">
+                <label class="label">Username: </label>
+                <input class="input" id="username" placeholder="Enter Username">
                 ${event.target.id === "signup" ? 
-                    `<button class="button is-primary column" id="signup">Signup</button>` : `<button class="button is-primary column" id="login">Login</button>`}
-                <button class="button is-danger column" id="back">Back</button>
+                    `<button class="button is-primary" id="signup">Signup</button>` : `<button class="button is-primary" id="login">Login</button>`}
+                <button class="button is-danger" id="back">Back</button>
             </div>
         `;
     }

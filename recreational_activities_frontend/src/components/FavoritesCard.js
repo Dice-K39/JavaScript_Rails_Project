@@ -7,50 +7,53 @@ class FavoritesCard
         this.favoriteArea = favoriteArea;
 
         if(this.favoriteArea.length === undefined)
-        {
-            this.render();
+        {debugger
+            this.render(this.favoriteArea);
         }
         else
         {
-            this.renderFavorites();
+            this.favoriteArea.forEach(area => 
+            {debugger
+                this.render(area);
+            });
         }
     }
 
-    render()
+    render(area)
     {
         const card = document.createElement("div");
 
         card.className = "favorite-card";
         this.card = card;
-        this.renderInnerHTML(this.favoriteArea);
+        this.favoriteArea.length === undefined ? this.renderInnerHTML(this.favoriteArea) : this.renderInnerHTML(area);
+        this.attachEventListener(card);
         this.constructor.container.append(card);
     }
 
-    renderFavorites()
+    attachEventListener = (card) =>
     {
-        this.favoriteArea.forEach(area =>
-        {
-            const card = document.createElement("div");
-    
-            card.className = "favorite-card";
-            this.card = card;
-            this.renderInnerHTML(area);
-            this.constructor.container.append(card);
-        });    
+        card.querySelector(".remove-btn").addEventListener("click", () => this.handleRemoveOnClick());
+    }
+
+    handleRemoveOnClick = () =>
+    {
+        console.log(this.card)
     }
 
     renderInnerHTML = (area) =>
     {
         this.card.innerHTML = `
-            <div class="favorite columns">
-                <div class="favorite-site-name column is-three-quarters">
+            <div class="favorite is-flex">
+                <div class="favorite-site-name is-three-quarters">
                     ${area.facility_name}
                 </div>
-                
+                <div class="remove-button-col">
+                    <button class="remove-btn button is-danger">x</button>
+                </div> 
             </div>
         `
         // Will add to code later
-        // <button class="remove-btn button is-danger column">x</button>
+               
         // and link to each facility with more information
         ;
     }
