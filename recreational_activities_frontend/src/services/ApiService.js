@@ -43,7 +43,7 @@ class ApiService
 
         fetch(url)
             .then(res => res.json())
-            .then(data => ActivityCard.getMatch(data));
+            .then(data => RecreationalAreaCard.getMatch(data));
     };
 
     saveFavoriteArea = (userID, data) =>

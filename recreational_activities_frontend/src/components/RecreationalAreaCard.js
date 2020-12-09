@@ -1,4 +1,4 @@
-class ActivityCard
+class RecreationalAreaCard
 {
     static container = document.querySelector(".display-search")
 
@@ -12,7 +12,7 @@ class ActivityCard
     {
         this.container.innerHTML = '';
 
-        data.RECDATA.forEach(activity => new ActivityCard(activity));
+        data.RECDATA.forEach(activity => new RecreationalAreaCard(activity));
     }
 
     render()
