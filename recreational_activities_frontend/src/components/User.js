@@ -6,7 +6,7 @@ class User
     {
         // Not safe to send around user_id from database. Future iteration of app will use secure method.
         return `
-            <div class="logged-in is-flex">
+            <div class="logged-in is-flex navbar-end">
                 <label class="name-label">Welcome: </label>
                 <div class="name">${data.username}</div>
                 <input class="user-id" type="hidden" value="${data.id}">
@@ -93,7 +93,7 @@ class User
     {
         const form = document.createElement("form");
 
-        form.className = "signup-login-form";
+        form.className = "signup-login-form navbar-end";
         form.innerHTML = this.renderSignupLoginFormInnerHTML();
         this.form = form;
         this.constructor.container.append(form);
@@ -138,7 +138,7 @@ class User
     renderInnerHTML = () =>
     {
         return `
-            <div class="signup-login-button is-flex">
+            <div class="signup-login-button is-flex navbar-end">
                 <button class="button is-primary" id="login">Login</button>
                 <button class="button is-warning" id="signup">Sign Up</button>
             </div>
