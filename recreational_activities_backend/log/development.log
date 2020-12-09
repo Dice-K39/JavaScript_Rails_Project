@@ -11686,3 +11686,1410 @@ Processing by Api::V1::SearchController#search as */*
 Completed 200 OK in 1360ms (Views: 10.0ms | ActiveRecord: 0.0ms | Allocations: 21671)
 
 
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-08 20:14:08 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.5ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 705)
+
+
+Started GET "/api/v1/users/1/recreational_areas?username=Dice" for ::1 at 2020-12-08 20:14:08 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"username"=>"Dice", "user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:3:in `index'
+  [1m[36mApi::V1::RecreationalArea Load (0.4ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 0.5ms | Allocations: 1929)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-08 20:14:10 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 1419ms (Views: 8.6ms | ActiveRecord: 0.0ms | Allocations: 21719)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-08 20:46:13 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.3ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 705)
+
+
+Started GET "/api/v1/users/1/recreational_areas?username=Dice" for ::1 at 2020-12-08 20:46:13 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"username"=>"Dice", "user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:3:in `index'
+  [1m[36mApi::V1::RecreationalArea Load (0.2ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.3ms | Allocations: 1929)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-08 20:46:16 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 1347ms (Views: 9.0ms | ActiveRecord: 0.0ms | Allocations: 21621)
+
+
+Started POST "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-08 20:46:27 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"username"=>"Dice", "facility_name"=>"Tower Fall Campground", "facility_description"=>"Tower Fall Campground—elevation 6,600 feet (2012 m)—is located on the north side of the steep, winding, road to Dunraven Pass. The campground is near the Tower General Store and Tower Fall, where Tower Creek plunges over 130 feet down to its confluence with the Yellowstone River. On the road over Dunraven Pass, a six-mile trail provides access to the summit of Mount Washburn. Roosevelt Lodge, a short drive from the campground, offers dining and horseback riding.", "facility_id"=>"259308", "facility_directions"=>"This campground is located on the road between Tower Fall and Canyon--north of Dunraven Pass and 3.5 miles (5.6 km) south of Tower-Roosevelt Junction.", "facility_email"=>"yell_visitor_services@nps.gov", "facility_phone"=>"(307) 344-7381", "user_id"=>"1", "recreational_area"=>{"facility_name"=>"Tower Fall Campground", "facility_description"=>"Tower Fall Campground—elevation 6,600 feet (2012 m)—is located on the north side of the steep, winding, road to Dunraven Pass. The campground is near the Tower General Store and Tower Fall, where Tower Creek plunges over 130 feet down to its confluence with the Yellowstone River. On the road over Dunraven Pass, a six-mile trail provides access to the summit of Mount Washburn. Roosevelt Lodge, a short drive from the campground, offers dining and horseback riding.", "facility_id"=>"259308", "facility_directions"=>"This campground is located on the road between Tower Fall and Canyon--north of Dunraven Pass and 3.5 miles (5.6 km) south of Tower-Roosevelt Junction.", "facility_email"=>"yell_visitor_services@nps.gov", "facility_phone"=>"(307) 344-7381"}}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:11:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[36mApi::V1::RecreationalArea Create (1.0ms)[0m  [1m[32mINSERT INTO "api_v1_recreational_areas" ("facility_name", "facility_description", "created_at", "updated_at", "facility_id", "facility_directions", "facility_email", "facility_phone", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["facility_name", "Tower Fall Campground"], ["facility_description", "Tower Fall Campground—elevation 6,600 feet (2012 m)—is located on the north side of the steep, winding, road to Dunraven Pass. The campground is near the Tower General Store and Tower Fall, where Tower Creek plunges over 130 feet down to its confluence with the Yellowstone River. On the road over Dunraven Pass, a six-mile trail provides access to the summit of Mount Washburn. Roosevelt Lodge, a short drive from the campground, offers dining and horseback riding."], ["created_at", "2020-12-09 01:46:27.919742"], ["updated_at", "2020-12-09 01:46:27.919742"], ["facility_id", "259308"], ["facility_directions", "This campground is located on the road between Tower Fall and Canyon--north of Dunraven Pass and 3.5 miles (5.6 km) south of Tower-Roosevelt Junction."], ["facility_email", "yell_visitor_services@nps.gov"], ["facility_phone", "(307) 344-7381"], ["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 1.8ms | Allocations: 3600)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-08 20:47:33 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas?username=Dice" for ::1 at 2020-12-08 20:47:33 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"username"=>"Dice", "user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:3:in `index'
+  [1m[36mApi::V1::RecreationalArea Load (0.3ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 1.9ms | ActiveRecord: 0.5ms | Allocations: 2089)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-08 20:47:34 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 581ms (Views: 9.6ms | ActiveRecord: 0.0ms | Allocations: 21626)
+
+
+Started POST "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-08 20:47:38 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"username"=>"Dice", "facility_name"=>"LAKE WINFIELD SCOTT REC", "facility_description"=>"<h2>Overview</h2>\nLake Winfield Scott Recreation Area offers visitors year-round recreation opportunities including camping, picnicking, boating, swimming and hiking, all centered around beautiful Lake Winfield Scott.\n<br/><br/>\nThe area is situated high in a mountain valley within the Chattahoochee-Oconee National Forest, approximately 80 miles from Atlanta, Georgia. The facility offers a rental cabin with electricity and water, as well as sites for tent and RV camping.<h2>Recreation</h2>\nThe Lake Winfield Scott Beach includes a designated swimming area, picnic tables, a bathhouse, pavilions (by reservation only), a playground and trash bins. \n<br/><br/>\nDay-use hiking trails are found within the recreation area, ideal for a short stroll. A 0.4-mile trail parallels the lakeshore. In addition, the 1-mile Jarrard Gap Trail and 2.7-mile Slaughter Creek Trail both begin within the recreation area and connect to the Appalachian Trail.\n<br/><br/>\nLake Winfield Scott is open to hand-powered and electric motor boats only. Fishing for catfish, trout, perch, brim and bass is a popular activity. See the <a href=\"http://www.gofishgeorgia.com/\" rel=\"nofollow\">Georgia Department of Natural Resources</a> for a complete listing of freshwater fishing regulations for the lake. A boat ramp and accessible fishing dock provide year-round lake access.<h2>Facilities</h2>\n<p>Lake Winfield Scott Recreation Area's cabin is a short walk to the lake, and can accommodate up to 12 people. A sleeping area upstairs is furnished with six twin beds and three double beds, all with mattresses. Visitors must provide their own bed and bath linens.<br>  <br>The main floor houses a living room with wood stove (no wood provided), dining room and kitchen, which is equipped with a refrigerator, electric stove, microwave, assorted pots and pans, utensils, plates, glasses, cups and flatware. The bathroom has a flush toilet, shower and an electric heater.  <br>  <br>Lake Winfield Scott Recreation Area's campground consists of 31 campsites configured in two loops for tent or RV camping. Showers, flush and vault toilets, grills, picnic tables and lantern posts are provided. The campground has no dump station.  Nearby Vogel State Park has a dump station with a nominal fee. <br> There are water and electric hookups on Site #12, 13, 14 and 15.  The North Loop is open November - March (sites 21 - 37).  Fees are temporarily reduced because water is not available.</p>\n<h2>Natural Features</h2>\nThe recreation area includes 18-acre Lake Winfield Scott, which forms the headwaters of Cooper Creek. The lake was built by the Civilian Conservation Corps in the 1930s.\n<br/><br/>\nA variety of wildlife makes its home in the surrounding forest, including deer, bear, wild turkey, grouse and songbirds.\n<h2>Nearby Attractions</h2>\nSuches, Georgia is five miles southwest of the recreation area and offers a general store and fuel station. \n<br/><br/>\nBlairsville, Georgia is 16 miles north on U.S. Highway 19/129 and offers the nearest full-service grocery stores and shopping villages.", "facility_id"=>"234469", "facility_directions"=>"From Blainsville, take U.S. 19/129 south for 10 miles. Turn right (west) on Georgia 180 for 7 miles. Turn right onto Forest Road 37 at Lake Winfield Scott Recreation Area entrance.\n<br /><br />\nFrom Dahlonega, take U.S. 19 north for approximately 20 miles. Turn left (west) on Georgia 180 for 7 miles. Turn left onto Forest Road 37 at Lake Winfield Scott Recreation Area entrance.", "facility_email"=>"LakeWinfieldScott@cfaia.org", "facility_phone"=>"706-747-3816", "user_id"=>"1", "recreational_area"=>{"facility_name"=>"LAKE WINFIELD SCOTT REC", "facility_description"=>"<h2>Overview</h2>\nLake Winfield Scott Recreation Area offers visitors year-round recreation opportunities including camping, picnicking, boating, swimming and hiking, all centered around beautiful Lake Winfield Scott.\n<br/><br/>\nThe area is situated high in a mountain valley within the Chattahoochee-Oconee National Forest, approximately 80 miles from Atlanta, Georgia. The facility offers a rental cabin with electricity and water, as well as sites for tent and RV camping.<h2>Recreation</h2>\nThe Lake Winfield Scott Beach includes a designated swimming area, picnic tables, a bathhouse, pavilions (by reservation only), a playground and trash bins. \n<br/><br/>\nDay-use hiking trails are found within the recreation area, ideal for a short stroll. A 0.4-mile trail parallels the lakeshore. In addition, the 1-mile Jarrard Gap Trail and 2.7-mile Slaughter Creek Trail both begin within the recreation area and connect to the Appalachian Trail.\n<br/><br/>\nLake Winfield Scott is open to hand-powered and electric motor boats only. Fishing for catfish, trout, perch, brim and bass is a popular activity. See the <a href=\"http://www.gofishgeorgia.com/\" rel=\"nofollow\">Georgia Department of Natural Resources</a> for a complete listing of freshwater fishing regulations for the lake. A boat ramp and accessible fishing dock provide year-round lake access.<h2>Facilities</h2>\n<p>Lake Winfield Scott Recreation Area's cabin is a short walk to the lake, and can accommodate up to 12 people. A sleeping area upstairs is furnished with six twin beds and three double beds, all with mattresses. Visitors must provide their own bed and bath linens.<br>  <br>The main floor houses a living room with wood stove (no wood provided), dining room and kitchen, which is equipped with a refrigerator, electric stove, microwave, assorted pots and pans, utensils, plates, glasses, cups and flatware. The bathroom has a flush toilet, shower and an electric heater.  <br>  <br>Lake Winfield Scott Recreation Area's campground consists of 31 campsites configured in two loops for tent or RV camping. Showers, flush and vault toilets, grills, picnic tables and lantern posts are provided. The campground has no dump station.  Nearby Vogel State Park has a dump station with a nominal fee. <br> There are water and electric hookups on Site #12, 13, 14 and 15.  The North Loop is open November - March (sites 21 - 37).  Fees are temporarily reduced because water is not available.</p>\n<h2>Natural Features</h2>\nThe recreation area includes 18-acre Lake Winfield Scott, which forms the headwaters of Cooper Creek. The lake was built by the Civilian Conservation Corps in the 1930s.\n<br/><br/>\nA variety of wildlife makes its home in the surrounding forest, including deer, bear, wild turkey, grouse and songbirds.\n<h2>Nearby Attractions</h2>\nSuches, Georgia is five miles southwest of the recreation area and offers a general store and fuel station. \n<br/><br/>\nBlairsville, Georgia is 16 miles north on U.S. Highway 19/129 and offers the nearest full-service grocery stores and shopping villages.", "facility_id"=>"234469", "facility_directions"=>"From Blainsville, take U.S. 19/129 south for 10 miles. Turn right (west) on Georgia 180 for 7 miles. Turn right onto Forest Road 37 at Lake Winfield Scott Recreation Area entrance.\n<br /><br />\nFrom Dahlonega, take U.S. 19 north for approximately 20 miles. Turn left (west) on Georgia 180 for 7 miles. Turn left onto Forest Road 37 at Lake Winfield Scott Recreation Area entrance.", "facility_email"=>"LakeWinfieldScott@cfaia.org", "facility_phone"=>"706-747-3816"}}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:11:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[36mApi::V1::RecreationalArea Create (0.8ms)[0m  [1m[32mINSERT INTO "api_v1_recreational_areas" ("facility_name", "facility_description", "created_at", "updated_at", "facility_id", "facility_directions", "facility_email", "facility_phone", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["facility_name", "LAKE WINFIELD SCOTT REC"], ["facility_description", "<h2>Overview</h2>\nLake Winfield Scott Recreation Area offers visitors year-round recreation opportunities including camping, picnicking, boating, swimming and hiking, all centered around beautiful Lake Winfield Scott.\n<br/><br/>\nThe area is situated high in a mountain valley within the Chattahoochee-Oconee National Forest, approximately 80 miles from Atlanta, Georgia. The facility offers a rental cabin with electricity and water, as well as sites for tent and RV camping.<h2>Recreation</h2>\nThe Lake Winfield Scott Beach includes a designated swimming area, picnic tables, a bathhouse, pavilions (by reservation only), a playground and trash bins. \n<br/><br/>\nDay-use hiking trails are found within the recreation area, ideal for a short stroll. A 0.4-mile trail parallels the lakeshore. In addition, the 1-mile Jarrard Gap Trail and 2.7-mile Slaughter Creek Trail both begin within the recreation area and connect to the Appalachian Trail.\n<br/><br/>\nLake Winfield Scott is open to hand-powered and electric motor boats only. Fishing for catfish, trout, perch, brim and bass is a popular activity. See the <a href=\"http://www.gofishgeorgia.com/\" rel=\"nofollow\">Georgia Department of Natural Resources</a> for a complete listing of freshwater fishing regulations for the lake. A boat ramp and accessible fishing dock provide year-round lake access.<h2>Facilities</h2>\n<p>Lake Winfield Scott Recreation Area's cabin is a short walk to the lake, and can accommodate up to 12 people. A sleeping area upstairs is furnished with six twin beds and three double beds, all with mattresses. Visitors must provide their own bed and bath linens.<br>  <br>The main floor houses a living room with wood stove (no wood provided), dining room and kitchen, which is equipped with a refrigerator, electric stove, microwave, assorted pots and pans, utensils, plates, glasses, cups and flatware. The bathroom has a flush toilet, shower and an electric heater.  <br>  <br>Lake Winfield Scott Recreation Area's campground consists of 31 campsites configured in two loops for tent or RV camping. Showers, flush and vault toilets, grills, picnic tables and lantern posts are provided. The campground has no dump station.  Nearby Vogel State Park has a dump station with a nominal fee. <br> There are water and electric hookups on Site #12, 13, 14 and 15.  The North Loop is open November - March (sites 21 - 37).  Fees are temporarily reduced because water is not available.</p>\n<h2>Natural Features</h2>\nThe recreation area includes 18-acre Lake Winfield Scott, which forms the headwaters of Cooper Creek. The lake was built by the Civilian Conservation Corps in the 1930s.\n<br/><br/>\nA variety of wildlife makes its home in the surrounding forest, including deer, bear, wild turkey, grouse and songbirds.\n<h2>Nearby Attractions</h2>\nSuches, Georgia is five miles southwest of the recreation area and offers a general store and fuel station. \n<br/><br/>\nBlairsville, Georgia is 16 miles north on U.S. Highway 19/129 and offers the nearest full-service grocery stores and shopping villages."], ["created_at", "2020-12-09 01:47:38.517630"], ["updated_at", "2020-12-09 01:47:38.517630"], ["facility_id", "234469"], ["facility_directions", "From Blainsville, take U.S. 19/129 south for 10 miles. Turn right (west) on Georgia 180 for 7 miles. Turn right onto Forest Road 37 at Lake Winfield Scott Recreation Area entrance.\n<br /><br />\nFrom Dahlonega, take U.S. 19 north for approximately 20 miles. Turn left (west) on Georgia 180 for 7 miles. Turn left onto Forest Road 37 at Lake Winfield Scott Recreation Area entrance."], ["facility_email", "LakeWinfieldScott@cfaia.org"], ["facility_phone", "706-747-3816"], ["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+Completed 200 OK in 8ms (Views: 0.4ms | ActiveRecord: 1.7ms | Allocations: 3666)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-08 20:54:28 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 705)
+
+
+Started GET "/api/v1/users/1/recreational_areas?username=Dice" for ::1 at 2020-12-08 20:54:28 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"username"=>"Dice", "user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:3:in `index'
+  [1m[36mApi::V1::RecreationalArea Load (0.3ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 5ms (Views: 2.8ms | ActiveRecord: 0.4ms | Allocations: 2370)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-08 20:54:30 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 590ms (Views: 9.3ms | ActiveRecord: 0.0ms | Allocations: 21634)
+
+
+Started POST "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-08 20:54:45 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"username"=>"Dice", "facility_name"=>"LAKE WINFIELD SCOTT REC", "facility_description"=>"<h2>Overview</h2>\nLake Winfield Scott Recreation Area offers visitors year-round recreation opportunities including camping, picnicking, boating, swimming and hiking, all centered around beautiful Lake Winfield Scott.\n<br/><br/>\nThe area is situated high in a mountain valley within the Chattahoochee-Oconee National Forest, approximately 80 miles from Atlanta, Georgia. The facility offers a rental cabin with electricity and water, as well as sites for tent and RV camping.<h2>Recreation</h2>\nThe Lake Winfield Scott Beach includes a designated swimming area, picnic tables, a bathhouse, pavilions (by reservation only), a playground and trash bins. \n<br/><br/>\nDay-use hiking trails are found within the recreation area, ideal for a short stroll. A 0.4-mile trail parallels the lakeshore. In addition, the 1-mile Jarrard Gap Trail and 2.7-mile Slaughter Creek Trail both begin within the recreation area and connect to the Appalachian Trail.\n<br/><br/>\nLake Winfield Scott is open to hand-powered and electric motor boats only. Fishing for catfish, trout, perch, brim and bass is a popular activity. See the <a href=\"http://www.gofishgeorgia.com/\" rel=\"nofollow\">Georgia Department of Natural Resources</a> for a complete listing of freshwater fishing regulations for the lake. A boat ramp and accessible fishing dock provide year-round lake access.<h2>Facilities</h2>\n<p>Lake Winfield Scott Recreation Area's cabin is a short walk to the lake, and can accommodate up to 12 people. A sleeping area upstairs is furnished with six twin beds and three double beds, all with mattresses. Visitors must provide their own bed and bath linens.<br>  <br>The main floor houses a living room with wood stove (no wood provided), dining room and kitchen, which is equipped with a refrigerator, electric stove, microwave, assorted pots and pans, utensils, plates, glasses, cups and flatware. The bathroom has a flush toilet, shower and an electric heater.  <br>  <br>Lake Winfield Scott Recreation Area's campground consists of 31 campsites configured in two loops for tent or RV camping. Showers, flush and vault toilets, grills, picnic tables and lantern posts are provided. The campground has no dump station.  Nearby Vogel State Park has a dump station with a nominal fee. <br> There are water and electric hookups on Site #12, 13, 14 and 15.  The North Loop is open November - March (sites 21 - 37).  Fees are temporarily reduced because water is not available.</p>\n<h2>Natural Features</h2>\nThe recreation area includes 18-acre Lake Winfield Scott, which forms the headwaters of Cooper Creek. The lake was built by the Civilian Conservation Corps in the 1930s.\n<br/><br/>\nA variety of wildlife makes its home in the surrounding forest, including deer, bear, wild turkey, grouse and songbirds.\n<h2>Nearby Attractions</h2>\nSuches, Georgia is five miles southwest of the recreation area and offers a general store and fuel station. \n<br/><br/>\nBlairsville, Georgia is 16 miles north on U.S. Highway 19/129 and offers the nearest full-service grocery stores and shopping villages.", "facility_id"=>"234469", "facility_directions"=>"From Blainsville, take U.S. 19/129 south for 10 miles. Turn right (west) on Georgia 180 for 7 miles. Turn right onto Forest Road 37 at Lake Winfield Scott Recreation Area entrance.\n<br /><br />\nFrom Dahlonega, take U.S. 19 north for approximately 20 miles. Turn left (west) on Georgia 180 for 7 miles. Turn left onto Forest Road 37 at Lake Winfield Scott Recreation Area entrance.", "facility_email"=>"LakeWinfieldScott@cfaia.org", "facility_phone"=>"706-747-3816", "user_id"=>"1", "recreational_area"=>{"facility_name"=>"LAKE WINFIELD SCOTT REC", "facility_description"=>"<h2>Overview</h2>\nLake Winfield Scott Recreation Area offers visitors year-round recreation opportunities including camping, picnicking, boating, swimming and hiking, all centered around beautiful Lake Winfield Scott.\n<br/><br/>\nThe area is situated high in a mountain valley within the Chattahoochee-Oconee National Forest, approximately 80 miles from Atlanta, Georgia. The facility offers a rental cabin with electricity and water, as well as sites for tent and RV camping.<h2>Recreation</h2>\nThe Lake Winfield Scott Beach includes a designated swimming area, picnic tables, a bathhouse, pavilions (by reservation only), a playground and trash bins. \n<br/><br/>\nDay-use hiking trails are found within the recreation area, ideal for a short stroll. A 0.4-mile trail parallels the lakeshore. In addition, the 1-mile Jarrard Gap Trail and 2.7-mile Slaughter Creek Trail both begin within the recreation area and connect to the Appalachian Trail.\n<br/><br/>\nLake Winfield Scott is open to hand-powered and electric motor boats only. Fishing for catfish, trout, perch, brim and bass is a popular activity. See the <a href=\"http://www.gofishgeorgia.com/\" rel=\"nofollow\">Georgia Department of Natural Resources</a> for a complete listing of freshwater fishing regulations for the lake. A boat ramp and accessible fishing dock provide year-round lake access.<h2>Facilities</h2>\n<p>Lake Winfield Scott Recreation Area's cabin is a short walk to the lake, and can accommodate up to 12 people. A sleeping area upstairs is furnished with six twin beds and three double beds, all with mattresses. Visitors must provide their own bed and bath linens.<br>  <br>The main floor houses a living room with wood stove (no wood provided), dining room and kitchen, which is equipped with a refrigerator, electric stove, microwave, assorted pots and pans, utensils, plates, glasses, cups and flatware. The bathroom has a flush toilet, shower and an electric heater.  <br>  <br>Lake Winfield Scott Recreation Area's campground consists of 31 campsites configured in two loops for tent or RV camping. Showers, flush and vault toilets, grills, picnic tables and lantern posts are provided. The campground has no dump station.  Nearby Vogel State Park has a dump station with a nominal fee. <br> There are water and electric hookups on Site #12, 13, 14 and 15.  The North Loop is open November - March (sites 21 - 37).  Fees are temporarily reduced because water is not available.</p>\n<h2>Natural Features</h2>\nThe recreation area includes 18-acre Lake Winfield Scott, which forms the headwaters of Cooper Creek. The lake was built by the Civilian Conservation Corps in the 1930s.\n<br/><br/>\nA variety of wildlife makes its home in the surrounding forest, including deer, bear, wild turkey, grouse and songbirds.\n<h2>Nearby Attractions</h2>\nSuches, Georgia is five miles southwest of the recreation area and offers a general store and fuel station. \n<br/><br/>\nBlairsville, Georgia is 16 miles north on U.S. Highway 19/129 and offers the nearest full-service grocery stores and shopping villages.", "facility_id"=>"234469", "facility_directions"=>"From Blainsville, take U.S. 19/129 south for 10 miles. Turn right (west) on Georgia 180 for 7 miles. Turn right onto Forest Road 37 at Lake Winfield Scott Recreation Area entrance.\n<br /><br />\nFrom Dahlonega, take U.S. 19 north for approximately 20 miles. Turn left (west) on Georgia 180 for 7 miles. Turn left onto Forest Road 37 at Lake Winfield Scott Recreation Area entrance.", "facility_email"=>"LakeWinfieldScott@cfaia.org", "facility_phone"=>"706-747-3816"}}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:11:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[36mApi::V1::RecreationalArea Create (0.7ms)[0m  [1m[32mINSERT INTO "api_v1_recreational_areas" ("facility_name", "facility_description", "created_at", "updated_at", "facility_id", "facility_directions", "facility_email", "facility_phone", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["facility_name", "LAKE WINFIELD SCOTT REC"], ["facility_description", "<h2>Overview</h2>\nLake Winfield Scott Recreation Area offers visitors year-round recreation opportunities including camping, picnicking, boating, swimming and hiking, all centered around beautiful Lake Winfield Scott.\n<br/><br/>\nThe area is situated high in a mountain valley within the Chattahoochee-Oconee National Forest, approximately 80 miles from Atlanta, Georgia. The facility offers a rental cabin with electricity and water, as well as sites for tent and RV camping.<h2>Recreation</h2>\nThe Lake Winfield Scott Beach includes a designated swimming area, picnic tables, a bathhouse, pavilions (by reservation only), a playground and trash bins. \n<br/><br/>\nDay-use hiking trails are found within the recreation area, ideal for a short stroll. A 0.4-mile trail parallels the lakeshore. In addition, the 1-mile Jarrard Gap Trail and 2.7-mile Slaughter Creek Trail both begin within the recreation area and connect to the Appalachian Trail.\n<br/><br/>\nLake Winfield Scott is open to hand-powered and electric motor boats only. Fishing for catfish, trout, perch, brim and bass is a popular activity. See the <a href=\"http://www.gofishgeorgia.com/\" rel=\"nofollow\">Georgia Department of Natural Resources</a> for a complete listing of freshwater fishing regulations for the lake. A boat ramp and accessible fishing dock provide year-round lake access.<h2>Facilities</h2>\n<p>Lake Winfield Scott Recreation Area's cabin is a short walk to the lake, and can accommodate up to 12 people. A sleeping area upstairs is furnished with six twin beds and three double beds, all with mattresses. Visitors must provide their own bed and bath linens.<br>  <br>The main floor houses a living room with wood stove (no wood provided), dining room and kitchen, which is equipped with a refrigerator, electric stove, microwave, assorted pots and pans, utensils, plates, glasses, cups and flatware. The bathroom has a flush toilet, shower and an electric heater.  <br>  <br>Lake Winfield Scott Recreation Area's campground consists of 31 campsites configured in two loops for tent or RV camping. Showers, flush and vault toilets, grills, picnic tables and lantern posts are provided. The campground has no dump station.  Nearby Vogel State Park has a dump station with a nominal fee. <br> There are water and electric hookups on Site #12, 13, 14 and 15.  The North Loop is open November - March (sites 21 - 37).  Fees are temporarily reduced because water is not available.</p>\n<h2>Natural Features</h2>\nThe recreation area includes 18-acre Lake Winfield Scott, which forms the headwaters of Cooper Creek. The lake was built by the Civilian Conservation Corps in the 1930s.\n<br/><br/>\nA variety of wildlife makes its home in the surrounding forest, including deer, bear, wild turkey, grouse and songbirds.\n<h2>Nearby Attractions</h2>\nSuches, Georgia is five miles southwest of the recreation area and offers a general store and fuel station. \n<br/><br/>\nBlairsville, Georgia is 16 miles north on U.S. Highway 19/129 and offers the nearest full-service grocery stores and shopping villages."], ["created_at", "2020-12-09 01:54:45.436077"], ["updated_at", "2020-12-09 01:54:45.436077"], ["facility_id", "234469"], ["facility_directions", "From Blainsville, take U.S. 19/129 south for 10 miles. Turn right (west) on Georgia 180 for 7 miles. Turn right onto Forest Road 37 at Lake Winfield Scott Recreation Area entrance.\n<br /><br />\nFrom Dahlonega, take U.S. 19 north for approximately 20 miles. Turn left (west) on Georgia 180 for 7 miles. Turn left onto Forest Road 37 at Lake Winfield Scott Recreation Area entrance."], ["facility_email", "LakeWinfieldScott@cfaia.org"], ["facility_phone", "706-747-3816"], ["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+Completed 200 OK in 20ms (Views: 0.6ms | ActiveRecord: 2.0ms | Allocations: 3670)
+
+
+Started POST "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-08 20:55:26 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"username"=>"Dice", "facility_name"=>"LAKE WINFIELD SCOTT REC", "facility_description"=>"<h2>Overview</h2>\nLake Winfield Scott Recreation Area offers visitors year-round recreation opportunities including camping, picnicking, boating, swimming and hiking, all centered around beautiful Lake Winfield Scott.\n<br/><br/>\nThe area is situated high in a mountain valley within the Chattahoochee-Oconee National Forest, approximately 80 miles from Atlanta, Georgia. The facility offers a rental cabin with electricity and water, as well as sites for tent and RV camping.<h2>Recreation</h2>\nThe Lake Winfield Scott Beach includes a designated swimming area, picnic tables, a bathhouse, pavilions (by reservation only), a playground and trash bins. \n<br/><br/>\nDay-use hiking trails are found within the recreation area, ideal for a short stroll. A 0.4-mile trail parallels the lakeshore. In addition, the 1-mile Jarrard Gap Trail and 2.7-mile Slaughter Creek Trail both begin within the recreation area and connect to the Appalachian Trail.\n<br/><br/>\nLake Winfield Scott is open to hand-powered and electric motor boats only. Fishing for catfish, trout, perch, brim and bass is a popular activity. See the <a href=\"http://www.gofishgeorgia.com/\" rel=\"nofollow\">Georgia Department of Natural Resources</a> for a complete listing of freshwater fishing regulations for the lake. A boat ramp and accessible fishing dock provide year-round lake access.<h2>Facilities</h2>\n<p>Lake Winfield Scott Recreation Area's cabin is a short walk to the lake, and can accommodate up to 12 people. A sleeping area upstairs is furnished with six twin beds and three double beds, all with mattresses. Visitors must provide their own bed and bath linens.<br>  <br>The main floor houses a living room with wood stove (no wood provided), dining room and kitchen, which is equipped with a refrigerator, electric stove, microwave, assorted pots and pans, utensils, plates, glasses, cups and flatware. The bathroom has a flush toilet, shower and an electric heater.  <br>  <br>Lake Winfield Scott Recreation Area's campground consists of 31 campsites configured in two loops for tent or RV camping. Showers, flush and vault toilets, grills, picnic tables and lantern posts are provided. The campground has no dump station.  Nearby Vogel State Park has a dump station with a nominal fee. <br> There are water and electric hookups on Site #12, 13, 14 and 15.  The North Loop is open November - March (sites 21 - 37).  Fees are temporarily reduced because water is not available.</p>\n<h2>Natural Features</h2>\nThe recreation area includes 18-acre Lake Winfield Scott, which forms the headwaters of Cooper Creek. The lake was built by the Civilian Conservation Corps in the 1930s.\n<br/><br/>\nA variety of wildlife makes its home in the surrounding forest, including deer, bear, wild turkey, grouse and songbirds.\n<h2>Nearby Attractions</h2>\nSuches, Georgia is five miles southwest of the recreation area and offers a general store and fuel station. \n<br/><br/>\nBlairsville, Georgia is 16 miles north on U.S. Highway 19/129 and offers the nearest full-service grocery stores and shopping villages.", "facility_id"=>"234469", "facility_directions"=>"From Blainsville, take U.S. 19/129 south for 10 miles. Turn right (west) on Georgia 180 for 7 miles. Turn right onto Forest Road 37 at Lake Winfield Scott Recreation Area entrance.\n<br /><br />\nFrom Dahlonega, take U.S. 19 north for approximately 20 miles. Turn left (west) on Georgia 180 for 7 miles. Turn left onto Forest Road 37 at Lake Winfield Scott Recreation Area entrance.", "facility_email"=>"LakeWinfieldScott@cfaia.org", "facility_phone"=>"706-747-3816", "user_id"=>"1", "recreational_area"=>{"facility_name"=>"LAKE WINFIELD SCOTT REC", "facility_description"=>"<h2>Overview</h2>\nLake Winfield Scott Recreation Area offers visitors year-round recreation opportunities including camping, picnicking, boating, swimming and hiking, all centered around beautiful Lake Winfield Scott.\n<br/><br/>\nThe area is situated high in a mountain valley within the Chattahoochee-Oconee National Forest, approximately 80 miles from Atlanta, Georgia. The facility offers a rental cabin with electricity and water, as well as sites for tent and RV camping.<h2>Recreation</h2>\nThe Lake Winfield Scott Beach includes a designated swimming area, picnic tables, a bathhouse, pavilions (by reservation only), a playground and trash bins. \n<br/><br/>\nDay-use hiking trails are found within the recreation area, ideal for a short stroll. A 0.4-mile trail parallels the lakeshore. In addition, the 1-mile Jarrard Gap Trail and 2.7-mile Slaughter Creek Trail both begin within the recreation area and connect to the Appalachian Trail.\n<br/><br/>\nLake Winfield Scott is open to hand-powered and electric motor boats only. Fishing for catfish, trout, perch, brim and bass is a popular activity. See the <a href=\"http://www.gofishgeorgia.com/\" rel=\"nofollow\">Georgia Department of Natural Resources</a> for a complete listing of freshwater fishing regulations for the lake. A boat ramp and accessible fishing dock provide year-round lake access.<h2>Facilities</h2>\n<p>Lake Winfield Scott Recreation Area's cabin is a short walk to the lake, and can accommodate up to 12 people. A sleeping area upstairs is furnished with six twin beds and three double beds, all with mattresses. Visitors must provide their own bed and bath linens.<br>  <br>The main floor houses a living room with wood stove (no wood provided), dining room and kitchen, which is equipped with a refrigerator, electric stove, microwave, assorted pots and pans, utensils, plates, glasses, cups and flatware. The bathroom has a flush toilet, shower and an electric heater.  <br>  <br>Lake Winfield Scott Recreation Area's campground consists of 31 campsites configured in two loops for tent or RV camping. Showers, flush and vault toilets, grills, picnic tables and lantern posts are provided. The campground has no dump station.  Nearby Vogel State Park has a dump station with a nominal fee. <br> There are water and electric hookups on Site #12, 13, 14 and 15.  The North Loop is open November - March (sites 21 - 37).  Fees are temporarily reduced because water is not available.</p>\n<h2>Natural Features</h2>\nThe recreation area includes 18-acre Lake Winfield Scott, which forms the headwaters of Cooper Creek. The lake was built by the Civilian Conservation Corps in the 1930s.\n<br/><br/>\nA variety of wildlife makes its home in the surrounding forest, including deer, bear, wild turkey, grouse and songbirds.\n<h2>Nearby Attractions</h2>\nSuches, Georgia is five miles southwest of the recreation area and offers a general store and fuel station. \n<br/><br/>\nBlairsville, Georgia is 16 miles north on U.S. Highway 19/129 and offers the nearest full-service grocery stores and shopping villages.", "facility_id"=>"234469", "facility_directions"=>"From Blainsville, take U.S. 19/129 south for 10 miles. Turn right (west) on Georgia 180 for 7 miles. Turn right onto Forest Road 37 at Lake Winfield Scott Recreation Area entrance.\n<br /><br />\nFrom Dahlonega, take U.S. 19 north for approximately 20 miles. Turn left (west) on Georgia 180 for 7 miles. Turn left onto Forest Road 37 at Lake Winfield Scott Recreation Area entrance.", "facility_email"=>"LakeWinfieldScott@cfaia.org", "facility_phone"=>"706-747-3816"}}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:11:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[36mApi::V1::RecreationalArea Create (0.5ms)[0m  [1m[32mINSERT INTO "api_v1_recreational_areas" ("facility_name", "facility_description", "created_at", "updated_at", "facility_id", "facility_directions", "facility_email", "facility_phone", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["facility_name", "LAKE WINFIELD SCOTT REC"], ["facility_description", "<h2>Overview</h2>\nLake Winfield Scott Recreation Area offers visitors year-round recreation opportunities including camping, picnicking, boating, swimming and hiking, all centered around beautiful Lake Winfield Scott.\n<br/><br/>\nThe area is situated high in a mountain valley within the Chattahoochee-Oconee National Forest, approximately 80 miles from Atlanta, Georgia. The facility offers a rental cabin with electricity and water, as well as sites for tent and RV camping.<h2>Recreation</h2>\nThe Lake Winfield Scott Beach includes a designated swimming area, picnic tables, a bathhouse, pavilions (by reservation only), a playground and trash bins. \n<br/><br/>\nDay-use hiking trails are found within the recreation area, ideal for a short stroll. A 0.4-mile trail parallels the lakeshore. In addition, the 1-mile Jarrard Gap Trail and 2.7-mile Slaughter Creek Trail both begin within the recreation area and connect to the Appalachian Trail.\n<br/><br/>\nLake Winfield Scott is open to hand-powered and electric motor boats only. Fishing for catfish, trout, perch, brim and bass is a popular activity. See the <a href=\"http://www.gofishgeorgia.com/\" rel=\"nofollow\">Georgia Department of Natural Resources</a> for a complete listing of freshwater fishing regulations for the lake. A boat ramp and accessible fishing dock provide year-round lake access.<h2>Facilities</h2>\n<p>Lake Winfield Scott Recreation Area's cabin is a short walk to the lake, and can accommodate up to 12 people. A sleeping area upstairs is furnished with six twin beds and three double beds, all with mattresses. Visitors must provide their own bed and bath linens.<br>  <br>The main floor houses a living room with wood stove (no wood provided), dining room and kitchen, which is equipped with a refrigerator, electric stove, microwave, assorted pots and pans, utensils, plates, glasses, cups and flatware. The bathroom has a flush toilet, shower and an electric heater.  <br>  <br>Lake Winfield Scott Recreation Area's campground consists of 31 campsites configured in two loops for tent or RV camping. Showers, flush and vault toilets, grills, picnic tables and lantern posts are provided. The campground has no dump station.  Nearby Vogel State Park has a dump station with a nominal fee. <br> There are water and electric hookups on Site #12, 13, 14 and 15.  The North Loop is open November - March (sites 21 - 37).  Fees are temporarily reduced because water is not available.</p>\n<h2>Natural Features</h2>\nThe recreation area includes 18-acre Lake Winfield Scott, which forms the headwaters of Cooper Creek. The lake was built by the Civilian Conservation Corps in the 1930s.\n<br/><br/>\nA variety of wildlife makes its home in the surrounding forest, including deer, bear, wild turkey, grouse and songbirds.\n<h2>Nearby Attractions</h2>\nSuches, Georgia is five miles southwest of the recreation area and offers a general store and fuel station. \n<br/><br/>\nBlairsville, Georgia is 16 miles north on U.S. Highway 19/129 and offers the nearest full-service grocery stores and shopping villages."], ["created_at", "2020-12-09 01:55:27.010947"], ["updated_at", "2020-12-09 01:55:27.010947"], ["facility_id", "234469"], ["facility_directions", "From Blainsville, take U.S. 19/129 south for 10 miles. Turn right (west) on Georgia 180 for 7 miles. Turn right onto Forest Road 37 at Lake Winfield Scott Recreation Area entrance.\n<br /><br />\nFrom Dahlonega, take U.S. 19 north for approximately 20 miles. Turn left (west) on Georgia 180 for 7 miles. Turn left onto Forest Road 37 at Lake Winfield Scott Recreation Area entrance."], ["facility_email", "LakeWinfieldScott@cfaia.org"], ["facility_phone", "706-747-3816"], ["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+Completed 200 OK in 12ms (Views: 0.7ms | ActiveRecord: 1.9ms | Allocations: 3666)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-08 21:04:28 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 1039)
+
+
+  
+ArgumentError (Unknown validator: 'UniuenessValidator'):
+  
+app/models/api/v1/user.rb:4:in `<class:User>'
+app/models/api/v1/user.rb:1:in `<main>'
+app/controllers/api/v1/users_controller.rb:4:in `index'
+Started GET "/api/v1/users/undefined/recreational_areas?username=undefined" for ::1 at 2020-12-08 21:04:28 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"username"=>"undefined", "user_id"=>"undefined"}
+  [1m[36mApi::V1::User Load (0.5ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "undefined"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:3:in `index'
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.5ms | Allocations: 1517)
+
+
+  
+NoMethodError (undefined method `recreational_areas' for nil:NilClass):
+  
+app/controllers/api/v1/recreational_areas_controller.rb:5:in `index'
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-08 21:05:08 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 0.1ms | Allocations: 2992)
+
+
+Started GET "/api/v1/users/1/recreational_areas?username=Dice" for ::1 at 2020-12-08 21:05:08 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"username"=>"Dice", "user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:3:in `index'
+  [1m[36mApi::V1::RecreationalArea Load (0.2ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 23ms (Views: 13.3ms | ActiveRecord: 0.4ms | Allocations: 11238)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:05:19 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mApi::V1::User Create (0.4ms)[0m  [1m[32mINSERT INTO "api_v1_users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Dice"], ["created_at", "2020-12-09 02:05:19.119520"], ["updated_at", "2020-12-09 02:05:19.119520"]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 1.2ms | Allocations: 2465)
+
+
+Started GET "/api/v1/users/2/recreational_areas?username=Dice" for ::1 at 2020-12-08 21:05:19 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"username"=>"Dice", "user_id"=>"2"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:3:in `index'
+  [1m[36mApi::V1::RecreationalArea Load (0.2ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.4ms | Allocations: 2855)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:05:36 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"", "user"=>{"username"=>""}}
+Completed 200 OK in 10ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 3606)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:05:58 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"", "user"=>{"username"=>""}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 594)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:05:59 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"", "user"=>{"username"=>""}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 596)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:06:00 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"", "user"=>{"username"=>""}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 594)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:06:01 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"", "user"=>{"username"=>""}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 594)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:06:01 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"", "user"=>{"username"=>""}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 594)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:06:01 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"", "user"=>{"username"=>""}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 594)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:06:02 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"", "user"=>{"username"=>""}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 594)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:06:02 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"", "user"=>{"username"=>""}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 594)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:06:02 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"", "user"=>{"username"=>""}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 594)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:06:02 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"", "user"=>{"username"=>""}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 594)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:06:02 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"", "user"=>{"username"=>""}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 594)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:06:03 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"", "user"=>{"username"=>""}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 594)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:06:03 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"", "user"=>{"username"=>""}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 594)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:06:03 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"", "user"=>{"username"=>""}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 594)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:06:03 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"", "user"=>{"username"=>""}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 594)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:06:03 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"", "user"=>{"username"=>""}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 594)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:06:04 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"", "user"=>{"username"=>""}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 594)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:06:04 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"", "user"=>{"username"=>""}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 594)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:06:04 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"", "user"=>{"username"=>""}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 594)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:06:04 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"", "user"=>{"username"=>""}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 594)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:06:04 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"", "user"=>{"username"=>""}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 594)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:06:05 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"", "user"=>{"username"=>""}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 594)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:06:06 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"", "user"=>{"username"=>""}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 594)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:06:06 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"", "user"=>{"username"=>""}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 594)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:06:06 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"", "user"=>{"username"=>""}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 594)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:06:07 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"", "user"=>{"username"=>""}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 594)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:06:07 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"", "user"=>{"username"=>""}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 594)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:06:08 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"", "user"=>{"username"=>""}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 594)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:06:08 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"", "user"=>{"username"=>""}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 594)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:06:08 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"", "user"=>{"username"=>""}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 594)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:06:09 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"", "user"=>{"username"=>""}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 594)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:06:09 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"", "user"=>{"username"=>""}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 594)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:06:09 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"", "user"=>{"username"=>""}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 594)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:06:09 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"", "user"=>{"username"=>""}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 594)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:06:09 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"", "user"=>{"username"=>""}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 594)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:06:10 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"", "user"=>{"username"=>""}}
+Completed 200 OK in 14ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 597)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:06:10 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"", "user"=>{"username"=>""}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 594)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:06:10 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"", "user"=>{"username"=>""}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 594)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:06:10 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"", "user"=>{"username"=>""}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 594)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:06:10 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"", "user"=>{"username"=>""}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 594)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:06:11 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"", "user"=>{"username"=>""}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 594)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:06:11 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"", "user"=>{"username"=>""}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 594)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:06:11 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"", "user"=>{"username"=>""}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 594)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:06:11 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"", "user"=>{"username"=>""}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 594)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:06:12 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"", "user"=>{"username"=>""}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 594)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:06:12 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"", "user"=>{"username"=>""}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 594)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:06:12 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"", "user"=>{"username"=>""}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 594)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:06:14 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"", "user"=>{"username"=>""}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 594)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:06:14 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"", "user"=>{"username"=>""}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 594)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:06:14 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"", "user"=>{"username"=>""}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 594)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:06:15 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"", "user"=>{"username"=>""}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 594)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:06:15 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"", "user"=>{"username"=>""}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 594)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:06:15 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"", "user"=>{"username"=>""}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 594)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-08 21:06:32 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 693)
+
+
+Started GET "/api/v1/users/1/recreational_areas?username=Dice" for ::1 at 2020-12-08 21:06:32 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"username"=>"Dice", "user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:3:in `index'
+  [1m[36mApi::V1::RecreationalArea Load (0.2ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.3ms | Allocations: 2855)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:06:40 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mApi::V1::User Create (0.4ms)[0m  [1m[32mINSERT INTO "api_v1_users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Dice"], ["created_at", "2020-12-09 02:06:40.880472"], ["updated_at", "2020-12-09 02:06:40.880472"]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 1.2ms | Allocations: 2368)
+
+
+Started GET "/api/v1/users/3/recreational_areas?username=Dice" for ::1 at 2020-12-08 21:06:40 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"username"=>"Dice", "user_id"=>"3"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:3:in `index'
+  [1m[36mApi::V1::RecreationalArea Load (0.2ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.3ms | Allocations: 2855)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:06:51 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"trice", "user"=>{"username"=>"trice"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mApi::V1::User Create (0.4ms)[0m  [1m[32mINSERT INTO "api_v1_users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "trice"], ["created_at", "2020-12-09 02:06:51.042209"], ["updated_at", "2020-12-09 02:06:51.042209"]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 1.2ms | Allocations: 2368)
+
+
+Started GET "/api/v1/users/4/recreational_areas?username=trice" for ::1 at 2020-12-08 21:06:51 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"username"=>"trice", "user_id"=>"4"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "trice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:3:in `index'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.2ms | Allocations: 1456)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:06:58 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"trice", "user"=>{"username"=>"trice"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mApi::V1::User Create (0.4ms)[0m  [1m[32mINSERT INTO "api_v1_users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "trice"], ["created_at", "2020-12-09 02:06:58.992849"], ["updated_at", "2020-12-09 02:06:58.992849"]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 1.2ms | Allocations: 2368)
+
+
+Started GET "/api/v1/users/5/recreational_areas?username=trice" for ::1 at 2020-12-08 21:06:59 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"username"=>"trice", "user_id"=>"5"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "trice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:3:in `index'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.3ms | Allocations: 1456)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:07:22 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mApi::V1::User Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 1.2ms | Allocations: 5770)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:07:24 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mApi::V1::User Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 3032)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:07:25 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mApi::V1::User Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 3031)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:07:31 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"trice", "user"=>{"username"=>"trice"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mApi::V1::User Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "trice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 3031)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:07:31 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"trice", "user"=>{"username"=>"trice"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mApi::V1::User Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "trice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 3031)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:07:32 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"trice", "user"=>{"username"=>"trice"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mApi::V1::User Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "trice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 3030)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:07:35 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Trice", "user"=>{"username"=>"Trice"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mApi::V1::User Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Trice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mApi::V1::User Create (0.3ms)[0m  [1m[32mINSERT INTO "api_v1_users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Trice"], ["created_at", "2020-12-09 02:07:35.187416"], ["updated_at", "2020-12-09 02:07:35.187416"]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+Completed 200 OK in 20ms (Views: 0.2ms | ActiveRecord: 1.4ms | Allocations: 3545)
+
+
+Started GET "/api/v1/users/6/recreational_areas?username=Trice" for ::1 at 2020-12-08 21:07:35 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"username"=>"Trice", "user_id"=>"6"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Trice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:3:in `index'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 5ms (Views: 1.6ms | ActiveRecord: 0.5ms | Allocations: 2810)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:07:42 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"trice", "user"=>{"username"=>"trice"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mApi::V1::User Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "trice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 3030)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:07:43 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"trice", "user"=>{"username"=>"trice"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mApi::V1::User Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "trice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 3030)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:07:43 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"trice", "user"=>{"username"=>"trice"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mApi::V1::User Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "trice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 3030)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:07:43 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"trice", "user"=>{"username"=>"trice"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mApi::V1::User Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "trice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 3030)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:07:43 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"trice", "user"=>{"username"=>"trice"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mApi::V1::User Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "trice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 3030)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:07:44 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"trice", "user"=>{"username"=>"trice"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mApi::V1::User Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "trice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 3030)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:07:44 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"trice", "user"=>{"username"=>"trice"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mApi::V1::User Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "trice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 3030)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:07:44 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"trice", "user"=>{"username"=>"trice"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mApi::V1::User Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "trice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 3030)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:07:45 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"trice", "user"=>{"username"=>"trice"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mApi::V1::User Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "trice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 3030)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:07:45 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"trice", "user"=>{"username"=>"trice"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mApi::V1::User Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "trice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 3030)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:07:45 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"trice", "user"=>{"username"=>"trice"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mApi::V1::User Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "trice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 3030)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:07:46 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"trice", "user"=>{"username"=>"trice"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mApi::V1::User Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "trice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 3030)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:07:46 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"trice", "user"=>{"username"=>"trice"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mApi::V1::User Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "trice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 3030)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:07:47 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"trice", "user"=>{"username"=>"trice"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mApi::V1::User Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "trice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 3030)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:12:43 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mApi::V1::User Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 0.9ms | Allocations: 5811)
+
+
+Started GET "/api/v1/users/undefined/recreational_areas?username=undefined" for ::1 at 2020-12-08 21:12:43 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"username"=>"undefined", "user_id"=>"undefined"}
+  [1m[36mApi::V1::User Load (0.3ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "undefined"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:3:in `index'
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.3ms | Allocations: 1195)
+
+
+  
+NoMethodError (undefined method `recreational_areas' for nil:NilClass):
+  
+app/controllers/api/v1/recreational_areas_controller.rb:5:in `index'
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:12:53 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"trice", "user"=>{"username"=>"trice"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mApi::V1::User Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "trice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 3190)
+
+
+Started GET "/api/v1/users/undefined/recreational_areas?username=undefined" for ::1 at 2020-12-08 21:12:53 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"username"=>"undefined", "user_id"=>"undefined"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "undefined"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:3:in `index'
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.2ms | Allocations: 998)
+
+
+  
+NoMethodError (undefined method `recreational_areas' for nil:NilClass):
+  
+app/controllers/api/v1/recreational_areas_controller.rb:5:in `index'
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-08 21:13:02 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 698)
+
+
+Started GET "/api/v1/users/1/recreational_areas?username=Dice" for ::1 at 2020-12-08 21:13:02 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"username"=>"Dice", "user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:3:in `index'
+  [1m[36mApi::V1::RecreationalArea Load (0.2ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 17ms (Views: 11.8ms | ActiveRecord: 1.0ms | Allocations: 10155)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:13:08 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mApi::V1::User Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 3190)
+
+
+Started GET "/api/v1/users/undefined/recreational_areas?username=undefined" for ::1 at 2020-12-08 21:13:08 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"username"=>"undefined", "user_id"=>"undefined"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "undefined"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:3:in `index'
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms | Allocations: 998)
+
+
+  
+NoMethodError (undefined method `recreational_areas' for nil:NilClass):
+  
+app/controllers/api/v1/recreational_areas_controller.rb:5:in `index'
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:14:00 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mApi::V1::User Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 3189)
+
+
+Started GET "/api/v1/users/undefined/recreational_areas?username=undefined" for ::1 at 2020-12-08 21:14:00 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"username"=>"undefined", "user_id"=>"undefined"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "undefined"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:3:in `index'
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms | Allocations: 997)
+
+
+  
+NoMethodError (undefined method `recreational_areas' for nil:NilClass):
+  
+app/controllers/api/v1/recreational_areas_controller.rb:5:in `index'
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:15:15 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/Users/daisukehashimoto/Documents/Programming/Flatiron/Projects/JavaScript_Rails_Project/recreational_activities_backend/app/controllers/api/v1/users_controller.rb:18: syntax error, unexpected =>
+            render json: => {:errors => user.errors.full...
+                         ^~):
+  
+app/controllers/api/v1/users_controller.rb:18: syntax error, unexpected =>
+app/controllers/api/v1/users_controller.rb:18: syntax error, unexpected =>
+Started GET "/api/v1/users/undefined/recreational_areas?username=undefined" for ::1 at 2020-12-08 21:15:15 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"username"=>"undefined", "user_id"=>"undefined"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "undefined"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:3:in `index'
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.4ms | Allocations: 2546)
+
+
+  
+NoMethodError (undefined method `recreational_areas' for nil:NilClass):
+  
+app/controllers/api/v1/recreational_areas_controller.rb:5:in `index'
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:15:48 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/Users/daisukehashimoto/Documents/Programming/Flatiron/Projects/JavaScript_Rails_Project/recreational_activities_backend/app/controllers/api/v1/users_controller.rb:18: syntax error, unexpected =>
+            render json: => {:errors => user.errors.full...
+                         ^~):
+  
+app/controllers/api/v1/users_controller.rb:18: syntax error, unexpected =>
+app/controllers/api/v1/users_controller.rb:18: syntax error, unexpected =>
+Started GET "/api/v1/users/undefined/recreational_areas?username=undefined" for ::1 at 2020-12-08 21:15:48 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"username"=>"undefined", "user_id"=>"undefined"}
+  [1m[36mApi::V1::User Load (0.3ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "undefined"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:3:in `index'
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.6ms | Allocations: 2549)
+
+
+  
+NoMethodError (undefined method `recreational_areas' for nil:NilClass):
+  
+app/controllers/api/v1/recreational_areas_controller.rb:5:in `index'
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:16:16 -0500
+  
+SyntaxError (/Users/daisukehashimoto/Documents/Programming/Flatiron/Projects/JavaScript_Rails_Project/recreational_activities_backend/app/controllers/api/v1/users_controller.rb:18: syntax error, unexpected =>
+            render json: => {:errors => user.errors.full...
+                         ^~):
+  
+app/controllers/api/v1/users_controller.rb:18: syntax error, unexpected =>
+app/controllers/api/v1/users_controller.rb:18: syntax error, unexpected =>
+Started GET "/api/v1/users/undefined/recreational_areas?username=undefined" for ::1 at 2020-12-08 21:16:16 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"username"=>"undefined", "user_id"=>"undefined"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "undefined"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:3:in `index'
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms | Allocations: 996)
+
+
+  
+NoMethodError (undefined method `recreational_areas' for nil:NilClass):
+  
+app/controllers/api/v1/recreational_areas_controller.rb:5:in `index'
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:16:48 -0500
+  
+SyntaxError (/Users/daisukehashimoto/Documents/Programming/Flatiron/Projects/JavaScript_Rails_Project/recreational_activities_backend/app/controllers/api/v1/users_controller.rb:18: syntax error, unexpected =>
+            render json: => {:errors => user.errors.full...
+                         ^~):
+  
+app/controllers/api/v1/users_controller.rb:18: syntax error, unexpected =>
+app/controllers/api/v1/users_controller.rb:18: syntax error, unexpected =>
+Started GET "/api/v1/users/undefined/recreational_areas?username=undefined" for ::1 at 2020-12-08 21:16:48 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"username"=>"undefined", "user_id"=>"undefined"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "undefined"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:3:in `index'
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.1ms | Allocations: 997)
+
+
+  
+NoMethodError (undefined method `recreational_areas' for nil:NilClass):
+  
+app/controllers/api/v1/recreational_areas_controller.rb:5:in `index'
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:18:29 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/Users/daisukehashimoto/Documents/Programming/Flatiron/Projects/JavaScript_Rails_Project/recreational_activities_backend/app/controllers/api/v1/users_controller.rb:18: syntax error, unexpected tLABEL
+...           render json: errors: user.errors, status: 422
+...                        ^~~~~~~
+/Users/daisukehashimoto/Documents/Programming/Flatiron/Projects/JavaScript_Rails_Project/recreational_activities_backend/app/controllers/api/v1/users_controller.rb:18: syntax error, unexpected tLABEL, expecting '='
+...n: errors: user.errors, status: 422
+...                        ^~~~~~~):
+  
+app/controllers/api/v1/users_controller.rb:18: syntax error, unexpected tLABEL
+app/controllers/api/v1/users_controller.rb:18: syntax error, unexpected tLABEL, expecting '='
+app/controllers/api/v1/users_controller.rb:18: syntax error, unexpected tLABEL
+app/controllers/api/v1/users_controller.rb:18: syntax error, unexpected tLABEL, expecting '='
+Started GET "/api/v1/users/undefined/recreational_areas?username=undefined" for ::1 at 2020-12-08 21:18:29 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"username"=>"undefined", "user_id"=>"undefined"}
+  [1m[36mApi::V1::User Load (0.5ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "undefined"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:3:in `index'
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 1.0ms | Allocations: 2545)
+
+
+  
+NoMethodError (undefined method `recreational_areas' for nil:NilClass):
+  
+app/controllers/api/v1/recreational_areas_controller.rb:5:in `index'
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-08 21:18:33 -0500
+  
+SyntaxError (/Users/daisukehashimoto/Documents/Programming/Flatiron/Projects/JavaScript_Rails_Project/recreational_activities_backend/app/controllers/api/v1/users_controller.rb:18: syntax error, unexpected tLABEL
+...           render json: errors: user.errors, status: 422
+...                        ^~~~~~~
+/Users/daisukehashimoto/Documents/Programming/Flatiron/Projects/JavaScript_Rails_Project/recreational_activities_backend/app/controllers/api/v1/users_controller.rb:18: syntax error, unexpected tLABEL, expecting '='
+...n: errors: user.errors, status: 422
+...                        ^~~~~~~):
+  
+app/controllers/api/v1/users_controller.rb:18: syntax error, unexpected tLABEL
+app/controllers/api/v1/users_controller.rb:18: syntax error, unexpected tLABEL, expecting '='
+app/controllers/api/v1/users_controller.rb:18: syntax error, unexpected tLABEL
+app/controllers/api/v1/users_controller.rb:18: syntax error, unexpected tLABEL, expecting '='
+Started GET "/api/v1/users/undefined/recreational_areas?username=undefined" for ::1 at 2020-12-08 21:18:33 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"username"=>"undefined", "user_id"=>"undefined"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "undefined"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:3:in `index'
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.2ms | Allocations: 996)
+
+
+  
+NoMethodError (undefined method `recreational_areas' for nil:NilClass):
+  
+app/controllers/api/v1/recreational_areas_controller.rb:5:in `index'
+Started GET "/api/v1/users?username=trice" for ::1 at 2020-12-08 21:18:40 -0500
+  
+SyntaxError (/Users/daisukehashimoto/Documents/Programming/Flatiron/Projects/JavaScript_Rails_Project/recreational_activities_backend/app/controllers/api/v1/users_controller.rb:18: syntax error, unexpected tLABEL
+...           render json: errors: user.errors, status: 422
+...                        ^~~~~~~
+/Users/daisukehashimoto/Documents/Programming/Flatiron/Projects/JavaScript_Rails_Project/recreational_activities_backend/app/controllers/api/v1/users_controller.rb:18: syntax error, unexpected tLABEL, expecting '='
+...n: errors: user.errors, status: 422
+...                        ^~~~~~~):
+  
+app/controllers/api/v1/users_controller.rb:18: syntax error, unexpected tLABEL
+app/controllers/api/v1/users_controller.rb:18: syntax error, unexpected tLABEL, expecting '='
+app/controllers/api/v1/users_controller.rb:18: syntax error, unexpected tLABEL
+app/controllers/api/v1/users_controller.rb:18: syntax error, unexpected tLABEL, expecting '='
+Started GET "/api/v1/users/undefined/recreational_areas?username=undefined" for ::1 at 2020-12-08 21:18:40 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"username"=>"undefined", "user_id"=>"undefined"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "undefined"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:3:in `index'
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.2ms | Allocations: 996)
+
+
+  
+NoMethodError (undefined method `recreational_areas' for nil:NilClass):
+  
+app/controllers/api/v1/recreational_areas_controller.rb:5:in `index'
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:19:50 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mApi::V1::User Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mApi::V1::User Create (0.3ms)[0m  [1m[32mINSERT INTO "api_v1_users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Dice"], ["created_at", "2020-12-09 02:19:50.954536"], ["updated_at", "2020-12-09 02:19:50.954536"]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+Completed 200 OK in 9ms (Views: 0.2ms | ActiveRecord: 1.8ms | Allocations: 6082)
+
+
+Started GET "/api/v1/users/7/recreational_areas?username=Dice" for ::1 at 2020-12-08 21:19:50 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"username"=>"Dice", "user_id"=>"7"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:3:in `index'
+  [1m[36mApi::V1::RecreationalArea Load (0.2ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 9ms (Views: 2.6ms | ActiveRecord: 1.1ms | Allocations: 2809)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:19:58 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mApi::V1::User Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+Completed 204 No Content in 3ms (ActiveRecord: 0.2ms | Allocations: 3072)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:19:59 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mApi::V1::User Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+Completed 204 No Content in 4ms (ActiveRecord: 0.2ms | Allocations: 2994)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:20:00 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mApi::V1::User Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+Completed 204 No Content in 3ms (ActiveRecord: 0.2ms | Allocations: 2994)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:20:01 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mApi::V1::User Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+Completed 204 No Content in 4ms (ActiveRecord: 0.2ms | Allocations: 2994)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:20:02 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mApi::V1::User Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+Completed 204 No Content in 4ms (ActiveRecord: 0.2ms | Allocations: 2994)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:20:02 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mApi::V1::User Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+Completed 204 No Content in 3ms (ActiveRecord: 0.2ms | Allocations: 2994)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:20:03 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mApi::V1::User Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+Completed 204 No Content in 3ms (ActiveRecord: 0.2ms | Allocations: 2994)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:20:03 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mApi::V1::User Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+Completed 204 No Content in 3ms (ActiveRecord: 0.2ms | Allocations: 2994)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:20:03 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mApi::V1::User Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+Completed 204 No Content in 3ms (ActiveRecord: 0.2ms | Allocations: 2994)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:20:03 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mApi::V1::User Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+Completed 204 No Content in 4ms (ActiveRecord: 0.2ms | Allocations: 2994)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:20:04 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mApi::V1::User Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+Completed 204 No Content in 3ms (ActiveRecord: 0.2ms | Allocations: 2994)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:20:04 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mApi::V1::User Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+Completed 204 No Content in 4ms (ActiveRecord: 0.2ms | Allocations: 2994)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:20:04 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mApi::V1::User Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+Completed 204 No Content in 3ms (ActiveRecord: 0.2ms | Allocations: 2994)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:20:04 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mApi::V1::User Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+Completed 204 No Content in 3ms (ActiveRecord: 0.2ms | Allocations: 2994)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:20:04 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mApi::V1::User Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+Completed 204 No Content in 15ms (ActiveRecord: 0.2ms | Allocations: 2996)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:20:04 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mApi::V1::User Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+Completed 204 No Content in 3ms (ActiveRecord: 0.3ms | Allocations: 2994)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:20:05 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mApi::V1::User Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+Completed 204 No Content in 3ms (ActiveRecord: 0.2ms | Allocations: 2994)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-08 21:20:05 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mApi::V1::User Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+Completed 204 No Content in 3ms (ActiveRecord: 0.2ms | Allocations: 2994)
+
+
