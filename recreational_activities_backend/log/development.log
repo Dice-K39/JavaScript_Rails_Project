@@ -13652,3 +13652,304 @@ Processing by Api::V1::UsersController#create as JSON
 Completed 400 Bad Request in 4ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 3082)
 
 
+Started POST "/api/v1/users" for ::1 at 2020-12-08 23:52:32 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mApi::V1::User Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+Completed 204 No Content in 8ms (ActiveRecord: 0.5ms | Allocations: 5490)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-09 05:56:43 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mApi::V1::User Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+Completed 204 No Content in 4ms (ActiveRecord: 0.5ms | Allocations: 2998)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-09 06:01:45 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mApi::V1::User Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+Completed 200 OK in 8ms (Views: 0.2ms | ActiveRecord: 1.1ms | Allocations: 5696)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-09 06:06:09 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mApi::V1::User Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+Completed 200 OK in 9ms (Views: 0.2ms | ActiveRecord: 1.2ms | Allocations: 5663)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-09 06:12:08 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/Users/daisukehashimoto/Documents/Programming/Flatiron/Projects/JavaScript_Rails_Project/recreational_activities_backend/app/controllers/api/v1/users_controller.rb:31: syntax error, unexpected end, expecting end-of-input):
+  
+app/controllers/api/v1/users_controller.rb:31: syntax error, unexpected end, expecting end-of-input
+app/controllers/api/v1/users_controller.rb:31: syntax error, unexpected end, expecting end-of-input
+Started POST "/api/v1/users" for ::1 at 2020-12-09 06:14:24 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/Users/daisukehashimoto/Documents/Programming/Flatiron/Projects/JavaScript_Rails_Project/recreational_activities_backend/app/controllers/api/v1/users_controller.rb:32: syntax error, unexpected end, expecting end-of-input):
+  
+app/controllers/api/v1/users_controller.rb:32: syntax error, unexpected end, expecting end-of-input
+app/controllers/api/v1/users_controller.rb:32: syntax error, unexpected end, expecting end-of-input
+Started POST "/api/v1/users" for ::1 at 2020-12-09 06:14:44 -0500
+  
+SyntaxError (/Users/daisukehashimoto/Documents/Programming/Flatiron/Projects/JavaScript_Rails_Project/recreational_activities_backend/app/controllers/api/v1/users_controller.rb:32: syntax error, unexpected end, expecting end-of-input):
+  
+app/controllers/api/v1/users_controller.rb:32: syntax error, unexpected end, expecting end-of-input
+app/controllers/api/v1/users_controller.rb:32: syntax error, unexpected end, expecting end-of-input
+Started POST "/api/v1/users" for ::1 at 2020-12-09 06:16:19 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mApi::V1::User Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+Completed 422 Unprocessable Entity in 8ms (Views: 0.2ms | ActiveRecord: 1.1ms | Allocations: 5667)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-09 06:21:47 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mApi::V1::User Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+Completed 422 Unprocessable Entity in 3ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 3055)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-09 06:22:27 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mApi::V1::User Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+Completed 422 Unprocessable Entity in 3ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 3054)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-09 06:22:43 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"trice", "user"=>{"username"=>"trice"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mApi::V1::User Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "trice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mApi::V1::User Create (1.4ms)[0m  [1m[32mINSERT INTO "api_v1_users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "trice"], ["created_at", "2020-12-09 11:22:43.042189"], ["updated_at", "2020-12-09 11:22:43.042189"]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 2.2ms | Allocations: 3542)
+
+
+Started GET "/api/v1/users/3/recreational_areas?username=trice" for ::1 at 2020-12-09 06:22:46 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"username"=>"trice", "user_id"=>"3"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "trice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:25:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.2ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 8ms (Views: 3.0ms | ActiveRecord: 0.8ms | Allocations: 2893)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-09 06:24:39 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mApi::V1::User Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+Completed 422 Unprocessable Entity in 3ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 3054)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-09 06:25:07 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mApi::V1::User Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+Completed 422 Unprocessable Entity in 3ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 3054)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-09 06:25:50 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mApi::V1::User Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+Completed 422 Unprocessable Entity in 3ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 3054)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-09 06:27:50 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mApi::V1::User Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+Completed 422 Unprocessable Entity in 3ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 3054)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-09 06:31:12 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mApi::V1::User Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+Completed 422 Unprocessable Entity in 3ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 3054)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-09 06:31:32 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mApi::V1::User Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+Completed 422 Unprocessable Entity in 3ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 3054)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-09 06:33:31 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mApi::V1::User Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+Completed 422 Unprocessable Entity in 3ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 3054)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-09 06:34:02 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mApi::V1::User Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+Completed 422 Unprocessable Entity in 4ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 3054)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-09 06:34:59 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mApi::V1::User Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+Completed 422 Unprocessable Entity in 4ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 3057)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-09 06:37:21 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mApi::V1::User Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+Completed 422 Unprocessable Entity in 4ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 3054)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-09 06:37:28 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mApi::V1::User Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+Completed 422 Unprocessable Entity in 4ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 3054)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-09 06:37:41 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"amatasora39", "user"=>{"username"=>"amatasora39"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mApi::V1::User Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "amatasora39"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mApi::V1::User Create (0.3ms)[0m  [1m[32mINSERT INTO "api_v1_users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "amatasora39"], ["created_at", "2020-12-09 11:37:41.907184"], ["updated_at", "2020-12-09 11:37:41.907184"]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 1.4ms | Allocations: 3490)
+
+
+Started GET "/api/v1/users/4/recreational_areas?username=amatasora39" for ::1 at 2020-12-09 06:37:41 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"username"=>"amatasora39", "user_id"=>"4"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "amatasora39"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:25:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.2ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.4ms | Allocations: 1468)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-09 06:37:50 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"amatasora39", "user"=>{"username"=>"amatasora39"}}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[36mApi::V1::User Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "amatasora39"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+Completed 422 Unprocessable Entity in 5ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 3054)
+
+

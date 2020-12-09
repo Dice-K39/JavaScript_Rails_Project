@@ -1,5 +1,7 @@
 class ApiService
 {
+    static container = document.querySelector(".display-search");
+
     constructor(baseURL)
     {
         this.baseURL = baseURL;
@@ -18,6 +20,8 @@ class ApiService
 
     signupUser = (userName) =>
     {
+        this.constructor.container.innerHTML = "";
+
         const configObj =
         {
             method: "POST",
@@ -30,8 +34,19 @@ class ApiService
         };
 
         fetch(`${this.baseURL}/users`, configObj)
-            .then(res => res.json())
+            .then(res => 
+               {
+                    if (res.ok)
+                    {
+                        return res.json();
+                    }
+                    else
+                    {
+                        throw new Error("Username not available.");
+                    }
+               })
             .then(data => new User(data))
+            .catch(err => this.constructor.printError(err));
     }
 
     searchActivities = () =>
@@ -78,5 +93,10 @@ class ApiService
         fetch(url)
             .then(res => res.json())
             .then(data => new FavoritesCard(data));
+    }
+
+    static printError = (err) =>
+    {
+        this.container.innerHTML = `${err}`
     }
 }

@@ -14,6 +14,8 @@ class Api::V1::UsersController < ApplicationController
 
         if (user.save)
             render json: user, except: [:created_at, :updated_at]
+        else
+            render json: user.errors, status: :unprocessable_entity
         end
     end
 
