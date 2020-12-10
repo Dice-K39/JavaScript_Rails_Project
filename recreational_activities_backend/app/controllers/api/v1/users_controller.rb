@@ -2,11 +2,14 @@ class Api::V1::UsersController < ApplicationController
     def index
         if params[:username]
             user = Api::V1::User.find_by_username(params[:username])
-        else
-            user = Api::V1::User.all
         end
 
-        render json: user, except: [:created_at, :updated_at]
+            
+        if user.nil?
+            render json: user, status: :bad_request
+        else
+            render json: user, except: [:created_at, :updated_at]
+        end
     end
     
     def create
@@ -15,7 +18,7 @@ class Api::V1::UsersController < ApplicationController
         if (user.save)
             render json: user, except: [:created_at, :updated_at]
         else
-            render json: user.errors, status: :unprocessable_entity
+            render json: user.errors, status: :bad_request
         end
     end
 

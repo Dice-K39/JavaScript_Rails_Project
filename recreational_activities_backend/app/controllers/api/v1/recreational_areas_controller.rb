@@ -12,6 +12,8 @@ class Api::V1::RecreationalAreasController < ApplicationController
 
         if(rec_area.save)
             render json: rec_area, except: [:created_at, :updated_at]
+        else
+            render json: rec_area.errors, status: :bad_request
         end
     end
 

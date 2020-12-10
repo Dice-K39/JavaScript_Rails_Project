@@ -2,19 +2,6 @@ class User
 {
     static container = document.querySelector(".navbar");
     
-    static renderLoggedIn = (data) =>
-    {
-        // Not safe to send around user_id from database. Future iteration of app will use secure method.
-        return `
-            <div class="logged-in is-flex navbar-end">
-                <label class="name-label">Welcome: </label>
-                <div class="name">${data.username}</div>
-                <input class="user-id" type="hidden" value="${data.id}">
-                <button class="button is-danger" id="logout">Logout</button>
-            </div>
-        `;
-    }
-
     constructor(user = null)
     {
         if (user)
@@ -31,7 +18,7 @@ class User
             this.selectBtnEventListener();
         }
     }
-
+    
     loadFavorites()
     {
         api.getFavorites(this.user);
@@ -40,20 +27,20 @@ class User
     displayName(user)
     {
         this.constructor.container.innerHTML = "";
-        this.constructor.container.innerHTML = this.constructor.renderLoggedIn(user);
+        this.constructor.container.innerHTML = this.renderLoggedIn(user);
     }
-
+    
     renderButtons()
     {
         this.constructor.container.innerHTML = this.renderInnerHTML();
     }
-
+    
     selectBtnEventListener()
     {
         if (this.user)
         {
             const btn = document.querySelector(".logged-in")
-
+            
             this.attachEventListener(btn);
         }
         else
@@ -61,7 +48,7 @@ class User
             document.querySelectorAll(".signup-login-button").forEach(btn => this.attachEventListener(btn))
         }
     }
-
+    
     attachEventListener(btn)
     {
         btn.addEventListener("click", () => this.handleBtnsOnClick());
@@ -70,7 +57,7 @@ class User
     handleBtnsOnClick()
     {
         this.constructor.container.innerHTML = "";
-
+        
         if (event.target.id === "logout")
         {
             const searchForm = document.querySelector(".search-section");
@@ -80,7 +67,7 @@ class User
             searchForm.innerHTML = "";
             displaySearch.innerHTML = "";
             favoritedSection.innerHTML = "";
-
+            
             new User();
         }
         else
@@ -88,18 +75,18 @@ class User
             this.renderForm();
         }
     }
-
+    
     renderForm()
     {
         const form = document.createElement("form");
-
+        
         form.className = "signup-login-form navbar-end";
         form.innerHTML = this.renderSignupLoginFormInnerHTML();
         this.form = form;
         this.constructor.container.append(form);
         this.attachSignupLoginEventListener();
     }
-
+    
     attachSignupLoginEventListener()
     {
         this.form.addEventListener("click", () => this.handleSignupLoginOnClick());
@@ -112,29 +99,29 @@ class User
         {
             username: userName
         }
-
+        
         event.preventDefault();
-
+        
         if (event.target.id === "login")
         {
             api.loginUser(data);
         }
-
+        
         if (event.target.id === "signup")
         {
             api.signupUser(data);
         }
-
+        
         if (event.target.id === "back")
         {
             const navbar = document.querySelector(".navbar");
-
+            
             navbar.innerHTML = "";
-
+            
             new User();
         }
     }
-
+    
     renderInnerHTML = () =>
     {
         return `
@@ -144,7 +131,20 @@ class User
             </div>
         `;
     };
-
+    
+    renderLoggedIn = (data) =>
+    {
+        // Not safe to send around user_id from database. Future iteration of app will use secure method.
+        return `
+            <div class="logged-in is-flex navbar-end">
+                <label class="name-label">Welcome: </label>
+                <div class="name">${data.username}</div>
+                <input class="user-id" type="hidden" value="${data.id}">
+                <button class="button is-danger" id="logout">Logout</button>
+            </div>
+        `;
+    }
+    
     renderSignupLoginFormInnerHTML = () =>
     {
         return `

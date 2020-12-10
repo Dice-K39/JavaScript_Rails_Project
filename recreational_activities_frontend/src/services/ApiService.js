@@ -14,8 +14,19 @@ class ApiService
         url.search = new URLSearchParams(userName);
 
         fetch(url)
-            .then(res => res.json())
-            .then(data => new User(data));
+            .then(res => 
+            {
+                if (res.ok)
+                {
+                    return res.json();
+                }
+                else
+                {
+                    throw new Error("Username does not exist.");
+                }
+            })
+            .then(data => new User(data))
+            .catch(err => this.constructor.printError(err));
     }
 
     signupUser = (userName) =>
@@ -35,16 +46,16 @@ class ApiService
 
         fetch(`${this.baseURL}/users`, configObj)
             .then(res => 
-               {
-                    if (res.ok)
-                    {
-                        return res.json();
-                    }
-                    else
-                    {
-                        throw new Error("Username not available.");
-                    }
-               })
+            {
+                if (res.ok)
+                {
+                    return res.json();
+                }
+                else
+                {
+                    throw new Error("Username not available.");
+                }
+            })
             .then(data => new User(data))
             .catch(err => this.constructor.printError(err));
     }
@@ -76,8 +87,19 @@ class ApiService
         };
 
         fetch(url, configObj)
-            .then(res => res.json())
-            .then(data => new FavoritesCard(data));
+            .then(res => 
+            {
+                if (res.ok)
+                {
+                    return res.json();
+                }
+                else
+                {
+                    throw new Error("Recreational area was not saved.");
+                }
+            })
+            .then(data => new FavoritesCard(data))
+            .catch(err => this.constructor.printError(err));
     }
 
     getFavorites = (user) =>
