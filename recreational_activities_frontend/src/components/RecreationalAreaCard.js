@@ -2,17 +2,17 @@ class RecreationalAreaCard
 {
     static container = document.querySelector(".display-search")
 
-    constructor(activity)
-    {
-        this.activity = activity;
-        this.render(activity);
-    }
-
     static getMatch(data)
     {
         this.container.innerHTML = '';
 
         data.RECDATA.forEach(activity => new RecreationalAreaCard(activity));
+    }
+    
+    constructor(activity)
+    {
+        this.activity = activity;
+        this.render(activity);
     }
 
     render()
