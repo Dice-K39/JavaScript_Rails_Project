@@ -39,7 +39,7 @@ class User
     {
         if (this.user)
         {
-            const btn = document.querySelector(".logged-in")
+            const btn = document.getElementById("logout")
             
             this.attachEventListener(btn);
         }
