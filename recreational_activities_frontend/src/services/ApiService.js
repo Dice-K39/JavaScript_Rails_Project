@@ -107,7 +107,7 @@ class ApiService
         const url = new URL(this.baseURL + `/users/${user.id}/recreational_areas`);
         const userData =
         {
-            username: user.username
+            user_id: user.id
         }
 
         url.search = new URLSearchParams(userData);
@@ -115,6 +115,12 @@ class ApiService
         fetch(url)
             .then(res => res.json())
             .then(data => new FavoritesCard(data));
+    }
+
+    removeFavorites = (area) =>
+    {
+        const userID = document.querySelector(".user-id");
+        const url = new URL(this.baseURL + `/users/${userID}/recreational_areas`)
     }
 
     static printError = (err) =>

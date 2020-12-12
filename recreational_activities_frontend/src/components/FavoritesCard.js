@@ -37,7 +37,7 @@ class FavoritesCard
 
     handleRemoveOnClick = (card) =>
     {
-        console.log(card)
+        api.removeFavorites(card.innerText);
     }
 
     renderInnerHTML = (area) =>
@@ -48,7 +48,7 @@ class FavoritesCard
                     ${area.facility_name}
                 </div>
                 <div class="remove-button-col">
-                    <button class="remove-btn button is-danger">x</button>
+                    <button class="remove-btn button is-danger" ></button>
                 </div> 
             </div>
         `

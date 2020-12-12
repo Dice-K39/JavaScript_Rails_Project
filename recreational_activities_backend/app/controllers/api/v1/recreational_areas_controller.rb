@@ -17,6 +17,11 @@ class Api::V1::RecreationalAreasController < ApplicationController
         end
     end
 
+    def destroy
+        rec_area = @user.recreational_areas.find_by_facility_name(params[:facility_name])
+        byebug
+    end
+
     private
 
     def rec_area_params
@@ -24,6 +29,6 @@ class Api::V1::RecreationalAreasController < ApplicationController
     end
 
     def find_user
-        @user = Api::V1::User.find_by_username(params[:username])
+        @user = Api::V1::User.find_by_id(params[:user_id])
     end
 end

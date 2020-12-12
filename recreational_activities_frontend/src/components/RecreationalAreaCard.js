@@ -37,11 +37,10 @@ class RecreationalAreaCard
     handleBtnOnClick()
     {
         const recreationalArea = this.activity;
-        const userName = document.querySelector(".name");
         const userID = document.querySelector(".user-id").value; // Not safe to send around user_id from database. Future iteration of app will use secure method.
         const data =
         {
-            username: userName.innerText,
+            user_id: userID,
             facility_name: recreationalArea.FacilityName,
             facility_description: recreationalArea.FacilityDescription,
             facility_id: recreationalArea.FacilityID,
