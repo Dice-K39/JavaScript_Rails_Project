@@ -23,7 +23,7 @@ class FavoritesCard
     {
         const card = document.createElement("div");
 
-        card.className = "favorite-card";
+        card.className = "favorite-card is-flex";
         this.card = card;
         this.renderInnerHTML(area);
         this.attachEventListener(card);
@@ -43,14 +43,12 @@ class FavoritesCard
     renderInnerHTML = (area) =>
     {
         this.card.innerHTML = `
-            <div class="favorite is-flex">
                 <div class="favorite-site-name is-three-quarters">
                     ${area.facility_name}
                 </div>
                 <div class="remove-button-col">
                     <button class="remove-btn button is-danger" ></button>
                 </div> 
-            </div>
         `
         // Will add to code later               
         // link to each facility with more information
