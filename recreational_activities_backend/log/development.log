@@ -14594,3 +14594,704 @@ Processing by Api::V1::RecreationalAreasController#index as */*
 Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 0.7ms | Allocations: 2282)
 
 
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-11 19:31:45 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 705)
+
+
+Started GET "/api/v1/users/5/recreational_areas?user_id=5" for ::1 at 2020-12-11 19:31:45 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"5"}
+  [1m[36mApi::V1::User Load (0.3ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:32:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.2ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 0.6ms | Allocations: 2320)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-11 19:31:47 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 637ms (Views: 9.1ms | ActiveRecord: 0.0ms | Allocations: 21603)
+
+
+Started POST "/api/v1/users/undefined/recreational_areas" for ::1 at 2020-12-11 19:31:51 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"user_id"=>"undefined", "facility_name"=>"Yeoman Park Discovery Trailhead", "facility_description"=>"<p>This short interpretive trail is at an elevation of 9000 feet. It is designed to accommodate those forest visitors that may be disabled. The terrain is level with a packed small gravel surface. The trail is relatively straight and passes through a stand of mature blue spruce and sub-alpine fir trees and ends at a bench overlooking one of Yeoman Park’s small beaver ponds. Along the way there are several log benches to relax and take in the view. The Yeoman Park Discovery Trail has 7 unique interpretive signs focusing on the use of senses to explore nature. The signs were designed with many touchable features and they are accessible to those with disabilities. The natural subjects covered by the signs include Colorado mammals, wildflowers, rocks, trees, archaeology and water. There are many opportunities along the trail to view the behaviors of common tree and ground squirrels, as well as many species of birds such as mountain chickadees, Stellar’s jays and gray jays.</p><p>* There is a <a href=\"../../../../../../../../../../Internet/FSE_DOCUMENTS/stelprdb5186415.pdf\">printable Recreation Quicksheet for this trail</a> which is complete with directions, a map, details, and other information about this trail. Or to see quicksheets for other recreation areas across the Forest, click on the \"Recreation Quicksheets\" link in the right column and select the appropriate Ranger District.</p>", "facility_id"=>"10082507", "facility_directions"=>"From I-70 exit 147 for Eagle, turn south on Eby Creek Rd to the Route 6 roundabout.At roundabout, turn right (west) on Route 6/Grand Ave and travel 0.8 miles to next roundabout. At this roundabout, take the third right onto Sylvan Lake Road.Continue 1.6 miles to Brush Creek Road, and take a right on Brush Creek Road.Follow Brush Creek Rd for roughly 9 miles to the fork of East and West Brush Creek.Turn left onto East Brush Creek Rd., FDR 415 and drive for 6 miles to Yeoman Park.Enter the campground and drive to the end of Loop A where the trailhead is located.", "facility_email"=>"", "facility_phone"=>"", "recreational_area"=>{"facility_name"=>"Yeoman Park Discovery Trailhead", "facility_description"=>"<p>This short interpretive trail is at an elevation of 9000 feet. It is designed to accommodate those forest visitors that may be disabled. The terrain is level with a packed small gravel surface. The trail is relatively straight and passes through a stand of mature blue spruce and sub-alpine fir trees and ends at a bench overlooking one of Yeoman Park’s small beaver ponds. Along the way there are several log benches to relax and take in the view. The Yeoman Park Discovery Trail has 7 unique interpretive signs focusing on the use of senses to explore nature. The signs were designed with many touchable features and they are accessible to those with disabilities. The natural subjects covered by the signs include Colorado mammals, wildflowers, rocks, trees, archaeology and water. There are many opportunities along the trail to view the behaviors of common tree and ground squirrels, as well as many species of birds such as mountain chickadees, Stellar’s jays and gray jays.</p><p>* There is a <a href=\"../../../../../../../../../../Internet/FSE_DOCUMENTS/stelprdb5186415.pdf\">printable Recreation Quicksheet for this trail</a> which is complete with directions, a map, details, and other information about this trail. Or to see quicksheets for other recreation areas across the Forest, click on the \"Recreation Quicksheets\" link in the right column and select the appropriate Ranger District.</p>", "facility_id"=>"10082507", "facility_directions"=>"From I-70 exit 147 for Eagle, turn south on Eby Creek Rd to the Route 6 roundabout.At roundabout, turn right (west) on Route 6/Grand Ave and travel 0.8 miles to next roundabout. At this roundabout, take the third right onto Sylvan Lake Road.Continue 1.6 miles to Brush Creek Road, and take a right on Brush Creek Road.Follow Brush Creek Rd for roughly 9 miles to the fork of East and West Brush Creek.Turn left onto East Brush Creek Rd., FDR 415 and drive for 6 miles to Yeoman Park.Enter the campground and drive to the end of Loop A where the trailhead is located.", "facility_email"=>"", "facility_phone"=>"", "user_id"=>"undefined"}}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:32:in `find_user'
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms | Allocations: 1034)
+
+
+  
+NoMethodError (undefined method `recreational_areas' for nil:NilClass):
+  
+app/controllers/api/v1/recreational_areas_controller.rb:11:in `create'
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-11 19:32:04 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 690)
+
+
+Started GET "/api/v1/users/5/recreational_areas?user_id=5" for ::1 at 2020-12-11 19:32:04 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"5"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:32:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.2ms | Allocations: 2282)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-11 19:32:09 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 289ms (Views: 9.6ms | ActiveRecord: 0.0ms | Allocations: 21554)
+
+
+Started POST "/api/v1/users/undefined/recreational_areas" for ::1 at 2020-12-11 19:32:11 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"user_id"=>"undefined", "facility_name"=>"RED FIR", "facility_description"=>"<h2>Overview</h2>\nSituated on the north side of the Loon Lake Reservoir, Red Fir Group Campground offers a primitive group camping experience in the lush Eldorado National Forest.\n<h2>Recreation</h2>\nThe nearby lake provides fishing, swimming and boating, and the campground is just a short walk across the road to the water's edge.\n<br /> <br />\nVisitors also enjoy off-road vehicle and motorcycle riding on the popular Rubicon Jeep trail. \n<br /> <br />\nHiking and wilderness backpacking are popular activities. Day permits are available at the nearby Loon Lake trailhead and overnight permits are available at the Eldorado Information Center.<h2>Facilities</h2>\nThe campground offers tent-only campsites, accommodating a group of up to 25 guests. \n<br /> <br />\nA group kitchen area is equipped with multiple tables, a campfire circle and grills. Accessible vault toilets and drinking water are provided. \n\n<h2>Natural Features</h2>\nThe campground is part of the Crystal Basin Recreation Area, situated at a 6,400-foot elevation and nestled in a forest of tall pine trees. \n\n<h2>Nearby Attractions</h2>\nThe campground is not far from the Desolation Wilderness.\n<h2>Charges &amp; Cancellations</h2>\n<ul>\n<li>Recreation Fee: Recreation fees are the fees a visitor pays for things like overnight camping, a day-use pavilion, group facilities, a tour or a permit. Recreation fees vary by location and/or activity.</li>\n<li>Reservation Fee:\tA fee may be charged at the time a reservation is made to cover the cost of reservation services. This fee is in addition to the Recreation Fee and is non-refundable. Fees for camping, day use, group sites, cabins and lookouts: $8 if made on-line; $9 if made through the call center; $3 if made in-person.</li>\n<li>Change Fee:\tA service fee may be charged at the time a modification is made depending on the changes.</li>\n<li>Cancellation Fee:\tCustomers who cancel a group overnight facility reservation less than 14 days before the arrival date will pay a $10.00 service fee AND forfeit the first night's use fee..</li>\n<li>Cut-Off Window:\tThe latest date and/or time that you can make an advanced reservation or a change to an existing reservation. Cut-off windows can vary by location, but are typically 14 days before your arrival date.  </li>\n<li>Late Cancellation: If you cancel your reservation too close to the start date, additional service fees may be withheld.</li>\n</ul>\n", "facility_id"=>"232302", "facility_directions"=>"Take Highway 50 east of Placerville for approximately 21 miles to Ice House Road. At the river take a left and go north 28 miles, then veer right at the fork in the road and continue 9 miles to Red Fir Group campground.", "facility_email"=>"", "facility_phone"=>"831-245-6891", "recreational_area"=>{"facility_name"=>"RED FIR", "facility_description"=>"<h2>Overview</h2>\nSituated on the north side of the Loon Lake Reservoir, Red Fir Group Campground offers a primitive group camping experience in the lush Eldorado National Forest.\n<h2>Recreation</h2>\nThe nearby lake provides fishing, swimming and boating, and the campground is just a short walk across the road to the water's edge.\n<br /> <br />\nVisitors also enjoy off-road vehicle and motorcycle riding on the popular Rubicon Jeep trail. \n<br /> <br />\nHiking and wilderness backpacking are popular activities. Day permits are available at the nearby Loon Lake trailhead and overnight permits are available at the Eldorado Information Center.<h2>Facilities</h2>\nThe campground offers tent-only campsites, accommodating a group of up to 25 guests. \n<br /> <br />\nA group kitchen area is equipped with multiple tables, a campfire circle and grills. Accessible vault toilets and drinking water are provided. \n\n<h2>Natural Features</h2>\nThe campground is part of the Crystal Basin Recreation Area, situated at a 6,400-foot elevation and nestled in a forest of tall pine trees. \n\n<h2>Nearby Attractions</h2>\nThe campground is not far from the Desolation Wilderness.\n<h2>Charges &amp; Cancellations</h2>\n<ul>\n<li>Recreation Fee: Recreation fees are the fees a visitor pays for things like overnight camping, a day-use pavilion, group facilities, a tour or a permit. Recreation fees vary by location and/or activity.</li>\n<li>Reservation Fee:\tA fee may be charged at the time a reservation is made to cover the cost of reservation services. This fee is in addition to the Recreation Fee and is non-refundable. Fees for camping, day use, group sites, cabins and lookouts: $8 if made on-line; $9 if made through the call center; $3 if made in-person.</li>\n<li>Change Fee:\tA service fee may be charged at the time a modification is made depending on the changes.</li>\n<li>Cancellation Fee:\tCustomers who cancel a group overnight facility reservation less than 14 days before the arrival date will pay a $10.00 service fee AND forfeit the first night's use fee..</li>\n<li>Cut-Off Window:\tThe latest date and/or time that you can make an advanced reservation or a change to an existing reservation. Cut-off windows can vary by location, but are typically 14 days before your arrival date.  </li>\n<li>Late Cancellation: If you cancel your reservation too close to the start date, additional service fees may be withheld.</li>\n</ul>\n", "facility_id"=>"232302", "facility_directions"=>"Take Highway 50 east of Placerville for approximately 21 miles to Ice House Road. At the river take a left and go north 28 miles, then veer right at the fork in the road and continue 9 miles to Red Fir Group campground.", "facility_email"=>"", "facility_phone"=>"831-245-6891", "user_id"=>"undefined"}}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:32:in `find_user'
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms | Allocations: 1023)
+
+
+  
+NoMethodError (undefined method `recreational_areas' for nil:NilClass):
+  
+app/controllers/api/v1/recreational_areas_controller.rb:11:in `create'
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-11 19:33:30 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 690)
+
+
+Started GET "/api/v1/users/5/recreational_areas?user_id=5" for ::1 at 2020-12-11 19:33:30 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"5"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:32:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.2ms | Allocations: 2282)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-11 19:33:33 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 383ms (Views: 8.5ms | ActiveRecord: 0.0ms | Allocations: 21565)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-11 19:34:15 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/5/recreational_areas?user_id=5" for ::1 at 2020-12-11 19:34:15 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"5"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:32:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.3ms | Allocations: 2282)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-11 19:34:17 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 272ms (Views: 9.9ms | ActiveRecord: 0.0ms | Allocations: 21525)
+
+
+Started POST "/api/v1/users/undefined/recreational_areas" for ::1 at 2020-12-11 19:34:19 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"user_id"=>"undefined", "facility_name"=>"Yeoman Park Discovery Trailhead", "facility_description"=>"<p>This short interpretive trail is at an elevation of 9000 feet. It is designed to accommodate those forest visitors that may be disabled. The terrain is level with a packed small gravel surface. The trail is relatively straight and passes through a stand of mature blue spruce and sub-alpine fir trees and ends at a bench overlooking one of Yeoman Park’s small beaver ponds. Along the way there are several log benches to relax and take in the view. The Yeoman Park Discovery Trail has 7 unique interpretive signs focusing on the use of senses to explore nature. The signs were designed with many touchable features and they are accessible to those with disabilities. The natural subjects covered by the signs include Colorado mammals, wildflowers, rocks, trees, archaeology and water. There are many opportunities along the trail to view the behaviors of common tree and ground squirrels, as well as many species of birds such as mountain chickadees, Stellar’s jays and gray jays.</p><p>* There is a <a href=\"../../../../../../../../../../Internet/FSE_DOCUMENTS/stelprdb5186415.pdf\">printable Recreation Quicksheet for this trail</a> which is complete with directions, a map, details, and other information about this trail. Or to see quicksheets for other recreation areas across the Forest, click on the \"Recreation Quicksheets\" link in the right column and select the appropriate Ranger District.</p>", "facility_id"=>"10082507", "facility_directions"=>"From I-70 exit 147 for Eagle, turn south on Eby Creek Rd to the Route 6 roundabout.At roundabout, turn right (west) on Route 6/Grand Ave and travel 0.8 miles to next roundabout. At this roundabout, take the third right onto Sylvan Lake Road.Continue 1.6 miles to Brush Creek Road, and take a right on Brush Creek Road.Follow Brush Creek Rd for roughly 9 miles to the fork of East and West Brush Creek.Turn left onto East Brush Creek Rd., FDR 415 and drive for 6 miles to Yeoman Park.Enter the campground and drive to the end of Loop A where the trailhead is located.", "facility_email"=>"", "facility_phone"=>"", "recreational_area"=>{"facility_name"=>"Yeoman Park Discovery Trailhead", "facility_description"=>"<p>This short interpretive trail is at an elevation of 9000 feet. It is designed to accommodate those forest visitors that may be disabled. The terrain is level with a packed small gravel surface. The trail is relatively straight and passes through a stand of mature blue spruce and sub-alpine fir trees and ends at a bench overlooking one of Yeoman Park’s small beaver ponds. Along the way there are several log benches to relax and take in the view. The Yeoman Park Discovery Trail has 7 unique interpretive signs focusing on the use of senses to explore nature. The signs were designed with many touchable features and they are accessible to those with disabilities. The natural subjects covered by the signs include Colorado mammals, wildflowers, rocks, trees, archaeology and water. There are many opportunities along the trail to view the behaviors of common tree and ground squirrels, as well as many species of birds such as mountain chickadees, Stellar’s jays and gray jays.</p><p>* There is a <a href=\"../../../../../../../../../../Internet/FSE_DOCUMENTS/stelprdb5186415.pdf\">printable Recreation Quicksheet for this trail</a> which is complete with directions, a map, details, and other information about this trail. Or to see quicksheets for other recreation areas across the Forest, click on the \"Recreation Quicksheets\" link in the right column and select the appropriate Ranger District.</p>", "facility_id"=>"10082507", "facility_directions"=>"From I-70 exit 147 for Eagle, turn south on Eby Creek Rd to the Route 6 roundabout.At roundabout, turn right (west) on Route 6/Grand Ave and travel 0.8 miles to next roundabout. At this roundabout, take the third right onto Sylvan Lake Road.Continue 1.6 miles to Brush Creek Road, and take a right on Brush Creek Road.Follow Brush Creek Rd for roughly 9 miles to the fork of East and West Brush Creek.Turn left onto East Brush Creek Rd., FDR 415 and drive for 6 miles to Yeoman Park.Enter the campground and drive to the end of Loop A where the trailhead is located.", "facility_email"=>"", "facility_phone"=>"", "user_id"=>"undefined"}}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:32:in `find_user'
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.1ms | Allocations: 1022)
+
+
+  
+NoMethodError (undefined method `recreational_areas' for nil:NilClass):
+  
+app/controllers/api/v1/recreational_areas_controller.rb:11:in `create'
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-11 19:34:35 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 317ms (Views: 23.5ms | ActiveRecord: 0.0ms | Allocations: 21515)
+
+
+Started POST "/api/v1/users/undefined/recreational_areas" for ::1 at 2020-12-11 19:34:39 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"user_id"=>"undefined", "facility_name"=>"Hooper Lake #1860", "facility_description"=>"<p>The Hooper Lake trail begins at the end of Forest Sevice Road #610 (4wd high clearance vehicle needed) and becomes the North Derby Trail after passing Hooper Lake and crossing onto the Routt National Forest. It has a relatively gentle incline and passes near several small ponds and North Fork Derby Creek. It is recommended to have good map and compass skills for this area as there is so much undulating terrain and multiple trail intersections.</p>", "facility_id"=>"10082781", "facility_directions"=>"From Eagle travel west on I-70 for 13 miles to the Dotsero exit, and follow the signs for Sweetwater/ Burns, turning north onto the Colorado River Road.Follow the Colorado River Rd. for 23.5 miles until you get to Cabin Creek Rd. and turn left.Stay on this road for 7 miles to the intersection with Stump Park Rd., FDR 610 and turn right onto this high-clearance 4WD road.The trailhead is at the end of this road.", "facility_email"=>"", "facility_phone"=>"", "recreational_area"=>{"facility_name"=>"Hooper Lake #1860", "facility_description"=>"<p>The Hooper Lake trail begins at the end of Forest Sevice Road #610 (4wd high clearance vehicle needed) and becomes the North Derby Trail after passing Hooper Lake and crossing onto the Routt National Forest. It has a relatively gentle incline and passes near several small ponds and North Fork Derby Creek. It is recommended to have good map and compass skills for this area as there is so much undulating terrain and multiple trail intersections.</p>", "facility_id"=>"10082781", "facility_directions"=>"From Eagle travel west on I-70 for 13 miles to the Dotsero exit, and follow the signs for Sweetwater/ Burns, turning north onto the Colorado River Road.Follow the Colorado River Rd. for 23.5 miles until you get to Cabin Creek Rd. and turn left.Stay on this road for 7 miles to the intersection with Stump Park Rd., FDR 610 and turn right onto this high-clearance 4WD road.The trailhead is at the end of this road.", "facility_email"=>"", "facility_phone"=>"", "user_id"=>"undefined"}}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:32:in `find_user'
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms | Allocations: 1022)
+
+
+  
+NoMethodError (undefined method `recreational_areas' for nil:NilClass):
+  
+app/controllers/api/v1/recreational_areas_controller.rb:11:in `create'
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-11 19:36:03 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 8ms (Views: 0.2ms | ActiveRecord: 0.7ms | Allocations: 4692)
+
+
+Started GET "/api/v1/users/5/recreational_areas?user_id=5" for ::1 at 2020-12-11 19:36:03 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"5"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:33:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 18ms (Views: 13.2ms | ActiveRecord: 0.9ms | Allocations: 9806)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-11 19:36:04 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 402ms (Views: 8.6ms | ActiveRecord: 0.0ms | Allocations: 21574)
+
+
+Started POST "/api/v1/users/undefined/recreational_areas" for ::1 at 2020-12-11 19:36:08 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"user_id"=>"undefined", "facility_name"=>"Yeoman Park Discovery Trailhead", "facility_description"=>"<p>This short interpretive trail is at an elevation of 9000 feet. It is designed to accommodate those forest visitors that may be disabled. The terrain is level with a packed small gravel surface. The trail is relatively straight and passes through a stand of mature blue spruce and sub-alpine fir trees and ends at a bench overlooking one of Yeoman Park’s small beaver ponds. Along the way there are several log benches to relax and take in the view. The Yeoman Park Discovery Trail has 7 unique interpretive signs focusing on the use of senses to explore nature. The signs were designed with many touchable features and they are accessible to those with disabilities. The natural subjects covered by the signs include Colorado mammals, wildflowers, rocks, trees, archaeology and water. There are many opportunities along the trail to view the behaviors of common tree and ground squirrels, as well as many species of birds such as mountain chickadees, Stellar’s jays and gray jays.</p><p>* There is a <a href=\"../../../../../../../../../../Internet/FSE_DOCUMENTS/stelprdb5186415.pdf\">printable Recreation Quicksheet for this trail</a> which is complete with directions, a map, details, and other information about this trail. Or to see quicksheets for other recreation areas across the Forest, click on the \"Recreation Quicksheets\" link in the right column and select the appropriate Ranger District.</p>", "facility_id"=>"10082507", "facility_directions"=>"From I-70 exit 147 for Eagle, turn south on Eby Creek Rd to the Route 6 roundabout.At roundabout, turn right (west) on Route 6/Grand Ave and travel 0.8 miles to next roundabout. At this roundabout, take the third right onto Sylvan Lake Road.Continue 1.6 miles to Brush Creek Road, and take a right on Brush Creek Road.Follow Brush Creek Rd for roughly 9 miles to the fork of East and West Brush Creek.Turn left onto East Brush Creek Rd., FDR 415 and drive for 6 miles to Yeoman Park.Enter the campground and drive to the end of Loop A where the trailhead is located.", "facility_email"=>"", "facility_phone"=>"", "recreational_area"=>{"facility_name"=>"Yeoman Park Discovery Trailhead", "facility_description"=>"<p>This short interpretive trail is at an elevation of 9000 feet. It is designed to accommodate those forest visitors that may be disabled. The terrain is level with a packed small gravel surface. The trail is relatively straight and passes through a stand of mature blue spruce and sub-alpine fir trees and ends at a bench overlooking one of Yeoman Park’s small beaver ponds. Along the way there are several log benches to relax and take in the view. The Yeoman Park Discovery Trail has 7 unique interpretive signs focusing on the use of senses to explore nature. The signs were designed with many touchable features and they are accessible to those with disabilities. The natural subjects covered by the signs include Colorado mammals, wildflowers, rocks, trees, archaeology and water. There are many opportunities along the trail to view the behaviors of common tree and ground squirrels, as well as many species of birds such as mountain chickadees, Stellar’s jays and gray jays.</p><p>* There is a <a href=\"../../../../../../../../../../Internet/FSE_DOCUMENTS/stelprdb5186415.pdf\">printable Recreation Quicksheet for this trail</a> which is complete with directions, a map, details, and other information about this trail. Or to see quicksheets for other recreation areas across the Forest, click on the \"Recreation Quicksheets\" link in the right column and select the appropriate Ranger District.</p>", "facility_id"=>"10082507", "facility_directions"=>"From I-70 exit 147 for Eagle, turn south on Eby Creek Rd to the Route 6 roundabout.At roundabout, turn right (west) on Route 6/Grand Ave and travel 0.8 miles to next roundabout. At this roundabout, take the third right onto Sylvan Lake Road.Continue 1.6 miles to Brush Creek Road, and take a right on Brush Creek Road.Follow Brush Creek Rd for roughly 9 miles to the fork of East and West Brush Creek.Turn left onto East Brush Creek Rd., FDR 415 and drive for 6 miles to Yeoman Park.Enter the campground and drive to the end of Loop A where the trailhead is located.", "facility_email"=>"", "facility_phone"=>"", "user_id"=>"undefined"}}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:33:in `find_user'
+Completed 500 Internal Server Error in 60583ms (ActiveRecord: 0.1ms | Allocations: 47371)
+
+
+  
+NoMethodError (undefined method `recreational_areas' for nil:NilClass):
+  
+app/controllers/api/v1/recreational_areas_controller.rb:12:in `create'
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-11 19:37:09 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.1ms | Allocations: 690)
+
+
+Started GET "/api/v1/users/5/recreational_areas?user_id=5" for ::1 at 2020-12-11 19:37:09 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"5"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:33:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.3ms | Allocations: 2282)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-11 19:37:19 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 327ms (Views: 10.0ms | ActiveRecord: 0.0ms | Allocations: 21598)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-11 19:39:06 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 8ms (Views: 0.2ms | ActiveRecord: 0.8ms | Allocations: 4692)
+
+
+Started GET "/api/v1/users/5/recreational_areas?user_id=5" for ::1 at 2020-12-11 19:39:06 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"5"}
+  [1m[36mApi::V1::User Load (0.4ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:32:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 16ms (Views: 10.6ms | ActiveRecord: 1.1ms | Allocations: 9806)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-11 19:39:09 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 524ms (Views: 9.6ms | ActiveRecord: 0.0ms | Allocations: 21554)
+
+
+Started POST "/api/v1/users/undefined/recreational_areas" for ::1 at 2020-12-11 19:39:10 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"user_id"=>"undefined", "facility_name"=>"Yeoman Park Discovery Trailhead", "facility_description"=>"<p>This short interpretive trail is at an elevation of 9000 feet. It is designed to accommodate those forest visitors that may be disabled. The terrain is level with a packed small gravel surface. The trail is relatively straight and passes through a stand of mature blue spruce and sub-alpine fir trees and ends at a bench overlooking one of Yeoman Park’s small beaver ponds. Along the way there are several log benches to relax and take in the view. The Yeoman Park Discovery Trail has 7 unique interpretive signs focusing on the use of senses to explore nature. The signs were designed with many touchable features and they are accessible to those with disabilities. The natural subjects covered by the signs include Colorado mammals, wildflowers, rocks, trees, archaeology and water. There are many opportunities along the trail to view the behaviors of common tree and ground squirrels, as well as many species of birds such as mountain chickadees, Stellar’s jays and gray jays.</p><p>* There is a <a href=\"../../../../../../../../../../Internet/FSE_DOCUMENTS/stelprdb5186415.pdf\">printable Recreation Quicksheet for this trail</a> which is complete with directions, a map, details, and other information about this trail. Or to see quicksheets for other recreation areas across the Forest, click on the \"Recreation Quicksheets\" link in the right column and select the appropriate Ranger District.</p>", "facility_id"=>"10082507", "facility_directions"=>"From I-70 exit 147 for Eagle, turn south on Eby Creek Rd to the Route 6 roundabout.At roundabout, turn right (west) on Route 6/Grand Ave and travel 0.8 miles to next roundabout. At this roundabout, take the third right onto Sylvan Lake Road.Continue 1.6 miles to Brush Creek Road, and take a right on Brush Creek Road.Follow Brush Creek Rd for roughly 9 miles to the fork of East and West Brush Creek.Turn left onto East Brush Creek Rd., FDR 415 and drive for 6 miles to Yeoman Park.Enter the campground and drive to the end of Loop A where the trailhead is located.", "facility_email"=>"", "facility_phone"=>"", "recreational_area"=>{"facility_name"=>"Yeoman Park Discovery Trailhead", "facility_description"=>"<p>This short interpretive trail is at an elevation of 9000 feet. It is designed to accommodate those forest visitors that may be disabled. The terrain is level with a packed small gravel surface. The trail is relatively straight and passes through a stand of mature blue spruce and sub-alpine fir trees and ends at a bench overlooking one of Yeoman Park’s small beaver ponds. Along the way there are several log benches to relax and take in the view. The Yeoman Park Discovery Trail has 7 unique interpretive signs focusing on the use of senses to explore nature. The signs were designed with many touchable features and they are accessible to those with disabilities. The natural subjects covered by the signs include Colorado mammals, wildflowers, rocks, trees, archaeology and water. There are many opportunities along the trail to view the behaviors of common tree and ground squirrels, as well as many species of birds such as mountain chickadees, Stellar’s jays and gray jays.</p><p>* There is a <a href=\"../../../../../../../../../../Internet/FSE_DOCUMENTS/stelprdb5186415.pdf\">printable Recreation Quicksheet for this trail</a> which is complete with directions, a map, details, and other information about this trail. Or to see quicksheets for other recreation areas across the Forest, click on the \"Recreation Quicksheets\" link in the right column and select the appropriate Ranger District.</p>", "facility_id"=>"10082507", "facility_directions"=>"From I-70 exit 147 for Eagle, turn south on Eby Creek Rd to the Route 6 roundabout.At roundabout, turn right (west) on Route 6/Grand Ave and travel 0.8 miles to next roundabout. At this roundabout, take the third right onto Sylvan Lake Road.Continue 1.6 miles to Brush Creek Road, and take a right on Brush Creek Road.Follow Brush Creek Rd for roughly 9 miles to the fork of East and West Brush Creek.Turn left onto East Brush Creek Rd., FDR 415 and drive for 6 miles to Yeoman Park.Enter the campground and drive to the end of Loop A where the trailhead is located.", "facility_email"=>"", "facility_phone"=>"", "user_id"=>"undefined"}}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:32:in `find_user'
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.1ms | Allocations: 1023)
+
+
+  
+NoMethodError (undefined method `recreational_areas' for nil:NilClass):
+  
+app/controllers/api/v1/recreational_areas_controller.rb:11:in `create'
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-11 19:40:20 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 0.7ms | Allocations: 4692)
+
+
+Started GET "/api/v1/users/5/recreational_areas?user_id=5" for ::1 at 2020-12-11 19:40:20 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"5"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:33:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 26995ms (Views: 10.9ms | ActiveRecord: 0.8ms | Allocations: 23527)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-11 19:41:22 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 0.7ms | Allocations: 4696)
+
+
+Started GET "/api/v1/users/5/recreational_areas?user_id=5" for ::1 at 2020-12-11 19:41:22 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"5"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:33:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.2ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 15ms (Views: 10.9ms | ActiveRecord: 0.9ms | Allocations: 9806)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-11 19:41:24 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 370ms (Views: 9.1ms | ActiveRecord: 0.0ms | Allocations: 21627)
+
+
+Started POST "/api/v1/users/undefined/recreational_areas" for ::1 at 2020-12-11 19:41:26 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"user_id"=>"undefined", "facility_name"=>"Yeoman Park Discovery Trailhead", "facility_description"=>"<p>This short interpretive trail is at an elevation of 9000 feet. It is designed to accommodate those forest visitors that may be disabled. The terrain is level with a packed small gravel surface. The trail is relatively straight and passes through a stand of mature blue spruce and sub-alpine fir trees and ends at a bench overlooking one of Yeoman Park’s small beaver ponds. Along the way there are several log benches to relax and take in the view. The Yeoman Park Discovery Trail has 7 unique interpretive signs focusing on the use of senses to explore nature. The signs were designed with many touchable features and they are accessible to those with disabilities. The natural subjects covered by the signs include Colorado mammals, wildflowers, rocks, trees, archaeology and water. There are many opportunities along the trail to view the behaviors of common tree and ground squirrels, as well as many species of birds such as mountain chickadees, Stellar’s jays and gray jays.</p><p>* There is a <a href=\"../../../../../../../../../../Internet/FSE_DOCUMENTS/stelprdb5186415.pdf\">printable Recreation Quicksheet for this trail</a> which is complete with directions, a map, details, and other information about this trail. Or to see quicksheets for other recreation areas across the Forest, click on the \"Recreation Quicksheets\" link in the right column and select the appropriate Ranger District.</p>", "facility_id"=>"10082507", "facility_directions"=>"From I-70 exit 147 for Eagle, turn south on Eby Creek Rd to the Route 6 roundabout.At roundabout, turn right (west) on Route 6/Grand Ave and travel 0.8 miles to next roundabout. At this roundabout, take the third right onto Sylvan Lake Road.Continue 1.6 miles to Brush Creek Road, and take a right on Brush Creek Road.Follow Brush Creek Rd for roughly 9 miles to the fork of East and West Brush Creek.Turn left onto East Brush Creek Rd., FDR 415 and drive for 6 miles to Yeoman Park.Enter the campground and drive to the end of Loop A where the trailhead is located.", "facility_email"=>"", "facility_phone"=>"", "recreational_area"=>{"facility_name"=>"Yeoman Park Discovery Trailhead", "facility_description"=>"<p>This short interpretive trail is at an elevation of 9000 feet. It is designed to accommodate those forest visitors that may be disabled. The terrain is level with a packed small gravel surface. The trail is relatively straight and passes through a stand of mature blue spruce and sub-alpine fir trees and ends at a bench overlooking one of Yeoman Park’s small beaver ponds. Along the way there are several log benches to relax and take in the view. The Yeoman Park Discovery Trail has 7 unique interpretive signs focusing on the use of senses to explore nature. The signs were designed with many touchable features and they are accessible to those with disabilities. The natural subjects covered by the signs include Colorado mammals, wildflowers, rocks, trees, archaeology and water. There are many opportunities along the trail to view the behaviors of common tree and ground squirrels, as well as many species of birds such as mountain chickadees, Stellar’s jays and gray jays.</p><p>* There is a <a href=\"../../../../../../../../../../Internet/FSE_DOCUMENTS/stelprdb5186415.pdf\">printable Recreation Quicksheet for this trail</a> which is complete with directions, a map, details, and other information about this trail. Or to see quicksheets for other recreation areas across the Forest, click on the \"Recreation Quicksheets\" link in the right column and select the appropriate Ranger District.</p>", "facility_id"=>"10082507", "facility_directions"=>"From I-70 exit 147 for Eagle, turn south on Eby Creek Rd to the Route 6 roundabout.At roundabout, turn right (west) on Route 6/Grand Ave and travel 0.8 miles to next roundabout. At this roundabout, take the third right onto Sylvan Lake Road.Continue 1.6 miles to Brush Creek Road, and take a right on Brush Creek Road.Follow Brush Creek Rd for roughly 9 miles to the fork of East and West Brush Creek.Turn left onto East Brush Creek Rd., FDR 415 and drive for 6 miles to Yeoman Park.Enter the campground and drive to the end of Loop A where the trailhead is located.", "facility_email"=>"", "facility_phone"=>"", "user_id"=>"undefined"}}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:33:in `find_user'
+Completed 500 Internal Server Error in 74423ms (ActiveRecord: 0.1ms | Allocations: 14657)
+
+
+  
+NoMethodError (undefined method `recreational_areas' for nil:NilClass):
+  
+app/controllers/api/v1/recreational_areas_controller.rb:12:in `create'
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-11 19:42:40 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 690)
+
+
+Started GET "/api/v1/users/5/recreational_areas?user_id=5" for ::1 at 2020-12-11 19:42:40 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"5"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:33:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.2ms | Allocations: 2282)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-11 19:42:46 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 536ms (Views: 9.4ms | ActiveRecord: 0.0ms | Allocations: 21628)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-11 19:44:54 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 0.7ms | Allocations: 4692)
+
+
+Started GET "/api/v1/users/5/recreational_areas?user_id=5" for ::1 at 2020-12-11 19:44:54 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"5"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:33:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.2ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 15ms (Views: 12.0ms | ActiveRecord: 0.9ms | Allocations: 9806)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-11 19:44:55 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 423ms (Views: 9.8ms | ActiveRecord: 0.0ms | Allocations: 21570)
+
+
+Started POST "/api/v1/users/undefined/recreational_areas" for ::1 at 2020-12-11 19:45:03 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"user_id"=>"undefined", "facility_name"=>"Yeoman Park Discovery Trailhead", "facility_description"=>"<p>This short interpretive trail is at an elevation of 9000 feet. It is designed to accommodate those forest visitors that may be disabled. The terrain is level with a packed small gravel surface. The trail is relatively straight and passes through a stand of mature blue spruce and sub-alpine fir trees and ends at a bench overlooking one of Yeoman Park’s small beaver ponds. Along the way there are several log benches to relax and take in the view. The Yeoman Park Discovery Trail has 7 unique interpretive signs focusing on the use of senses to explore nature. The signs were designed with many touchable features and they are accessible to those with disabilities. The natural subjects covered by the signs include Colorado mammals, wildflowers, rocks, trees, archaeology and water. There are many opportunities along the trail to view the behaviors of common tree and ground squirrels, as well as many species of birds such as mountain chickadees, Stellar’s jays and gray jays.</p><p>* There is a <a href=\"../../../../../../../../../../Internet/FSE_DOCUMENTS/stelprdb5186415.pdf\">printable Recreation Quicksheet for this trail</a> which is complete with directions, a map, details, and other information about this trail. Or to see quicksheets for other recreation areas across the Forest, click on the \"Recreation Quicksheets\" link in the right column and select the appropriate Ranger District.</p>", "facility_id"=>"10082507", "facility_directions"=>"From I-70 exit 147 for Eagle, turn south on Eby Creek Rd to the Route 6 roundabout.At roundabout, turn right (west) on Route 6/Grand Ave and travel 0.8 miles to next roundabout. At this roundabout, take the third right onto Sylvan Lake Road.Continue 1.6 miles to Brush Creek Road, and take a right on Brush Creek Road.Follow Brush Creek Rd for roughly 9 miles to the fork of East and West Brush Creek.Turn left onto East Brush Creek Rd., FDR 415 and drive for 6 miles to Yeoman Park.Enter the campground and drive to the end of Loop A where the trailhead is located.", "facility_email"=>"", "facility_phone"=>"", "recreational_area"=>{"facility_name"=>"Yeoman Park Discovery Trailhead", "facility_description"=>"<p>This short interpretive trail is at an elevation of 9000 feet. It is designed to accommodate those forest visitors that may be disabled. The terrain is level with a packed small gravel surface. The trail is relatively straight and passes through a stand of mature blue spruce and sub-alpine fir trees and ends at a bench overlooking one of Yeoman Park’s small beaver ponds. Along the way there are several log benches to relax and take in the view. The Yeoman Park Discovery Trail has 7 unique interpretive signs focusing on the use of senses to explore nature. The signs were designed with many touchable features and they are accessible to those with disabilities. The natural subjects covered by the signs include Colorado mammals, wildflowers, rocks, trees, archaeology and water. There are many opportunities along the trail to view the behaviors of common tree and ground squirrels, as well as many species of birds such as mountain chickadees, Stellar’s jays and gray jays.</p><p>* There is a <a href=\"../../../../../../../../../../Internet/FSE_DOCUMENTS/stelprdb5186415.pdf\">printable Recreation Quicksheet for this trail</a> which is complete with directions, a map, details, and other information about this trail. Or to see quicksheets for other recreation areas across the Forest, click on the \"Recreation Quicksheets\" link in the right column and select the appropriate Ranger District.</p>", "facility_id"=>"10082507", "facility_directions"=>"From I-70 exit 147 for Eagle, turn south on Eby Creek Rd to the Route 6 roundabout.At roundabout, turn right (west) on Route 6/Grand Ave and travel 0.8 miles to next roundabout. At this roundabout, take the third right onto Sylvan Lake Road.Continue 1.6 miles to Brush Creek Road, and take a right on Brush Creek Road.Follow Brush Creek Rd for roughly 9 miles to the fork of East and West Brush Creek.Turn left onto East Brush Creek Rd., FDR 415 and drive for 6 miles to Yeoman Park.Enter the campground and drive to the end of Loop A where the trailhead is located.", "facility_email"=>"", "facility_phone"=>"", "user_id"=>"undefined"}}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:33:in `find_user'
+  [1m[36mCACHE Api::V1::User Load (0.0ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:33:in `find_user'
+Completed 500 Internal Server Error in 136913ms (ActiveRecord: 0.2ms | Allocations: 17155)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-11 19:47:20 -0500
+  
+NoMethodError (undefined method `recreational_areas' for nil:NilClass):
+  
+app/controllers/api/v1/recreational_areas_controller.rb:12:in `create'
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 690)
+
+
+Started GET "/api/v1/users/5/recreational_areas?user_id=5" for ::1 at 2020-12-11 19:47:20 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"5"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:33:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.2ms | Allocations: 2282)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-11 19:47:23 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 493ms (Views: 9.6ms | ActiveRecord: 0.0ms | Allocations: 21607)
+
+
+Started POST "/api/v1/users/undefined/recreational_areas" for ::1 at 2020-12-11 19:48:33 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"user_id"=>"undefined", "facility_name"=>"Yeoman Park Discovery Trailhead", "facility_description"=>"<p>This short interpretive trail is at an elevation of 9000 feet. It is designed to accommodate those forest visitors that may be disabled. The terrain is level with a packed small gravel surface. The trail is relatively straight and passes through a stand of mature blue spruce and sub-alpine fir trees and ends at a bench overlooking one of Yeoman Park’s small beaver ponds. Along the way there are several log benches to relax and take in the view. The Yeoman Park Discovery Trail has 7 unique interpretive signs focusing on the use of senses to explore nature. The signs were designed with many touchable features and they are accessible to those with disabilities. The natural subjects covered by the signs include Colorado mammals, wildflowers, rocks, trees, archaeology and water. There are many opportunities along the trail to view the behaviors of common tree and ground squirrels, as well as many species of birds such as mountain chickadees, Stellar’s jays and gray jays.</p><p>* There is a <a href=\"../../../../../../../../../../Internet/FSE_DOCUMENTS/stelprdb5186415.pdf\">printable Recreation Quicksheet for this trail</a> which is complete with directions, a map, details, and other information about this trail. Or to see quicksheets for other recreation areas across the Forest, click on the \"Recreation Quicksheets\" link in the right column and select the appropriate Ranger District.</p>", "facility_id"=>"10082507", "facility_directions"=>"From I-70 exit 147 for Eagle, turn south on Eby Creek Rd to the Route 6 roundabout.At roundabout, turn right (west) on Route 6/Grand Ave and travel 0.8 miles to next roundabout. At this roundabout, take the third right onto Sylvan Lake Road.Continue 1.6 miles to Brush Creek Road, and take a right on Brush Creek Road.Follow Brush Creek Rd for roughly 9 miles to the fork of East and West Brush Creek.Turn left onto East Brush Creek Rd., FDR 415 and drive for 6 miles to Yeoman Park.Enter the campground and drive to the end of Loop A where the trailhead is located.", "facility_email"=>"", "facility_phone"=>"", "recreational_area"=>{"facility_name"=>"Yeoman Park Discovery Trailhead", "facility_description"=>"<p>This short interpretive trail is at an elevation of 9000 feet. It is designed to accommodate those forest visitors that may be disabled. The terrain is level with a packed small gravel surface. The trail is relatively straight and passes through a stand of mature blue spruce and sub-alpine fir trees and ends at a bench overlooking one of Yeoman Park’s small beaver ponds. Along the way there are several log benches to relax and take in the view. The Yeoman Park Discovery Trail has 7 unique interpretive signs focusing on the use of senses to explore nature. The signs were designed with many touchable features and they are accessible to those with disabilities. The natural subjects covered by the signs include Colorado mammals, wildflowers, rocks, trees, archaeology and water. There are many opportunities along the trail to view the behaviors of common tree and ground squirrels, as well as many species of birds such as mountain chickadees, Stellar’s jays and gray jays.</p><p>* There is a <a href=\"../../../../../../../../../../Internet/FSE_DOCUMENTS/stelprdb5186415.pdf\">printable Recreation Quicksheet for this trail</a> which is complete with directions, a map, details, and other information about this trail. Or to see quicksheets for other recreation areas across the Forest, click on the \"Recreation Quicksheets\" link in the right column and select the appropriate Ranger District.</p>", "facility_id"=>"10082507", "facility_directions"=>"From I-70 exit 147 for Eagle, turn south on Eby Creek Rd to the Route 6 roundabout.At roundabout, turn right (west) on Route 6/Grand Ave and travel 0.8 miles to next roundabout. At this roundabout, take the third right onto Sylvan Lake Road.Continue 1.6 miles to Brush Creek Road, and take a right on Brush Creek Road.Follow Brush Creek Rd for roughly 9 miles to the fork of East and West Brush Creek.Turn left onto East Brush Creek Rd., FDR 415 and drive for 6 miles to Yeoman Park.Enter the campground and drive to the end of Loop A where the trailhead is located.", "facility_email"=>"", "facility_phone"=>"", "user_id"=>"undefined"}}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:33:in `find_user'
+Completed 500 Internal Server Error in 295561ms (ActiveRecord: 0.1ms | Allocations: 15473)
+
+
+  
+NoMethodError (undefined method `recreational_areas' for nil:NilClass):
+  
+app/controllers/api/v1/recreational_areas_controller.rb:12:in `create'
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-11 19:53:34 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 690)
+
+
+Started GET "/api/v1/users/5/recreational_areas?user_id=5" for ::1 at 2020-12-11 19:53:34 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"5"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:33:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.2ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 5ms (Views: 2.8ms | ActiveRecord: 0.4ms | Allocations: 2282)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-11 19:53:36 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 472ms (Views: 9.1ms | ActiveRecord: 0.0ms | Allocations: 21600)
+
+
+Started POST "/api/v1/users/undefined/recreational_areas" for ::1 at 2020-12-11 19:54:01 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"facility_name"=>"Yeoman Park Discovery Trailhead", "facility_description"=>"<p>This short interpretive trail is at an elevation of 9000 feet. It is designed to accommodate those forest visitors that may be disabled. The terrain is level with a packed small gravel surface. The trail is relatively straight and passes through a stand of mature blue spruce and sub-alpine fir trees and ends at a bench overlooking one of Yeoman Park’s small beaver ponds. Along the way there are several log benches to relax and take in the view. The Yeoman Park Discovery Trail has 7 unique interpretive signs focusing on the use of senses to explore nature. The signs were designed with many touchable features and they are accessible to those with disabilities. The natural subjects covered by the signs include Colorado mammals, wildflowers, rocks, trees, archaeology and water. There are many opportunities along the trail to view the behaviors of common tree and ground squirrels, as well as many species of birds such as mountain chickadees, Stellar’s jays and gray jays.</p><p>* There is a <a href=\"../../../../../../../../../../Internet/FSE_DOCUMENTS/stelprdb5186415.pdf\">printable Recreation Quicksheet for this trail</a> which is complete with directions, a map, details, and other information about this trail. Or to see quicksheets for other recreation areas across the Forest, click on the \"Recreation Quicksheets\" link in the right column and select the appropriate Ranger District.</p>", "facility_id"=>"10082507", "facility_directions"=>"From I-70 exit 147 for Eagle, turn south on Eby Creek Rd to the Route 6 roundabout.At roundabout, turn right (west) on Route 6/Grand Ave and travel 0.8 miles to next roundabout. At this roundabout, take the third right onto Sylvan Lake Road.Continue 1.6 miles to Brush Creek Road, and take a right on Brush Creek Road.Follow Brush Creek Rd for roughly 9 miles to the fork of East and West Brush Creek.Turn left onto East Brush Creek Rd., FDR 415 and drive for 6 miles to Yeoman Park.Enter the campground and drive to the end of Loop A where the trailhead is located.", "facility_email"=>"", "facility_phone"=>"", "user_id"=>"undefined", "recreational_area"=>{"facility_name"=>"Yeoman Park Discovery Trailhead", "facility_description"=>"<p>This short interpretive trail is at an elevation of 9000 feet. It is designed to accommodate those forest visitors that may be disabled. The terrain is level with a packed small gravel surface. The trail is relatively straight and passes through a stand of mature blue spruce and sub-alpine fir trees and ends at a bench overlooking one of Yeoman Park’s small beaver ponds. Along the way there are several log benches to relax and take in the view. The Yeoman Park Discovery Trail has 7 unique interpretive signs focusing on the use of senses to explore nature. The signs were designed with many touchable features and they are accessible to those with disabilities. The natural subjects covered by the signs include Colorado mammals, wildflowers, rocks, trees, archaeology and water. There are many opportunities along the trail to view the behaviors of common tree and ground squirrels, as well as many species of birds such as mountain chickadees, Stellar’s jays and gray jays.</p><p>* There is a <a href=\"../../../../../../../../../../Internet/FSE_DOCUMENTS/stelprdb5186415.pdf\">printable Recreation Quicksheet for this trail</a> which is complete with directions, a map, details, and other information about this trail. Or to see quicksheets for other recreation areas across the Forest, click on the \"Recreation Quicksheets\" link in the right column and select the appropriate Ranger District.</p>", "facility_id"=>"10082507", "facility_directions"=>"From I-70 exit 147 for Eagle, turn south on Eby Creek Rd to the Route 6 roundabout.At roundabout, turn right (west) on Route 6/Grand Ave and travel 0.8 miles to next roundabout. At this roundabout, take the third right onto Sylvan Lake Road.Continue 1.6 miles to Brush Creek Road, and take a right on Brush Creek Road.Follow Brush Creek Rd for roughly 9 miles to the fork of East and West Brush Creek.Turn left onto East Brush Creek Rd., FDR 415 and drive for 6 miles to Yeoman Park.Enter the campground and drive to the end of Loop A where the trailhead is located.", "facility_email"=>"", "facility_phone"=>""}}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:33:in `find_user'
+Completed 500 Internal Server Error in 19831ms (ActiveRecord: 0.1ms | Allocations: 15668)
+
+
+  
+NoMethodError (undefined method `recreational_areas' for nil:NilClass):
+  
+app/controllers/api/v1/recreational_areas_controller.rb:12:in `create'
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-11 19:55:00 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 690)
+
+
+Started GET "/api/v1/users/5/recreational_areas?user_id=5" for ::1 at 2020-12-11 19:55:00 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"5"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:33:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.3ms | Allocations: 2282)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-11 19:55:02 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 350ms (Views: 20.8ms | ActiveRecord: 0.0ms | Allocations: 21535)
+
+
+Started POST "/api/v1/users/undefined/recreational_areas" for ::1 at 2020-12-11 19:57:08 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"user_id"=>"undefined", "facility_name"=>"Yeoman Park Discovery Trailhead", "facility_description"=>"<p>This short interpretive trail is at an elevation of 9000 feet. It is designed to accommodate those forest visitors that may be disabled. The terrain is level with a packed small gravel surface. The trail is relatively straight and passes through a stand of mature blue spruce and sub-alpine fir trees and ends at a bench overlooking one of Yeoman Park’s small beaver ponds. Along the way there are several log benches to relax and take in the view. The Yeoman Park Discovery Trail has 7 unique interpretive signs focusing on the use of senses to explore nature. The signs were designed with many touchable features and they are accessible to those with disabilities. The natural subjects covered by the signs include Colorado mammals, wildflowers, rocks, trees, archaeology and water. There are many opportunities along the trail to view the behaviors of common tree and ground squirrels, as well as many species of birds such as mountain chickadees, Stellar’s jays and gray jays.</p><p>* There is a <a href=\"../../../../../../../../../../Internet/FSE_DOCUMENTS/stelprdb5186415.pdf\">printable Recreation Quicksheet for this trail</a> which is complete with directions, a map, details, and other information about this trail. Or to see quicksheets for other recreation areas across the Forest, click on the \"Recreation Quicksheets\" link in the right column and select the appropriate Ranger District.</p>", "facility_id"=>"10082507", "facility_directions"=>"From I-70 exit 147 for Eagle, turn south on Eby Creek Rd to the Route 6 roundabout.At roundabout, turn right (west) on Route 6/Grand Ave and travel 0.8 miles to next roundabout. At this roundabout, take the third right onto Sylvan Lake Road.Continue 1.6 miles to Brush Creek Road, and take a right on Brush Creek Road.Follow Brush Creek Rd for roughly 9 miles to the fork of East and West Brush Creek.Turn left onto East Brush Creek Rd., FDR 415 and drive for 6 miles to Yeoman Park.Enter the campground and drive to the end of Loop A where the trailhead is located.", "facility_email"=>"", "facility_phone"=>"", "recreational_area"=>{"facility_name"=>"Yeoman Park Discovery Trailhead", "facility_description"=>"<p>This short interpretive trail is at an elevation of 9000 feet. It is designed to accommodate those forest visitors that may be disabled. The terrain is level with a packed small gravel surface. The trail is relatively straight and passes through a stand of mature blue spruce and sub-alpine fir trees and ends at a bench overlooking one of Yeoman Park’s small beaver ponds. Along the way there are several log benches to relax and take in the view. The Yeoman Park Discovery Trail has 7 unique interpretive signs focusing on the use of senses to explore nature. The signs were designed with many touchable features and they are accessible to those with disabilities. The natural subjects covered by the signs include Colorado mammals, wildflowers, rocks, trees, archaeology and water. There are many opportunities along the trail to view the behaviors of common tree and ground squirrels, as well as many species of birds such as mountain chickadees, Stellar’s jays and gray jays.</p><p>* There is a <a href=\"../../../../../../../../../../Internet/FSE_DOCUMENTS/stelprdb5186415.pdf\">printable Recreation Quicksheet for this trail</a> which is complete with directions, a map, details, and other information about this trail. Or to see quicksheets for other recreation areas across the Forest, click on the \"Recreation Quicksheets\" link in the right column and select the appropriate Ranger District.</p>", "facility_id"=>"10082507", "facility_directions"=>"From I-70 exit 147 for Eagle, turn south on Eby Creek Rd to the Route 6 roundabout.At roundabout, turn right (west) on Route 6/Grand Ave and travel 0.8 miles to next roundabout. At this roundabout, take the third right onto Sylvan Lake Road.Continue 1.6 miles to Brush Creek Road, and take a right on Brush Creek Road.Follow Brush Creek Rd for roughly 9 miles to the fork of East and West Brush Creek.Turn left onto East Brush Creek Rd., FDR 415 and drive for 6 miles to Yeoman Park.Enter the campground and drive to the end of Loop A where the trailhead is located.", "facility_email"=>"", "facility_phone"=>"", "user_id"=>"undefined"}}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:33:in `find_user'
+Completed 500 Internal Server Error in 285900ms (ActiveRecord: 0.1ms | Allocations: 17372)
+
+
+  
+NoMethodError (undefined method `recreational_areas' for nil:NilClass):
+  
+app/controllers/api/v1/recreational_areas_controller.rb:12:in `create'
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-11 20:01:54 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 690)
+
+
+Started GET "/api/v1/users/5/recreational_areas?user_id=5" for ::1 at 2020-12-11 20:01:54 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"5"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:33:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.2ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 5ms (Views: 2.8ms | ActiveRecord: 0.3ms | Allocations: 2282)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-11 20:01:59 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 706ms (Views: 8.9ms | ActiveRecord: 0.0ms | Allocations: 21529)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-11 20:07:06 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:18:in `create'
+  [1m[36mApi::V1::User Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:18:in `create'
+  [1m[36mApi::V1::User Create (0.6ms)[0m  [1m[32mINSERT INTO "api_v1_users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Dice"], ["created_at", "2020-12-12 01:07:06.296801"], ["updated_at", "2020-12-12 01:07:06.296801"]]
+  ↳ app/controllers/api/v1/users_controller.rb:18:in `create'
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:18:in `create'
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 1.5ms | Allocations: 3640)
+
+
+Started GET "/api/v1/users/1/recreational_areas?user_id=1" for ::1 at 2020-12-11 20:07:06 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:33:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.3ms | Allocations: 1466)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-11 20:07:08 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 384ms (Views: 9.5ms | ActiveRecord: 0.0ms | Allocations: 21596)
+
+
+Started POST "/api/v1/users/undefined/recreational_areas" for ::1 at 2020-12-11 20:08:06 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"user_id"=>"undefined", "facility_name"=>"Tower Fall Campground", "facility_description"=>"Tower Fall Campground—elevation 6,600 feet (2012 m)—is located on the north side of the steep, winding, road to Dunraven Pass. The campground is near the Tower General Store and Tower Fall, where Tower Creek plunges over 130 feet down to its confluence with the Yellowstone River. On the road over Dunraven Pass, a six-mile trail provides access to the summit of Mount Washburn. Roosevelt Lodge, a short drive from the campground, offers dining and horseback riding.", "facility_id"=>"259308", "facility_directions"=>"This campground is located on the road between Tower Fall and Canyon--north of Dunraven Pass and 3.5 miles (5.6 km) south of Tower-Roosevelt Junction.", "facility_email"=>"yell_visitor_services@nps.gov", "facility_phone"=>"(307) 344-7381", "recreational_area"=>{"facility_name"=>"Tower Fall Campground", "facility_description"=>"Tower Fall Campground—elevation 6,600 feet (2012 m)—is located on the north side of the steep, winding, road to Dunraven Pass. The campground is near the Tower General Store and Tower Fall, where Tower Creek plunges over 130 feet down to its confluence with the Yellowstone River. On the road over Dunraven Pass, a six-mile trail provides access to the summit of Mount Washburn. Roosevelt Lodge, a short drive from the campground, offers dining and horseback riding.", "facility_id"=>"259308", "facility_directions"=>"This campground is located on the road between Tower Fall and Canyon--north of Dunraven Pass and 3.5 miles (5.6 km) south of Tower-Roosevelt Junction.", "facility_email"=>"yell_visitor_services@nps.gov", "facility_phone"=>"(307) 344-7381", "user_id"=>"undefined"}}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:33:in `find_user'
+Completed 500 Internal Server Error in 88616ms (ActiveRecord: 0.2ms | Allocations: 17051)
+
+
+  
+NoMethodError (undefined method `recreational_areas' for nil:NilClass):
+  
+app/controllers/api/v1/recreational_areas_controller.rb:12:in `create'
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-11 20:09:54 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 8ms (Views: 0.2ms | ActiveRecord: 0.7ms | Allocations: 4695)
+
+
+Started GET "/api/v1/users/1/recreational_areas?user_id=1" for ::1 at 2020-12-11 20:09:54 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:33:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 5ms (Views: 1.7ms | ActiveRecord: 0.5ms | Allocations: 2876)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-11 20:09:55 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 564ms (Views: 10.4ms | ActiveRecord: 0.0ms | Allocations: 21587)
+
+
+Started POST "/api/v1/users/undefined/recreational_areas" for ::1 at 2020-12-11 20:10:02 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"user_id"=>"undefined", "facility_name"=>"Tower Fall Campground", "facility_description"=>"Tower Fall Campground—elevation 6,600 feet (2012 m)—is located on the north side of the steep, winding, road to Dunraven Pass. The campground is near the Tower General Store and Tower Fall, where Tower Creek plunges over 130 feet down to its confluence with the Yellowstone River. On the road over Dunraven Pass, a six-mile trail provides access to the summit of Mount Washburn. Roosevelt Lodge, a short drive from the campground, offers dining and horseback riding.", "facility_id"=>"259308", "facility_directions"=>"This campground is located on the road between Tower Fall and Canyon--north of Dunraven Pass and 3.5 miles (5.6 km) south of Tower-Roosevelt Junction.", "facility_email"=>"yell_visitor_services@nps.gov", "facility_phone"=>"(307) 344-7381", "recreational_area"=>{"facility_name"=>"Tower Fall Campground", "facility_description"=>"Tower Fall Campground—elevation 6,600 feet (2012 m)—is located on the north side of the steep, winding, road to Dunraven Pass. The campground is near the Tower General Store and Tower Fall, where Tower Creek plunges over 130 feet down to its confluence with the Yellowstone River. On the road over Dunraven Pass, a six-mile trail provides access to the summit of Mount Washburn. Roosevelt Lodge, a short drive from the campground, offers dining and horseback riding.", "facility_id"=>"259308", "facility_directions"=>"This campground is located on the road between Tower Fall and Canyon--north of Dunraven Pass and 3.5 miles (5.6 km) south of Tower-Roosevelt Junction.", "facility_email"=>"yell_visitor_services@nps.gov", "facility_phone"=>"(307) 344-7381", "user_id"=>"undefined"}}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:33:in `find_user'
+Completed 500 Internal Server Error in 9451ms (ActiveRecord: 0.2ms | Allocations: 17106)
+
+
+  
+NoMethodError (undefined method `recreational_area' for nil:NilClass):
+  
+app/controllers/api/v1/recreational_areas_controller.rb:12:in `create'
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-11 20:10:47 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 22ms (Views: 0.3ms | ActiveRecord: 0.7ms | Allocations: 4698)
+
+
+Started GET "/api/v1/users/1/recreational_areas?user_id=1" for ::1 at 2020-12-11 20:10:47 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:34:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 6ms (Views: 2.0ms | ActiveRecord: 0.6ms | Allocations: 2876)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-11 20:10:48 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 340ms (Views: 9.4ms | ActiveRecord: 0.0ms | Allocations: 21601)
+
+
+Started POST "/api/v1/users/undefined/recreational_areas" for ::1 at 2020-12-11 20:10:56 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"user_id"=>"undefined", "facility_name"=>"Tower Fall Campground", "facility_description"=>"Tower Fall Campground—elevation 6,600 feet (2012 m)—is located on the north side of the steep, winding, road to Dunraven Pass. The campground is near the Tower General Store and Tower Fall, where Tower Creek plunges over 130 feet down to its confluence with the Yellowstone River. On the road over Dunraven Pass, a six-mile trail provides access to the summit of Mount Washburn. Roosevelt Lodge, a short drive from the campground, offers dining and horseback riding.", "facility_id"=>"259308", "facility_directions"=>"This campground is located on the road between Tower Fall and Canyon--north of Dunraven Pass and 3.5 miles (5.6 km) south of Tower-Roosevelt Junction.", "facility_email"=>"yell_visitor_services@nps.gov", "facility_phone"=>"(307) 344-7381", "recreational_area"=>{"facility_name"=>"Tower Fall Campground", "facility_description"=>"Tower Fall Campground—elevation 6,600 feet (2012 m)—is located on the north side of the steep, winding, road to Dunraven Pass. The campground is near the Tower General Store and Tower Fall, where Tower Creek plunges over 130 feet down to its confluence with the Yellowstone River. On the road over Dunraven Pass, a six-mile trail provides access to the summit of Mount Washburn. Roosevelt Lodge, a short drive from the campground, offers dining and horseback riding.", "facility_id"=>"259308", "facility_directions"=>"This campground is located on the road between Tower Fall and Canyon--north of Dunraven Pass and 3.5 miles (5.6 km) south of Tower-Roosevelt Junction.", "facility_email"=>"yell_visitor_services@nps.gov", "facility_phone"=>"(307) 344-7381", "user_id"=>"undefined"}}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:34:in `find_user'
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.2ms | Allocations: 1023)
+
+
+  
+NoMethodError (undefined method `recreational_areas' for nil:NilClass):
+  
+app/controllers/api/v1/recreational_areas_controller.rb:11:in `create'
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-13 01:09:51 -0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 10ms (Views: 0.3ms | ActiveRecord: 0.6ms | Allocations: 5511)
+
+
+Started GET "/api/v1/users/1/recreational_areas?user_id=1" for ::1 at 2020-12-13 01:09:51 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:34:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 13ms (Views: 3.5ms | ActiveRecord: 0.6ms | Allocations: 4687)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-13 01:09:56 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 455ms (Views: 29.7ms | ActiveRecord: 0.0ms | Allocations: 22479)
+
+
+Started POST "/api/v1/users/undefined/recreational_areas" for ::1 at 2020-12-13 01:09:58 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"user_id"=>"undefined", "facility_name"=>"Tower Fall Campground", "facility_description"=>"Tower Fall Campground—elevation 6,600 feet (2012 m)—is located on the north side of the steep, winding, road to Dunraven Pass. The campground is near the Tower General Store and Tower Fall, where Tower Creek plunges over 130 feet down to its confluence with the Yellowstone River. On the road over Dunraven Pass, a six-mile trail provides access to the summit of Mount Washburn. Roosevelt Lodge, a short drive from the campground, offers dining and horseback riding.", "facility_id"=>"259308", "facility_directions"=>"This campground is located on the road between Tower Fall and Canyon--north of Dunraven Pass and 3.5 miles (5.6 km) south of Tower-Roosevelt Junction.", "facility_email"=>"yell_visitor_services@nps.gov", "facility_phone"=>"(307) 344-7381", "recreational_area"=>{"facility_name"=>"Tower Fall Campground", "facility_description"=>"Tower Fall Campground—elevation 6,600 feet (2012 m)—is located on the north side of the steep, winding, road to Dunraven Pass. The campground is near the Tower General Store and Tower Fall, where Tower Creek plunges over 130 feet down to its confluence with the Yellowstone River. On the road over Dunraven Pass, a six-mile trail provides access to the summit of Mount Washburn. Roosevelt Lodge, a short drive from the campground, offers dining and horseback riding.", "facility_id"=>"259308", "facility_directions"=>"This campground is located on the road between Tower Fall and Canyon--north of Dunraven Pass and 3.5 miles (5.6 km) south of Tower-Roosevelt Junction.", "facility_email"=>"yell_visitor_services@nps.gov", "facility_phone"=>"(307) 344-7381", "user_id"=>"undefined"}}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:34:in `find_user'
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.1ms | Allocations: 1052)
+
+
+  
+NoMethodError (undefined method `recreational_areas' for nil:NilClass):
+  
+app/controllers/api/v1/recreational_areas_controller.rb:11:in `create'
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-13 01:10:11 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 270ms (Views: 10.5ms | ActiveRecord: 0.0ms | Allocations: 21835)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-13 01:15:25 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas?user_id=1" for ::1 at 2020-12-13 01:15:25 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:34:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 0.3ms | Allocations: 1466)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-13 01:15:26 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 476ms (Views: 9.2ms | ActiveRecord: 0.0ms | Allocations: 21784)
+
+
+Started POST "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-13 01:16:02 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"user_id"=>"1", "facility_name"=>"Tower Fall Campground", "facility_description"=>"Tower Fall Campground—elevation 6,600 feet (2012 m)—is located on the north side of the steep, winding, road to Dunraven Pass. The campground is near the Tower General Store and Tower Fall, where Tower Creek plunges over 130 feet down to its confluence with the Yellowstone River. On the road over Dunraven Pass, a six-mile trail provides access to the summit of Mount Washburn. Roosevelt Lodge, a short drive from the campground, offers dining and horseback riding.", "facility_id"=>"259308", "facility_directions"=>"This campground is located on the road between Tower Fall and Canyon--north of Dunraven Pass and 3.5 miles (5.6 km) south of Tower-Roosevelt Junction.", "facility_email"=>"yell_visitor_services@nps.gov", "facility_phone"=>"(307) 344-7381", "recreational_area"=>{"facility_name"=>"Tower Fall Campground", "facility_description"=>"Tower Fall Campground—elevation 6,600 feet (2012 m)—is located on the north side of the steep, winding, road to Dunraven Pass. The campground is near the Tower General Store and Tower Fall, where Tower Creek plunges over 130 feet down to its confluence with the Yellowstone River. On the road over Dunraven Pass, a six-mile trail provides access to the summit of Mount Washburn. Roosevelt Lodge, a short drive from the campground, offers dining and horseback riding.", "facility_id"=>"259308", "facility_directions"=>"This campground is located on the road between Tower Fall and Canyon--north of Dunraven Pass and 3.5 miles (5.6 km) south of Tower-Roosevelt Junction.", "facility_email"=>"yell_visitor_services@nps.gov", "facility_phone"=>"(307) 344-7381", "user_id"=>"1"}}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:34:in `find_user'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[36mApi::V1::RecreationalArea Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."facility_name" = ? LIMIT ?[0m  [["facility_name", "Tower Fall Campground"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[36mApi::V1::RecreationalArea Create (1.1ms)[0m  [1m[32mINSERT INTO "api_v1_recreational_areas" ("facility_name", "facility_description", "created_at", "updated_at", "facility_id", "facility_directions", "facility_email", "facility_phone", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["facility_name", "Tower Fall Campground"], ["facility_description", "Tower Fall Campground—elevation 6,600 feet (2012 m)—is located on the north side of the steep, winding, road to Dunraven Pass. The campground is near the Tower General Store and Tower Fall, where Tower Creek plunges over 130 feet down to its confluence with the Yellowstone River. On the road over Dunraven Pass, a six-mile trail provides access to the summit of Mount Washburn. Roosevelt Lodge, a short drive from the campground, offers dining and horseback riding."], ["created_at", "2020-12-13 06:16:22.728980"], ["updated_at", "2020-12-13 06:16:22.728980"], ["facility_id", "259308"], ["facility_directions", "This campground is located on the road between Tower Fall and Canyon--north of Dunraven Pass and 3.5 miles (5.6 km) south of Tower-Roosevelt Junction."], ["facility_email", "yell_visitor_services@nps.gov"], ["facility_phone", "(307) 344-7381"], ["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+Completed 200 OK in 24977ms (Views: 0.4ms | ActiveRecord: 2.6ms | Allocations: 79660)
+
+

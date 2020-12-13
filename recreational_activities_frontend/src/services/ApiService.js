@@ -72,9 +72,9 @@ class ApiService
             .then(data => RecreationalAreaCard.getMatch(data));
     };
 
-    saveFavoriteArea = (userID, data) =>
+    saveFavoriteArea = (areaData) =>
     {
-        const url = new URL(this.baseURL + `/users/${userID}/recreational_areas`);
+        const url = new URL(this.baseURL + `/users/${areaData.user_id}/recreational_areas`);
         const configObj =
         {
             method: "POST",
@@ -83,7 +83,7 @@ class ApiService
                 "Content-Type": "application/json",
                 "Accept": "application/json"
             },
-            body: JSON.stringify(data)
+            body: JSON.stringify(areaData)
         };
 
         fetch(url, configObj)
@@ -119,7 +119,6 @@ class ApiService
 
     removeFavorites = (area) =>
     {
-        const userID = document.querySelector(".user-id");
         const url = new URL(this.baseURL + `/users/${userID}/recreational_areas`)
     }
 

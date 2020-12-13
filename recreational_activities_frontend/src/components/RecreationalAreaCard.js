@@ -38,6 +38,7 @@ class RecreationalAreaCard
     {
         const recreationalArea = this.activity;
         const userID = document.querySelector(".user-id").value; // Not safe to send around user_id from database. Future iteration of app will use secure method.
+
         const data =
         {
             user_id: userID,
@@ -49,7 +50,7 @@ class RecreationalAreaCard
             facility_phone: recreationalArea.FacilityPhone
         };
 
-        api.saveFavoriteArea(userID, data);
+        api.saveFavoriteArea(data);
     }
 
     renderInnerHTML()

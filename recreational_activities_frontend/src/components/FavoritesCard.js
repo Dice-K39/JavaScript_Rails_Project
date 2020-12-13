@@ -37,7 +37,9 @@ class FavoritesCard
 
     handleRemoveOnClick = (card) =>
     {
-        api.removeFavorites(card.innerText);
+        const userID = document.querySelector(".user-id");
+
+        api.removeFavorites(userID, card.innerText);
     }
 
     renderInnerHTML = (area) =>
