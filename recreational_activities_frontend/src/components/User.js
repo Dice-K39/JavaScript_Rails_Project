@@ -21,6 +21,10 @@ class User
     
     loadFavorites()
     {
+        const favoriteContainer = document.querySelector(".favorited-section");
+
+        favoriteContainer.innerHTML = "Favorites:";
+
         api.getFavorites(this.user);
     }
     

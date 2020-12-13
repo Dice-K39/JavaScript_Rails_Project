@@ -1,6 +1,12 @@
 class ApiService
 {
     static container = document.querySelector(".display-search");
+    static errorMessageContainer = document.querySelector(".error-message")
+
+    static printError = (err) =>
+    {
+        this.errorMessageContainer.innerHTML = `${err}`
+    }
 
     constructor(baseURL)
     {
@@ -18,6 +24,7 @@ class ApiService
             {
                 if (res.ok)
                 {
+                    this.constructor.errorMessageContainer.innerHTML = "";
                     return res.json();
                 }
                 else
@@ -49,6 +56,7 @@ class ApiService
             {
                 if (res.ok)
                 {
+                    this.constructor.errorMessageContainer.innerHTML = "";
                     return res.json();
                 }
                 else
@@ -120,10 +128,5 @@ class ApiService
     removeFavorites = (area) =>
     {
         const url = new URL(this.baseURL + `/users/${userID}/recreational_areas`)
-    }
-
-    static printError = (err) =>
-    {
-        this.container.innerHTML = `${err}`
     }
 }

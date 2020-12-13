@@ -23,7 +23,7 @@ class FavoritesCard
     {
         const card = document.createElement("div");
 
-        card.className = "favorite-card is-flex";
+        card.className = "favorite-card";
         this.card = card;
         this.renderInnerHTML(area);
         this.attachEventListener(card);
