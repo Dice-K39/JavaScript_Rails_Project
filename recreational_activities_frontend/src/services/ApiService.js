@@ -3,9 +3,9 @@ class ApiService
     static container = document.querySelector(".display-search");
     static errorMessageContainer = document.querySelector(".error-message")
 
-    static printError = (err) =>
-    {
-        this.errorMessageContainer.innerHTML = `${err}`
+    printError = (err) =>
+    {debugger
+        this.constructor.errorMessageContainer.innerHTML = `${err}`
     }
 
     constructor(baseURL)
@@ -23,7 +23,7 @@ class ApiService
             .then(res => 
             {
                 if (res.ok)
-                {
+                {debugger
                     this.constructor.errorMessageContainer.innerHTML = "";
                     return res.json();
                 }
@@ -33,7 +33,7 @@ class ApiService
                 }
             })
             .then(data => new User(data))
-            .catch(err => this.constructor.printError(err));
+            .catch(err => this.printError(err));
     }
 
     signupUser = (userName) =>
@@ -55,7 +55,7 @@ class ApiService
             .then(res => 
             {
                 if (res.ok)
-                {
+                {debugger
                     this.constructor.errorMessageContainer.innerHTML = "";
                     return res.json();
                 }
@@ -65,7 +65,7 @@ class ApiService
                 }
             })
             .then(data => new User(data))
-            .catch(err => this.constructor.printError(err));
+            .catch(err => this.printError(err));
     }
 
     searchActivities = () =>
@@ -125,8 +125,8 @@ class ApiService
             .then(data => new FavoritesCard(data));
     }
 
-    removeFavorites = (area) =>
-    {
-        const url = new URL(this.baseURL + `/users/${userID}/recreational_areas`)
-    }
+    // removeFavorites = (area) =>
+    // {
+        
+    // }
 }

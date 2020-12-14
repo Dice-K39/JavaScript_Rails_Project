@@ -26,21 +26,21 @@ class FavoritesCard
         card.className = "favorite-card";
         this.card = card;
         this.renderInnerHTML(area);
-        this.attachEventListener(card);
+        // this.attachEventListener(card);
         this.constructor.container.append(card);
     }
 
-    attachEventListener = (card) =>
-    {
-        card.querySelector(".remove-btn").addEventListener("click", () => this.handleRemoveOnClick(card));
-    }
+    // attachEventListener = (card) =>
+    // {
+    //     card.querySelector(".remove-btn").addEventListener("click", () => this.handleRemoveOnClick(card));
+    // }
 
-    handleRemoveOnClick = (card) =>
-    {
-        const userID = document.querySelector(".user-id");
+    // handleRemoveOnClick = (card) =>
+    // {
+    //     const userID = document.querySelector(".user-id");
 
-        api.removeFavorites(userID, card.innerText);
-    }
+    //     api.removeFavorites(userID, card.innerText);
+    // }
 
     renderInnerHTML = (area) =>
     {
@@ -48,12 +48,13 @@ class FavoritesCard
                 <div class="favorite-site-name">
                     ${area.facility_name}
                 </div>
-                <div class="remove-button">
-                    <button class="remove-btn button is-danger" ></button>
-                </div> 
-        `
-        // Will add to code later               
-        // link to each facility with more information
-        ;
+                `
+                ;
+                // Will add to code later:               
+                // link to each facility with more information
+                // 
+                // <div class="remove-button">
+                //      <button class="remove-btn button is-danger" ></button>
+                // </div> 
     }
 }
