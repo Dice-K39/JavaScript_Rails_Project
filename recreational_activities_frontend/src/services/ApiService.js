@@ -23,7 +23,7 @@ class ApiService
             .then(res => 
             {
                 if (res.ok)
-                {debugger
+                {
                     this.constructor.errorMessageContainer.innerHTML = "";
                     return res.json();
                 }
@@ -55,7 +55,7 @@ class ApiService
             .then(res => 
             {
                 if (res.ok)
-                {debugger
+                {
                     this.constructor.errorMessageContainer.innerHTML = "";
                     return res.json();
                 }

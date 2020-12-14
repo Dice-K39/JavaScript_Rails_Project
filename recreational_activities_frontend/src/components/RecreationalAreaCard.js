@@ -9,17 +9,17 @@ class RecreationalAreaCard
         data.RECDATA.forEach(activity => new RecreationalAreaCard(activity));
     }
     
-    constructor(activity)
+    constructor(area)
     {
-        this.activity = activity;
-        this.render(activity);
+        this.area = area;
+        this.render(area);
     }
 
     render()
     {
         const card = document.createElement("div");
 
-        if (this.activity.FacilityDescription !== "")
+        if (this.area.FacilityDescription !== "")
         {
             card.className = "card";
             this.card = card;
@@ -36,7 +36,7 @@ class RecreationalAreaCard
 
     handleBtnOnClick()
     {
-        const recreationalArea = this.activity;
+        const recreationalArea = this.area;
         const userID = document.querySelector(".user-id").value; // Not safe to send around user_id from database. Future iteration of app will use secure method.
 
         const data =
@@ -57,8 +57,8 @@ class RecreationalAreaCard
     {
         this.card.innerHTML =`
             <div class="content">
-                <h2>${this.activity.FacilityName} <button class="favorite-btn button is-primary">Favorite</button></h2>
-                ${this.activity.FacilityDescription}
+                <h2>${this.area.FacilityName} <button class="favorite-btn button is-primary">Favorite</button></h2>
+                ${this.area.FacilityDescription}
                 <hr>
             </div>
         `
