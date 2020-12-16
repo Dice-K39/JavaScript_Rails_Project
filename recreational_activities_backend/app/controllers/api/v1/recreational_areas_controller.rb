@@ -10,7 +10,7 @@ class Api::V1::RecreationalAreasController < ApplicationController
     def create
         rec_area = @user.recreational_areas.new(rec_area_params)
 
-        if (Api::V1::RecreationalArea.where(facility_name: rec_area.facility_name).exists?)
+        if (Api::V1::RecreationalArea.where(facility_name: rec_area.facility_name, user_id: @user).exists?)
             render json: rec_area.errors, status: :conflict
         else
             if (rec_area.save)
