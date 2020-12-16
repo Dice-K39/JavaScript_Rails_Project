@@ -67,10 +67,12 @@ class User
             const searchForm = document.querySelector(".search-section");
             const displaySearch = document.querySelector(".display-search");
             const favoritedSection = document.querySelector(".favorited-section");
+            const errorMessageContainer = document.querySelector(".error-message");
             
             searchForm.innerHTML = "";
             displaySearch.innerHTML = "";
             favoritedSection.innerHTML = "";
+            errorMessageContainer.innerHTML = "";
             
             new User();
         }
