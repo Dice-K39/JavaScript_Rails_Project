@@ -1,5 +1,5 @@
 class Api::V1::RecreationalAreasController < ApplicationController
-    before_action :find_user
+    before_action :find_user, only: [:index, :create, :delete]
     
     def index
         rec_areas = @user.recreational_areas
@@ -10,17 +10,20 @@ class Api::V1::RecreationalAreasController < ApplicationController
     def create
         rec_area = @user.recreational_areas.new(rec_area_params)
 
-        if(rec_area.save)
-            render json: rec_area, except: [:created_at, :updated_at]
+        if (Api::V1::RecreationalArea.where(facility_name: rec_area.facility_name).exists?)
+            render json: rec_area.errors, status: :conflict
         else
-            render json: rec_area.errors, status: :bad_request
+            if (rec_area.save)
+                render json: rec_area, except: [:created_at, :updated_at]
+            else
+                render json: rec_area.errors, status: :conflict
+            end
         end
     end
 
-    def destroy
-        rec_area = @user.recreational_areas.find_by_facility_name(params[:facility_name])
-        byebug
-    end
+    # def destroy
+    #     byebug
+    # end
 
     private
 

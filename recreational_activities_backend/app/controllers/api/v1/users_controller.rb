@@ -3,10 +3,9 @@ class Api::V1::UsersController < ApplicationController
         if params[:username]
             user = Api::V1::User.find_by_username(params[:username])
         end
-
             
         if user.nil?
-            render json: user, status: :bad_request
+            render json: user, status: :conflict
         else
             render json: user, except: [:created_at, :updated_at]
         end
@@ -18,7 +17,7 @@ class Api::V1::UsersController < ApplicationController
         if (user.save)
             render json: user, except: [:created_at, :updated_at]
         else
-            render json: user.errors, status: :bad_request
+            render json: user.errors, status: :conflict
         end
     end
 

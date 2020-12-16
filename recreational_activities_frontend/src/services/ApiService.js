@@ -3,11 +3,6 @@ class ApiService
     static container = document.querySelector(".display-search");
     static errorMessageContainer = document.querySelector(".error-message")
 
-    printError = (err) =>
-    {debugger
-        this.constructor.errorMessageContainer.innerHTML = `${err}`
-    }
-
     constructor(baseURL)
     {
         this.baseURL = baseURL;
@@ -29,7 +24,7 @@ class ApiService
                 }
                 else
                 {
-                    throw new Error("Username does not exist.");
+                    throw new Error(`${res.status} ${res.statusText}: Username does not exist.`);
                 }
             })
             .then(data => new User(data))
@@ -61,7 +56,7 @@ class ApiService
                 }
                 else
                 {
-                    throw new Error("Username not available.");
+                    throw new Error(`${res.status} ${res.statusText}: Username not available.`);
                 }
             })
             .then(data => new User(data))
@@ -82,6 +77,8 @@ class ApiService
 
     saveFavoriteArea = (areaData) =>
     {
+        this.constructor.errorMessageContainer.innerHTML = "";
+
         const url = new URL(this.baseURL + `/users/${areaData.user_id}/recreational_areas`);
         const configObj =
         {
@@ -103,11 +100,11 @@ class ApiService
                 }
                 else
                 {
-                    throw new Error("Recreational area was not saved.");
+                    throw new Error(`${res.status} ${res.statusText}: Recreational area was not saved to favorites.`);
                 }
             })
             .then(data => new FavoritesCard(data))
-            .catch(err => this.constructor.printError(err));
+            .catch(err => this.printError(err));
     }
 
     getFavorites = (user) =>
@@ -123,6 +120,11 @@ class ApiService
         fetch(url)
             .then(res => res.json())
             .then(data => new FavoritesCard(data));
+    }
+
+    printError = (err) =>
+    {
+        this.constructor.errorMessageContainer.innerHTML = `${err}`
     }
 
     // removeFavorites = (area) =>
