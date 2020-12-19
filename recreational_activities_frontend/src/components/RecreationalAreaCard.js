@@ -6,7 +6,7 @@ class RecreationalAreaCard
     {
         this.container.innerHTML = '';
 
-        data.RECDATA.forEach(activity => new RecreationalAreaCard(activity));
+        data.RECDATA.forEach(area => new RecreationalAreaCard(area));
     }
     
     constructor(area)
@@ -18,15 +18,27 @@ class RecreationalAreaCard
     render()
     {
         const card = document.createElement("div");
+        const filterQuery = document.getElementById("area-filter-by-first-letter").value;
 
-        if (this.area.FacilityDescription !== "")
-        {
-            card.className = "card";
-            this.card = card;
-            this.renderInnerHTML();
-            this.attachEventListener(card);
-            this.constructor.container.append(card);
+        if (filterQuery !== "")
+        {    if (this.area.FacilityName.split("")[0] === filterQuery.toUpperCase())
+            {
+                this.areaCardConstructor(card);
+            }
         }
+        else
+        {
+            this.areaCardConstructor(card);
+        }
+    }
+
+    areaCardConstructor = (card) => 
+    {
+        card.className = "card";
+        this.card = card;
+        this.renderInnerHTML();
+        this.attachEventListener(card);
+        this.constructor.container.append(card);
     }
 
     attachEventListener = (card) =>

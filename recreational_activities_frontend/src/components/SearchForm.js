@@ -19,7 +19,7 @@ class SearchForm
         {
             event.preventDefault();
 
-            api.searchActivities();
+            api.searchAreas();
         }
         
         if (event.target.id === "reset")
@@ -117,12 +117,19 @@ class SearchForm
                     </select>
                 </div>
 
-                <br />
+            <br />
 
-                <div class="buttons">
-                    <button class="button is-primary" id="submit">Submit</button>
-                    <button class="button is-danger" id="reset" type="reset">Reset</button>
+            <label>Filter by First Letter of Area Name:</label>
+                <div class"control">
+                    <input class="input" id="area-filter-by-first-letter" name="area-filter-by-first-letter" type="text">
                 </div>
+
+            <br />
+
+            <div class="buttons">
+                <button class="button is-primary" id="submit">Submit</button>
+                <button class="button is-danger" id="reset" type="reset">Reset</button>
+            </div>
         `;
     };
 }

@@ -22277,3 +22277,675 @@ Processing by Api::V1::RecreationalAreasController#create as JSON
 Completed 409 Conflict in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 1671)
 
 
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-16 18:32:40 -0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.5ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 409 Conflict in 7ms (Views: 0.2ms | ActiveRecord: 0.7ms | Allocations: 2784)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-12-16 18:32:47 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Dice", "user"=>{"username"=>"Dice"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:17:in `create'
+  [1m[36mApi::V1::User Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:17:in `create'
+  [1m[36mApi::V1::User Create (1.2ms)[0m  [1m[32mINSERT INTO "api_v1_users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Dice"], ["created_at", "2020-12-16 23:32:47.224078"], ["updated_at", "2020-12-16 23:32:47.224078"]]
+  ↳ app/controllers/api/v1/users_controller.rb:17:in `create'
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:17:in `create'
+Completed 200 OK in 10ms (Views: 0.6ms | ActiveRecord: 2.3ms | Allocations: 6467)
+
+
+Started GET "/api/v1/users/1/recreational_areas?user_id=1" for ::1 at 2020-12-16 18:32:47 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:35:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.4ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 35ms (Views: 10.1ms | ActiveRecord: 1.2ms | Allocations: 4644)
+
+
+Started GET "/api/v1/search?keyword_query=camping&activity_query=&state=GA" for ::1 at 2020-12-16 18:33:10 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"camping", "activity_query"=>"", "state"=>"GA"}
+Completed 200 OK in 1598ms (Views: 26.8ms | ActiveRecord: 0.0ms | Allocations: 23887)
+
+
+Started POST "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-16 18:33:22 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"user_id"=>"1", "facility_name"=>"BOLDING MILL", "facility_description"=>"<h2>Overview</h2>\nBolding Mill Campground is an excellent choice for camping on Lake Sidney Lanier, offering plenty of comfortable amenities in addition to a well-kept facility.  <br/><br/>\nVisitors will enjoy fishing and boating on the lake as well as the lush picnic area and large swimming beach, perfect for families.<br/><br/><h2>Recreation</h2>\nThe large swimming beach is concrete, which provides a gentle slope and ADA access for visitors. An on-site boat ramp and fishing pier provide access to many water activities.\nLand-based recreation features picnic shelters and playground area near the front of the park.\n<h2>Facilities</h2>\nThe campground offers 88 sites with electric and water hookups (no sewer). There's also nine tent-only primitive sites.  Campground conveniences include a laundry facility, fishing pier, and restroom/showerhouses.\nFacilities outside of the campground but within Bolding Mill park include the playground, swim beach and boat ramp. There's also two dump stations, inside and outside the campground which rotate use per year.<h2>Natural Features</h2>\nLake Lanier spans 38,000 surface water acres and 17,000 land acres across five counties in northern Georgia. The reservoir is known for its aqua-blue coloring and spectacular scenery in the forested foothills of the Blue Ridge Mountains.   \nBolding Mill campground is on the northwest side of the lake, which has plenty of grass and shade for comfortable camping.\n<h2>Nearby Attractions</h2>\nHead to the Don Carter State Park for birding and hiking opportunities. Another idea is the Sawnee Mountain Preserve, with breathtaking scenic overlooks, hiking opportunities and rock climbing.\nNearby Gainesville, Dawsonville and Dalonega provide many different experiences and opportunities.<h2>Charges &amp; Cancellations</h2>\nCancellations must be made via the online/phone reservation system.", "facility_id"=>"232531", "facility_directions"=>"From Atlanta, GA, take SR 400 north to Exit 17, turn right on GA Hwy\n306, turn right on GA Hwy 53, turn left on Old Sardis Rd, and turn left\non Chestatee Rd.  Follow into campground.", "facility_email"=>"Brent.J.Cossette@sam.usace.army.mil", "facility_phone"=>"770-534-6960", "recreational_area"=>{"facility_name"=>"BOLDING MILL", "facility_description"=>"<h2>Overview</h2>\nBolding Mill Campground is an excellent choice for camping on Lake Sidney Lanier, offering plenty of comfortable amenities in addition to a well-kept facility.  <br/><br/>\nVisitors will enjoy fishing and boating on the lake as well as the lush picnic area and large swimming beach, perfect for families.<br/><br/><h2>Recreation</h2>\nThe large swimming beach is concrete, which provides a gentle slope and ADA access for visitors. An on-site boat ramp and fishing pier provide access to many water activities.\nLand-based recreation features picnic shelters and playground area near the front of the park.\n<h2>Facilities</h2>\nThe campground offers 88 sites with electric and water hookups (no sewer). There's also nine tent-only primitive sites.  Campground conveniences include a laundry facility, fishing pier, and restroom/showerhouses.\nFacilities outside of the campground but within Bolding Mill park include the playground, swim beach and boat ramp. There's also two dump stations, inside and outside the campground which rotate use per year.<h2>Natural Features</h2>\nLake Lanier spans 38,000 surface water acres and 17,000 land acres across five counties in northern Georgia. The reservoir is known for its aqua-blue coloring and spectacular scenery in the forested foothills of the Blue Ridge Mountains.   \nBolding Mill campground is on the northwest side of the lake, which has plenty of grass and shade for comfortable camping.\n<h2>Nearby Attractions</h2>\nHead to the Don Carter State Park for birding and hiking opportunities. Another idea is the Sawnee Mountain Preserve, with breathtaking scenic overlooks, hiking opportunities and rock climbing.\nNearby Gainesville, Dawsonville and Dalonega provide many different experiences and opportunities.<h2>Charges &amp; Cancellations</h2>\nCancellations must be made via the online/phone reservation system.", "facility_id"=>"232531", "facility_directions"=>"From Atlanta, GA, take SR 400 north to Exit 17, turn right on GA Hwy\n306, turn right on GA Hwy 53, turn left on Old Sardis Rd, and turn left\non Chestatee Rd.  Follow into campground.", "facility_email"=>"Brent.J.Cossette@sam.usace.army.mil", "facility_phone"=>"770-534-6960", "user_id"=>"1"}}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:35:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."facility_name" = ? AND "api_v1_recreational_areas"."user_id" = ? LIMIT ?[0m  [["facility_name", "BOLDING MILL"], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:16:in `create'
+  [1m[36mApi::V1::RecreationalArea Create (0.4ms)[0m  [1m[32mINSERT INTO "api_v1_recreational_areas" ("facility_name", "facility_description", "created_at", "updated_at", "facility_id", "facility_directions", "facility_email", "facility_phone", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["facility_name", "BOLDING MILL"], ["facility_description", "<h2>Overview</h2>\nBolding Mill Campground is an excellent choice for camping on Lake Sidney Lanier, offering plenty of comfortable amenities in addition to a well-kept facility.  <br/><br/>\nVisitors will enjoy fishing and boating on the lake as well as the lush picnic area and large swimming beach, perfect for families.<br/><br/><h2>Recreation</h2>\nThe large swimming beach is concrete, which provides a gentle slope and ADA access for visitors. An on-site boat ramp and fishing pier provide access to many water activities.\nLand-based recreation features picnic shelters and playground area near the front of the park.\n<h2>Facilities</h2>\nThe campground offers 88 sites with electric and water hookups (no sewer). There's also nine tent-only primitive sites.  Campground conveniences include a laundry facility, fishing pier, and restroom/showerhouses.\nFacilities outside of the campground but within Bolding Mill park include the playground, swim beach and boat ramp. There's also two dump stations, inside and outside the campground which rotate use per year.<h2>Natural Features</h2>\nLake Lanier spans 38,000 surface water acres and 17,000 land acres across five counties in northern Georgia. The reservoir is known for its aqua-blue coloring and spectacular scenery in the forested foothills of the Blue Ridge Mountains.   \nBolding Mill campground is on the northwest side of the lake, which has plenty of grass and shade for comfortable camping.\n<h2>Nearby Attractions</h2>\nHead to the Don Carter State Park for birding and hiking opportunities. Another idea is the Sawnee Mountain Preserve, with breathtaking scenic overlooks, hiking opportunities and rock climbing.\nNearby Gainesville, Dawsonville and Dalonega provide many different experiences and opportunities.<h2>Charges &amp; Cancellations</h2>\nCancellations must be made via the online/phone reservation system."], ["created_at", "2020-12-16 23:33:22.809546"], ["updated_at", "2020-12-16 23:33:22.809546"], ["facility_id", "232531"], ["facility_directions", "From Atlanta, GA, take SR 400 north to Exit 17, turn right on GA Hwy\n306, turn right on GA Hwy 53, turn left on Old Sardis Rd, and turn left\non Chestatee Rd.  Follow into campground."], ["facility_email", "Brent.J.Cossette@sam.usace.army.mil"], ["facility_phone", "770-534-6960"], ["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:16:in `create'
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:16:in `create'
+Completed 200 OK in 35ms (Views: 0.4ms | ActiveRecord: 2.2ms | Allocations: 10761)
+
+
+Started POST "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-16 18:33:28 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"user_id"=>"1", "facility_name"=>"CONEROSS PARK", "facility_description"=>"<h2>Overview</h2>\n  \nConeross Campground is a moderately sloping, heavily wooded 136 acre site of mixed hardwoods and pines. The site presently offers camping and boat launching facilities to include: 1 gatehouse/entrance, 2 park attendant campsites, 106 public use campsites (94 with full water and electric hookups and 12 primitive sites with impact pad only), 4 comfort stations with showers, 2 dump stations, 1 boat ramp, 1 courtesy dock, 4 playgrounds, 2 designated swim areas/beaches, and associated paved roads and parking areas throughout. <h2>Recreation</h2>\nFishing is one of the most popular activities at the lake. Sought-after species include largemouth bass, bream, crappie, catfish, striped bass and hybrid bass. \n<br/><br/>\nThe lake appeals to boaters of all kinds, whether their specialty is canoeing, sailing or motor boating. Coves and areas of quiet water provide water skiers with excellent surfaces.\n<br/><br/>\nSwimmers will find sand beaches and designated swim areas along the shoreline. <h2>Facilities</h2>\n The site presently offers camping and boat launching facilities to include: 1 gatehouse/entrance, 2 park attendant campsites, 106 public use campsites (94 with full water and electric hookups and 12 primitive sites with impact pad only), 4 comfort stations with showers, 2 dump stations, 1 boat ramp, 1 courtesy dock, 4 playgrounds, 2 designated swim areas/beaches, and associated paved roads and parking areas throughout.  <h2>Natural Features</h2>\n \nHartwell Lake is a man-made lake bordering Georgia and South Carolina on the Savannah, Tugaloo and Seneca Rivers. The dam and lake area boasts 8 campgrounds and 11 day-use facilities that are operated by the US Army Corps of Engineers. \nThe Hartwell Project was originally authorized for hydropower, flood control, and navigation. Later, recreation, water quality, water supply, and fish and wildlife management were added. \nSurrounding vegetation allows for plenty of shade, and the 962 miles of shoreline provide numerous swimming beaches, picnic areas and boat ramps. \n\n<h2>Nearby Attractions</h2>\nThe campground is a short drive away from Clemson, South Carolina and Clemson University, offering additional tourism opportunities, along with grocery stores, gas stations and restaurants.<h2>Charges &amp; Cancellations</h2>\n\n- Once your reservation has been created, there will be a $10.00 fee to cancel and a $10.00 fee to change your site or dates.\n- Cancellations made the day before, or up to the day after your arrival date will also be charged the first night use fee.\n- Reserved campsites will be held until check out time ( 2 p.m.) on the day following your scheduled arrival date.  If you do not arrive at campground by 2 p.m. to fulfill your reservation, your reservation will be cancelled and you will be assessed a $20 service fee and forfeit the first night use fee.  \n- If your reservation is for one night and you have been charged the first nights use fee, there is no $10 service fee.\nRefunds: \n- To insure fairness for all Recreation.gov customers, any reservation with departure dates outside the 6 or 12 month maximum window cannot be changed or cancelled until 18 days after the reservation is made.\n- Refunds must be requested no later than 14 days after scheduled departure date.  Refunds may be requested through NNRS Customer Service at 888-448-1474.  Refunds for bank card payments will be issued as a credit to the original bank card.  Cash and check purchases will be refunded by check and may take up to 8 weekds for approval and processing.  ", "facility_id"=>"232555", "facility_directions"=>"From Interstate 85 in South Carolina, take Exit 11 onto Highway 24 towards Townville. About 1.5 miles past Townville, turn right onto Coneross Creek Road. Follow signs to the park entrance.  699 CONEROSS PARK ROAD, Townville, SC 29689\n", "facility_email"=>"", "facility_phone"=>"888-893-0678 (HARTWELL PROJECT OFFICE)", "recreational_area"=>{"facility_name"=>"CONEROSS PARK", "facility_description"=>"<h2>Overview</h2>\n  \nConeross Campground is a moderately sloping, heavily wooded 136 acre site of mixed hardwoods and pines. The site presently offers camping and boat launching facilities to include: 1 gatehouse/entrance, 2 park attendant campsites, 106 public use campsites (94 with full water and electric hookups and 12 primitive sites with impact pad only), 4 comfort stations with showers, 2 dump stations, 1 boat ramp, 1 courtesy dock, 4 playgrounds, 2 designated swim areas/beaches, and associated paved roads and parking areas throughout. <h2>Recreation</h2>\nFishing is one of the most popular activities at the lake. Sought-after species include largemouth bass, bream, crappie, catfish, striped bass and hybrid bass. \n<br/><br/>\nThe lake appeals to boaters of all kinds, whether their specialty is canoeing, sailing or motor boating. Coves and areas of quiet water provide water skiers with excellent surfaces.\n<br/><br/>\nSwimmers will find sand beaches and designated swim areas along the shoreline. <h2>Facilities</h2>\n The site presently offers camping and boat launching facilities to include: 1 gatehouse/entrance, 2 park attendant campsites, 106 public use campsites (94 with full water and electric hookups and 12 primitive sites with impact pad only), 4 comfort stations with showers, 2 dump stations, 1 boat ramp, 1 courtesy dock, 4 playgrounds, 2 designated swim areas/beaches, and associated paved roads and parking areas throughout.  <h2>Natural Features</h2>\n \nHartwell Lake is a man-made lake bordering Georgia and South Carolina on the Savannah, Tugaloo and Seneca Rivers. The dam and lake area boasts 8 campgrounds and 11 day-use facilities that are operated by the US Army Corps of Engineers. \nThe Hartwell Project was originally authorized for hydropower, flood control, and navigation. Later, recreation, water quality, water supply, and fish and wildlife management were added. \nSurrounding vegetation allows for plenty of shade, and the 962 miles of shoreline provide numerous swimming beaches, picnic areas and boat ramps. \n\n<h2>Nearby Attractions</h2>\nThe campground is a short drive away from Clemson, South Carolina and Clemson University, offering additional tourism opportunities, along with grocery stores, gas stations and restaurants.<h2>Charges &amp; Cancellations</h2>\n\n- Once your reservation has been created, there will be a $10.00 fee to cancel and a $10.00 fee to change your site or dates.\n- Cancellations made the day before, or up to the day after your arrival date will also be charged the first night use fee.\n- Reserved campsites will be held until check out time ( 2 p.m.) on the day following your scheduled arrival date.  If you do not arrive at campground by 2 p.m. to fulfill your reservation, your reservation will be cancelled and you will be assessed a $20 service fee and forfeit the first night use fee.  \n- If your reservation is for one night and you have been charged the first nights use fee, there is no $10 service fee.\nRefunds: \n- To insure fairness for all Recreation.gov customers, any reservation with departure dates outside the 6 or 12 month maximum window cannot be changed or cancelled until 18 days after the reservation is made.\n- Refunds must be requested no later than 14 days after scheduled departure date.  Refunds may be requested through NNRS Customer Service at 888-448-1474.  Refunds for bank card payments will be issued as a credit to the original bank card.  Cash and check purchases will be refunded by check and may take up to 8 weekds for approval and processing.  ", "facility_id"=>"232555", "facility_directions"=>"From Interstate 85 in South Carolina, take Exit 11 onto Highway 24 towards Townville. About 1.5 miles past Townville, turn right onto Coneross Creek Road. Follow signs to the park entrance.  699 CONEROSS PARK ROAD, Townville, SC 29689\n", "facility_email"=>"", "facility_phone"=>"888-893-0678 (HARTWELL PROJECT OFFICE)", "user_id"=>"1"}}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:35:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."facility_name" = ? AND "api_v1_recreational_areas"."user_id" = ? LIMIT ?[0m  [["facility_name", "CONEROSS PARK"], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:16:in `create'
+  [1m[36mApi::V1::RecreationalArea Create (1.1ms)[0m  [1m[32mINSERT INTO "api_v1_recreational_areas" ("facility_name", "facility_description", "created_at", "updated_at", "facility_id", "facility_directions", "facility_email", "facility_phone", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["facility_name", "CONEROSS PARK"], ["facility_description", "<h2>Overview</h2>\n  \nConeross Campground is a moderately sloping, heavily wooded 136 acre site of mixed hardwoods and pines. The site presently offers camping and boat launching facilities to include: 1 gatehouse/entrance, 2 park attendant campsites, 106 public use campsites (94 with full water and electric hookups and 12 primitive sites with impact pad only), 4 comfort stations with showers, 2 dump stations, 1 boat ramp, 1 courtesy dock, 4 playgrounds, 2 designated swim areas/beaches, and associated paved roads and parking areas throughout. <h2>Recreation</h2>\nFishing is one of the most popular activities at the lake. Sought-after species include largemouth bass, bream, crappie, catfish, striped bass and hybrid bass. \n<br/><br/>\nThe lake appeals to boaters of all kinds, whether their specialty is canoeing, sailing or motor boating. Coves and areas of quiet water provide water skiers with excellent surfaces.\n<br/><br/>\nSwimmers will find sand beaches and designated swim areas along the shoreline. <h2>Facilities</h2>\n The site presently offers camping and boat launching facilities to include: 1 gatehouse/entrance, 2 park attendant campsites, 106 public use campsites (94 with full water and electric hookups and 12 primitive sites with impact pad only), 4 comfort stations with showers, 2 dump stations, 1 boat ramp, 1 courtesy dock, 4 playgrounds, 2 designated swim areas/beaches, and associated paved roads and parking areas throughout.  <h2>Natural Features</h2>\n \nHartwell Lake is a man-made lake bordering Georgia and South Carolina on the Savannah, Tugaloo and Seneca Rivers. The dam and lake area boasts 8 campgrounds and 11 day-use facilities that are operated by the US Army Corps of Engineers. \nThe Hartwell Project was originally authorized for hydropower, flood control, and navigation. Later, recreation, water quality, water supply, and fish and wildlife management were added. \nSurrounding vegetation allows for plenty of shade, and the 962 miles of shoreline provide numerous swimming beaches, picnic areas and boat ramps. \n\n<h2>Nearby Attractions</h2>\nThe campground is a short drive away from Clemson, South Carolina and Clemson University, offering additional tourism opportunities, along with grocery stores, gas stations and restaurants.<h2>Charges &amp; Cancellations</h2>\n\n- Once your reservation has been created, there will be a $10.00 fee to cancel and a $10.00 fee to change your site or dates.\n- Cancellations made the day before, or up to the day after your arrival date will also be charged the first night use fee.\n- Reserved campsites will be held until check out time ( 2 p.m.) on the day following your scheduled arrival date.  If you do not arrive at campground by 2 p.m. to fulfill your reservation, your reservation will be cancelled and you will be assessed a $20 service fee and forfeit the first night use fee.  \n- If your reservation is for one night and you have been charged the first nights use fee, there is no $10 service fee.\nRefunds: \n- To insure fairness for all Recreation.gov customers, any reservation with departure dates outside the 6 or 12 month maximum window cannot be changed or cancelled until 18 days after the reservation is made.\n- Refunds must be requested no later than 14 days after scheduled departure date.  Refunds may be requested through NNRS Customer Service at 888-448-1474.  Refunds for bank card payments will be issued as a credit to the original bank card.  Cash and check purchases will be refunded by check and may take up to 8 weekds for approval and processing.  "], ["created_at", "2020-12-16 23:33:28.620571"], ["updated_at", "2020-12-16 23:33:28.620571"], ["facility_id", "232555"], ["facility_directions", "From Interstate 85 in South Carolina, take Exit 11 onto Highway 24 towards Townville. About 1.5 miles past Townville, turn right onto Coneross Creek Road. Follow signs to the park entrance.  699 CONEROSS PARK ROAD, Townville, SC 29689\n"], ["facility_email", ""], ["facility_phone", "888-893-0678 (HARTWELL PROJECT OFFICE)"], ["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:16:in `create'
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:16:in `create'
+Completed 200 OK in 9ms (Views: 0.5ms | ActiveRecord: 2.2ms | Allocations: 4019)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-16 18:33:36 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 694)
+
+
+Started GET "/api/v1/users/1/recreational_areas?user_id=1" for ::1 at 2020-12-16 18:33:36 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:35:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.2ms | Allocations: 1922)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-16 18:43:54 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 716)
+
+
+Started GET "/api/v1/users/1/recreational_areas?user_id=1" for ::1 at 2020-12-16 18:43:54 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.3ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:35:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.3ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 12ms (Views: 9.4ms | ActiveRecord: 0.6ms | Allocations: 1953)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-16 18:57:57 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 361ms (Views: 8.6ms | ActiveRecord: 0.0ms | Allocations: 21516)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-17 21:03:36 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.2ms | Allocations: 706)
+
+
+Started GET "/api/v1/users/1/recreational_areas?user_id=1" for ::1 at 2020-12-17 21:03:36 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:35:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.6ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 12ms (Views: 9.2ms | ActiveRecord: 0.8ms | Allocations: 1952)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-17 21:03:38 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 510ms (Views: 11.5ms | ActiveRecord: 0.0ms | Allocations: 21482)
+
+
+Started POST "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-17 21:03:58 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"user_id"=>"1", "facility_name"=>"Red Rock Canyon Backcountry Late Exit Pass", "facility_description"=>"", "facility_id"=>"f4d17453-0cba-11eb-b57c-4a047fce61ec", "facility_directions"=>"", "facility_email"=>"", "facility_phone"=>"", "recreational_area"=>{"facility_name"=>"Red Rock Canyon Backcountry Late Exit Pass", "facility_description"=>"", "facility_id"=>"f4d17453-0cba-11eb-b57c-4a047fce61ec", "facility_directions"=>"", "facility_email"=>"", "facility_phone"=>"", "user_id"=>"1"}}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:35:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."facility_name" = ? AND "api_v1_recreational_areas"."user_id" = ? LIMIT ?[0m  [["facility_name", "Red Rock Canyon Backcountry Late Exit Pass"], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:16:in `create'
+  [1m[36mApi::V1::RecreationalArea Create (0.3ms)[0m  [1m[32mINSERT INTO "api_v1_recreational_areas" ("facility_name", "facility_description", "created_at", "updated_at", "facility_id", "facility_directions", "facility_email", "facility_phone", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["facility_name", "Red Rock Canyon Backcountry Late Exit Pass"], ["facility_description", ""], ["created_at", "2020-12-18 02:03:58.160717"], ["updated_at", "2020-12-18 02:03:58.160717"], ["facility_id", "f4d17453-0cba-11eb-b57c-4a047fce61ec"], ["facility_directions", ""], ["facility_email", ""], ["facility_phone", ""], ["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:16:in `create'
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:16:in `create'
+Completed 200 OK in 14ms (Views: 0.5ms | ActiveRecord: 1.7ms | Allocations: 3983)
+
+
+Started POST "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-17 21:03:58 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"user_id"=>"1", "facility_name"=>"Red Rock Canyon Backcountry Late Exit Pass", "facility_description"=>"", "facility_id"=>"f4d17453-0cba-11eb-b57c-4a047fce61ec", "facility_directions"=>"", "facility_email"=>"", "facility_phone"=>"", "recreational_area"=>{"facility_name"=>"Red Rock Canyon Backcountry Late Exit Pass", "facility_description"=>"", "facility_id"=>"f4d17453-0cba-11eb-b57c-4a047fce61ec", "facility_directions"=>"", "facility_email"=>"", "facility_phone"=>"", "user_id"=>"1"}}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:35:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."facility_name" = ? AND "api_v1_recreational_areas"."user_id" = ? LIMIT ?[0m  [["facility_name", "Red Rock Canyon Backcountry Late Exit Pass"], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+Completed 409 Conflict in 3ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 1685)
+
+
+Started POST "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-17 21:13:50 -0500
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"user_id"=>"1", "facility_name"=>"Red Rock Canyon Backcountry Late Exit Pass", "facility_description"=>"", "facility_id"=>"f4d17453-0cba-11eb-b57c-4a047fce61ec", "facility_directions"=>"", "facility_email"=>"", "facility_phone"=>"", "recreational_area"=>{"facility_name"=>"Red Rock Canyon Backcountry Late Exit Pass", "facility_description"=>"", "facility_id"=>"f4d17453-0cba-11eb-b57c-4a047fce61ec", "facility_directions"=>"", "facility_email"=>"", "facility_phone"=>"", "user_id"=>"1"}}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:35:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."facility_name" = ? AND "api_v1_recreational_areas"."user_id" = ? LIMIT ?[0m  [["facility_name", "Red Rock Canyon Backcountry Late Exit Pass"], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+Completed 409 Conflict in 6ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 1687)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-19 00:36:19 -0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 9ms (Views: 0.4ms | ActiveRecord: 0.6ms | Allocations: 5511)
+
+
+Started GET "/api/v1/users/1/recreational_areas?user_id=1" for ::1 at 2020-12-19 00:36:19 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.6ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:35:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.2ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 51ms (Views: 31.7ms | ActiveRecord: 1.6ms | Allocations: 11898)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-19 00:37:11 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.1ms | Allocations: 707)
+
+
+Started GET "/api/v1/users/1/recreational_areas?user_id=1" for ::1 at 2020-12-19 00:37:11 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:35:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.2ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 6ms (Views: 3.0ms | ActiveRecord: 0.4ms | Allocations: 2098)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-19 00:37:53 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 707)
+
+
+Started GET "/api/v1/users/1/recreational_areas?user_id=1" for ::1 at 2020-12-19 00:37:53 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:35:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.2ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 8ms (Views: 4.4ms | ActiveRecord: 0.3ms | Allocations: 2098)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-19 00:54:04 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 715)
+
+
+Started GET "/api/v1/users/1/recreational_areas?user_id=1" for ::1 at 2020-12-19 00:54:04 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:35:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.2ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 7ms (Views: 3.1ms | ActiveRecord: 0.4ms | Allocations: 2136)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=&area-filter-by-first-letter=t" for ::1 at 2020-12-19 00:54:15 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>"", "area-filter-by-first-letter"=>"t"}
+Completed 200 OK in 493ms (Views: 11.0ms | ActiveRecord: 0.0ms | Allocations: 22192)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=&area-filter-by-first-letter=t" for ::1 at 2020-12-19 00:54:24 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>"", "area-filter-by-first-letter"=>"t"}
+Completed 200 OK in 344ms (Views: 10.7ms | ActiveRecord: 0.0ms | Allocations: 21486)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-19 01:01:47 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 706)
+
+
+Started GET "/api/v1/users/1/recreational_areas?user_id=1" for ::1 at 2020-12-19 01:01:48 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:35:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.2ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 9ms (Views: 6.1ms | ActiveRecord: 0.5ms | Allocations: 2135)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=&area-filter-by-first-letter=" for ::1 at 2020-12-19 01:01:50 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>"", "area-filter-by-first-letter"=>""}
+Completed 200 OK in 516ms (Views: 9.7ms | ActiveRecord: 0.0ms | Allocations: 21696)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-19 01:02:36 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas?user_id=1" for ::1 at 2020-12-19 01:02:36 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:35:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 0.4ms | Allocations: 2097)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=&area-filter-by-first-letter=" for ::1 at 2020-12-19 01:02:38 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>"", "area-filter-by-first-letter"=>""}
+Completed 200 OK in 266ms (Views: 9.6ms | ActiveRecord: 0.0ms | Allocations: 21674)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-19 01:10:44 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 705)
+
+
+Started GET "/api/v1/users/1/recreational_areas?user_id=1" for ::1 at 2020-12-19 01:10:44 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.3ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:35:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.3ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 6ms (Views: 3.2ms | ActiveRecord: 0.5ms | Allocations: 2135)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=&area-filter-by-first-letter=" for ::1 at 2020-12-19 01:10:46 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>"", "area-filter-by-first-letter"=>""}
+Completed 200 OK in 328ms (Views: 10.4ms | ActiveRecord: 0.0ms | Allocations: 21654)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=&area-filter-by-first-letter=r" for ::1 at 2020-12-19 01:10:50 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>"", "area-filter-by-first-letter"=>"r"}
+Completed 200 OK in 317ms (Views: 10.4ms | ActiveRecord: 0.0ms | Allocations: 21657)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=&area-filter-by-first-letter=R" for ::1 at 2020-12-19 01:11:04 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>"", "area-filter-by-first-letter"=>"R"}
+Completed 200 OK in 304ms (Views: 36.3ms | ActiveRecord: 0.0ms | Allocations: 21679)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-19 01:11:28 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas?user_id=1" for ::1 at 2020-12-19 01:11:28 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:35:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.2ms | Allocations: 2097)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=&area-filter-by-first-letter=R" for ::1 at 2020-12-19 01:11:31 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>"", "area-filter-by-first-letter"=>"R"}
+Completed 200 OK in 286ms (Views: 9.0ms | ActiveRecord: 0.0ms | Allocations: 21655)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-19 01:13:08 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas?user_id=1" for ::1 at 2020-12-19 01:13:08 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:35:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.2ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.4ms | Allocations: 2097)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=&area-filter-by-first-letter=" for ::1 at 2020-12-19 01:13:09 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>"", "area-filter-by-first-letter"=>""}
+Completed 200 OK in 462ms (Views: 9.6ms | ActiveRecord: 0.0ms | Allocations: 21656)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=&area-filter-by-first-letter=R" for ::1 at 2020-12-19 01:13:12 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>"", "area-filter-by-first-letter"=>"R"}
+Completed 200 OK in 322ms (Views: 9.8ms | ActiveRecord: 0.0ms | Allocations: 21677)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-19 01:13:33 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas?user_id=1" for ::1 at 2020-12-19 01:13:33 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:35:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.3ms | Allocations: 2097)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=&area-filter-by-first-letter=R" for ::1 at 2020-12-19 01:13:37 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>"", "area-filter-by-first-letter"=>"R"}
+Completed 200 OK in 268ms (Views: 9.1ms | ActiveRecord: 0.0ms | Allocations: 21658)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-19 01:21:59 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.3ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 705)
+
+
+Started GET "/api/v1/users/1/recreational_areas?user_id=1" for ::1 at 2020-12-19 01:22:00 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:35:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.4ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 6ms (Views: 3.9ms | ActiveRecord: 0.5ms | Allocations: 2135)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=&area-filter-by-first-letter=R" for ::1 at 2020-12-19 01:22:02 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>"", "area-filter-by-first-letter"=>"R"}
+Completed 200 OK in 465ms (Views: 31.6ms | ActiveRecord: 0.0ms | Allocations: 21667)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=&area-filter-by-first-letter=T" for ::1 at 2020-12-19 01:22:08 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>"", "area-filter-by-first-letter"=>"T"}
+Completed 200 OK in 294ms (Views: 10.7ms | ActiveRecord: 0.0ms | Allocations: 21691)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=&area-filter-by-first-letter=F" for ::1 at 2020-12-19 01:22:13 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>"", "area-filter-by-first-letter"=>"F"}
+Completed 200 OK in 249ms (Views: 10.0ms | ActiveRecord: 0.0ms | Allocations: 21635)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=&area-filter-by-first-letter=A" for ::1 at 2020-12-19 01:22:17 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>"", "area-filter-by-first-letter"=>"A"}
+Completed 200 OK in 309ms (Views: 9.1ms | ActiveRecord: 0.0ms | Allocations: 21635)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=&area-filter-by-first-letter=%22%22" for ::1 at 2020-12-19 01:22:24 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>"", "area-filter-by-first-letter"=>"\"\""}
+Completed 200 OK in 280ms (Views: 9.5ms | ActiveRecord: 0.0ms | Allocations: 21698)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=&area-filter-by-first-letter=%22+%22" for ::1 at 2020-12-19 01:22:28 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>"", "area-filter-by-first-letter"=>"\" \""}
+Completed 200 OK in 277ms (Views: 9.8ms | ActiveRecord: 0.0ms | Allocations: 21696)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=&area-filter-by-first-letter=" for ::1 at 2020-12-19 01:22:32 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>"", "area-filter-by-first-letter"=>""}
+Completed 200 OK in 286ms (Views: 31.1ms | ActiveRecord: 0.0ms | Allocations: 21658)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-19 01:38:42 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 705)
+
+
+Started GET "/api/v1/users/1/recreational_areas?user_id=1" for ::1 at 2020-12-19 01:38:42 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:35:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.2ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 7ms (Views: 4.8ms | ActiveRecord: 0.4ms | Allocations: 2135)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=&area-filter-by-first-letter=" for ::1 at 2020-12-19 01:38:44 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>"", "area-filter-by-first-letter"=>""}
+Completed 200 OK in 1671ms (Views: 9.1ms | ActiveRecord: 0.0ms | Allocations: 21684)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-19 01:45:25 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 705)
+
+
+Started GET "/api/v1/users/1/recreational_areas?user_id=1" for ::1 at 2020-12-19 01:45:25 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.3ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:35:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.2ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 8ms (Views: 5.4ms | ActiveRecord: 0.5ms | Allocations: 2135)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=&area-filter-by-first-letter=" for ::1 at 2020-12-19 01:45:26 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>"", "area-filter-by-first-letter"=>""}
+Completed 200 OK in 346ms (Views: 9.1ms | ActiveRecord: 0.0ms | Allocations: 21671)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=&area-filter-by-first-letter=R" for ::1 at 2020-12-19 01:45:31 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>"", "area-filter-by-first-letter"=>"R"}
+Completed 200 OK in 347ms (Views: 9.8ms | ActiveRecord: 0.0ms | Allocations: 21665)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=&area-filter-by-first-letter=" for ::1 at 2020-12-19 01:45:51 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>"", "area-filter-by-first-letter"=>""}
+Completed 200 OK in 273ms (Views: 9.7ms | ActiveRecord: 0.0ms | Allocations: 21660)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=&area-filter-by-first-letter=T" for ::1 at 2020-12-19 01:45:54 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>"", "area-filter-by-first-letter"=>"T"}
+Completed 200 OK in 349ms (Views: 29.0ms | ActiveRecord: 0.0ms | Allocations: 21656)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=&area-filter-by-first-letter=A" for ::1 at 2020-12-19 01:46:03 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>"", "area-filter-by-first-letter"=>"A"}
+Completed 200 OK in 282ms (Views: 9.5ms | ActiveRecord: 0.0ms | Allocations: 21678)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-19 01:46:37 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas?user_id=1" for ::1 at 2020-12-19 01:46:37 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:35:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 0.3ms | Allocations: 2097)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=&area-filter-by-first-letter=t" for ::1 at 2020-12-19 01:46:41 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>"", "area-filter-by-first-letter"=>"t"}
+Completed 200 OK in 275ms (Views: 9.9ms | ActiveRecord: 0.0ms | Allocations: 21680)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=&area-filter-by-first-letter=h" for ::1 at 2020-12-19 01:46:48 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>"", "area-filter-by-first-letter"=>"h"}
+Completed 200 OK in 301ms (Views: 9.3ms | ActiveRecord: 0.0ms | Allocations: 21665)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=&area-filter-by-first-letter=" for ::1 at 2020-12-19 01:46:55 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>"", "area-filter-by-first-letter"=>""}
+Completed 200 OK in 263ms (Views: 10.0ms | ActiveRecord: 0.0ms | Allocations: 21665)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-19 01:50:51 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas?user_id=1" for ::1 at 2020-12-19 01:50:51 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:35:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 11ms (Views: 9.0ms | ActiveRecord: 0.3ms | Allocations: 2097)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=&area-filter-by-first-letter=" for ::1 at 2020-12-19 01:50:53 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>"", "area-filter-by-first-letter"=>""}
+Completed 200 OK in 387ms (Views: 28.7ms | ActiveRecord: 0.0ms | Allocations: 21687)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=&area-filter-by-first-letter=t" for ::1 at 2020-12-19 01:50:57 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>"", "area-filter-by-first-letter"=>"t"}
+Completed 200 OK in 347ms (Views: 9.0ms | ActiveRecord: 0.0ms | Allocations: 21703)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=&area-filter-by-first-letter=" for ::1 at 2020-12-19 01:51:01 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>"", "area-filter-by-first-letter"=>""}
+Completed 200 OK in 252ms (Views: 9.6ms | ActiveRecord: 0.0ms | Allocations: 21667)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=camping&state=GA&area-filter-by-first-letter=" for ::1 at 2020-12-19 01:51:15 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"camping", "state"=>"GA", "area-filter-by-first-letter"=>""}
+Completed 200 OK in 358ms (Views: 13.1ms | ActiveRecord: 0.0ms | Allocations: 23774)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=camping&state=GA&area-filter-by-first-letter=a" for ::1 at 2020-12-19 01:51:19 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"camping", "state"=>"GA", "area-filter-by-first-letter"=>"a"}
+Completed 200 OK in 351ms (Views: 13.4ms | ActiveRecord: 0.0ms | Allocations: 23754)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=camping&state=GA&area-filter-by-first-letter=" for ::1 at 2020-12-19 01:51:29 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"camping", "state"=>"GA", "area-filter-by-first-letter"=>""}
+Completed 200 OK in 349ms (Views: 13.2ms | ActiveRecord: 0.0ms | Allocations: 23774)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=camping&state=GA&area-filter-by-first-letter=r" for ::1 at 2020-12-19 01:51:52 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"camping", "state"=>"GA", "area-filter-by-first-letter"=>"r"}
+Completed 200 OK in 381ms (Views: 34.8ms | ActiveRecord: 0.0ms | Allocations: 23891)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=camping&state=GA&area-filter-by-first-letter=w" for ::1 at 2020-12-19 01:52:03 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"camping", "state"=>"GA", "area-filter-by-first-letter"=>"w"}
+Completed 200 OK in 277ms (Views: 14.1ms | ActiveRecord: 0.0ms | Allocations: 23821)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=camping&state=GA&area-filter-by-first-letter=l" for ::1 at 2020-12-19 01:52:15 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"camping", "state"=>"GA", "area-filter-by-first-letter"=>"l"}
+Completed 200 OK in 330ms (Views: 13.5ms | ActiveRecord: 0.0ms | Allocations: 23791)
+
+

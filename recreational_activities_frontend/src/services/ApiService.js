@@ -63,7 +63,7 @@ class ApiService
             .catch(err => this.printError(err));
     }
 
-    searchActivities = () =>
+    searchAreas = () =>
     {
         const formData = new FormData(document.querySelector(".search-form"));
         const url = new URL(this.baseURL + "/search");
