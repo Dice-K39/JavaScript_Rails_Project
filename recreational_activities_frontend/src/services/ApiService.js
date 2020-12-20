@@ -121,8 +121,8 @@ class ApiService
         this.constructor.errorMessageContainer.innerHTML = `${err}`
     }
 
-    // removeFavorites = (area) =>
-    // {
-        
-    // }
+    removeFavorites = (userID, areaID) =>
+    {debugger
+        const url = new URL(this.baseURL + `/users/${userID}/recreational_areas`)
+    }
 }
