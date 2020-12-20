@@ -43,13 +43,13 @@ class User
     {
         if (this.user)
         {
-            const btn = document.getElementById("logout")
+            const btn = document.getElementById("logout");
             
             this.attachEventListener(btn);
         }
         else
         {
-            document.querySelectorAll(".signup-login-button").forEach(btn => this.attachEventListener(btn))
+            document.querySelectorAll(".signup-login-button").forEach(btn => this.attachEventListener(btn));
         }
     }
     
@@ -104,7 +104,7 @@ class User
         const data = 
         {
             username: userName
-        }
+        };
         
         event.preventDefault();
         
@@ -136,7 +136,7 @@ class User
                 <button class="button is-warning" id="signup">Sign Up</button>
             </div>
         `;
-    };
+    }
     
     renderLoggedIn = (data) =>
     {

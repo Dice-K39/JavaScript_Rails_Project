@@ -132,5 +132,5 @@ class SearchForm
                 <button class="button is-danger" id="reset" type="reset">Reset</button>
             </div>
         `;
-    };
+    }
 }

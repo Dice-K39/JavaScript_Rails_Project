@@ -26504,3 +26504,734 @@ Processing by Api::V1::RecreationalAreasController#destroy as JSON
 Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 1.4ms | Allocations: 3389)
 
 
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-20 14:21:53 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 705)
+
+
+Started GET "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-20 14:21:53 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.2ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.3ms | Allocations: 1508)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-20 14:21:55 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 562ms (Views: 20.7ms | ActiveRecord: 0.0ms | Allocations: 21518)
+
+
+Started POST "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-20 14:21:57 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"user_id"=>"1", "facility_name"=>"Red Rock Canyon Backcountry Late Exit Pass", "facility_description"=>"", "facility_id"=>"f4d17453-0cba-11eb-b57c-4a047fce61ec", "facility_directions"=>"", "facility_email"=>"", "facility_phone"=>"", "recreational_area"=>{"facility_name"=>"Red Rock Canyon Backcountry Late Exit Pass", "facility_description"=>"", "facility_id"=>"f4d17453-0cba-11eb-b57c-4a047fce61ec", "facility_directions"=>"", "facility_email"=>"", "facility_phone"=>"", "user_id"=>"1"}}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."facility_name" = ? AND "api_v1_recreational_areas"."user_id" = ? LIMIT ?[0m  [["facility_name", "Red Rock Canyon Backcountry Late Exit Pass"], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:16:in `create'
+  [1m[36mApi::V1::RecreationalArea Create (0.5ms)[0m  [1m[32mINSERT INTO "api_v1_recreational_areas" ("facility_name", "facility_description", "created_at", "updated_at", "facility_id", "facility_directions", "facility_email", "facility_phone", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["facility_name", "Red Rock Canyon Backcountry Late Exit Pass"], ["facility_description", ""], ["created_at", "2020-12-20 19:21:57.315446"], ["updated_at", "2020-12-20 19:21:57.315446"], ["facility_id", "f4d17453-0cba-11eb-b57c-4a047fce61ec"], ["facility_directions", ""], ["facility_email", ""], ["facility_phone", ""], ["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:16:in `create'
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:16:in `create'
+Completed 200 OK in 11ms (Views: 1.2ms | ActiveRecord: 2.5ms | Allocations: 3980)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-20 14:22:31 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-20 14:22:31 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.3ms | Allocations: 1653)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-20 14:22:32 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 365ms (Views: 9.5ms | ActiveRecord: 0.0ms | Allocations: 21458)
+
+
+Started POST "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-20 14:22:34 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"user_id"=>"1", "facility_name"=>"Blackwater National Wildlife Refuge Waterfowl Hunt Permits", "facility_description"=>"", "facility_id"=>"5151515", "facility_directions"=>"", "facility_email"=>"", "facility_phone"=>"", "recreational_area"=>{"facility_name"=>"Blackwater National Wildlife Refuge Waterfowl Hunt Permits", "facility_description"=>"", "facility_id"=>"5151515", "facility_directions"=>"", "facility_email"=>"", "facility_phone"=>"", "user_id"=>"1"}}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."facility_name" = ? AND "api_v1_recreational_areas"."user_id" = ? LIMIT ?[0m  [["facility_name", "Blackwater National Wildlife Refuge Waterfowl Hunt Permits"], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:16:in `create'
+  [1m[36mApi::V1::RecreationalArea Create (0.6ms)[0m  [1m[32mINSERT INTO "api_v1_recreational_areas" ("facility_name", "facility_description", "created_at", "updated_at", "facility_id", "facility_directions", "facility_email", "facility_phone", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["facility_name", "Blackwater National Wildlife Refuge Waterfowl Hunt Permits"], ["facility_description", ""], ["created_at", "2020-12-20 19:22:34.376728"], ["updated_at", "2020-12-20 19:22:34.376728"], ["facility_id", "5151515"], ["facility_directions", ""], ["facility_email", ""], ["facility_phone", ""], ["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:16:in `create'
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:16:in `create'
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 2.0ms | Allocations: 3975)
+
+
+Started DELETE "/api/v1/users/1/recreational_areas/1" for ::1 at 2020-12-20 14:22:58 -0500
+Processing by Api::V1::RecreationalAreasController#destroy as JSON
+  Parameters: {"user_id"=>"1", "id"=>"1", "recreational_area"=>{}}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.2ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ? AND "api_v1_recreational_areas"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:25:in `destroy'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:27:in `destroy'
+  [1m[36mApi::V1::RecreationalArea Destroy (0.3ms)[0m  [1m[31mDELETE FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:27:in `destroy'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:27:in `destroy'
+Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 1.4ms | Allocations: 3414)
+
+
+Started DELETE "/api/v1/users/1/recreational_areas/2" for ::1 at 2020-12-20 14:22:59 -0500
+Processing by Api::V1::RecreationalAreasController#destroy as JSON
+  Parameters: {"user_id"=>"1", "id"=>"2", "recreational_area"=>{}}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ? AND "api_v1_recreational_areas"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:25:in `destroy'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:27:in `destroy'
+  [1m[36mApi::V1::RecreationalArea Destroy (0.3ms)[0m  [1m[31mDELETE FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:27:in `destroy'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:27:in `destroy'
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 1.4ms | Allocations: 3389)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-20 14:23:05 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-20 14:23:05 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 2.1ms | ActiveRecord: 0.3ms | Allocations: 1470)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-20 14:23:06 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 282ms (Views: 10.5ms | ActiveRecord: 0.0ms | Allocations: 21513)
+
+
+Started POST "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-20 14:23:08 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"user_id"=>"1", "facility_name"=>"Red Rock Canyon Backcountry Late Exit Pass", "facility_description"=>"", "facility_id"=>"f4d17453-0cba-11eb-b57c-4a047fce61ec", "facility_directions"=>"", "facility_email"=>"", "facility_phone"=>"", "recreational_area"=>{"facility_name"=>"Red Rock Canyon Backcountry Late Exit Pass", "facility_description"=>"", "facility_id"=>"f4d17453-0cba-11eb-b57c-4a047fce61ec", "facility_directions"=>"", "facility_email"=>"", "facility_phone"=>"", "user_id"=>"1"}}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."facility_name" = ? AND "api_v1_recreational_areas"."user_id" = ? LIMIT ?[0m  [["facility_name", "Red Rock Canyon Backcountry Late Exit Pass"], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:16:in `create'
+  [1m[36mApi::V1::RecreationalArea Create (1.1ms)[0m  [1m[32mINSERT INTO "api_v1_recreational_areas" ("facility_name", "facility_description", "created_at", "updated_at", "facility_id", "facility_directions", "facility_email", "facility_phone", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["facility_name", "Red Rock Canyon Backcountry Late Exit Pass"], ["facility_description", ""], ["created_at", "2020-12-20 19:23:08.184438"], ["updated_at", "2020-12-20 19:23:08.184438"], ["facility_id", "f4d17453-0cba-11eb-b57c-4a047fce61ec"], ["facility_directions", ""], ["facility_email", ""], ["facility_phone", ""], ["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:16:in `create'
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:16:in `create'
+Completed 200 OK in 10ms (Views: 0.3ms | ActiveRecord: 2.6ms | Allocations: 3977)
+
+
+Started DELETE "/api/v1/users/1/recreational_areas/1" for ::1 at 2020-12-20 14:23:22 -0500
+Processing by Api::V1::RecreationalAreasController#destroy as JSON
+  Parameters: {"user_id"=>"1", "id"=>"1", "recreational_area"=>{}}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ? AND "api_v1_recreational_areas"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:25:in `destroy'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:27:in `destroy'
+  [1m[36mApi::V1::RecreationalArea Destroy (0.3ms)[0m  [1m[31mDELETE FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:27:in `destroy'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:27:in `destroy'
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 1.5ms | Allocations: 3390)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-20 14:24:40 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-20 14:24:40 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.3ms | Allocations: 1470)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-20 14:24:42 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 781ms (Views: 10.0ms | ActiveRecord: 0.0ms | Allocations: 21518)
+
+
+Started POST "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-20 14:24:44 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"user_id"=>"1", "facility_name"=>"Red Rock Canyon Backcountry Late Exit Pass", "facility_description"=>"", "facility_id"=>"f4d17453-0cba-11eb-b57c-4a047fce61ec", "facility_directions"=>"", "facility_email"=>"", "facility_phone"=>"", "recreational_area"=>{"facility_name"=>"Red Rock Canyon Backcountry Late Exit Pass", "facility_description"=>"", "facility_id"=>"f4d17453-0cba-11eb-b57c-4a047fce61ec", "facility_directions"=>"", "facility_email"=>"", "facility_phone"=>"", "user_id"=>"1"}}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."facility_name" = ? AND "api_v1_recreational_areas"."user_id" = ? LIMIT ?[0m  [["facility_name", "Red Rock Canyon Backcountry Late Exit Pass"], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:16:in `create'
+  [1m[36mApi::V1::RecreationalArea Create (0.5ms)[0m  [1m[32mINSERT INTO "api_v1_recreational_areas" ("facility_name", "facility_description", "created_at", "updated_at", "facility_id", "facility_directions", "facility_email", "facility_phone", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["facility_name", "Red Rock Canyon Backcountry Late Exit Pass"], ["facility_description", ""], ["created_at", "2020-12-20 19:24:44.186181"], ["updated_at", "2020-12-20 19:24:44.186181"], ["facility_id", "f4d17453-0cba-11eb-b57c-4a047fce61ec"], ["facility_directions", ""], ["facility_email", ""], ["facility_phone", ""], ["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:16:in `create'
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:16:in `create'
+Completed 200 OK in 10ms (Views: 0.3ms | ActiveRecord: 2.6ms | Allocations: 3977)
+
+
+Started DELETE "/api/v1/users/1/recreational_areas/1" for ::1 at 2020-12-20 14:25:48 -0500
+Processing by Api::V1::RecreationalAreasController#destroy as JSON
+  Parameters: {"user_id"=>"1", "id"=>"1", "recreational_area"=>{}}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ? AND "api_v1_recreational_areas"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:25:in `destroy'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:27:in `destroy'
+  [1m[36mApi::V1::RecreationalArea Destroy (0.3ms)[0m  [1m[31mDELETE FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:27:in `destroy'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:27:in `destroy'
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 1.4ms | Allocations: 3389)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-20 14:25:52 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-20 14:25:52 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.2ms | Allocations: 1470)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-20 14:25:53 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 363ms (Views: 9.4ms | ActiveRecord: 0.0ms | Allocations: 21482)
+
+
+Started POST "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-20 14:25:55 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"user_id"=>"1", "facility_name"=>"Red Rock Canyon Backcountry Late Exit Pass", "facility_description"=>"", "facility_id"=>"f4d17453-0cba-11eb-b57c-4a047fce61ec", "facility_directions"=>"", "facility_email"=>"", "facility_phone"=>"", "recreational_area"=>{"facility_name"=>"Red Rock Canyon Backcountry Late Exit Pass", "facility_description"=>"", "facility_id"=>"f4d17453-0cba-11eb-b57c-4a047fce61ec", "facility_directions"=>"", "facility_email"=>"", "facility_phone"=>"", "user_id"=>"1"}}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."facility_name" = ? AND "api_v1_recreational_areas"."user_id" = ? LIMIT ?[0m  [["facility_name", "Red Rock Canyon Backcountry Late Exit Pass"], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:16:in `create'
+  [1m[36mApi::V1::RecreationalArea Create (0.3ms)[0m  [1m[32mINSERT INTO "api_v1_recreational_areas" ("facility_name", "facility_description", "created_at", "updated_at", "facility_id", "facility_directions", "facility_email", "facility_phone", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["facility_name", "Red Rock Canyon Backcountry Late Exit Pass"], ["facility_description", ""], ["created_at", "2020-12-20 19:25:55.629377"], ["updated_at", "2020-12-20 19:25:55.629377"], ["facility_id", "f4d17453-0cba-11eb-b57c-4a047fce61ec"], ["facility_directions", ""], ["facility_email", ""], ["facility_phone", ""], ["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:16:in `create'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:16:in `create'
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 1.5ms | Allocations: 3977)
+
+
+Started DELETE "/api/v1/users/1/recreational_areas/1" for ::1 at 2020-12-20 14:26:42 -0500
+Processing by Api::V1::RecreationalAreasController#destroy as JSON
+  Parameters: {"user_id"=>"1", "id"=>"1", "recreational_area"=>{}}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ? AND "api_v1_recreational_areas"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:25:in `destroy'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:27:in `destroy'
+  [1m[36mApi::V1::RecreationalArea Destroy (0.3ms)[0m  [1m[31mDELETE FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:27:in `destroy'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:27:in `destroy'
+Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 1.3ms | Allocations: 3389)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-20 14:26:46 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-20 14:26:46 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 18ms (Views: 1.1ms | ActiveRecord: 0.2ms | Allocations: 1473)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-20 14:26:47 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 360ms (Views: 9.7ms | ActiveRecord: 0.0ms | Allocations: 21501)
+
+
+Started POST "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-20 14:26:49 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"user_id"=>"1", "facility_name"=>"Red Rock Canyon Backcountry Late Exit Pass", "facility_description"=>"", "facility_id"=>"f4d17453-0cba-11eb-b57c-4a047fce61ec", "facility_directions"=>"", "facility_email"=>"", "facility_phone"=>"", "recreational_area"=>{"facility_name"=>"Red Rock Canyon Backcountry Late Exit Pass", "facility_description"=>"", "facility_id"=>"f4d17453-0cba-11eb-b57c-4a047fce61ec", "facility_directions"=>"", "facility_email"=>"", "facility_phone"=>"", "user_id"=>"1"}}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."facility_name" = ? AND "api_v1_recreational_areas"."user_id" = ? LIMIT ?[0m  [["facility_name", "Red Rock Canyon Backcountry Late Exit Pass"], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:16:in `create'
+  [1m[36mApi::V1::RecreationalArea Create (0.4ms)[0m  [1m[32mINSERT INTO "api_v1_recreational_areas" ("facility_name", "facility_description", "created_at", "updated_at", "facility_id", "facility_directions", "facility_email", "facility_phone", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["facility_name", "Red Rock Canyon Backcountry Late Exit Pass"], ["facility_description", ""], ["created_at", "2020-12-20 19:26:49.533455"], ["updated_at", "2020-12-20 19:26:49.533455"], ["facility_id", "f4d17453-0cba-11eb-b57c-4a047fce61ec"], ["facility_directions", ""], ["facility_email", ""], ["facility_phone", ""], ["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:16:in `create'
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:16:in `create'
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 1.6ms | Allocations: 3977)
+
+
+Started DELETE "/api/v1/users/1/recreational_areas/1" for ::1 at 2020-12-20 14:26:55 -0500
+Processing by Api::V1::RecreationalAreasController#destroy as JSON
+  Parameters: {"user_id"=>"1", "id"=>"1", "recreational_area"=>{}}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.2ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ? AND "api_v1_recreational_areas"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:25:in `destroy'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:27:in `destroy'
+  [1m[36mApi::V1::RecreationalArea Destroy (0.4ms)[0m  [1m[31mDELETE FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:27:in `destroy'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:27:in `destroy'
+Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 1.7ms | Allocations: 3389)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-20 14:28:30 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.3ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-20 14:28:30 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.2ms | Allocations: 1470)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-20 14:28:31 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 728ms (Views: 9.4ms | ActiveRecord: 0.0ms | Allocations: 21445)
+
+
+Started POST "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-20 14:28:33 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"user_id"=>"1", "facility_name"=>"Red Rock Canyon Backcountry Late Exit Pass", "facility_description"=>"", "facility_id"=>"f4d17453-0cba-11eb-b57c-4a047fce61ec", "facility_directions"=>"", "facility_email"=>"", "facility_phone"=>"", "recreational_area"=>{"facility_name"=>"Red Rock Canyon Backcountry Late Exit Pass", "facility_description"=>"", "facility_id"=>"f4d17453-0cba-11eb-b57c-4a047fce61ec", "facility_directions"=>"", "facility_email"=>"", "facility_phone"=>"", "user_id"=>"1"}}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."facility_name" = ? AND "api_v1_recreational_areas"."user_id" = ? LIMIT ?[0m  [["facility_name", "Red Rock Canyon Backcountry Late Exit Pass"], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:16:in `create'
+  [1m[36mApi::V1::RecreationalArea Create (0.4ms)[0m  [1m[32mINSERT INTO "api_v1_recreational_areas" ("facility_name", "facility_description", "created_at", "updated_at", "facility_id", "facility_directions", "facility_email", "facility_phone", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["facility_name", "Red Rock Canyon Backcountry Late Exit Pass"], ["facility_description", ""], ["created_at", "2020-12-20 19:28:33.481450"], ["updated_at", "2020-12-20 19:28:33.481450"], ["facility_id", "f4d17453-0cba-11eb-b57c-4a047fce61ec"], ["facility_directions", ""], ["facility_email", ""], ["facility_phone", ""], ["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:16:in `create'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:16:in `create'
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 1.6ms | Allocations: 3977)
+
+
+Started DELETE "/api/v1/users/1/recreational_areas/1" for ::1 at 2020-12-20 14:28:59 -0500
+Processing by Api::V1::RecreationalAreasController#destroy as JSON
+  Parameters: {"user_id"=>"1", "id"=>"1", "recreational_area"=>{}}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ? AND "api_v1_recreational_areas"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:25:in `destroy'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:27:in `destroy'
+  [1m[36mApi::V1::RecreationalArea Destroy (0.3ms)[0m  [1m[31mDELETE FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:27:in `destroy'
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:27:in `destroy'
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 1.1ms | Allocations: 3389)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-20 14:29:03 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.3ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-20 14:29:03 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.2ms | Allocations: 1470)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-20 14:29:04 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 397ms (Views: 22.6ms | ActiveRecord: 0.0ms | Allocations: 21462)
+
+
+Started POST "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-20 14:29:06 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"user_id"=>"1", "facility_name"=>"Red Rock Canyon Backcountry Late Exit Pass", "facility_description"=>"", "facility_id"=>"f4d17453-0cba-11eb-b57c-4a047fce61ec", "facility_directions"=>"", "facility_email"=>"", "facility_phone"=>"", "recreational_area"=>{"facility_name"=>"Red Rock Canyon Backcountry Late Exit Pass", "facility_description"=>"", "facility_id"=>"f4d17453-0cba-11eb-b57c-4a047fce61ec", "facility_directions"=>"", "facility_email"=>"", "facility_phone"=>"", "user_id"=>"1"}}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."facility_name" = ? AND "api_v1_recreational_areas"."user_id" = ? LIMIT ?[0m  [["facility_name", "Red Rock Canyon Backcountry Late Exit Pass"], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:16:in `create'
+  [1m[36mApi::V1::RecreationalArea Create (0.3ms)[0m  [1m[32mINSERT INTO "api_v1_recreational_areas" ("facility_name", "facility_description", "created_at", "updated_at", "facility_id", "facility_directions", "facility_email", "facility_phone", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["facility_name", "Red Rock Canyon Backcountry Late Exit Pass"], ["facility_description", ""], ["created_at", "2020-12-20 19:29:06.687436"], ["updated_at", "2020-12-20 19:29:06.687436"], ["facility_id", "f4d17453-0cba-11eb-b57c-4a047fce61ec"], ["facility_directions", ""], ["facility_email", ""], ["facility_phone", ""], ["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:16:in `create'
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:16:in `create'
+Completed 200 OK in 8ms (Views: 0.5ms | ActiveRecord: 1.3ms | Allocations: 3977)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-20 14:34:07 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-20 14:34:07 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 1.6ms | ActiveRecord: 0.3ms | Allocations: 1653)
+
+
+Started DELETE "/api/v1/users/1/recreational_areas/1" for ::1 at 2020-12-20 14:34:09 -0500
+Processing by Api::V1::RecreationalAreasController#destroy as JSON
+  Parameters: {"user_id"=>"1", "id"=>"1", "recreational_area"=>{}}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ? AND "api_v1_recreational_areas"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:25:in `destroy'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:27:in `destroy'
+  [1m[36mApi::V1::RecreationalArea Destroy (0.3ms)[0m  [1m[31mDELETE FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:27:in `destroy'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:27:in `destroy'
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 1.4ms | Allocations: 3389)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-20 14:34:09 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 395ms (Views: 9.9ms | ActiveRecord: 0.0ms | Allocations: 21511)
+
+
+Started POST "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-20 14:34:11 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"user_id"=>"1", "facility_name"=>"Red Rock Canyon Backcountry Late Exit Pass", "facility_description"=>"", "facility_id"=>"f4d17453-0cba-11eb-b57c-4a047fce61ec", "facility_directions"=>"", "facility_email"=>"", "facility_phone"=>"", "recreational_area"=>{"facility_name"=>"Red Rock Canyon Backcountry Late Exit Pass", "facility_description"=>"", "facility_id"=>"f4d17453-0cba-11eb-b57c-4a047fce61ec", "facility_directions"=>"", "facility_email"=>"", "facility_phone"=>"", "user_id"=>"1"}}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."facility_name" = ? AND "api_v1_recreational_areas"."user_id" = ? LIMIT ?[0m  [["facility_name", "Red Rock Canyon Backcountry Late Exit Pass"], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:16:in `create'
+  [1m[36mApi::V1::RecreationalArea Create (0.5ms)[0m  [1m[32mINSERT INTO "api_v1_recreational_areas" ("facility_name", "facility_description", "created_at", "updated_at", "facility_id", "facility_directions", "facility_email", "facility_phone", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["facility_name", "Red Rock Canyon Backcountry Late Exit Pass"], ["facility_description", ""], ["created_at", "2020-12-20 19:34:11.399785"], ["updated_at", "2020-12-20 19:34:11.399785"], ["facility_id", "f4d17453-0cba-11eb-b57c-4a047fce61ec"], ["facility_directions", ""], ["facility_email", ""], ["facility_phone", ""], ["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:16:in `create'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:16:in `create'
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 1.8ms | Allocations: 3977)
+
+
+Started POST "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-20 14:34:25 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"user_id"=>"1", "facility_name"=>"Red Rock Canyon Backcountry Late Exit Pass", "facility_description"=>"", "facility_id"=>"f4d17453-0cba-11eb-b57c-4a047fce61ec", "facility_directions"=>"", "facility_email"=>"", "facility_phone"=>"", "recreational_area"=>{"facility_name"=>"Red Rock Canyon Backcountry Late Exit Pass", "facility_description"=>"", "facility_id"=>"f4d17453-0cba-11eb-b57c-4a047fce61ec", "facility_directions"=>"", "facility_email"=>"", "facility_phone"=>"", "user_id"=>"1"}}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."facility_name" = ? AND "api_v1_recreational_areas"."user_id" = ? LIMIT ?[0m  [["facility_name", "Red Rock Canyon Backcountry Late Exit Pass"], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+Completed 409 Conflict in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 1670)
+
+
+Started POST "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-20 14:34:29 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"user_id"=>"1", "facility_name"=>"Blackwater National Wildlife Refuge Waterfowl Hunt Permits", "facility_description"=>"", "facility_id"=>"5151515", "facility_directions"=>"", "facility_email"=>"", "facility_phone"=>"", "recreational_area"=>{"facility_name"=>"Blackwater National Wildlife Refuge Waterfowl Hunt Permits", "facility_description"=>"", "facility_id"=>"5151515", "facility_directions"=>"", "facility_email"=>"", "facility_phone"=>"", "user_id"=>"1"}}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."facility_name" = ? AND "api_v1_recreational_areas"."user_id" = ? LIMIT ?[0m  [["facility_name", "Blackwater National Wildlife Refuge Waterfowl Hunt Permits"], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:16:in `create'
+  [1m[36mApi::V1::RecreationalArea Create (0.9ms)[0m  [1m[32mINSERT INTO "api_v1_recreational_areas" ("facility_name", "facility_description", "created_at", "updated_at", "facility_id", "facility_directions", "facility_email", "facility_phone", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["facility_name", "Blackwater National Wildlife Refuge Waterfowl Hunt Permits"], ["facility_description", ""], ["created_at", "2020-12-20 19:34:29.594958"], ["updated_at", "2020-12-20 19:34:29.594958"], ["facility_id", "5151515"], ["facility_directions", ""], ["facility_email", ""], ["facility_phone", ""], ["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:16:in `create'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:16:in `create'
+Completed 200 OK in 10ms (Views: 0.3ms | ActiveRecord: 2.1ms | Allocations: 3975)
+
+
+Started POST "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-20 14:34:30 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"user_id"=>"1", "facility_name"=>"Tower Fall Campground", "facility_description"=>"Tower Fall Campground—elevation 6,600 feet (2012 m)—is located on the north side of the steep, winding, road to Dunraven Pass. The campground is near the Tower General Store and Tower Fall, where Tower Creek plunges over 130 feet down to its confluence with the Yellowstone River. On the road over Dunraven Pass, a six-mile trail provides access to the summit of Mount Washburn. Roosevelt Lodge, a short drive from the campground, offers dining and horseback riding.", "facility_id"=>"259308", "facility_directions"=>"This campground is located on the road between Tower Fall and Canyon--north of Dunraven Pass and 3.5 miles (5.6 km) south of Tower-Roosevelt Junction.", "facility_email"=>"yell_visitor_services@nps.gov", "facility_phone"=>"(307) 344-7381", "recreational_area"=>{"facility_name"=>"Tower Fall Campground", "facility_description"=>"Tower Fall Campground—elevation 6,600 feet (2012 m)—is located on the north side of the steep, winding, road to Dunraven Pass. The campground is near the Tower General Store and Tower Fall, where Tower Creek plunges over 130 feet down to its confluence with the Yellowstone River. On the road over Dunraven Pass, a six-mile trail provides access to the summit of Mount Washburn. Roosevelt Lodge, a short drive from the campground, offers dining and horseback riding.", "facility_id"=>"259308", "facility_directions"=>"This campground is located on the road between Tower Fall and Canyon--north of Dunraven Pass and 3.5 miles (5.6 km) south of Tower-Roosevelt Junction.", "facility_email"=>"yell_visitor_services@nps.gov", "facility_phone"=>"(307) 344-7381", "user_id"=>"1"}}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."facility_name" = ? AND "api_v1_recreational_areas"."user_id" = ? LIMIT ?[0m  [["facility_name", "Tower Fall Campground"], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:16:in `create'
+  [1m[36mApi::V1::RecreationalArea Create (0.4ms)[0m  [1m[32mINSERT INTO "api_v1_recreational_areas" ("facility_name", "facility_description", "created_at", "updated_at", "facility_id", "facility_directions", "facility_email", "facility_phone", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["facility_name", "Tower Fall Campground"], ["facility_description", "Tower Fall Campground—elevation 6,600 feet (2012 m)—is located on the north side of the steep, winding, road to Dunraven Pass. The campground is near the Tower General Store and Tower Fall, where Tower Creek plunges over 130 feet down to its confluence with the Yellowstone River. On the road over Dunraven Pass, a six-mile trail provides access to the summit of Mount Washburn. Roosevelt Lodge, a short drive from the campground, offers dining and horseback riding."], ["created_at", "2020-12-20 19:34:30.772663"], ["updated_at", "2020-12-20 19:34:30.772663"], ["facility_id", "259308"], ["facility_directions", "This campground is located on the road between Tower Fall and Canyon--north of Dunraven Pass and 3.5 miles (5.6 km) south of Tower-Roosevelt Junction."], ["facility_email", "yell_visitor_services@nps.gov"], ["facility_phone", "(307) 344-7381"], ["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:16:in `create'
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:16:in `create'
+Completed 200 OK in 15ms (Views: 0.3ms | ActiveRecord: 1.4ms | Allocations: 3979)
+
+
+Started DELETE "/api/v1/users/1/recreational_areas/3" for ::1 at 2020-12-20 14:34:33 -0500
+Processing by Api::V1::RecreationalAreasController#destroy as JSON
+  Parameters: {"user_id"=>"1", "id"=>"3", "recreational_area"=>{}}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ? AND "api_v1_recreational_areas"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:25:in `destroy'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:27:in `destroy'
+  [1m[36mApi::V1::RecreationalArea Destroy (0.3ms)[0m  [1m[31mDELETE FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:27:in `destroy'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:27:in `destroy'
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 1.4ms | Allocations: 3389)
+
+
+Started DELETE "/api/v1/users/1/recreational_areas/2" for ::1 at 2020-12-20 14:34:34 -0500
+Processing by Api::V1::RecreationalAreasController#destroy as JSON
+  Parameters: {"user_id"=>"1", "id"=>"2", "recreational_area"=>{}}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ? AND "api_v1_recreational_areas"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:25:in `destroy'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:27:in `destroy'
+  [1m[36mApi::V1::RecreationalArea Destroy (0.5ms)[0m  [1m[31mDELETE FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:27:in `destroy'
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:27:in `destroy'
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 2.1ms | Allocations: 3392)
+
+
+Started DELETE "/api/v1/users/1/recreational_areas/1" for ::1 at 2020-12-20 14:34:34 -0500
+Processing by Api::V1::RecreationalAreasController#destroy as JSON
+  Parameters: {"user_id"=>"1", "id"=>"1", "recreational_area"=>{}}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ? AND "api_v1_recreational_areas"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:25:in `destroy'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:27:in `destroy'
+  [1m[36mApi::V1::RecreationalArea Destroy (0.3ms)[0m  [1m[31mDELETE FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:27:in `destroy'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:27:in `destroy'
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 1.5ms | Allocations: 3389)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-20 14:34:41 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-20 14:34:41 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.2ms | Allocations: 1470)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-20 14:34:42 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 575ms (Views: 9.9ms | ActiveRecord: 0.0ms | Allocations: 21511)
+
+
+Started POST "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-20 14:35:22 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"user_id"=>"1", "facility_name"=>"Red Rock Canyon Backcountry Late Exit Pass", "facility_description"=>"", "facility_id"=>"f4d17453-0cba-11eb-b57c-4a047fce61ec", "facility_directions"=>"", "facility_email"=>"", "facility_phone"=>"", "recreational_area"=>{"facility_name"=>"Red Rock Canyon Backcountry Late Exit Pass", "facility_description"=>"", "facility_id"=>"f4d17453-0cba-11eb-b57c-4a047fce61ec", "facility_directions"=>"", "facility_email"=>"", "facility_phone"=>"", "user_id"=>"1"}}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."facility_name" = ? AND "api_v1_recreational_areas"."user_id" = ? LIMIT ?[0m  [["facility_name", "Red Rock Canyon Backcountry Late Exit Pass"], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:16:in `create'
+  [1m[36mApi::V1::RecreationalArea Create (0.4ms)[0m  [1m[32mINSERT INTO "api_v1_recreational_areas" ("facility_name", "facility_description", "created_at", "updated_at", "facility_id", "facility_directions", "facility_email", "facility_phone", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["facility_name", "Red Rock Canyon Backcountry Late Exit Pass"], ["facility_description", ""], ["created_at", "2020-12-20 19:35:22.494577"], ["updated_at", "2020-12-20 19:35:22.494577"], ["facility_id", "f4d17453-0cba-11eb-b57c-4a047fce61ec"], ["facility_directions", ""], ["facility_email", ""], ["facility_phone", ""], ["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:16:in `create'
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:16:in `create'
+Completed 200 OK in 9ms (Views: 0.3ms | ActiveRecord: 1.7ms | Allocations: 3977)
+
+
+Started POST "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-20 14:35:26 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"user_id"=>"1", "facility_name"=>"Red Rock Canyon Backcountry Late Exit Pass", "facility_description"=>"", "facility_id"=>"f4d17453-0cba-11eb-b57c-4a047fce61ec", "facility_directions"=>"", "facility_email"=>"", "facility_phone"=>"", "recreational_area"=>{"facility_name"=>"Red Rock Canyon Backcountry Late Exit Pass", "facility_description"=>"", "facility_id"=>"f4d17453-0cba-11eb-b57c-4a047fce61ec", "facility_directions"=>"", "facility_email"=>"", "facility_phone"=>"", "user_id"=>"1"}}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."facility_name" = ? AND "api_v1_recreational_areas"."user_id" = ? LIMIT ?[0m  [["facility_name", "Red Rock Canyon Backcountry Late Exit Pass"], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+Completed 409 Conflict in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 1670)
+
+
+Started POST "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-20 14:35:27 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"user_id"=>"1", "facility_name"=>"Red Rock Canyon Backcountry Late Exit Pass", "facility_description"=>"", "facility_id"=>"f4d17453-0cba-11eb-b57c-4a047fce61ec", "facility_directions"=>"", "facility_email"=>"", "facility_phone"=>"", "recreational_area"=>{"facility_name"=>"Red Rock Canyon Backcountry Late Exit Pass", "facility_description"=>"", "facility_id"=>"f4d17453-0cba-11eb-b57c-4a047fce61ec", "facility_directions"=>"", "facility_email"=>"", "facility_phone"=>"", "user_id"=>"1"}}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."facility_name" = ? AND "api_v1_recreational_areas"."user_id" = ? LIMIT ?[0m  [["facility_name", "Red Rock Canyon Backcountry Late Exit Pass"], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+Completed 409 Conflict in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 1670)
+
+
+Started DELETE "/api/v1/users/1/recreational_areas/1" for ::1 at 2020-12-20 14:37:35 -0500
+Processing by Api::V1::RecreationalAreasController#destroy as JSON
+  Parameters: {"user_id"=>"1", "id"=>"1", "recreational_area"=>{}}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ? AND "api_v1_recreational_areas"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:25:in `destroy'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:27:in `destroy'
+  [1m[36mApi::V1::RecreationalArea Destroy (0.4ms)[0m  [1m[31mDELETE FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:27:in `destroy'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:27:in `destroy'
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 1.5ms | Allocations: 3389)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-20 14:37:39 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-20 14:37:39 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.2ms | Allocations: 1470)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-20 14:37:41 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 442ms (Views: 9.5ms | ActiveRecord: 0.0ms | Allocations: 21442)
+
+
+Started POST "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-20 14:37:43 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"user_id"=>"1", "facility_name"=>"Red Rock Canyon Backcountry Late Exit Pass", "facility_description"=>"", "facility_id"=>"f4d17453-0cba-11eb-b57c-4a047fce61ec", "facility_directions"=>"", "facility_email"=>"", "facility_phone"=>"", "recreational_area"=>{"facility_name"=>"Red Rock Canyon Backcountry Late Exit Pass", "facility_description"=>"", "facility_id"=>"f4d17453-0cba-11eb-b57c-4a047fce61ec", "facility_directions"=>"", "facility_email"=>"", "facility_phone"=>"", "user_id"=>"1"}}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."facility_name" = ? AND "api_v1_recreational_areas"."user_id" = ? LIMIT ?[0m  [["facility_name", "Red Rock Canyon Backcountry Late Exit Pass"], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:16:in `create'
+  [1m[36mApi::V1::RecreationalArea Create (0.4ms)[0m  [1m[32mINSERT INTO "api_v1_recreational_areas" ("facility_name", "facility_description", "created_at", "updated_at", "facility_id", "facility_directions", "facility_email", "facility_phone", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["facility_name", "Red Rock Canyon Backcountry Late Exit Pass"], ["facility_description", ""], ["created_at", "2020-12-20 19:37:43.219800"], ["updated_at", "2020-12-20 19:37:43.219800"], ["facility_id", "f4d17453-0cba-11eb-b57c-4a047fce61ec"], ["facility_directions", ""], ["facility_email", ""], ["facility_phone", ""], ["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:16:in `create'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:16:in `create'
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 1.6ms | Allocations: 3977)
+
+
+Started POST "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-20 14:37:44 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"user_id"=>"1", "facility_name"=>"Red Rock Canyon Backcountry Late Exit Pass", "facility_description"=>"", "facility_id"=>"f4d17453-0cba-11eb-b57c-4a047fce61ec", "facility_directions"=>"", "facility_email"=>"", "facility_phone"=>"", "recreational_area"=>{"facility_name"=>"Red Rock Canyon Backcountry Late Exit Pass", "facility_description"=>"", "facility_id"=>"f4d17453-0cba-11eb-b57c-4a047fce61ec", "facility_directions"=>"", "facility_email"=>"", "facility_phone"=>"", "user_id"=>"1"}}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."facility_name" = ? AND "api_v1_recreational_areas"."user_id" = ? LIMIT ?[0m  [["facility_name", "Red Rock Canyon Backcountry Late Exit Pass"], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+Completed 409 Conflict in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 1671)
+
+
+Started POST "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-20 14:37:45 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"user_id"=>"1", "facility_name"=>"Red Rock Canyon Backcountry Late Exit Pass", "facility_description"=>"", "facility_id"=>"f4d17453-0cba-11eb-b57c-4a047fce61ec", "facility_directions"=>"", "facility_email"=>"", "facility_phone"=>"", "recreational_area"=>{"facility_name"=>"Red Rock Canyon Backcountry Late Exit Pass", "facility_description"=>"", "facility_id"=>"f4d17453-0cba-11eb-b57c-4a047fce61ec", "facility_directions"=>"", "facility_email"=>"", "facility_phone"=>"", "user_id"=>"1"}}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."facility_name" = ? AND "api_v1_recreational_areas"."user_id" = ? LIMIT ?[0m  [["facility_name", "Red Rock Canyon Backcountry Late Exit Pass"], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+Completed 409 Conflict in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 1670)
+
+
+Started DELETE "/api/v1/users/1/recreational_areas/1" for ::1 at 2020-12-20 14:37:59 -0500
+Processing by Api::V1::RecreationalAreasController#destroy as JSON
+  Parameters: {"user_id"=>"1", "id"=>"1", "recreational_area"=>{}}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ? AND "api_v1_recreational_areas"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:25:in `destroy'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:27:in `destroy'
+  [1m[36mApi::V1::RecreationalArea Destroy (0.5ms)[0m  [1m[31mDELETE FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:27:in `destroy'
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:27:in `destroy'
+Completed 200 OK in 8ms (Views: 0.2ms | ActiveRecord: 1.8ms | Allocations: 3389)
+
+

@@ -73,6 +73,6 @@ class RecreationalAreaCard
                 ${this.area.FacilityDescription}
                 <hr>
             </div>
-        `
+        `;
     }
 }

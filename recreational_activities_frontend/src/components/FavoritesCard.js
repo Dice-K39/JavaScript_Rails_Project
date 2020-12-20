@@ -42,7 +42,7 @@ class FavoritesCard
 
         card.remove();
 
-        api.removeFavorites(userID, areaID)
+        api.removeFavorites(userID, areaID);
     }
 
     renderInnerHTML = (area) =>
@@ -57,8 +57,8 @@ class FavoritesCard
                 <div class="remove-button">
                      <button class="remove-btn button is-danger" >X</button>
                 </div> 
-                `
-                ;
+                `;
+                
                 // Will add to code later:               
                 // link to each facility with more information
                 // 

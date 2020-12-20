@@ -1,7 +1,7 @@
 class ApiService
 {
     static container = document.querySelector(".display-search");
-    static errorMessageContainer = document.querySelector(".error-message")
+    static errorMessageContainer = document.querySelector(".error-message");
 
     constructor(baseURL)
     {
@@ -10,7 +10,7 @@ class ApiService
 
     printError = (err) =>
     {
-        this.constructor.errorMessageContainer.innerHTML = `${err}`
+        this.constructor.errorMessageContainer.innerHTML = `${err}`;
     }
     
     loginUser = (userName) =>
@@ -124,7 +124,7 @@ class ApiService
     
     removeFavorites = (userID, areaID) =>
     {
-        const url = new URL(this.baseURL + `/users/${userID}/recreational_areas/${areaID}`)
+        const url = new URL(this.baseURL + `/users/${userID}/recreational_areas/${areaID}`);
         const configObj = 
         {
             method: "DELETE",
@@ -133,10 +133,9 @@ class ApiService
                 "Content-Type": "application/json",
                 "Accept": "application/json"
             }
-        }
+        };
         
         fetch(url, configObj)
             .then(resp => resp.json());
-        
     }
 }
