@@ -47,14 +47,14 @@ class SearchForm
 
             <label>Keyword Search:</label>
             <div class="control">
-                <input class="input" id="keyword_query" name="keyword_query" type="text" placeholder="Input Keyword">
+                <input class="input" id="keyword_query" type="text" placeholder="Input Keyword">
             </div>
             
             <br />
 
             <label>Activity Search:</label>
             <div class="control">
-                <input class="input" id="activity_query" name="activity_query" type="text" placeholder="Input Activity">
+                <input class="input" id="activity_query" type="text" placeholder="Input Activity">
             </div>
 
             <br />
@@ -121,7 +121,7 @@ class SearchForm
 
             <label>Filter by First Letter of Area Name:</label>
                 <div class"control">
-                    <input class="input" id="area-filter-by-first-letter" name="area-filter-by-first-letter" type="text">
+                    <input class="input" id="area-filter-by-first-letter" maxlength="1" type="text">
                 </div>
 
             <br />
