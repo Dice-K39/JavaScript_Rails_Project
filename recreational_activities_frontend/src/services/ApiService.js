@@ -111,8 +111,6 @@ class ApiService
     {
         const url = new URL(this.baseURL + `/users/${user.id}/recreational_areas`);
 
-        url.search = new URLSearchParams(userData);
-
         fetch(url)
             .then(res => res.json())
             .then(data => new FavoritesCard(data));
