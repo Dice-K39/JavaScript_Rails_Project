@@ -1,5 +1,5 @@
 class Api::V1::RecreationalAreasController < ApplicationController
-    before_action :find_user, only: [:index, :create, :delete]
+    before_action :find_user, only: [:index, :create, :destroy]
     
     def index
         rec_areas = @user.recreational_areas
@@ -21,9 +21,9 @@ class Api::V1::RecreationalAreasController < ApplicationController
         end
     end
 
-    # def destroy
-    #     byebug
-    # end
+    def destroy
+        byebug
+    end
 
     private
 

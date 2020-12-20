@@ -7,6 +7,11 @@ class ApiService
     {
         this.baseURL = baseURL;
     }
+
+    printError = (err) =>
+    {
+        this.constructor.errorMessageContainer.innerHTML = `${err}`
+    }
     
     loginUser = (userName) =>
     {
@@ -116,13 +121,22 @@ class ApiService
             .then(data => new FavoritesCard(data));
     }
 
-    printError = (err) =>
-    {
-        this.constructor.errorMessageContainer.innerHTML = `${err}`
-    }
-
+    
     removeFavorites = (userID, areaID) =>
     {debugger
-        const url = new URL(this.baseURL + `/users/${userID}/recreational_areas`)
+        const url = new URL(this.baseURL + `/users/${userID}/recreational_areas/${areaID}`)
+        const configObj = 
+        {
+            method: "DELETE",
+            headers:
+            {
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+            }
+        }
+        
+        fetch(url, configObj)
+            .then(resp => resp.json());
+        
     }
 }
