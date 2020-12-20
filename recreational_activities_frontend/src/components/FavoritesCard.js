@@ -40,7 +40,9 @@ class FavoritesCard
         const userID = document.querySelector(".user-id").value;
         const areaID = card.querySelector(".area-id").value;
 
-        api.removeFavorites(userID, areaID);
+        card.remove();
+
+        api.removeFavorites(userID, areaID)
     }
 
     renderInnerHTML = (area) =>
@@ -53,7 +55,7 @@ class FavoritesCard
                 <input class="area-id" type="hidden" value="${area.id}">
 
                 <div class="remove-button">
-                     <button class="remove-btn button is-danger" ></button>
+                     <button class="remove-btn button is-danger" >X</button>
                 </div> 
                 `
                 ;

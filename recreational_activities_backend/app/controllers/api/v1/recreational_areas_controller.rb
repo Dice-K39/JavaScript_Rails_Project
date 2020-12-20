@@ -22,7 +22,11 @@ class Api::V1::RecreationalAreasController < ApplicationController
     end
 
     def destroy
-        byebug
+        rec_area = @user.recreational_areas.find_by_id(params[:id])
+
+        rec_area.destroy
+
+        render json: {message: "Successfully deleted."}
     end
 
     private

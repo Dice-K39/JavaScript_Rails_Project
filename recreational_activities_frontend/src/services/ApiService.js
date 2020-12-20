@@ -123,7 +123,7 @@ class ApiService
 
     
     removeFavorites = (userID, areaID) =>
-    {debugger
+    {
         const url = new URL(this.baseURL + `/users/${userID}/recreational_areas/${areaID}`)
         const configObj = 
         {
