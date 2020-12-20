@@ -110,10 +110,6 @@ class ApiService
     getFavorites = (user) =>
     {
         const url = new URL(this.baseURL + `/users/${user.id}/recreational_areas`);
-        const userData =
-        {
-            user_id: user.id
-        }
 
         url.search = new URLSearchParams(userData);
 
