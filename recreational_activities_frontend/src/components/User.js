@@ -142,6 +142,12 @@ class User
     {
         // Not safe to send around user_id from database. Future iteration of app will use secure method.
         return `
+            <div class="filter-bar content is-flex navbar-start" style="margin-bottom: 0px">
+                <label class="filter-label">Filter by Letter:</label>
+                <input class="input" id="area-filter-by-first-letter" maxlength="1" type="text">
+                <button class="button is-primary" onclick="RecreationalAreaCard.superDuperFilter()">Filter</button>
+            </div>
+
             <div class="logged-in is-flex navbar-end">
                 <label class="name-label">Welcome: </label>
                 <div class="name">${data.username}</div>

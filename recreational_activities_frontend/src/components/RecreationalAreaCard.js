@@ -1,39 +1,48 @@
 class RecreationalAreaCard
 {
     static container = document.querySelector(".display-search")
+    static all = [];
 
     static getMatch(data)
     {
         this.container.innerHTML = '';
 
+        this.all = []; // had to add to avoid filter from adding another of the same area after submitting another search of same parameters.
+
         data.RECDATA.forEach(area => new RecreationalAreaCard(area));
+    }
+
+    static superDuperFilter()
+    {
+        const query = document.querySelector("#area-filter-by-first-letter").value;
+
+        this.filterAreas(query);
+    }
+
+    static filterAreas(letter)
+    {
+        this.container.innerHTML = "";
+
+        this.all.filter((rec_facility) => 
+        {
+            if (rec_facility.area.FacilityName.split("")[0] === letter.toUpperCase())
+            {
+                rec_facility.render();
+            }
+        })
     }
     
     constructor(area)
     {
         this.area = area;
-        this.render(area);
+        this.constructor.all.push(this);
+        this.render();
     }
 
     render()
     {
         const card = document.createElement("div");
-        const filterQuery = document.getElementById("area-filter-by-first-letter").value;
 
-        if (filterQuery !== "")
-        {    if (this.area.FacilityName.split("")[0] === filterQuery.toUpperCase())
-            {
-                this.areaCardConstructor(card);
-            }
-        }
-        else
-        {
-            this.areaCardConstructor(card);
-        }
-    }
-
-    areaCardConstructor = (card) => 
-    {
         card.className = "card";
         this.card = card;
         this.renderInnerHTML();

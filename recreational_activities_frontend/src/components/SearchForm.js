@@ -26,6 +26,7 @@ class SearchForm
         {
             document.querySelector(".display-search").innerText = "";
             document.querySelector(".error-message").innerText = "";
+            document.querySelector("#area-filter-by-first-letter").value = "";
         }
     }
 
@@ -116,13 +117,6 @@ class SearchForm
                         <option value="WI">Wisconsin</option>
                         <option value="WY">Wyoming</option>
                     </select>
-                </div>
-
-            <br />
-
-            <label>Filter by First Letter of Area Name:</label>
-                <div class"control">
-                    <input class="input" id="area-filter-by-first-letter" maxlength="1" type="text">
                 </div>
 
             <br />
