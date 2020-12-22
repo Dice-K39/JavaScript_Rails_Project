@@ -27235,3 +27235,2079 @@ Processing by Api::V1::RecreationalAreasController#destroy as JSON
 Completed 200 OK in 8ms (Views: 0.2ms | ActiveRecord: 1.8ms | Allocations: 3389)
 
 
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-21 18:12:07 -0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.3ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 10ms (Views: 0.9ms | ActiveRecord: 0.9ms | Allocations: 5511)
+
+
+Started GET "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-21 18:12:07 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.4ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 14ms (Views: 3.1ms | ActiveRecord: 0.9ms | Allocations: 4637)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 18:12:09 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 441ms (Views: 29.1ms | ActiveRecord: 0.0ms | Allocations: 22224)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 18:12:22 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 283ms (Views: 13.0ms | ActiveRecord: 0.0ms | Allocations: 21558)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 18:12:28 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 273ms (Views: 10.7ms | ActiveRecord: 0.0ms | Allocations: 21579)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 18:12:38 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 248ms (Views: 17.7ms | ActiveRecord: 0.0ms | Allocations: 21539)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 18:18:43 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 502ms (Views: 8.9ms | ActiveRecord: 0.0ms | Allocations: 21617)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 18:30:45 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 1422ms (Views: 8.8ms | ActiveRecord: 0.0ms | Allocations: 21524)
+
+
+Started GET "/api/v1/users?username=" for ::1 at 2020-12-21 18:30:49 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>""}
+  [1m[36mApi::V1::User Load (0.8ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 409 Conflict in 2ms (Views: 0.1ms | ActiveRecord: 0.8ms | Allocations: 630)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-21 18:30:52 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 704)
+
+
+Started GET "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-21 18:30:52 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.9ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 1.4ms | ActiveRecord: 1.1ms | Allocations: 1515)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 18:30:58 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 266ms (Views: 8.4ms | ActiveRecord: 0.0ms | Allocations: 21542)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-21 20:04:14 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.4ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 712)
+
+
+Started GET "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-21 20:04:14 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.3ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.5ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 6ms (Views: 4.0ms | ActiveRecord: 0.8ms | Allocations: 1509)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 20:04:20 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 433ms (Views: 42.4ms | ActiveRecord: 0.0ms | Allocations: 21575)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-21 20:05:23 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-21 20:05:23 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.2ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 5ms (Views: 2.9ms | ActiveRecord: 0.3ms | Allocations: 1477)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-21 20:06:10 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-21 20:06:10 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.3ms | Allocations: 1470)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 20:06:43 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 340ms (Views: 8.6ms | ActiveRecord: 0.0ms | Allocations: 21568)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-21 20:07:41 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.3ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 698)
+
+
+Started GET "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-21 20:07:41 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 0.3ms | Allocations: 1471)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-21 20:07:56 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-21 20:07:56 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.2ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.4ms | Allocations: 1470)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-21 20:10:29 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-21 20:10:29 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 7ms (Views: 5.1ms | ActiveRecord: 0.3ms | Allocations: 1470)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 20:10:32 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 649ms (Views: 9.8ms | ActiveRecord: 0.0ms | Allocations: 21536)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-21 20:11:51 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-21 20:11:51 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.3ms | Allocations: 1470)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-21 20:13:16 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-21 20:13:16 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.3ms | Allocations: 1470)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-21 20:13:43 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-21 20:13:43 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.3ms | Allocations: 1470)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-21 20:14:55 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.3ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-21 20:14:55 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.2ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.3ms | Allocations: 1470)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-21 20:15:16 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-21 20:15:16 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.2ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 5ms (Views: 3.2ms | ActiveRecord: 0.4ms | Allocations: 1470)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-21 20:19:00 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-21 20:19:00 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.2ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.3ms | Allocations: 1470)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-21 20:21:03 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-21 20:21:03 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.2ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.4ms | Allocations: 1470)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-21 20:21:38 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-21 20:21:38 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.3ms | Allocations: 1470)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-21 20:23:00 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-21 20:23:00 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.2ms | Allocations: 1470)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-21 20:23:59 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-21 20:23:59 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.2ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 0.3ms | Allocations: 1470)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-21 20:26:16 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-21 20:26:16 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.2ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 0.4ms | Allocations: 1470)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 20:29:50 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 410ms (Views: 9.2ms | ActiveRecord: 0.0ms | Allocations: 21682)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-21 20:30:33 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-21 20:30:33 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.3ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.4ms | Allocations: 1476)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-21 20:30:41 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-21 20:30:41 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.3ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.2ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 5ms (Views: 2.4ms | ActiveRecord: 0.5ms | Allocations: 1470)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 20:30:42 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 369ms (Views: 8.8ms | ActiveRecord: 0.0ms | Allocations: 21551)
+
+
+Started POST "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-21 20:30:48 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"user_id"=>"1", "facility_name"=>"Red Rock Canyon Backcountry Late Exit Pass", "facility_description"=>"", "facility_id"=>"f4d17453-0cba-11eb-b57c-4a047fce61ec", "facility_directions"=>"", "facility_email"=>"", "facility_phone"=>"", "recreational_area"=>{"facility_name"=>"Red Rock Canyon Backcountry Late Exit Pass", "facility_description"=>"", "facility_id"=>"f4d17453-0cba-11eb-b57c-4a047fce61ec", "facility_directions"=>"", "facility_email"=>"", "facility_phone"=>"", "user_id"=>"1"}}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."facility_name" = ? AND "api_v1_recreational_areas"."user_id" = ? LIMIT ?[0m  [["facility_name", "Red Rock Canyon Backcountry Late Exit Pass"], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:16:in `create'
+  [1m[36mApi::V1::RecreationalArea Create (1.6ms)[0m  [1m[32mINSERT INTO "api_v1_recreational_areas" ("facility_name", "facility_description", "created_at", "updated_at", "facility_id", "facility_directions", "facility_email", "facility_phone", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["facility_name", "Red Rock Canyon Backcountry Late Exit Pass"], ["facility_description", ""], ["created_at", "2020-12-22 01:30:48.622899"], ["updated_at", "2020-12-22 01:30:48.622899"], ["facility_id", "f4d17453-0cba-11eb-b57c-4a047fce61ec"], ["facility_directions", ""], ["facility_email", ""], ["facility_phone", ""], ["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:16:in `create'
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:16:in `create'
+Completed 200 OK in 28ms (Views: 0.3ms | ActiveRecord: 3.5ms | Allocations: 12499)
+
+
+Started DELETE "/api/v1/users/1/recreational_areas/1" for ::1 at 2020-12-21 20:30:50 -0500
+Processing by Api::V1::RecreationalAreasController#destroy as JSON
+  Parameters: {"user_id"=>"1", "id"=>"1", "recreational_area"=>{}}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.2ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ? AND "api_v1_recreational_areas"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:25:in `destroy'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:27:in `destroy'
+  [1m[36mApi::V1::RecreationalArea Destroy (1.3ms)[0m  [1m[31mDELETE FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:27:in `destroy'
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:27:in `destroy'
+Completed 200 OK in 11ms (Views: 0.2ms | ActiveRecord: 2.3ms | Allocations: 3546)
+
+
+Started POST "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-21 20:30:53 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"user_id"=>"1", "facility_name"=>"Red Rock Canyon Backcountry Late Exit Pass", "facility_description"=>"", "facility_id"=>"f4d17453-0cba-11eb-b57c-4a047fce61ec", "facility_directions"=>"", "facility_email"=>"", "facility_phone"=>"", "recreational_area"=>{"facility_name"=>"Red Rock Canyon Backcountry Late Exit Pass", "facility_description"=>"", "facility_id"=>"f4d17453-0cba-11eb-b57c-4a047fce61ec", "facility_directions"=>"", "facility_email"=>"", "facility_phone"=>"", "user_id"=>"1"}}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."facility_name" = ? AND "api_v1_recreational_areas"."user_id" = ? LIMIT ?[0m  [["facility_name", "Red Rock Canyon Backcountry Late Exit Pass"], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:16:in `create'
+  [1m[36mApi::V1::RecreationalArea Create (0.5ms)[0m  [1m[32mINSERT INTO "api_v1_recreational_areas" ("facility_name", "facility_description", "created_at", "updated_at", "facility_id", "facility_directions", "facility_email", "facility_phone", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["facility_name", "Red Rock Canyon Backcountry Late Exit Pass"], ["facility_description", ""], ["created_at", "2020-12-22 01:30:53.049826"], ["updated_at", "2020-12-22 01:30:53.049826"], ["facility_id", "f4d17453-0cba-11eb-b57c-4a047fce61ec"], ["facility_directions", ""], ["facility_email", ""], ["facility_phone", ""], ["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:16:in `create'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:16:in `create'
+Completed 200 OK in 13ms (Views: 0.3ms | ActiveRecord: 1.6ms | Allocations: 3981)
+
+
+Started POST "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-21 20:30:53 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"user_id"=>"1", "facility_name"=>"Red Rock Canyon Backcountry Late Exit Pass", "facility_description"=>"", "facility_id"=>"f4d17453-0cba-11eb-b57c-4a047fce61ec", "facility_directions"=>"", "facility_email"=>"", "facility_phone"=>"", "recreational_area"=>{"facility_name"=>"Red Rock Canyon Backcountry Late Exit Pass", "facility_description"=>"", "facility_id"=>"f4d17453-0cba-11eb-b57c-4a047fce61ec", "facility_directions"=>"", "facility_email"=>"", "facility_phone"=>"", "user_id"=>"1"}}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."facility_name" = ? AND "api_v1_recreational_areas"."user_id" = ? LIMIT ?[0m  [["facility_name", "Red Rock Canyon Backcountry Late Exit Pass"], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+Completed 409 Conflict in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 1671)
+
+
+Started DELETE "/api/v1/users/1/recreational_areas/1" for ::1 at 2020-12-21 20:30:55 -0500
+Processing by Api::V1::RecreationalAreasController#destroy as JSON
+  Parameters: {"user_id"=>"1", "id"=>"1", "recreational_area"=>{}}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.2ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ? AND "api_v1_recreational_areas"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:25:in `destroy'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:27:in `destroy'
+  [1m[36mApi::V1::RecreationalArea Destroy (0.5ms)[0m  [1m[31mDELETE FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:27:in `destroy'
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:27:in `destroy'
+Completed 200 OK in 21ms (Views: 0.2ms | ActiveRecord: 3.3ms | Allocations: 3391)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-21 20:40:18 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 705)
+
+
+Started GET "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-21 20:40:18 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.3ms | Allocations: 1508)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 20:40:22 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 369ms (Views: 8.7ms | ActiveRecord: 0.0ms | Allocations: 21534)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-21 20:46:52 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 706)
+
+
+Started GET "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-21 20:46:52 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.2ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 0.4ms | Allocations: 1508)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 20:47:06 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 453ms (Views: 8.6ms | ActiveRecord: 0.0ms | Allocations: 21605)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-21 20:47:46 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-21 20:47:46 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.2ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 2.1ms | ActiveRecord: 0.3ms | Allocations: 1470)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 20:47:48 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 288ms (Views: 8.1ms | ActiveRecord: 0.0ms | Allocations: 21548)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-21 20:48:23 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-21 20:48:23 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.2ms | Allocations: 1470)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 20:48:24 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 301ms (Views: 8.5ms | ActiveRecord: 0.0ms | Allocations: 21554)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-21 20:48:59 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-21 20:48:59 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.2ms | Allocations: 1470)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 20:49:00 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 323ms (Views: 8.6ms | ActiveRecord: 0.0ms | Allocations: 21556)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-21 20:49:21 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-21 20:49:21 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.2ms | Allocations: 1470)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 20:49:23 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 262ms (Views: 24.5ms | ActiveRecord: 0.0ms | Allocations: 21568)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-21 20:51:54 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-21 20:51:54 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.2ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.4ms | Allocations: 1470)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 20:51:55 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 339ms (Views: 8.8ms | ActiveRecord: 0.0ms | Allocations: 21577)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-21 22:08:22 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 7ms (Views: 2.2ms | ActiveRecord: 0.2ms | Allocations: 705)
+
+
+Started GET "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-21 22:08:22 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.3ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.2ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 7ms (Views: 3.3ms | ActiveRecord: 0.6ms | Allocations: 1508)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 22:08:23 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 446ms (Views: 8.7ms | ActiveRecord: 0.0ms | Allocations: 21531)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-21 22:12:05 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-21 22:12:05 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.2ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 6ms (Views: 3.8ms | ActiveRecord: 0.4ms | Allocations: 1470)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 22:12:08 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 487ms (Views: 10.2ms | ActiveRecord: 0.0ms | Allocations: 21539)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-21 22:13:10 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-21 22:13:10 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.3ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.2ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 5ms (Views: 2.4ms | ActiveRecord: 0.5ms | Allocations: 1470)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 22:13:12 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 313ms (Views: 13.6ms | ActiveRecord: 0.0ms | Allocations: 21598)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-21 22:17:07 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-21 22:17:07 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.3ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.2ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 7ms (Views: 4.6ms | ActiveRecord: 0.5ms | Allocations: 1470)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 22:17:09 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 612ms (Views: 55.7ms | ActiveRecord: 0.0ms | Allocations: 21573)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-21 22:18:44 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-21 22:18:44 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.2ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.3ms | Allocations: 1470)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 22:18:45 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 449ms (Views: 10.1ms | ActiveRecord: 0.0ms | Allocations: 21593)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-21 22:19:53 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-21 22:19:53 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.2ms | Allocations: 1470)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-21 22:21:13 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-21 22:21:13 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.2ms | Allocations: 1470)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 22:21:15 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 330ms (Views: 8.4ms | ActiveRecord: 0.0ms | Allocations: 21553)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-21 22:23:53 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-21 22:23:53 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.2ms | Allocations: 1470)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 22:23:56 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 436ms (Views: 8.8ms | ActiveRecord: 0.0ms | Allocations: 21620)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-21 22:24:46 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-21 22:24:46 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.2ms | Allocations: 1470)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 22:24:48 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 314ms (Views: 8.4ms | ActiveRecord: 0.0ms | Allocations: 21570)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-21 22:28:01 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-21 22:28:01 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 0.2ms | Allocations: 1473)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 22:28:02 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 403ms (Views: 8.4ms | ActiveRecord: 0.0ms | Allocations: 21625)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-21 22:28:41 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-21 22:28:41 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.2ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.3ms | Allocations: 1470)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 22:28:42 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 355ms (Views: 8.6ms | ActiveRecord: 0.0ms | Allocations: 21592)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-21 22:30:42 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-21 22:30:42 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.3ms | Allocations: 1470)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 22:30:43 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 364ms (Views: 9.6ms | ActiveRecord: 0.0ms | Allocations: 21545)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-21 22:31:10 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-21 22:31:10 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.4ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.2ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 1.7ms | ActiveRecord: 0.6ms | Allocations: 1470)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 22:31:12 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 267ms (Views: 8.2ms | ActiveRecord: 0.0ms | Allocations: 21546)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-21 22:32:53 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-21 22:32:53 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.2ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.3ms | Allocations: 1470)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 22:32:54 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 407ms (Views: 8.4ms | ActiveRecord: 0.0ms | Allocations: 21557)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-21 22:34:03 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 692)
+
+
+Started GET "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-21 22:34:03 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 1.0ms | ActiveRecord: 0.3ms | Allocations: 1470)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 22:34:04 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 361ms (Views: 8.3ms | ActiveRecord: 0.0ms | Allocations: 21606)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-21 22:34:27 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-21 22:34:27 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.6ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.2ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 1.5ms | ActiveRecord: 0.8ms | Allocations: 1470)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 22:34:28 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 382ms (Views: 8.2ms | ActiveRecord: 0.0ms | Allocations: 21544)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 22:34:40 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 285ms (Views: 9.2ms | ActiveRecord: 0.0ms | Allocations: 21536)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 22:34:46 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 320ms (Views: 8.3ms | ActiveRecord: 0.0ms | Allocations: 21558)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-21 22:38:02 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-21 22:38:02 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 0.3ms | Allocations: 1470)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 22:38:03 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 594ms (Views: 9.3ms | ActiveRecord: 0.0ms | Allocations: 21573)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-21 22:41:54 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-21 22:41:54 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.3ms | Allocations: 1470)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 22:41:56 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 537ms (Views: 9.1ms | ActiveRecord: 0.0ms | Allocations: 21639)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-21 22:42:56 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-21 22:42:56 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.3ms | Allocations: 1470)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 22:42:58 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 271ms (Views: 8.1ms | ActiveRecord: 0.0ms | Allocations: 21576)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-21 22:43:53 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-21 22:43:53 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.3ms | Allocations: 1470)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 22:43:54 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 427ms (Views: 8.4ms | ActiveRecord: 0.0ms | Allocations: 21555)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-21 22:44:52 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-21 22:44:52 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.2ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.4ms | Allocations: 1470)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 22:44:54 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 277ms (Views: 8.8ms | ActiveRecord: 0.0ms | Allocations: 21558)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 22:46:53 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 392ms (Views: 8.1ms | ActiveRecord: 0.0ms | Allocations: 21542)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 22:47:06 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 289ms (Views: 32.4ms | ActiveRecord: 0.0ms | Allocations: 21543)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-21 22:48:16 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-21 22:48:16 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.6ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.2ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 1.1ms | ActiveRecord: 0.8ms | Allocations: 1470)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 22:48:17 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 483ms (Views: 8.9ms | ActiveRecord: 0.0ms | Allocations: 21543)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 22:48:55 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 294ms (Views: 8.5ms | ActiveRecord: 0.0ms | Allocations: 21560)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 22:49:15 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 286ms (Views: 9.0ms | ActiveRecord: 0.0ms | Allocations: 21534)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-21 22:54:31 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-21 22:54:31 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.2ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.4ms | Allocations: 1470)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-21 22:55:31 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-21 22:55:31 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.4ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 0.6ms | Allocations: 1470)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 22:55:37 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 340ms (Views: 9.4ms | ActiveRecord: 0.0ms | Allocations: 21567)
+
+
+Started GET "/api/v1/users?username=" for ::1 at 2020-12-21 22:56:21 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>""}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 409 Conflict in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 602)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-21 22:56:23 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-21 22:56:23 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.2ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.4ms | Allocations: 1470)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 22:56:27 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 305ms (Views: 30.4ms | ActiveRecord: 0.0ms | Allocations: 21570)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-21 22:58:32 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-21 22:58:32 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.3ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.2ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.5ms | Allocations: 1470)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 22:58:33 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 452ms (Views: 8.5ms | ActiveRecord: 0.0ms | Allocations: 21561)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-21 23:03:21 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-21 23:03:21 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.2ms | Allocations: 1470)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 23:03:23 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 550ms (Views: 8.4ms | ActiveRecord: 0.0ms | Allocations: 21559)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-21 23:08:10 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-21 23:08:10 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.3ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 5ms (Views: 1.7ms | ActiveRecord: 0.4ms | Allocations: 1470)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-21 23:08:45 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-21 23:08:45 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 0.3ms | Allocations: 1470)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 23:09:22 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 599ms (Views: 8.0ms | ActiveRecord: 0.0ms | Allocations: 21564)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-21 23:09:54 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-21 23:09:54 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (1.0ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.2ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 7ms (Views: 3.4ms | ActiveRecord: 1.2ms | Allocations: 1470)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 23:09:57 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 338ms (Views: 8.3ms | ActiveRecord: 0.0ms | Allocations: 21566)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-21 23:12:56 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.1ms | Allocations: 692)
+
+
+Started GET "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-21 23:12:56 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.3ms | Allocations: 1470)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 23:12:58 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 475ms (Views: 8.7ms | ActiveRecord: 0.0ms | Allocations: 21609)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-21 23:13:48 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-21 23:13:48 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 1.7ms | ActiveRecord: 0.4ms | Allocations: 1470)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 23:13:50 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 292ms (Views: 8.8ms | ActiveRecord: 0.0ms | Allocations: 21577)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-21 23:19:13 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-21 23:19:13 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 0.3ms | Allocations: 1470)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 23:19:15 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 503ms (Views: 8.6ms | ActiveRecord: 0.0ms | Allocations: 21555)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-21 23:23:25 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-21 23:23:25 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.2ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.3ms | Allocations: 1470)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 23:23:26 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 353ms (Views: 8.1ms | ActiveRecord: 0.0ms | Allocations: 21600)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-21 23:31:44 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.3ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 705)
+
+
+Started GET "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-21 23:31:44 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.3ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 1.6ms | ActiveRecord: 0.4ms | Allocations: 1508)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 23:31:45 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 365ms (Views: 27.0ms | ActiveRecord: 0.0ms | Allocations: 21579)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 23:31:55 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 277ms (Views: 8.7ms | ActiveRecord: 0.0ms | Allocations: 21565)
+
+
+Started POST "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-21 23:32:12 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"user_id"=>"1", "facility_name"=>"CRYSTAL SPRINGS", "facility_description"=>"<h2>Overview</h2>\nCrystal Springs Campground, perched on the shores of Lake Ouachita in Arkansas, is an ideal spot for families, friends and couples. Approximately 1.2 million people visit the lake each year to explore its crystal clear waters and scenic mountain landscape.\n    Click here  for the Lake Ouachita Virtual Tour.<h2>Recreation</h2>\nVisitors enjoy fishing, water skiing, hiking and boating. Scuba diving is particularly popular because of the lake's high underwater visibility. Small and rare freshwater jellyfish (non-stinging) can be found, in addition to many types of fish, including the striped bass, lazily drifting between rocks. \n<br/><br/>\nBald eagles are a big attraction for bird watchers and photographers in winter months.<h2>Facilities</h2>\nThe campground consists of 68 sites including 63 sites with electric and water hookups. There is also a reservable group campsite that includes electrical and water hookups. The two group picnic shelters have electricity. Other amenities include a dump station, fish cleaning station, hot showers, boat ramp, playground and a swim beach.<h2>Natural Features</h2>\nLake Ouachita is nestled in the Ouachita Mountains just 10 miles west of Hot Springs National Park. The pool is fed by the cool waters of the Ouachita River and extends about 30 miles over 40,000 surface acres.\n<h2>Nearby Attractions</h2>\nPart of the scenic 223-mile Ouachita National Recreation Trail runs just north of the lake. Here, hikers and mountain bikers can explore an array of breathtaking views in the Ouachita Mountains.", "facility_id"=>"233473", "facility_directions"=>"From Hot Springs, Arkansas, take US 270 west about 15.4 miles to North\nCrystal Springs Road. Turn right and follow access road three miles north\nto the park.", "facility_email"=>"", "facility_phone"=>"501-991-3390", "recreational_area"=>{"facility_name"=>"CRYSTAL SPRINGS", "facility_description"=>"<h2>Overview</h2>\nCrystal Springs Campground, perched on the shores of Lake Ouachita in Arkansas, is an ideal spot for families, friends and couples. Approximately 1.2 million people visit the lake each year to explore its crystal clear waters and scenic mountain landscape.\n    Click here  for the Lake Ouachita Virtual Tour.<h2>Recreation</h2>\nVisitors enjoy fishing, water skiing, hiking and boating. Scuba diving is particularly popular because of the lake's high underwater visibility. Small and rare freshwater jellyfish (non-stinging) can be found, in addition to many types of fish, including the striped bass, lazily drifting between rocks. \n<br/><br/>\nBald eagles are a big attraction for bird watchers and photographers in winter months.<h2>Facilities</h2>\nThe campground consists of 68 sites including 63 sites with electric and water hookups. There is also a reservable group campsite that includes electrical and water hookups. The two group picnic shelters have electricity. Other amenities include a dump station, fish cleaning station, hot showers, boat ramp, playground and a swim beach.<h2>Natural Features</h2>\nLake Ouachita is nestled in the Ouachita Mountains just 10 miles west of Hot Springs National Park. The pool is fed by the cool waters of the Ouachita River and extends about 30 miles over 40,000 surface acres.\n<h2>Nearby Attractions</h2>\nPart of the scenic 223-mile Ouachita National Recreation Trail runs just north of the lake. Here, hikers and mountain bikers can explore an array of breathtaking views in the Ouachita Mountains.", "facility_id"=>"233473", "facility_directions"=>"From Hot Springs, Arkansas, take US 270 west about 15.4 miles to North\nCrystal Springs Road. Turn right and follow access road three miles north\nto the park.", "facility_email"=>"", "facility_phone"=>"501-991-3390", "user_id"=>"1"}}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."facility_name" = ? AND "api_v1_recreational_areas"."user_id" = ? LIMIT ?[0m  [["facility_name", "CRYSTAL SPRINGS"], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:16:in `create'
+  [1m[36mApi::V1::RecreationalArea Create (0.5ms)[0m  [1m[32mINSERT INTO "api_v1_recreational_areas" ("facility_name", "facility_description", "created_at", "updated_at", "facility_id", "facility_directions", "facility_email", "facility_phone", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["facility_name", "CRYSTAL SPRINGS"], ["facility_description", "<h2>Overview</h2>\nCrystal Springs Campground, perched on the shores of Lake Ouachita in Arkansas, is an ideal spot for families, friends and couples. Approximately 1.2 million people visit the lake each year to explore its crystal clear waters and scenic mountain landscape.\n    Click here  for the Lake Ouachita Virtual Tour.<h2>Recreation</h2>\nVisitors enjoy fishing, water skiing, hiking and boating. Scuba diving is particularly popular because of the lake's high underwater visibility. Small and rare freshwater jellyfish (non-stinging) can be found, in addition to many types of fish, including the striped bass, lazily drifting between rocks. \n<br/><br/>\nBald eagles are a big attraction for bird watchers and photographers in winter months.<h2>Facilities</h2>\nThe campground consists of 68 sites including 63 sites with electric and water hookups. There is also a reservable group campsite that includes electrical and water hookups. The two group picnic shelters have electricity. Other amenities include a dump station, fish cleaning station, hot showers, boat ramp, playground and a swim beach.<h2>Natural Features</h2>\nLake Ouachita is nestled in the Ouachita Mountains just 10 miles west of Hot Springs National Park. The pool is fed by the cool waters of the Ouachita River and extends about 30 miles over 40,000 surface acres.\n<h2>Nearby Attractions</h2>\nPart of the scenic 223-mile Ouachita National Recreation Trail runs just north of the lake. Here, hikers and mountain bikers can explore an array of breathtaking views in the Ouachita Mountains."], ["created_at", "2020-12-22 04:32:12.100361"], ["updated_at", "2020-12-22 04:32:12.100361"], ["facility_id", "233473"], ["facility_directions", "From Hot Springs, Arkansas, take US 270 west about 15.4 miles to North\nCrystal Springs Road. Turn right and follow access road three miles north\nto the park."], ["facility_email", ""], ["facility_phone", "501-991-3390"], ["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:16:in `create'
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:16:in `create'
+Completed 200 OK in 23ms (Views: 0.4ms | ActiveRecord: 2.7ms | Allocations: 4010)
+
+
+Started DELETE "/api/v1/users/1/recreational_areas/1" for ::1 at 2020-12-21 23:32:14 -0500
+Processing by Api::V1::RecreationalAreasController#destroy as JSON
+  Parameters: {"user_id"=>"1", "id"=>"1", "recreational_area"=>{}}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.2ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ? AND "api_v1_recreational_areas"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:25:in `destroy'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:27:in `destroy'
+  [1m[36mApi::V1::RecreationalArea Destroy (0.3ms)[0m  [1m[31mDELETE FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:27:in `destroy'
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:27:in `destroy'
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 1.8ms | Allocations: 3414)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 23:32:46 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 292ms (Views: 8.4ms | ActiveRecord: 0.0ms | Allocations: 21545)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-21 23:34:41 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.5ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-21 23:34:41 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.2ms | Allocations: 1470)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 23:34:43 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 293ms (Views: 8.4ms | ActiveRecord: 0.0ms | Allocations: 21566)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 23:34:55 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 360ms (Views: 8.2ms | ActiveRecord: 0.0ms | Allocations: 21545)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 23:35:09 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 306ms (Views: 28.6ms | ActiveRecord: 0.0ms | Allocations: 21567)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 23:35:12 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 286ms (Views: 8.9ms | ActiveRecord: 0.0ms | Allocations: 21581)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-21 23:37:29 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-21 23:37:29 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.2ms | Allocations: 1470)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 23:37:30 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 413ms (Views: 8.6ms | ActiveRecord: 0.0ms | Allocations: 21586)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 23:37:37 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 234ms (Views: 8.4ms | ActiveRecord: 0.0ms | Allocations: 21578)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-21 23:37:57 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-21 23:37:57 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.3ms | Allocations: 1470)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 23:37:59 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 274ms (Views: 8.5ms | ActiveRecord: 0.0ms | Allocations: 21560)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-21 23:38:38 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-21 23:38:38 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.3ms | Allocations: 1470)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 23:38:39 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 270ms (Views: 27.7ms | ActiveRecord: 0.0ms | Allocations: 21565)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 23:38:55 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 340ms (Views: 8.1ms | ActiveRecord: 0.0ms | Allocations: 21564)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-21 23:39:59 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-21 23:39:59 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 0.3ms | Allocations: 1470)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 23:40:00 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 277ms (Views: 8.4ms | ActiveRecord: 0.0ms | Allocations: 21565)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 23:40:03 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 360ms (Views: 8.3ms | ActiveRecord: 0.0ms | Allocations: 21561)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-21 23:40:26 -0500
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-21 23:40:26 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.4ms | Allocations: 1470)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 23:40:27 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 279ms (Views: 8.4ms | ActiveRecord: 0.0ms | Allocations: 21566)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 23:40:35 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 249ms (Views: 27.2ms | ActiveRecord: 0.0ms | Allocations: 21551)
+
+
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-21 23:46:12 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 705)
+
+
+Started GET "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-21 23:46:12 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.2ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.3ms | Allocations: 1508)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 23:46:17 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 488ms (Views: 9.7ms | ActiveRecord: 0.0ms | Allocations: 21561)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 23:46:20 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 347ms (Views: 8.9ms | ActiveRecord: 0.0ms | Allocations: 21557)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 23:49:07 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 343ms (Views: 8.4ms | ActiveRecord: 0.0ms | Allocations: 21578)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 23:49:09 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 283ms (Views: 8.3ms | ActiveRecord: 0.0ms | Allocations: 21546)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 23:49:13 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 250ms (Views: 8.6ms | ActiveRecord: 0.0ms | Allocations: 21541)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 23:49:15 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 284ms (Views: 9.9ms | ActiveRecord: 0.0ms | Allocations: 21587)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 23:49:15 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 278ms (Views: 8.6ms | ActiveRecord: 0.0ms | Allocations: 21594)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 23:49:16 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 231ms (Views: 8.8ms | ActiveRecord: 0.0ms | Allocations: 21537)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 23:49:16 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 300ms (Views: 8.1ms | ActiveRecord: 0.0ms | Allocations: 21568)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 23:49:16 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 285ms (Views: 8.2ms | ActiveRecord: 0.0ms | Allocations: 21560)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 23:49:17 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 263ms (Views: 25.9ms | ActiveRecord: 0.0ms | Allocations: 21607)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 23:49:17 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 279ms (Views: 8.2ms | ActiveRecord: 0.0ms | Allocations: 21579)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 23:49:17 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 252ms (Views: 8.6ms | ActiveRecord: 0.0ms | Allocations: 21547)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 23:49:17 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 265ms (Views: 8.3ms | ActiveRecord: 0.0ms | Allocations: 21618)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 23:49:18 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 266ms (Views: 8.4ms | ActiveRecord: 0.0ms | Allocations: 21571)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 23:49:18 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 272ms (Views: 8.1ms | ActiveRecord: 0.0ms | Allocations: 21586)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 23:49:18 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 249ms (Views: 29.3ms | ActiveRecord: 0.0ms | Allocations: 21561)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 23:49:18 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 237ms (Views: 8.3ms | ActiveRecord: 0.0ms | Allocations: 21550)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 23:49:19 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 274ms (Views: 8.4ms | ActiveRecord: 0.0ms | Allocations: 21573)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 23:49:19 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 223ms (Views: 8.2ms | ActiveRecord: 0.0ms | Allocations: 21587)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 23:49:19 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 246ms (Views: 8.1ms | ActiveRecord: 0.0ms | Allocations: 21566)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 23:49:19 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 237ms (Views: 10.5ms | ActiveRecord: 0.0ms | Allocations: 21546)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 23:49:20 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 281ms (Views: 8.9ms | ActiveRecord: 0.0ms | Allocations: 21582)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 23:49:20 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 233ms (Views: 9.3ms | ActiveRecord: 0.0ms | Allocations: 21562)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 23:49:20 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 244ms (Views: 8.3ms | ActiveRecord: 0.0ms | Allocations: 21582)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 23:49:20 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 259ms (Views: 8.4ms | ActiveRecord: 0.0ms | Allocations: 21556)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 23:49:21 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 246ms (Views: 8.3ms | ActiveRecord: 0.0ms | Allocations: 21577)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 23:49:21 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 245ms (Views: 8.7ms | ActiveRecord: 0.0ms | Allocations: 21600)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 23:49:21 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 264ms (Views: 9.1ms | ActiveRecord: 0.0ms | Allocations: 21571)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 23:49:22 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 238ms (Views: 8.4ms | ActiveRecord: 0.0ms | Allocations: 21594)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 23:49:22 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 241ms (Views: 8.9ms | ActiveRecord: 0.0ms | Allocations: 21583)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 23:49:22 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 242ms (Views: 8.6ms | ActiveRecord: 0.0ms | Allocations: 21590)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 23:49:22 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 267ms (Views: 9.1ms | ActiveRecord: 0.0ms | Allocations: 21564)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 23:49:23 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 290ms (Views: 26.3ms | ActiveRecord: 0.0ms | Allocations: 21581)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 23:49:23 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 248ms (Views: 8.8ms | ActiveRecord: 0.0ms | Allocations: 21577)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 23:49:23 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 227ms (Views: 8.6ms | ActiveRecord: 0.0ms | Allocations: 21553)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 23:49:23 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 255ms (Views: 8.1ms | ActiveRecord: 0.0ms | Allocations: 21555)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 23:49:24 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 285ms (Views: 8.0ms | ActiveRecord: 0.0ms | Allocations: 21540)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 23:49:24 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 234ms (Views: 8.7ms | ActiveRecord: 0.0ms | Allocations: 21561)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 23:49:24 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 277ms (Views: 29.2ms | ActiveRecord: 0.0ms | Allocations: 21541)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 23:49:24 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 267ms (Views: 8.9ms | ActiveRecord: 0.0ms | Allocations: 21574)
+
+
+Started GET "/api/v1/search?state=" for ::1 at 2020-12-21 23:49:25 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"state"=>""}
+Completed 200 OK in 280ms (Views: 9.1ms | ActiveRecord: 0.0ms | Allocations: 21583)
+
+
