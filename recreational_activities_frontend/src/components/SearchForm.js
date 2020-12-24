@@ -49,20 +49,20 @@ class SearchForm
 
             <label>Keyword Search:</label>
             <div class="control">
-                <input class="input" id="keyword_query" type="text" placeholder="Input Keyword">
+                <input class="input" id="keyword_query" name="keyword_query" type="text" placeholder="Input Keyword">
             </div>
             
             <br />
 
             <label>Activity Search:</label>
             <div class="control">
-                <input class="input" id="activity_query" type="text" placeholder="Input Activity">
+                <input class="input" id="activity_query" name="activity_query" type="text" placeholder="Input Activity">
             </div>
 
             <br />
 
             <label>State:</label>
-                <div class="control" id="state">
+                <div class="control">
                     <select name="state">
                         <option value="">None</option> 
                         <option value="AL">Alabama</option>
@@ -123,7 +123,8 @@ class SearchForm
 
             <div class="buttons">
                 <button class="button is-primary" id="submit">Submit</button>
-                <button class="button is-danger" id="reset" type="reset">Reset</button>
+                <button class="button is-danger" id="reset" type="Reset">Reset</button>
+                <button class="button sort-btn is-warning" onclick="FavoritesCard.sortMyFavorites()">Sort Favorites</button> 
             </div>
         `;
     }

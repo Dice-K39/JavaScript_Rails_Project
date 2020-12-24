@@ -21,9 +21,9 @@ class User
     
     loadFavorites()
     {
-        const favoriteContainer = document.querySelector(".favorited-section");
+        const favoriteLbl = document.querySelector(".favorite-lbl");
 
-        favoriteContainer.innerHTML = "Favorites:";
+        favoriteLbl.innerHTML = `Favorites:`
 
         api.getFavorites(this.user);
     }
@@ -68,11 +68,13 @@ class User
             const displaySearch = document.querySelector(".display-search");
             const favoritedSection = document.querySelector(".favorited-section");
             const errorMessageContainer = document.querySelector(".error-message");
+            const favoriteLbl = document.querySelector(".favorite-lbl");
             
             searchForm.innerHTML = "";
             displaySearch.innerHTML = "";
             favoritedSection.innerHTML = "";
             errorMessageContainer.innerHTML = "";
+            favoriteLbl.innerHTML = "";
             
             new User();
         }

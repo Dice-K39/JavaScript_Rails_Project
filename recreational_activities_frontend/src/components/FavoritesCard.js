@@ -30,6 +30,40 @@ class FavoritesCard
         this.constructor.container.append(card);
     }
 
+    // live coding example
+    static sortMyFavorites()
+    {
+        event.preventDefault();
+
+        const userID = document.querySelector(".user-id").value;
+
+        const url = `http://localhost:3000/api/v1` + `/users/${userID}/recreational_areas`;
+
+        fetch(url)
+            .then(res => res.json())
+            .then(data => 
+            {
+
+                this.container.innerHTML = "";
+
+                const sortedData = data.sort((a, b) =>
+                {
+                    if (a.facility_name < b.facility_name)
+                    {
+                        return -1;
+                    }
+                    else if (a.facility_name > b.facility_name)
+                    {
+                        return 1;
+                    }
+
+                    return 0;
+                })
+
+                new FavoritesCard(sortedData);
+            });
+    }
+
     attachEventListener = (card) =>
     {
         card.querySelector(".remove-btn").addEventListener("click", () => this.handleRemoveOnClick(card));
