@@ -29,7 +29,7 @@ To get started you will need to:
 
 * Then navigate to the frontend of the project and open the index.html file.
 
-** You will need an api key to use the search function of the app. The search function takes information from an external api and lists the result on the browser.
+** You will need an api key to use the search function of the app. The search function takes information from an external api and lists the result on the browser. To signup for an api key, go to [Recreation.gov](https://ridb.recreation.gov/).
 
 ## Contributing
 

@@ -31534,3 +31534,141 @@ Processing by Api::V1::RecreationalAreasController#destroy as JSON
 Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 1.5ms | Allocations: 3389)
 
 
+Started GET "/api/v1/users?username=Dice" for ::1 at 2020-12-24 22:57:53 -0500
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"username"=>"Dice"}
+  [1m[36mApi::V1::User Load (0.4ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."username" = ? LIMIT ?[0m  [["username", "Dice"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 11ms (Views: 0.7ms | ActiveRecord: 1.1ms | Allocations: 5511)
+
+
+Started GET "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-24 22:57:53 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.4ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.4ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 19ms (Views: 5.6ms | ActiveRecord: 1.9ms | Allocations: 4637)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=camping&state=GA" for ::1 at 2020-12-24 22:58:27 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"camping", "state"=>"GA"}
+Completed 200 OK in 475ms (Views: 34.8ms | ActiveRecord: 0.0ms | Allocations: 24460)
+
+
+Started POST "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-24 22:58:32 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"user_id"=>"1", "facility_name"=>"Wildcat Creek Campground #2 Upper", "facility_description"=>"<p><strong>Wildcat Creek Campgrounds are opened to tent camping only. No RV, No Campers, and No Trailers allowed. Passenger cars and trucks only no towing on this road. Size and length restrictions applied.</strong></p><p>Although the winding road leading to the campground is not RV friendly, the payoff of landing a night in this environment is pure delight. These developed campgrounds are buried deep in the North Georgia Mountains west of Lake Burton and along the headwaters of Wildcat Creek. The creek, seasonally stocked with rainbow trout, runs directly adjacent to the campsites and provides for an astounding setting, so be prepared to capture nature at its best, and bring your camera. On clear nights the stars appear to be just an arm’s reach away! <br/> </p>", "facility_id"=>"10070265", "facility_directions"=>"<p><strong> Physical Address:</strong> 2740 West Wildcat Rd., Clayton, GA</p>", "facility_email"=>"", "facility_phone"=>"", "recreational_area"=>{"facility_name"=>"Wildcat Creek Campground #2 Upper", "facility_description"=>"<p><strong>Wildcat Creek Campgrounds are opened to tent camping only. No RV, No Campers, and No Trailers allowed. Passenger cars and trucks only no towing on this road. Size and length restrictions applied.</strong></p><p>Although the winding road leading to the campground is not RV friendly, the payoff of landing a night in this environment is pure delight. These developed campgrounds are buried deep in the North Georgia Mountains west of Lake Burton and along the headwaters of Wildcat Creek. The creek, seasonally stocked with rainbow trout, runs directly adjacent to the campsites and provides for an astounding setting, so be prepared to capture nature at its best, and bring your camera. On clear nights the stars appear to be just an arm’s reach away! <br/> </p>", "facility_id"=>"10070265", "facility_directions"=>"<p><strong> Physical Address:</strong> 2740 West Wildcat Rd., Clayton, GA</p>", "facility_email"=>"", "facility_phone"=>"", "user_id"=>"1"}}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."facility_name" = ? AND "api_v1_recreational_areas"."user_id" = ? LIMIT ?[0m  [["facility_name", "Wildcat Creek Campground #2 Upper"], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:16:in `create'
+  [1m[36mApi::V1::RecreationalArea Create (0.8ms)[0m  [1m[32mINSERT INTO "api_v1_recreational_areas" ("facility_name", "facility_description", "created_at", "updated_at", "facility_id", "facility_directions", "facility_email", "facility_phone", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["facility_name", "Wildcat Creek Campground #2 Upper"], ["facility_description", "<p><strong>Wildcat Creek Campgrounds are opened to tent camping only. No RV, No Campers, and No Trailers allowed. Passenger cars and trucks only no towing on this road. Size and length restrictions applied.</strong></p><p>Although the winding road leading to the campground is not RV friendly, the payoff of landing a night in this environment is pure delight. These developed campgrounds are buried deep in the North Georgia Mountains west of Lake Burton and along the headwaters of Wildcat Creek. The creek, seasonally stocked with rainbow trout, runs directly adjacent to the campsites and provides for an astounding setting, so be prepared to capture nature at its best, and bring your camera. On clear nights the stars appear to be just an arm’s reach away! <br/> </p>"], ["created_at", "2020-12-25 03:58:32.492985"], ["updated_at", "2020-12-25 03:58:32.492985"], ["facility_id", "10070265"], ["facility_directions", "<p><strong> Physical Address:</strong> 2740 West Wildcat Rd., Clayton, GA</p>"], ["facility_email", ""], ["facility_phone", ""], ["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:16:in `create'
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:16:in `create'
+Completed 200 OK in 36ms (Views: 0.3ms | ActiveRecord: 3.7ms | Allocations: 10986)
+
+
+Started POST "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-24 22:58:33 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"user_id"=>"1", "facility_name"=>"Leon E. Williams - Holiday Marina", "facility_description"=>"This recreation area is part of <a href=http://www.recreation.gov/recreationalAreaDetails.do?contractCode=NRSO&recAreaId=440&agencyCode=130>Allatoona Lake</a>", "facility_id"=>"231774", "facility_directions"=>"", "facility_email"=>"", "facility_phone"=>"", "recreational_area"=>{"facility_name"=>"Leon E. Williams - Holiday Marina", "facility_description"=>"This recreation area is part of <a href=http://www.recreation.gov/recreationalAreaDetails.do?contractCode=NRSO&recAreaId=440&agencyCode=130>Allatoona Lake</a>", "facility_id"=>"231774", "facility_directions"=>"", "facility_email"=>"", "facility_phone"=>"", "user_id"=>"1"}}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."facility_name" = ? AND "api_v1_recreational_areas"."user_id" = ? LIMIT ?[0m  [["facility_name", "Leon E. Williams - Holiday Marina"], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:16:in `create'
+  [1m[36mApi::V1::RecreationalArea Create (0.3ms)[0m  [1m[32mINSERT INTO "api_v1_recreational_areas" ("facility_name", "facility_description", "created_at", "updated_at", "facility_id", "facility_directions", "facility_email", "facility_phone", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["facility_name", "Leon E. Williams - Holiday Marina"], ["facility_description", "This recreation area is part of <a href=http://www.recreation.gov/recreationalAreaDetails.do?contractCode=NRSO&recAreaId=440&agencyCode=130>Allatoona Lake</a>"], ["created_at", "2020-12-25 03:58:33.799669"], ["updated_at", "2020-12-25 03:58:33.799669"], ["facility_id", "231774"], ["facility_directions", ""], ["facility_email", ""], ["facility_phone", ""], ["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:16:in `create'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:16:in `create'
+Completed 200 OK in 14ms (Views: 0.3ms | ActiveRecord: 1.5ms | Allocations: 4009)
+
+
+Started POST "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-24 22:58:34 -0500
+Processing by Api::V1::RecreationalAreasController#create as JSON
+  Parameters: {"user_id"=>"1", "facility_name"=>"PS Marina 3 - Allatoona Landing", "facility_description"=>"This recreation area is part of <a href=http://www.recreation.gov/recreationalAreaDetails.do?contractCode=NRSO&recAreaId=440&agencyCode=130>Allatoona Lake</a>", "facility_id"=>"231775", "facility_directions"=>"", "facility_email"=>"", "facility_phone"=>"", "recreational_area"=>{"facility_name"=>"PS Marina 3 - Allatoona Landing", "facility_description"=>"This recreation area is part of <a href=http://www.recreation.gov/recreationalAreaDetails.do?contractCode=NRSO&recAreaId=440&agencyCode=130>Allatoona Lake</a>", "facility_id"=>"231775", "facility_directions"=>"", "facility_email"=>"", "facility_phone"=>"", "user_id"=>"1"}}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."facility_name" = ? AND "api_v1_recreational_areas"."user_id" = ? LIMIT ?[0m  [["facility_name", "PS Marina 3 - Allatoona Landing"], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:13:in `create'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:16:in `create'
+  [1m[36mApi::V1::RecreationalArea Create (0.3ms)[0m  [1m[32mINSERT INTO "api_v1_recreational_areas" ("facility_name", "facility_description", "created_at", "updated_at", "facility_id", "facility_directions", "facility_email", "facility_phone", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["facility_name", "PS Marina 3 - Allatoona Landing"], ["facility_description", "This recreation area is part of <a href=http://www.recreation.gov/recreationalAreaDetails.do?contractCode=NRSO&recAreaId=440&agencyCode=130>Allatoona Lake</a>"], ["created_at", "2020-12-25 03:58:34.593732"], ["updated_at", "2020-12-25 03:58:34.593732"], ["facility_id", "231775"], ["facility_directions", ""], ["facility_email", ""], ["facility_phone", ""], ["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:16:in `create'
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:16:in `create'
+Completed 200 OK in 13ms (Views: 0.4ms | ActiveRecord: 1.6ms | Allocations: 4008)
+
+
+Started GET "/api/v1/users/1/recreational_areas" for ::1 at 2020-12-24 22:58:37 -0500
+Processing by Api::V1::RecreationalAreasController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.2ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.3ms | Allocations: 2079)
+
+
+Started DELETE "/api/v1/users/1/recreational_areas/2" for ::1 at 2020-12-24 23:00:02 -0500
+Processing by Api::V1::RecreationalAreasController#destroy as JSON
+  Parameters: {"user_id"=>"1", "id"=>"2", "recreational_area"=>{}}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.2ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ? AND "api_v1_recreational_areas"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:25:in `destroy'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:27:in `destroy'
+  [1m[36mApi::V1::RecreationalArea Destroy (0.3ms)[0m  [1m[31mDELETE FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:27:in `destroy'
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:27:in `destroy'
+Completed 200 OK in 11ms (Views: 0.1ms | ActiveRecord: 2.0ms | Allocations: 3554)
+
+
+Started DELETE "/api/v1/users/1/recreational_areas/3" for ::1 at 2020-12-24 23:00:10 -0500
+Processing by Api::V1::RecreationalAreasController#destroy as JSON
+  Parameters: {"user_id"=>"1", "id"=>"3", "recreational_area"=>{}}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ? AND "api_v1_recreational_areas"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:25:in `destroy'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:27:in `destroy'
+  [1m[36mApi::V1::RecreationalArea Destroy (0.3ms)[0m  [1m[31mDELETE FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:27:in `destroy'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:27:in `destroy'
+Completed 200 OK in 20ms (Views: 0.1ms | ActiveRecord: 1.4ms | Allocations: 3393)
+
+
+Started DELETE "/api/v1/users/1/recreational_areas/1" for ::1 at 2020-12-24 23:00:10 -0500
+Processing by Api::V1::RecreationalAreasController#destroy as JSON
+  Parameters: {"user_id"=>"1", "id"=>"1", "recreational_area"=>{}}
+  [1m[36mApi::V1::User Load (0.1ms)[0m  [1m[34mSELECT "api_v1_users".* FROM "api_v1_users" WHERE "api_v1_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:39:in `find_user'
+  [1m[36mApi::V1::RecreationalArea Load (0.1ms)[0m  [1m[34mSELECT "api_v1_recreational_areas".* FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."user_id" = ? AND "api_v1_recreational_areas"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:25:in `destroy'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:27:in `destroy'
+  [1m[36mApi::V1::RecreationalArea Destroy (0.3ms)[0m  [1m[31mDELETE FROM "api_v1_recreational_areas" WHERE "api_v1_recreational_areas"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:27:in `destroy'
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/recreational_areas_controller.rb:27:in `destroy'
+Completed 200 OK in 10ms (Views: 0.1ms | ActiveRecord: 1.2ms | Allocations: 3389)
+
+
+Started GET "/api/v1/search?keyword_query=&activity_query=&state=" for ::1 at 2020-12-24 23:00:17 -0500
+Processing by Api::V1::SearchController#search as */*
+  Parameters: {"keyword_query"=>"", "activity_query"=>"", "state"=>""}
+Completed 200 OK in 346ms (Views: 8.5ms | ActiveRecord: 0.0ms | Allocations: 21504)
+
+
